@@ -32,10 +32,10 @@ Provides a high-level view of the portfolio's financing profile.
 
 Key sections
 
--   **KPI summary** -- exposure, borrow cost, HTB concentration\
--   **Exposure by Prime Broker** -- financing distribution across PBs\
--   **Sector and Market exposure** -- portfolio concentration analysis\
--   **Borrow rate distribution** -- cost structure of the book\
+-   **KPI summary** -- exposure, borrow cost, HTB concentration
+-   **Exposure by Prime Broker** -- financing distribution across PBs
+-   **Sector and Market exposure** -- portfolio concentration analysis
+-   **Borrow rate distribution** -- cost structure of the book
 -   **Top positions by borrow cost** -- largest financing cost
     contributors
 
@@ -56,7 +56,7 @@ Features
 -   **Daily cost saving**
 -   Filters by market, strategy, and HTB classification
 
-Purpose\
+Purpose
 Identify positions where **switching prime brokers could reduce
 financing cost**.
 
@@ -73,7 +73,7 @@ Displays
 -   Available shares
 -   Security price
 
-Purpose\
+Purpose
 Monitor **borrow supply and market availability before initiating short
 positions**.
 
@@ -100,15 +100,15 @@ fund portfolio finance and treasury teams**.
 
 Example
 
-/images/dashboard_snapshot.png\
-/images/refinancing_opportunities.png\
+/images/dashboard_snapshot.png
+/images/refinancing_opportunities.png
 /images/daily_availability.png
 
 ------------------------------------------------------------------------
 
 # Author
 
-Cherin Kim\
+Cherin Kim
 Portfolio Finance / Equity Finance
 
 Demo dashboard built with **simulated financial data**
