@@ -15,6 +15,8 @@ markets, sectors and funds**, and highlights potential
 -   Taiwan
 -   Japan
 
+  
+
 **Technology**
 
 HTML, JavaScript, Chart.js
@@ -43,7 +45,7 @@ Key sections
 -   **Top positions by borrow cost** -- largest financing cost
     contributors
 
-Purpose
+Purpose\
 Quickly identify **where financing exposure and borrow costs are
 concentrated**.
 
