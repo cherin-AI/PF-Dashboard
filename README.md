@@ -5,8 +5,8 @@ positions**, designed to simulate how a hedge fund treasury or
 portfolio finance team tracks borrow costs and financing opportunities.
 
 The dashboard visualizes financing exposure across **Prime Brokers,
-markets, sectors, and strategies**, and highlights potential
-**refinancing opportunities to reduce borrow costs**.
+markets, sectors and funds**, and highlights potential
+**refinancing opportunities to optimize borrow costs**.
 
 **Markets covered**
 
@@ -61,7 +61,7 @@ Features
 -   Sorts by **Daily cost saving**, bps, positon notional $
 
 Purpose
-Identify positions where borrow costs can be reduced either through renegotiation with the current prime broker or by switching to another broker offering lower rates, after accounting for crossing costs such as comms and stamp charges.
+Identify positions where borrow costs can be reduced either through **renegotiation with the current prime broker** or **switching to another broker offering lower rates**, after accounting for crossing costs such as comms and stamp charges.
 
 ------------------------------------------------------------------------
 
