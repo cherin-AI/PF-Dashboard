@@ -1,7 +1,7 @@
 # PF/ASIA -- Portfolio Finance Dashboard
 
-Portfolio Finance monitoring dashboard for **APAC equity long/short
-portfolios**, designed to simulate how a hedge fund treasury or
+Portfolio Finance monitoring dashboard for **APAC equity short
+positions**, designed to simulate how a hedge fund treasury or
 portfolio finance team tracks borrow costs and financing opportunities.
 
 The dashboard visualizes financing exposure across **Prime Brokers,
