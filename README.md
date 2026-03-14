@@ -103,7 +103,7 @@ fund portfolio finance and treasury teams**.
 
 /images/dashboard_snapshot.png\
 /images/refinancing_opportunities.png\
-/images/daily_availability.png\
+/images/daily_availability.png
 
 ------------------------------------------------------------------------
 
