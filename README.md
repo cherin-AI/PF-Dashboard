@@ -22,6 +22,10 @@ HTML, JavaScript, Chart.js
 The dashboard runs as a **standalone HTML application** with simulated
 financial data.
 
+The design can be extended to support automated data ingestion via APIs or data pipelines, allowing the dashboard to refresh with updated portfolio datasets.
+
+Data in this project is simulated and does not represent any real portfolio.
+
 ------------------------------------------------------------------------
 
 # Dashboard Pages
@@ -39,7 +43,7 @@ Key sections
 -   **Top positions by borrow cost** -- largest financing cost
     contributors
 
-Purpose\
+Purpose
 Quickly identify **where financing exposure and borrow costs are
 concentrated**.
 
@@ -53,12 +57,11 @@ brokers**.
 Features
 
 -   Estimated **saving in basis points**
--   **Daily cost saving**
--   Filters by market, strategy, and HTB classification
+-   Filters by market, fund and HTB classification
+-   Sorts by **Daily cost saving**, bps, positon notional $
 
 Purpose
-Identify positions where **switching prime brokers could reduce
-financing cost**.
+Identify positions where borrow costs can be reduced either through renegotiation with the current prime broker or by switching to another broker offering lower rates, after accounting for crossing costs such as comms and stamp charges.
 
 ------------------------------------------------------------------------
 
@@ -96,10 +99,6 @@ fund portfolio finance and treasury teams**.
 
 # Preview
 
-(Add screenshots here when publishing the project)
-
-Example
-
 /images/dashboard_snapshot.png
 /images/refinancing_opportunities.png
 /images/daily_availability.png
@@ -111,4 +110,8 @@ Example
 Cherin Kim
 Portfolio Finance / Equity Finance
 
-Demo dashboard built with **simulated financial data**
+------------------------------------------------------------------------
+
+# Updates & Latest Deployments
+
+Mar 15th, 2025
