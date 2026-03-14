@@ -62,7 +62,7 @@ Features
 -   Filters by market, fund and HTB classification
 -   Sorts by **Daily cost saving**, bps, positon notional $
 
-Purpose
+Purpose\
 Identify positions where borrow costs can be reduced either through **renegotiation with the current prime broker** or **switching to another broker offering lower rates**, after accounting for crossing costs such as comms and stamp charges.
 
 ------------------------------------------------------------------------
@@ -78,7 +78,7 @@ Displays
 -   Available shares
 -   Security price
 
-Purpose
+Purpose\
 Monitor **borrow supply and market availability before initiating short
 positions**.
 
@@ -94,7 +94,7 @@ structured and visualized** to support:
 -   Financing decision support
 -   Short inventory analysis
 
-The goal is to replicate the **type of monitoring tools used by hedge
+The goal is to replicate the **consolidated monitoring tools used by hedge
 fund portfolio finance and treasury teams**.
 
 ------------------------------------------------------------------------
