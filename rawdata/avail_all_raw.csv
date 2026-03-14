@@ -1,0 +1,1192 @@
+date,prime_broker,ticker,name,country,sector,currency,price_local,price_usd,available_shares,borrow_rate_pct,htb_flag
+3/6/25,Prime C,1101 TT,Taiwan Cement,TW,Materials,TWD,90.47,2.845,2710527,1.5,N
+3/6/25,Prime A,1101 TT,Taiwan Cement,TW,Materials,TWD,90.47,2.845,867344,3.25,N
+3/6/25,Prime C,1605 JP,Inpex,JP,Industrials,JPY,42296,282.9164,1195611,5.25,N
+3/6/25,Prime C,992 HK,Lenovo,HK,Information Technology,HKD,205.44,26.2711,195795,0.25,N
+3/6/25,Prime A,462870 KS,SHIFT UP,KR,Information Technology,KRW,70193,52.9758,2126347,15.75,Y
+3/6/25,Prime B,462870 KS,SHIFT UP,KR,Information Technology,KRW,70193,52.9758,1283964,14.5,Y
+3/6/25,Prime C,462870 KS,SHIFT UP,KR,Information Technology,KRW,70193,52.9758,1007844,11.5,Y
+3/6/25,Prime B,1605 JP,Inpex,JP,Industrials,JPY,42296,282.9164,1305230,1.75,N
+3/6/25,Prime A,992 HK,Lenovo,HK,Information Technology,HKD,205.44,26.2711,975856,0.25,N
+3/6/25,Prime A,9766 JP,Konami Holdings,JP,Industrials,JPY,37302,249.5117,874460,4,N
+3/6/25,Prime B,9766 JP,Konami Holdings,JP,Industrials,JPY,37302,249.5117,1408807,4,N
+3/6/25,Prime B,992 HK,Lenovo,HK,Information Technology,HKD,205.44,26.2711,982548,0.5,N
+3/6/25,Prime A,1605 JP,Inpex,JP,Industrials,JPY,42296,282.9164,1197333,0.75,N
+3/6/25,Prime C,966 HK,China Taiping Insurance,HK,Financials,HKD,276.59,35.3696,1310843,5.75,N
+3/6/25,Prime B,1101 TT,Taiwan Cement,TW,Materials,TWD,90.47,2.845,1568309,2,N
+3/6/25,Prime B,966 HK,China Taiping Insurance,HK,Financials,HKD,276.59,35.3696,201202,4,N
+3/6/25,Prime C,9766 JP,Konami Holdings,JP,Industrials,JPY,37302,249.5117,1043447,3.25,N
+3/6/25,Prime C,9532 JP,Osaka Gas,JP,Industrials,JPY,8720,58.3278,2466445,1.5,N
+3/6/25,Prime A,402340 KS,SK Square,KR,Information Technology,KRW,50422,38.0543,506591,0.25,N
+3/6/25,Prime A,966 HK,China Taiping Insurance,HK,Financials,HKD,276.59,35.3696,437388,3.75,N
+3/6/25,Prime A,9532 JP,Osaka Gas,JP,Industrials,JPY,8720,58.3278,2145620,1,N
+3/6/25,Prime A,963 HK,Bloomage BioTechnology,HK,Financials,HKD,123.6,15.8056,40286,6.25,N
+3/6/25,Prime B,963 HK,Bloomage BioTechnology,HK,Financials,HKD,123.6,15.8056,1572947,5.75,N
+3/6/25,Prime A,1102 TT,Asia Cement,TW,Information Technology,TWD,121.39,3.8173,105552,13.25,Y
+3/6/25,Prime A,9531 JP,Tokyo Gas,JP,Industrials,JPY,21459,143.5385,1707509,2.25,N
+3/6/25,Prime B,402340 KS,SK Square,KR,Information Technology,KRW,50422,38.0543,452777,0.25,N
+3/6/25,Prime C,402340 KS,SK Square,KR,Information Technology,KRW,50422,38.0543,2294189,0.25,N
+3/6/25,Prime C,383220 KS,F&F Co,KR,Information Technology,KRW,28876,21.7932,2498087,7.75,N
+3/6/25,Prime C,963 HK,Bloomage BioTechnology,HK,Financials,HKD,123.6,15.8056,1539721,3.5,N
+3/6/25,Prime A,880 HK,SJM Holdings,HK,Financials,HKD,161.65,20.6714,2119747,5.25,N
+3/6/25,Prime A,383220 KS,F&F Co,KR,Information Technology,KRW,28876,21.7932,665877,7.5,N
+3/6/25,Prime B,383220 KS,F&F Co,KR,Information Technology,KRW,28876,21.7932,1595260,6,N
+3/6/25,Prime A,377300 KS,Kakao Pay,KR,Information Technology,KRW,67244,50.7502,1721360,0.25,N
+3/6/25,Prime B,377300 KS,Kakao Pay,KR,Information Technology,KRW,67244,50.7502,386731,0.25,N
+3/6/25,Prime C,880 HK,SJM Holdings,HK,Financials,HKD,161.65,20.6714,752719,5.25,N
+3/6/25,Prime C,377300 KS,Kakao Pay,KR,Information Technology,KRW,67244,50.7502,1051096,0.25,N
+3/6/25,Prime B,1102 TT,Asia Cement,TW,Information Technology,TWD,121.39,3.8173,81702,13.25,Y
+3/6/25,Prime B,9531 JP,Tokyo Gas,JP,Industrials,JPY,21459,143.5385,746496,2.25,N
+3/6/25,Prime C,9531 JP,Tokyo Gas,JP,Industrials,JPY,21459,143.5385,461793,2.25,N
+3/6/25,Prime C,9503 JP,KEPCO,JP,Industrials,JPY,47734,319.291,2450721,1.75,N
+3/6/25,Prime C,1102 TT,Asia Cement,TW,Information Technology,TWD,121.39,3.8173,54054,10.25,Y
+3/6/25,Prime A,352820 KS,HYBE,KR,Communication Services,KRW,53379,40.286,106089,14.5,Y
+3/6/25,Prime B,880 HK,SJM Holdings,HK,Financials,HKD,161.65,20.6714,2705866,4,N
+3/6/25,Prime B,1802 JP,Obayashi,JP,Industrials,JPY,3477,23.2575,664398,7.5,N
+3/6/25,Prime B,352820 KS,HYBE,KR,Communication Services,KRW,53379,40.286,148667,12.25,Y
+3/6/25,Prime A,9503 JP,KEPCO,JP,Industrials,JPY,47734,319.291,1427394,1.5,N
+3/6/25,Prime B,9503 JP,KEPCO,JP,Industrials,JPY,47734,319.291,2737451,1.5,N
+3/6/25,Prime A,1802 JP,Obayashi,JP,Industrials,JPY,3477,23.2575,347584,5.75,N
+3/6/25,Prime C,1802 JP,Obayashi,JP,Industrials,JPY,3477,23.2575,2218559,5.25,N
+3/6/25,Prime A,1216 TT,Uni-President Enterprises,TW,Consumer Staples,TWD,295.78,9.3013,1844972,6.25,N
+3/6/25,Prime C,352820 KS,HYBE,KR,Communication Services,KRW,53379,40.286,86545,9.5,Y
+3/6/25,Prime A,1812 JP,Kajima,JP,Industrials,JPY,53236,356.0936,93812,8.75,Y
+3/6/25,Prime C,9432 JP,NTT (Nippon Telegraph & Telephone),JP,Communication Services,JPY,49030,327.9599,2072468,1.25,N
+3/6/25,Prime C,1812 JP,Kajima,JP,Industrials,JPY,53236,356.0936,894923,6.25,N
+3/6/25,Prime A,9432 JP,NTT (Nippon Telegraph & Telephone),JP,Communication Services,JPY,49030,327.9599,556327,1,N
+3/6/25,Prime B,1216 TT,Uni-President Enterprises,TW,Consumer Staples,TWD,295.78,9.3013,1123137,4,N
+3/6/25,Prime B,9432 JP,NTT (Nippon Telegraph & Telephone),JP,Communication Services,JPY,49030,327.9599,1925582,1,N
+3/6/25,Prime A,868 HK,Xinyi Glass Holdings,HK,Financials,HKD,64.68,8.2711,759074,1,N
+3/6/25,Prime B,868 HK,Xinyi Glass Holdings,HK,Financials,HKD,64.68,8.2711,2255816,1,N
+3/6/25,Prime B,1812 JP,Kajima,JP,Industrials,JPY,53236,356.0936,2029983,1,N
+3/6/25,Prime C,868 HK,Xinyi Glass Holdings,HK,Financials,HKD,64.68,8.2711,1609355,1,N
+3/6/25,Prime C,8630 JP,Sompo Holdings,JP,Financials,JPY,17755,118.7625,1151170,3.25,N
+3/6/25,Prime B,8630 JP,Sompo Holdings,JP,Financials,JPY,17755,118.7625,112133,3,N
+3/6/25,Prime C,1216 TT,Uni-President Enterprises,TW,Consumer Staples,TWD,295.78,9.3013,592813,1.75,N
+3/6/25,Prime A,8630 JP,Sompo Holdings,JP,Financials,JPY,17755,118.7625,2515694,2.75,N
+3/6/25,Prime A,2802 JP,Ajinomoto,JP,Industrials,JPY,909,6.0803,364942,7.75,N
+3/6/25,Prime B,8454 TT,momo.com Inc.,TW,Information Technology,TWD,313.28,9.8516,2134303,2.75,N
+3/6/25,Prime C,86 HK,Sun Hung Kai & Co.,HK,Financials,HKD,30.3,3.8747,273470,3.75,N
+3/6/25,Prime A,86 HK,Sun Hung Kai & Co.,HK,Financials,HKD,30.3,3.8747,911635,3.25,N
+3/6/25,Prime B,323410 KS,KakaoBank,KR,Information Technology,KRW,13741,10.3706,2688515,7.5,N
+3/6/25,Prime C,323410 KS,KakaoBank,KR,Information Technology,KRW,13741,10.3706,1091608,4.75,N
+3/6/25,Prime B,86 HK,Sun Hung Kai & Co.,HK,Financials,HKD,30.3,3.8747,792640,3.25,N
+3/6/25,Prime C,8454 TT,momo.com Inc.,TW,Information Technology,TWD,313.28,9.8516,634947,2.75,N
+3/6/25,Prime B,2802 JP,Ajinomoto,JP,Industrials,JPY,909,6.0803,2710651,2.25,N
+3/6/25,Prime A,8454 TT,momo.com Inc.,TW,Information Technology,TWD,313.28,9.8516,2894357,2.5,N
+3/6/25,Prime A,8411 JP,Mizuho Financial Group,JP,Financials,JPY,51410,343.8796,1041252,1.5,N
+3/6/25,Prime B,8411 JP,Mizuho Financial Group,JP,Financials,JPY,51410,343.8796,204481,1.25,N
+3/6/25,Prime A,323410 KS,KakaoBank,KR,Information Technology,KRW,13741,10.3706,2659672,3,N
+3/6/25,Prime C,2802 JP,Ajinomoto,JP,Industrials,JPY,909,6.0803,865420,2.25,N
+3/6/25,Prime A,2914 JP,Japan Tobacco,JP,Consumer Staples,JPY,27378,183.1304,148145,14.5,Y
+3/6/25,Prime C,1303 TT,Nan Ya Plastics,TW,Materials,TWD,282.41,8.8808,375834,6.75,N
+3/6/25,Prime B,2914 JP,Japan Tobacco,JP,Consumer Staples,JPY,27378,183.1304,132445,14,Y
+3/6/25,Prime B,1303 TT,Nan Ya Plastics,TW,Materials,TWD,282.41,8.8808,1745189,6.25,N
+3/6/25,Prime A,1303 TT,Nan Ya Plastics,TW,Materials,TWD,282.41,8.8808,1751878,5.5,N
+3/6/25,Prime A,1326 TT,Formosa Chemicals & Fibre,TW,Materials,TWD,289.59,9.1066,756124,0.25,N
+3/6/25,Prime A,316140 KS,Woori Financial Group,KR,Financials,KRW,27023,20.3947,1969294,7.5,N
+3/6/25,Prime C,8411 JP,Mizuho Financial Group,JP,Financials,JPY,51410,343.8796,133481,1,N
+3/6/25,Prime C,2914 JP,Japan Tobacco,JP,Consumer Staples,JPY,27378,183.1304,79962,12.25,Y
+3/6/25,Prime A,3382 JP,7-Eleven,JP,Consumer Staples,JPY,6404,42.8361,311500,0.25,N
+3/6/25,Prime B,1326 TT,Formosa Chemicals & Fibre,TW,Materials,TWD,289.59,9.1066,2440372,0.25,N
+3/6/25,Prime B,3382 JP,7-Eleven,JP,Consumer Staples,JPY,6404,42.8361,1094791,0.25,N
+3/6/25,Prime C,3382 JP,7-Eleven,JP,Consumer Staples,JPY,6404,42.8361,1007813,0.25,N
+3/6/25,Prime C,316140 KS,Woori Financial Group,KR,Financials,KRW,27023,20.3947,1554647,3,N
+3/6/25,Prime A,836 HK,China Resources Power Holdings,HK,Financials,HKD,275.16,35.1867,1253384,2.5,N
+3/6/25,Prime C,836 HK,China Resources Power Holdings,HK,Financials,HKD,275.16,35.1867,1789843,2.5,N
+3/6/25,Prime C,1326 TT,Formosa Chemicals & Fibre,TW,Materials,TWD,289.59,9.1066,2756469,0.25,N
+3/6/25,Prime B,836 HK,China Resources Power Holdings,HK,Financials,HKD,275.16,35.1867,2370633,2.25,N
+3/6/25,Prime B,8308 JP,Resona Holdings,JP,Industrials,JPY,37845,253.1438,1373530,6.5,N
+3/6/25,Prime A,1402 TT,Far Eastern New Century,TW,Consumer Discretionary,TWD,139.68,4.3925,1467679,0.25,N
+3/6/25,Prime C,8308 JP,Resona Holdings,JP,Industrials,JPY,37845,253.1438,1497062,4.5,N
+3/6/25,Prime A,83 HK,Sino Land,HK,Real Estate,HKD,181.28,23.1816,2194733,5,N
+3/6/25,Prime B,1402 TT,Far Eastern New Century,TW,Consumer Discretionary,TWD,139.68,4.3925,1860186,0.25,N
+3/6/25,Prime C,1402 TT,Far Eastern New Century,TW,Consumer Discretionary,TWD,139.68,4.3925,540120,0.25,N
+3/6/25,Prime A,8308 JP,Resona Holdings,JP,Industrials,JPY,37845,253.1438,1623620,2.75,N
+3/6/25,Prime B,8058 JP,Mitsubishi Corporation,JP,Industrials,JPY,5126,34.2876,1891755,6.75,N
+3/6/25,Prime A,282330 KS,BGF Retail,KR,Information Technology,KRW,40974,30.9238,2078709,6.75,N
+3/6/25,Prime B,4063 JP,Shin-Etsu Chemical,JP,Materials,JPY,22798,152.495,1920179,7.25,N
+3/6/25,Prime B,282330 KS,BGF Retail,KR,Information Technology,KRW,40974,30.9238,1517139,2.75,N
+3/6/25,Prime A,4063 JP,Shin-Etsu Chemical,JP,Materials,JPY,22798,152.495,1945924,5.25,N
+3/6/25,Prime A,1434 TT,Formosa Taffeta,TW,Information Technology,TWD,344.98,10.8484,189437,17.75,Y
+3/6/25,Prime B,1434 TT,Formosa Taffeta,TW,Information Technology,TWD,344.98,10.8484,82737,13.25,Y
+3/6/25,Prime C,282330 KS,BGF Retail,KR,Information Technology,KRW,40974,30.9238,464804,2.5,N
+3/6/25,Prime C,4063 JP,Shin-Etsu Chemical,JP,Materials,JPY,22798,152.495,1956031,4.75,N
+3/6/25,Prime A,272210 KS,Hanwha Systems,KR,Information Technology,KRW,103491,78.1064,1972608,0.25,N
+3/6/25,Prime A,4091 JP,Nippon Sanso,JP,Industrials,JPY,14305,95.6856,187432,0.25,N
+3/6/25,Prime C,272210 KS,Hanwha Systems,KR,Information Technology,KRW,103491,78.1064,896169,0.25,N
+3/6/25,Prime A,8058 JP,Mitsubishi Corporation,JP,Industrials,JPY,5126,34.2876,744567,4.75,N
+3/6/25,Prime B,4091 JP,Nippon Sanso,JP,Industrials,JPY,14305,95.6856,2237076,0.25,N
+3/6/25,Prime C,4091 JP,Nippon Sanso,JP,Industrials,JPY,14305,95.6856,1263349,0.25,N
+3/6/25,Prime C,83 HK,Sino Land,HK,Real Estate,HKD,181.28,23.1816,771140,3.5,N
+3/6/25,Prime C,8058 JP,Mitsubishi Corporation,JP,Industrials,JPY,5126,34.2876,2391418,4.25,N
+3/6/25,Prime B,83 HK,Sino Land,HK,Real Estate,HKD,181.28,23.1816,582977,1.5,N
+3/6/25,Prime B,8046 TT,Nan Ya PCB,TW,Information Technology,TWD,372.08,11.7006,1712000,4.75,N
+3/6/25,Prime A,8046 TT,Nan Ya PCB,TW,Information Technology,TWD,372.08,11.7006,21605,3,N
+3/6/25,Prime C,1434 TT,Formosa Taffeta,TW,Information Technology,TWD,344.98,10.8484,4609,9.5,Y
+3/6/25,Prime A,1590 TT,AirTAC International,TW,Industrials,TWD,390.04,12.2654,1753755,8,Y
+3/6/25,Prime C,1590 TT,AirTAC International,TW,Industrials,TWD,390.04,12.2654,1330793,5.25,N
+3/6/25,Prime B,1590 TT,AirTAC International,TW,Industrials,TWD,390.04,12.2654,1205537,1,N
+3/6/25,Prime B,267260 KS,HD Hyundai Electric,KR,Information Technology,KRW,15581,11.7592,37655,8.75,Y
+3/6/25,Prime C,2002A TT,China Steel,TW,Information Technology,TWD,477.91,15.0286,1963871,6.75,N
+3/6/25,Prime C,267260 KS,HD Hyundai Electric,KR,Information Technology,KRW,15581,11.7592,187517,8.5,Y
+3/6/25,Prime A,267260 KS,HD Hyundai Electric,KR,Information Technology,KRW,15581,11.7592,111752,6,N
+3/6/25,Prime C,8046 TT,Nan Ya PCB,TW,Information Technology,TWD,372.08,11.7006,2709863,3,N
+3/6/25,Prime A,263750 KS,Pearl Abyss,KR,Information Technology,KRW,27976,21.114,1983297,4,N
+3/6/25,Prime B,8015 JP,Toyota Tsusho,JP,Industrials,JPY,53803,359.8863,835655,0.75,N
+3/6/25,Prime A,823 HK,Link REIT,HK,Real Estate,HKD,269.34,34.4425,1273140,0.25,N
+3/6/25,Prime B,823 HK,Link REIT,HK,Real Estate,HKD,269.34,34.4425,345985,0.25,N
+3/6/25,Prime B,263750 KS,Pearl Abyss,KR,Information Technology,KRW,27976,21.114,59085,4.5,N
+3/6/25,Prime C,4452 JP,Kao,JP,Consumer Staples,JPY,38292,256.1338,1820465,7.5,N
+3/6/25,Prime B,2002A TT,China Steel,TW,Information Technology,TWD,477.91,15.0286,2556960,5.75,N
+3/6/25,Prime C,263750 KS,Pearl Abyss,KR,Information Technology,KRW,27976,21.114,2492415,4,N
+3/6/25,Prime C,823 HK,Link REIT,HK,Real Estate,HKD,269.34,34.4425,1416365,0.25,N
+3/6/25,Prime A,259960 KS,Krafton,KR,Information Technology,KRW,106398,80.3004,144914,3.5,N
+3/6/25,Prime B,259960 KS,Krafton,KR,Information Technology,KRW,106398,80.3004,1917855,3,N
+3/6/25,Prime B,4452 JP,Kao,JP,Consumer Staples,JPY,38292,256.1338,553356,7,N
+3/6/25,Prime C,259960 KS,Krafton,KR,Information Technology,KRW,106398,80.3004,582553,2.25,N
+3/6/25,Prime A,251270 KS,Netmarble,KR,Communication Services,KRW,43054,32.4936,712884,0.25,N
+3/6/25,Prime A,4452 JP,Kao,JP,Consumer Staples,JPY,38292,256.1338,2769076,1.5,N
+3/6/25,Prime B,251270 KS,Netmarble,KR,Communication Services,KRW,43054,32.4936,706806,0.25,N
+3/6/25,Prime C,251270 KS,Netmarble,KR,Communication Services,KRW,43054,32.4936,1732180,0.25,N
+3/6/25,Prime A,4502 JP,Takeda Pharmaceutical,JP,Health Care,JPY,31448,210.3545,2031676,0.25,N
+3/6/25,Prime B,4502 JP,Takeda Pharmaceutical,JP,Health Care,JPY,31448,210.3545,2528200,0.25,N
+3/6/25,Prime A,2002A TT,China Steel,TW,Information Technology,TWD,477.91,15.0286,1597055,4.75,N
+3/6/25,Prime A,8 HK,PCCW,HK,Financials,HKD,185.88,23.7698,740189,0.25,N
+3/6/25,Prime C,4502 JP,Takeda Pharmaceutical,JP,Health Care,JPY,31448,210.3545,2067275,0.25,N
+3/6/25,Prime A,2201 TT,Yulon Motor Company,TW,Information Technology,TWD,382.75,12.0362,141105,9,Y
+3/6/25,Prime B,2201 TT,Yulon Motor Company,TW,Information Technology,TWD,382.75,12.0362,172884,8.75,Y
+3/6/25,Prime C,2201 TT,Yulon Motor Company,TW,Information Technology,TWD,382.75,12.0362,2090364,6,N
+3/6/25,Prime C,247540 KS,Ecopro BM,KR,Information Technology,KRW,91885,69.3472,67005,9,Y
+3/6/25,Prime B,4503 JP,Astellas Pharma,JP,Industrials,JPY,33094,221.3645,145393,8.5,Y
+3/6/25,Prime C,4503 JP,Astellas Pharma,JP,Industrials,JPY,33094,221.3645,5652,8.5,Y
+3/6/25,Prime B,8 HK,PCCW,HK,Financials,HKD,185.88,23.7698,2369815,0.25,N
+3/6/25,Prime A,4503 JP,Astellas Pharma,JP,Industrials,JPY,33094,221.3645,422673,1.5,N
+3/6/25,Prime C,8 HK,PCCW,HK,Financials,HKD,185.88,23.7698,2039894,0.25,N
+3/6/25,Prime A,247540 KS,Ecopro BM,KR,Information Technology,KRW,91885,69.3472,46201,8.5,Y
+3/6/25,Prime A,8015 JP,Toyota Tsusho,JP,Industrials,JPY,53803,359.8863,2447451,0.25,N
+3/6/25,Prime A,778 HK,Fortune REIT,HK,Financials,HKD,241.39,30.8683,2729178,7.75,N
+3/6/25,Prime B,778 HK,Fortune REIT,HK,Financials,HKD,241.39,30.8683,2052304,2.25,N
+3/6/25,Prime C,778 HK,Fortune REIT,HK,Financials,HKD,241.39,30.8683,2394412,0.75,N
+3/6/25,Prime B,247540 KS,Ecopro BM,KR,Information Technology,KRW,91885,69.3472,83093,3.25,N
+3/6/25,Prime C,8015 JP,Toyota Tsusho,JP,Industrials,JPY,53803,359.8863,350584,0.25,N
+3/6/25,Prime A,241560 KS,Doosan Bobcat,KR,Information Technology,KRW,19690,14.8604,2890274,0.25,N
+3/6/25,Prime B,241560 KS,Doosan Bobcat,KR,Information Technology,KRW,19690,14.8604,148404,0.25,N
+3/6/25,Prime C,8002 JP,Marubeni,JP,Industrials,JPY,33044,221.0301,217726,2.5,N
+3/6/25,Prime A,8002 JP,Marubeni,JP,Industrials,JPY,33044,221.0301,925110,2.25,N
+3/6/25,Prime A,4507 JP,Shionogi,JP,Industrials,JPY,42023,281.0903,171339,15,Y
+3/6/25,Prime C,241560 KS,Doosan Bobcat,KR,Information Technology,KRW,19690,14.8604,290439,0.25,N
+3/6/25,Prime B,8002 JP,Marubeni,JP,Industrials,JPY,33044,221.0301,126300,1.5,N
+3/6/25,Prime B,8001 JP,Itochu Shoji,JP,Industrials,JPY,28573,191.1237,469489,3.5,N
+3/6/25,Prime A,8001 JP,Itochu Shoji,JP,Industrials,JPY,28573,191.1237,271830,3,N
+3/6/25,Prime C,4507 JP,Shionogi,JP,Industrials,JPY,42023,281.0903,30045,11.75,Y
+3/6/25,Prime C,8001 JP,Itochu Shoji,JP,Industrials,JPY,28573,191.1237,2581489,0.5,N
+3/6/25,Prime B,2303 TT,United Microelectronics,TW,Information Technology,TWD,204.25,6.423,2713391,2,N
+3/6/25,Prime B,207940 KS,Samsung Biologics,KR,Health Care,KRW,70286,53.046,2164894,7.75,N
+3/6/25,Prime C,207940 KS,Samsung Biologics,KR,Health Care,KRW,70286,53.046,238172,5.5,N
+3/6/25,Prime A,207940 KS,Samsung Biologics,KR,Health Care,KRW,70286,53.046,277804,4.75,N
+3/6/25,Prime A,71 HK,Miramar Hotel and Investment,HK,Financials,HKD,93.95,12.0141,41020,0.25,N
+3/6/25,Prime A,2303 TT,United Microelectronics,TW,Information Technology,TWD,204.25,6.423,944639,1.25,N
+3/6/25,Prime C,2303 TT,United Microelectronics,TW,Information Technology,TWD,204.25,6.423,1756449,1,N
+3/6/25,Prime B,4507 JP,Shionogi,JP,Industrials,JPY,42023,281.0903,42390,9.5,Y
+3/6/25,Prime A,7741 JP,Hoya,JP,Health Care,JPY,43100,288.2943,651744,1.5,N
+3/6/25,Prime C,7741 JP,Hoya,JP,Health Care,JPY,43100,288.2943,989234,1.5,N
+3/6/25,Prime B,7741 JP,Hoya,JP,Health Care,JPY,43100,288.2943,2491325,1.25,N
+3/6/25,Prime A,196170 KS,Alteogen,KR,Information Technology,KRW,90040,67.9547,186246,16.5,Y
+3/6/25,Prime C,196170 KS,Alteogen,KR,Information Technology,KRW,90040,67.9547,139706,15.25,Y
+3/6/25,Prime B,71 HK,Miramar Hotel and Investment,HK,Financials,HKD,93.95,12.0141,882209,0.25,N
+3/6/25,Prime C,71 HK,Miramar Hotel and Investment,HK,Financials,HKD,93.95,12.0141,304461,0.25,N
+3/6/25,Prime B,196170 KS,Alteogen,KR,Information Technology,KRW,90040,67.9547,19887,9.75,Y
+3/6/25,Prime A,69 HK,Shangri-La,HK,Financials,HKD,158.26,20.2379,782816,0.25,N
+3/6/25,Prime C,2308 TT,Delta Electronics,TW,Information Technology,TWD,507.69,15.9651,123831,22.25,Y
+3/6/25,Prime B,2308 TT,Delta Electronics,TW,Information Technology,TWD,507.69,15.9651,81833,19.75,Y
+3/6/25,Prime B,4543 JP,Terumo,JP,Health Care,JPY,31855,213.0769,2987428,5.75,N
+3/6/25,Prime A,181710 KS,NHN Corp,KR,Information Technology,KRW,43136,32.5555,2368475,0.25,N
+3/6/25,Prime B,69 HK,Shangri-La,HK,Financials,HKD,158.26,20.2379,2640836,0.25,N
+3/6/25,Prime A,2308 TT,Delta Electronics,TW,Information Technology,TWD,507.69,15.9651,57359,19.25,Y
+3/6/25,Prime B,2311 TT,ASE Group,TW,Information Technology,TWD,520.19,16.3582,2549618,7.75,N
+3/6/25,Prime B,181710 KS,NHN Corp,KR,Information Technology,KRW,43136,32.5555,906600,0.25,N
+3/6/25,Prime C,69 HK,Shangri-La,HK,Financials,HKD,158.26,20.2379,45255,0.25,N
+3/6/25,Prime C,762 HK,China Unicom,HK,Communication Services,HKD,164.25,21.0038,970921,3,N
+3/6/25,Prime A,762 HK,China Unicom,HK,Communication Services,HKD,164.25,21.0038,2495860,1,N
+3/6/25,Prime C,2311 TT,ASE Group,TW,Information Technology,TWD,520.19,16.3582,1555439,3.5,N
+3/6/25,Prime C,181710 KS,NHN Corp,KR,Information Technology,KRW,43136,32.5555,649742,0.5,N
+3/6/25,Prime B,7532 JP,Pan Pacific International Holdings,JP,Industrials,JPY,8748,58.5151,833584,2,N
+3/6/25,Prime A,683 HK,Kerry Properties,HK,Financials,HKD,42.94,5.491,761837,0.25,N
+3/6/25,Prime C,161390 KS,Hankook Tire,KR,Consumer Discretionary,KRW,95349,71.9615,2493808,5.75,N
+3/6/25,Prime A,2311 TT,ASE Group,TW,Information Technology,TWD,520.19,16.3582,155753,3.25,N
+3/6/25,Prime A,4543 JP,Terumo,JP,Health Care,JPY,31855,213.0769,405027,3.75,N
+3/6/25,Prime C,4543 JP,Terumo,JP,Health Care,JPY,31855,213.0769,1118831,0.5,N
+3/6/25,Prime C,4568 JP,Daiichi Sankyo,JP,Health Care,JPY,52328,350.0201,120464,17.75,Y
+3/6/25,Prime B,4568 JP,Daiichi Sankyo,JP,Health Care,JPY,52328,350.0201,20643,13.75,Y
+3/6/25,Prime B,161390 KS,Hankook Tire,KR,Consumer Discretionary,KRW,95349,71.9615,846484,4.5,N
+3/6/25,Prime B,683 HK,Kerry Properties,HK,Financials,HKD,42.94,5.491,855594,0.25,N
+3/6/25,Prime C,683 HK,Kerry Properties,HK,Financials,HKD,42.94,5.491,2059569,0.25,N
+3/6/25,Prime C,7532 JP,Pan Pacific International Holdings,JP,Industrials,JPY,8748,58.5151,1016426,2,N
+3/6/25,Prime A,7532 JP,Pan Pacific International Holdings,JP,Industrials,JPY,8748,58.5151,2160255,1.75,N
+3/6/25,Prime B,7269 JP,Suzuki Motor,JP,Industrials,JPY,14529,97.1839,2189347,3,N
+3/6/25,Prime A,4568 JP,Daiichi Sankyo,JP,Health Care,JPY,52328,350.0201,50081,9.5,Y
+3/6/25,Prime A,161390 KS,Hankook Tire,KR,Consumer Discretionary,KRW,95349,71.9615,1460716,3,N
+3/6/25,Prime A,7269 JP,Suzuki Motor,JP,Industrials,JPY,14529,97.1839,1854204,2.75,N
+3/6/25,Prime C,4578 JP,Otsuka Holdings,JP,Health Care,JPY,37022,247.6388,1369140,7.75,N
+3/6/25,Prime B,4578 JP,Otsuka Holdings,JP,Health Care,JPY,37022,247.6388,2651807,4.5,N
+3/6/25,Prime A,138040 KS,Meritz Financial Group,KR,Financials,KRW,5617,4.2392,1073096,0.25,N
+3/6/25,Prime B,138040 KS,Meritz Financial Group,KR,Financials,KRW,5617,4.2392,2047053,0.25,N
+3/6/25,Prime C,7269 JP,Suzuki Motor,JP,Industrials,JPY,14529,97.1839,1133298,2.75,N
+3/6/25,Prime A,669 HK,Techtronic Industries,HK,Financials,HKD,69.84,8.9309,181811,9,Y
+3/6/25,Prime C,669 HK,Techtronic Industries,HK,Financials,HKD,69.84,8.9309,2296625,7,N
+3/6/25,Prime B,669 HK,Techtronic Industries,HK,Financials,HKD,69.84,8.9309,2306021,6.5,N
+3/6/25,Prime A,7013 JP,IHI Corporation,JP,Industrials,JPY,35231,235.6589,1156398,7.75,N
+3/6/25,Prime A,4578 JP,Otsuka Holdings,JP,Health Care,JPY,37022,247.6388,742670,4.25,N
+3/6/25,Prime A,4661 JP,Oriental Land,JP,Consumer Discretionary,JPY,54965,367.6589,314060,0.25,N
+3/6/25,Prime B,4661 JP,Oriental Land,JP,Consumer Discretionary,JPY,54965,367.6589,2284518,0.25,N
+3/6/25,Prime C,138040 KS,Meritz Financial Group,KR,Financials,KRW,5617,4.2392,55151,0.25,N
+3/6/25,Prime C,7013 JP,IHI Corporation,JP,Industrials,JPY,35231,235.6589,2477781,7,N
+3/6/25,Prime C,4661 JP,Oriental Land,JP,Consumer Discretionary,JPY,54965,367.6589,1749277,0.25,N
+3/6/25,Prime B,7013 JP,IHI Corporation,JP,Industrials,JPY,35231,235.6589,182853,1.25,N
+3/6/25,Prime C,7011 JP,Mitsubishi Heavy Industries,JP,Industrials,JPY,22951,153.5184,101317,8.75,Y
+3/6/25,Prime A,2327 TT,Yageo,TW,Information Technology,TWD,209.84,6.5987,1490503,0.25,N
+3/6/25,Prime B,2327 TT,Yageo,TW,Information Technology,TWD,209.84,6.5987,45384,0.25,N
+3/6/25,Prime A,7011 JP,Mitsubishi Heavy Industries,JP,Industrials,JPY,22951,153.5184,639549,5.75,N
+3/6/25,Prime B,7011 JP,Mitsubishi Heavy Industries,JP,Industrials,JPY,22951,153.5184,1818621,2.75,N
+3/6/25,Prime B,6971 JP,Kyocera,JP,Information Technology,JPY,21881,146.3612,1561073,2.25,N
+3/6/25,Prime A,105560 KS,KB Financial Group,KR,Financials,KRW,110078,83.0777,152804,0.25,N
+3/6/25,Prime A,66 HK,MTR Corporation,HK,Industrials,HKD,28.92,3.6982,2864884,0.25,N
+3/6/25,Prime B,66 HK,MTR Corporation,HK,Industrials,HKD,28.92,3.6982,937640,0.25,N
+3/6/25,Prime C,2327 TT,Yageo,TW,Information Technology,TWD,209.84,6.5987,2247171,0.25,N
+3/6/25,Prime A,6971 JP,Kyocera,JP,Information Technology,JPY,21881,146.3612,989316,2,N
+3/6/25,Prime C,4901 JP,Fujifilm,JP,Information Technology,JPY,3787,25.3311,114798,22.5,Y
+3/6/25,Prime C,105560 KS,KB Financial Group,KR,Financials,KRW,110078,83.0777,176906,0.5,N
+3/6/25,Prime B,105560 KS,KB Financial Group,KR,Financials,KRW,110078,83.0777,162061,10.25,Y
+3/6/25,Prime C,66 HK,MTR Corporation,HK,Industrials,HKD,28.92,3.6982,2776481,0.25,N
+3/6/25,Prime A,659 HK,CTF Services Limited,HK,Financials,HKD,199.55,25.5179,751931,0.25,N
+3/6/25,Prime C,6971 JP,Kyocera,JP,Information Technology,JPY,21881,146.3612,1357377,1.75,N
+3/6/25,Prime B,4901 JP,Fujifilm,JP,Information Technology,JPY,3787,25.3311,27375,20,Y
+3/6/25,Prime B,098460 KS,Koh Young Technology,KR,Information Technology,KRW,63596,47.997,2644118,5.25,N
+3/6/25,Prime B,659 HK,CTF Services Limited,HK,Financials,HKD,199.55,25.5179,1375474,0.25,N
+3/6/25,Prime C,659 HK,CTF Services Limited,HK,Financials,HKD,199.55,25.5179,1629557,0.25,N
+3/6/25,Prime A,636 HK,Kerry Logistics Network,HK,Financials,HKD,146.18,18.6931,2821441,0.25,N
+3/6/25,Prime B,636 HK,Kerry Logistics Network,HK,Financials,HKD,146.18,18.6931,336845,0.25,N
+3/6/25,Prime A,6902 JP,Denso,JP,Consumer Discretionary,JPY,19367,129.5452,25866,16.75,Y
+3/6/25,Prime A,4901 JP,Fujifilm,JP,Information Technology,JPY,3787,25.3311,85417,19.75,Y
+3/6/25,Prime C,098460 KS,Koh Young Technology,KR,Information Technology,KRW,63596,47.997,71258,4,N
+3/6/25,Prime C,636 HK,Kerry Logistics Network,HK,Financials,HKD,146.18,18.6931,1434854,0.25,N
+3/6/25,Prime B,6902 JP,Denso,JP,Consumer Discretionary,JPY,19367,129.5452,84979,16.75,Y
+3/6/25,Prime C,6902 JP,Denso,JP,Consumer Discretionary,JPY,19367,129.5452,58805,16.25,Y
+3/6/25,Prime B,688 HK,China Overseas Land & Investment,HK,Real Estate,HKD,18.83,2.4079,44076,24.5,Y
+3/6/25,Prime C,688 HK,China Overseas Land & Investment,HK,Real Estate,HKD,18.83,2.4079,155880,23.5,Y
+3/6/25,Prime A,688 HK,China Overseas Land & Investment,HK,Real Estate,HKD,18.83,2.4079,174881,19.5,Y
+3/6/25,Prime C,6823 HK,Hong Kong Telecom,HK,Financials,HKD,232.99,29.7941,2509696,7.75,N
+3/6/25,Prime A,6823 HK,Hong Kong Telecom,HK,Financials,HKD,232.99,29.7941,997812,4.5,N
+3/6/25,Prime A,098460 KS,Koh Young Technology,KR,Information Technology,KRW,63596,47.997,2543875,3.25,N
+3/6/25,Prime B,6823 HK,Hong Kong Telecom,HK,Financials,HKD,232.99,29.7941,610901,1,N
+3/6/25,Prime A,6762 JP,TDK,JP,Information Technology,JPY,53854,360.2274,878715,3.75,N
+3/6/25,Prime B,6762 JP,TDK,JP,Information Technology,JPY,53854,360.2274,1277686,4,N
+3/6/25,Prime C,6762 JP,TDK,JP,Information Technology,JPY,53854,360.2274,1591253,2.5,N
+3/6/25,Prime C,6752 JP,Panasonic,JP,Consumer Discretionary,JPY,8293,55.4716,2155638,4.75,N
+3/6/25,Prime A,6752 JP,Panasonic,JP,Consumer Discretionary,JPY,8293,55.4716,1227119,4.5,N
+3/6/25,Prime B,6752 JP,Panasonic,JP,Consumer Discretionary,JPY,8293,55.4716,2613846,2.5,N
+3/6/25,Prime B,6701 JP,NEC Corp,JP,Industrials,JPY,48298,323.0635,56488,23.25,Y
+3/6/25,Prime A,6701 JP,NEC Corp,JP,Industrials,JPY,48298,323.0635,136673,22,Y
+3/6/25,Prime C,6701 JP,NEC Corp,JP,Industrials,JPY,48298,323.0635,78977,18,Y
+3/6/25,Prime B,6542 TT,Gamesparcs,TW,Information Technology,TWD,309.24,9.7245,2910883,1.75,N
+3/6/25,Prime C,6542 TT,Gamesparcs,TW,Information Technology,TWD,309.24,9.7245,485855,1.5,N
+3/6/25,Prime A,6542 TT,Gamesparcs,TW,Information Technology,TWD,309.24,9.7245,1573615,1,N
+3/6/25,Prime B,6505 TT,Formosa Petrochemical,TW,Energy,TWD,156.04,4.9069,170598,8.25,Y
+3/6/25,Prime C,6178 HK,Everbright Securities Company,HK,Financials,HKD,138.69,17.7353,160533,14,Y
+3/6/25,Prime A,6505 TT,Formosa Petrochemical,TW,Energy,TWD,156.04,4.9069,2281658,7.25,N
+3/6/25,Prime A,5108 JP,Bridgestone,JP,Consumer Discretionary,JPY,37158,248.5485,1341198,7.5,N
+3/6/25,Prime B,5108 JP,Bridgestone,JP,Consumer Discretionary,JPY,37158,248.5485,1677853,5,N
+3/6/25,Prime B,6178 HK,Everbright Securities Company,HK,Financials,HKD,138.69,17.7353,38691,12,Y
+3/6/25,Prime A,6178 HK,Everbright Securities Company,HK,Financials,HKD,138.69,17.7353,90091,11,Y
+3/6/25,Prime C,6505 TT,Formosa Petrochemical,TW,Energy,TWD,156.04,4.9069,412236,3.75,N
+3/6/25,Prime C,5401 JP,Nippon Steel,JP,Materials,JPY,50996,341.1104,688580,6,N
+3/6/25,Prime B,6488 TT,GlobalWafers,TW,Information Technology,TWD,137.92,4.3371,2542399,2,N
+3/6/25,Prime C,6488 TT,GlobalWafers,TW,Information Technology,TWD,137.92,4.3371,1645630,1.75,N
+3/6/25,Prime A,6488 TT,GlobalWafers,TW,Information Technology,TWD,137.92,4.3371,1033683,1.5,N
+3/6/25,Prime A,6110 HK,Topsports International,HK,Financials,HKD,134.67,17.2212,980319,0.25,N
+3/6/25,Prime A,6482 TT,Fun Yours Technology,TW,Information Technology,TWD,51.42,1.617,1715360,2.25,N
+3/6/25,Prime B,6482 TT,Fun Yours Technology,TW,Information Technology,TWD,51.42,1.617,2802769,2.25,N
+3/6/25,Prime C,6482 TT,Fun Yours Technology,TW,Information Technology,TWD,51.42,1.617,2963740,2,N
+3/6/25,Prime A,5401 JP,Nippon Steel,JP,Materials,JPY,50996,341.1104,2128986,5.75,N
+3/6/25,Prime B,6110 HK,Topsports International,HK,Financials,HKD,134.67,17.2212,1636857,0.25,N
+3/6/25,Prime C,6110 HK,Topsports International,HK,Financials,HKD,134.67,17.2212,132553,0.25,N
+3/6/25,Prime B,2379 TT,Realtek,TW,Information Technology,TWD,125.71,3.9531,190981,5,N
+3/6/25,Prime A,2379 TT,Realtek,TW,Information Technology,TWD,125.71,3.9531,39209,3.5,N
+3/6/25,Prime C,2379 TT,Realtek,TW,Information Technology,TWD,125.71,3.9531,723481,1.75,N
+3/6/25,Prime B,5401 JP,Nippon Steel,JP,Materials,JPY,50996,341.1104,622376,1.75,N
+3/6/25,Prime C,6472 TT,Bora Pharmaceuticals,TW,Information Technology,TWD,546.65,17.1903,1889288,5.75,N
+3/6/25,Prime C,5713 JP,Sumitomo Metal Mining,JP,Industrials,JPY,35038,234.3679,2178600,5.75,N
+3/6/25,Prime B,6472 TT,Bora Pharmaceuticals,TW,Information Technology,TWD,546.65,17.1903,2885054,4.5,N
+3/6/25,Prime A,6472 TT,Bora Pharmaceuticals,TW,Information Technology,TWD,546.65,17.1903,2698889,3,N
+3/6/25,Prime B,5713 JP,Sumitomo Metal Mining,JP,Industrials,JPY,35038,234.3679,1058738,5.5,N
+3/6/25,Prime A,086790 KS,Hana Financial Group,KR,Financials,KRW,28887,21.8015,1410610,0.25,N
+3/6/25,Prime B,086790 KS,Hana Financial Group,KR,Financials,KRW,28887,21.8015,1747978,0.25,N
+3/6/25,Prime C,086790 KS,Hana Financial Group,KR,Financials,KRW,28887,21.8015,1897216,0.25,N
+3/6/25,Prime A,6273 JP,SMC Corp,JP,Industrials,JPY,28485,190.5351,2971352,5.25,N
+3/6/25,Prime A,5713 JP,Sumitomo Metal Mining,JP,Industrials,JPY,35038,234.3679,201628,1,N
+3/6/25,Prime A,5802 JP,Sumitomo Denki Kogyo,JP,Industrials,JPY,20548,137.4448,183596,0.25,N
+3/6/25,Prime B,5802 JP,Sumitomo Denki Kogyo,JP,Industrials,JPY,20548,137.4448,1468439,0.25,N
+3/6/25,Prime C,5802 JP,Sumitomo Denki Kogyo,JP,Industrials,JPY,20548,137.4448,1836426,0.25,N
+3/6/25,Prime C,6273 JP,SMC Corp,JP,Industrials,JPY,28485,190.5351,1164655,5.25,N
+3/6/25,Prime B,6273 JP,SMC Corp,JP,Industrials,JPY,28485,190.5351,1825574,1,N
+3/6/25,Prime A,62 HK,Transport International Holdings,HK,Financials,HKD,234.14,29.9412,930844,0.75,N
+3/6/25,Prime B,62 HK,Transport International Holdings,HK,Financials,HKD,234.14,29.9412,1479093,0.5,N
+3/6/25,Prime C,62 HK,Transport International Holdings,HK,Financials,HKD,234.14,29.9412,1836708,0.5,N
+3/6/25,Prime B,6098 JP,Recruit,JP,Real Estate,JPY,47090,314.9833,165899,8.25,Y
+3/6/25,Prime A,6178 JP,Japan Post Holdings,JP,Industrials,JPY,12509,83.6722,239740,5,N
+3/6/25,Prime C,6098 JP,Recruit,JP,Real Estate,JPY,47090,314.9833,2357543,6,N
+3/6/25,Prime A,6098 JP,Recruit,JP,Real Estate,JPY,47090,314.9833,84063,2,N
+3/6/25,Prime B,6178 JP,Japan Post Holdings,JP,Industrials,JPY,12509,83.6722,1580312,5,N
+3/6/25,Prime C,6178 JP,Japan Post Holdings,JP,Industrials,JPY,12509,83.6722,64796,1.5,N
+3/6/25,Prime B,6146 JP,Disco Corp.,JP,Industrials,JPY,29851,199.6722,986660,4.5,N
+3/6/25,Prime A,53 HK,Guoco,HK,Financials,HKD,15.31,1.9578,2574548,0.25,N
+3/6/25,Prime B,53 HK,Guoco,HK,Financials,HKD,15.31,1.9578,2392199,0.25,N
+3/6/25,Prime C,6146 JP,Disco Corp.,JP,Industrials,JPY,29851,199.6722,1602188,4.5,N
+3/6/25,Prime A,6146 JP,Disco Corp.,JP,Industrials,JPY,29851,199.6722,2866686,2,N
+3/6/25,Prime B,6055 HK,China Tobacco International,HK,Financials,HKD,100.1,12.8005,1915926,4.75,N
+3/6/25,Prime C,6055 HK,China Tobacco International,HK,Financials,HKD,100.1,12.8005,2109743,3.5,N
+3/6/25,Prime A,6055 HK,China Tobacco International,HK,Financials,HKD,100.1,12.8005,961136,1.75,N
+3/6/25,Prime A,086520 KS,Ecopro,KR,Information Technology,KRW,69386,52.3668,18413,8.25,Y
+3/6/25,Prime B,086520 KS,Ecopro,KR,Information Technology,KRW,69386,52.3668,2157269,7,N
+3/6/25,Prime C,53 HK,Guoco,HK,Financials,HKD,15.31,1.9578,1886418,0.25,N
+3/6/25,Prime A,522 HK,ASMPT (ASM Pacific Technology),HK,Financials,HKD,169.84,21.7187,745616,0.25,N
+3/6/25,Prime A,2395 TT,Advantech,TW,Information Technology,TWD,129.89,4.0846,2220849,7,N
+3/6/25,Prime C,2395 TT,Advantech,TW,Information Technology,TWD,129.89,4.0846,1621332,4.5,N
+3/6/25,Prime B,2395 TT,Advantech,TW,Information Technology,TWD,129.89,4.0846,520349,4.25,N
+3/6/25,Prime B,522 HK,ASMPT (ASM Pacific Technology),HK,Financials,HKD,169.84,21.7187,73470,0.25,N
+3/6/25,Prime C,522 HK,ASMPT (ASM Pacific Technology),HK,Financials,HKD,169.84,21.7187,823868,0.25,N
+3/6/25,Prime A,6 HK,Power Assets,HK,Utilities,HKD,8.96,1.1458,97878,22,Y
+3/6/25,Prime C,6 HK,Power Assets,HK,Utilities,HKD,8.96,1.1458,139811,21.25,Y
+3/6/25,Prime B,6 HK,Power Assets,HK,Utilities,HKD,8.96,1.1458,34511,16.5,Y
+3/6/25,Prime A,5803 JP,Fujikura,JP,Industrials,JPY,18695,125.0502,2484309,7.75,N
+3/6/25,Prime B,6201 JP,Toyota Industries,JP,Industrials,JPY,29376,196.495,255138,6.5,N
+3/6/25,Prime A,6201 JP,Toyota Industries,JP,Industrials,JPY,29376,196.495,2944371,1.25,N
+3/6/25,Prime C,086520 KS,Ecopro,KR,Information Technology,KRW,69386,52.3668,1300295,7.75,N
+3/6/25,Prime B,5803 JP,Fujikura,JP,Industrials,JPY,18695,125.0502,2483573,7.75,N
+3/6/25,Prime C,5803 JP,Fujikura,JP,Industrials,JPY,18695,125.0502,1809491,3.75,N
+3/6/25,Prime B,2412 TT,Chunghwa Telecom,TW,Communication Services,TWD,303.19,9.5343,8268,16,Y
+3/6/25,Prime C,6201 JP,Toyota Industries,JP,Industrials,JPY,29376,196.495,2752944,1,N
+3/6/25,Prime A,5478 TT,Soft-World International,TW,Information Technology,TWD,413.35,12.9984,181766,7.25,N
+3/6/25,Prime C,5478 TT,Soft-World International,TW,Information Technology,TWD,413.35,12.9984,1982937,6.5,N
+3/6/25,Prime B,5478 TT,Soft-World International,TW,Information Technology,TWD,413.35,12.9984,2820694,3.75,N
+3/6/25,Prime A,45 HK,Hongkong and Shanghai Hotels,HK,Financials,HKD,188.96,24.1637,390011,0.25,N
+3/6/25,Prime B,45 HK,Hongkong and Shanghai Hotels,HK,Financials,HKD,188.96,24.1637,2456848,0.25,N
+3/6/25,Prime C,5020 JP,ENEOS Holdings,JP,Industrials,JPY,41881,280.1405,2908173,4.5,N
+3/6/25,Prime C,6301 JP,Komatsu,JP,Industrials,JPY,38856,259.9064,2074383,7,N
+3/6/25,Prime A,081660 KS,Misto Holdings (Fila),KR,Information Technology,KRW,19532,14.7411,1312217,1,N
+3/6/25,Prime B,081660 KS,Misto Holdings (Fila),KR,Information Technology,KRW,19532,14.7411,2044038,1.25,N
+3/6/25,Prime C,081660 KS,Misto Holdings (Fila),KR,Information Technology,KRW,19532,14.7411,1119481,2.25,N
+3/6/25,Prime C,45 HK,Hongkong and Shanghai Hotels,HK,Financials,HKD,188.96,24.1637,401659,0.25,N
+3/6/25,Prime A,2412 TT,Chunghwa Telecom,TW,Communication Services,TWD,303.19,9.5343,115787,15,Y
+3/6/25,Prime A,6301 JP,Komatsu,JP,Industrials,JPY,38856,259.9064,2030818,2.75,N
+3/6/25,Prime B,6301 JP,Komatsu,JP,Industrials,JPY,38856,259.9064,2592844,2.25,N
+3/6/25,Prime B,6326 JP,Kubota,JP,Industrials,JPY,17162,114.796,26922,16.75,Y
+3/6/25,Prime A,079550 KS,LIG Nex1,KR,Information Technology,KRW,105088,79.3117,2371272,0.25,N
+3/6/25,Prime A,5020 JP,ENEOS Holdings,JP,Industrials,JPY,41881,280.1405,2280292,3.75,N
+3/6/25,Prime B,5020 JP,ENEOS Holdings,JP,Industrials,JPY,41881,280.1405,1894720,3.75,N
+3/6/25,Prime C,2412 TT,Chunghwa Telecom,TW,Communication Services,TWD,303.19,9.5343,134944,12.5,Y
+3/6/25,Prime B,2454 TT,MediaTek,TW,Information Technology,TWD,322.65,10.1462,2793427,7.25,N
+3/6/25,Prime A,6326 JP,Kubota,JP,Industrials,JPY,17162,114.796,2493,14,Y
+3/6/25,Prime B,079550 KS,LIG Nex1,KR,Information Technology,KRW,105088,79.3117,241994,0.25,N
+3/6/25,Prime B,5016 JP,JX Advanced Metals,JP,Industrials,JPY,13947,93.291,159682,19,Y
+3/6/25,Prime A,5016 JP,JX Advanced Metals,JP,Industrials,JPY,13947,93.291,40035,16.75,Y
+3/6/25,Prime C,5016 JP,JX Advanced Metals,JP,Industrials,JPY,13947,93.291,52492,15.25,Y
+3/6/25,Prime C,6326 JP,Kubota,JP,Industrials,JPY,17162,114.796,67158,10.25,Y
+3/6/25,Prime A,6367 JP,Daikin,JP,Industrials,JPY,38586,258.1003,1463698,0.25,N
+3/6/25,Prime C,079550 KS,LIG Nex1,KR,Information Technology,KRW,105088,79.3117,404287,0.25,N
+3/6/25,Prime A,4994 TT,X-Legend Entertainment,TW,Information Technology,TWD,286.98,9.0245,1447475,3,N
+3/6/25,Prime C,2454 TT,MediaTek,TW,Information Technology,TWD,322.65,10.1462,151952,4.25,N
+3/6/25,Prime A,2454 TT,MediaTek,TW,Information Technology,TWD,322.65,10.1462,815946,1,N
+3/6/25,Prime B,4994 TT,X-Legend Entertainment,TW,Information Technology,TWD,286.98,9.0245,1546688,2.75,N
+3/6/25,Prime C,073240 KS,Kumho Tire,KR,Consumer Discretionary,KRW,63576,47.9819,118406,16.75,Y
+3/6/25,Prime B,073240 KS,Kumho Tire,KR,Consumer Discretionary,KRW,63576,47.9819,144278,15.5,Y
+3/6/25,Prime C,4994 TT,X-Legend Entertainment,TW,Information Technology,TWD,286.98,9.0245,1644222,2.5,N
+3/6/25,Prime B,6367 JP,Daikin,JP,Industrials,JPY,38586,258.1003,132565,0.25,N
+3/6/25,Prime C,6367 JP,Daikin,JP,Industrials,JPY,38586,258.1003,2393019,0.25,N
+3/6/25,Prime A,6501 JP,Hitachi,JP,Industrials,JPY,4137,27.6722,618401,0.25,N
+3/6/25,Prime A,073240 KS,Kumho Tire,KR,Consumer Discretionary,KRW,63576,47.9819,191304,9,Y
+3/6/25,Prime C,068270 KS,Celltrion,KR,Health Care,KRW,30093,22.7117,54575,12.5,Y
+3/6/25,Prime A,4904 TT,Far EasTone,TW,Communication Services,TWD,88.2,2.7736,360831,0.25,N
+3/6/25,Prime B,6501 JP,Hitachi,JP,Industrials,JPY,4137,27.6722,2358536,0.25,N
+3/6/25,Prime C,6501 JP,Hitachi,JP,Industrials,JPY,4137,27.6722,368112,0.25,N
+3/6/25,Prime B,068270 KS,Celltrion,KR,Health Care,KRW,30093,22.7117,189858,13.75,Y
+3/6/25,Prime A,068270 KS,Celltrion,KR,Health Care,KRW,30093,22.7117,38616,20,Y
+3/6/25,Prime A,066570 KS,LG Electronics,KR,Consumer Discretionary,KRW,40291,30.4083,2803901,0.25,N
+3/6/25,Prime B,4904 TT,Far EasTone,TW,Communication Services,TWD,88.2,2.7736,336594,0.5,N
+3/6/25,Prime C,4904 TT,Far EasTone,TW,Communication Services,TWD,88.2,2.7736,502767,0.25,N
+3/6/25,Prime B,4689 JP,LY Corporation,JP,Communication Services,JPY,35977,240.6488,13509,10.25,Y
+3/6/25,Prime C,4689 JP,LY Corporation,JP,Communication Services,JPY,35977,240.6488,167629,10.25,Y
+3/6/25,Prime A,6503 JP,Mitsubishi Electric,JP,Industrials,JPY,24813,165.9732,1088869,0.25,N
+3/6/25,Prime B,066570 KS,LG Electronics,KR,Consumer Discretionary,KRW,40291,30.4083,18016,0.25,N
+3/6/25,Prime B,6503 JP,Mitsubishi Electric,JP,Industrials,JPY,24813,165.9732,2225744,0.25,N
+3/6/25,Prime C,066570 KS,LG Electronics,KR,Consumer Discretionary,KRW,40291,30.4083,1556178,0.25,N
+3/6/25,Prime A,4689 JP,LY Corporation,JP,Communication Services,JPY,35977,240.6488,41363,9.5,Y
+3/6/25,Prime B,4519 JP,Chugai Pharmaceutical,JP,Health Care,JPY,32724,218.8896,2394912,0.75,N
+3/6/25,Prime A,3998 HK,Bosideng,HK,Financials,HKD,134.28,17.1714,2081715,0.25,N
+3/6/25,Prime B,3998 HK,Bosideng,HK,Financials,HKD,134.28,17.1714,2544004,0.25,N
+3/6/25,Prime C,6503 JP,Mitsubishi Electric,JP,Industrials,JPY,24813,165.9732,1115230,0.25,N
+3/6/25,Prime B,6594 JP,Nidec,JP,Industrials,JPY,26602,177.9398,2896083,6.5,N
+3/6/25,Prime C,6594 JP,Nidec,JP,Industrials,JPY,26602,177.9398,201868,3.75,N
+3/6/25,Prime A,6594 JP,Nidec,JP,Industrials,JPY,26602,177.9398,1819094,3.5,N
+3/6/25,Prime C,4519 JP,Chugai Pharmaceutical,JP,Health Care,JPY,32724,218.8896,2553281,0.75,N
+3/6/25,Prime A,4519 JP,Chugai Pharmaceutical,JP,Health Care,JPY,32724,218.8896,415825,0.5,N
+3/6/25,Prime C,443060 KS,HD Hyundai Marine Solution,KR,Information Technology,KRW,59972,45.2619,40232,14.75,Y
+3/6/25,Prime B,443060 KS,HD Hyundai Marine Solution,KR,Information Technology,KRW,59972,45.2619,41546,12.25,Y
+3/6/25,Prime A,443060 KS,HD Hyundai Marine Solution,KR,Information Technology,KRW,59972,45.2619,133473,11.75,Y
+3/6/25,Prime A,440 HK,Dah Sing Financial,HK,Financials,HKD,171.01,21.8683,1732444,0.75,N
+3/6/25,Prime A,6702 JP,Fujitsu,JP,Information Technology,JPY,19426,129.9398,2112042,0.25,N
+3/6/25,Prime C,440 HK,Dah Sing Financial,HK,Financials,HKD,171.01,21.8683,2790971,0.75,N
+3/6/25,Prime A,392 HK,Beijing Enterprises Holdings,HK,Financials,HKD,95.37,12.1957,645138,0.25,N
+3/6/25,Prime B,392 HK,Beijing Enterprises Holdings,HK,Financials,HKD,95.37,12.1957,2120217,0.25,N
+3/6/25,Prime B,440 HK,Dah Sing Financial,HK,Financials,HKD,171.01,21.8683,1475511,0.5,N
+3/6/25,Prime B,6702 JP,Fujitsu,JP,Information Technology,JPY,19426,129.9398,2761270,0.25,N
+3/6/25,Prime A,2603 TT,Evergreen Marine,TW,Information Technology,TWD,259.26,8.1528,2743832,7.75,N
+3/6/25,Prime B,2603 TT,Evergreen Marine,TW,Information Technology,TWD,259.26,8.1528,160214,5,N
+3/6/25,Prime C,2603 TT,Evergreen Marine,TW,Information Technology,TWD,259.26,8.1528,2621443,3.75,N
+3/6/25,Prime A,4307 JP,Nomura Research Institute,JP,Information Technology,JPY,50512,337.8729,855689,1.5,N
+3/6/25,Prime C,392 HK,Beijing Enterprises Holdings,HK,Financials,HKD,95.37,12.1957,1031793,0.25,N
+3/6/25,Prime B,4307 JP,Nomura Research Institute,JP,Information Technology,JPY,50512,337.8729,2496623,1.5,N
+3/6/25,Prime C,6702 JP,Fujitsu,JP,Information Technology,JPY,19426,129.9398,1245556,0.25,N
+3/6/25,Prime A,6723 JP,Renesas Electronics,JP,Information Technology,JPY,11079,74.107,157143,20.5,Y
+3/6/25,Prime B,6723 JP,Renesas Electronics,JP,Information Technology,JPY,11079,74.107,72715,20,Y
+3/6/25,Prime C,6723 JP,Renesas Electronics,JP,Information Technology,JPY,11079,74.107,18531,18,Y
+3/6/25,Prime B,3898 HK,Zhuzhou CRRC Times Electric,HK,Financials,HKD,187.72,24.0051,1142877,8,Y
+3/6/25,Prime C,3898 HK,Zhuzhou CRRC Times Electric,HK,Financials,HKD,187.72,24.0051,1133623,2.5,N
+3/6/25,Prime C,4307 JP,Nomura Research Institute,JP,Information Technology,JPY,50512,337.8729,848604,1.5,N
+3/6/25,Prime B,41 HK,Great Eagle,HK,Financials,HKD,111.89,14.3082,74637,10,Y
+3/6/25,Prime A,2610 TT,China Airlines,TW,Industrials,TWD,381.36,11.9925,1588496,0.25,N
+3/6/25,Prime A,41 HK,Great Eagle,HK,Financials,HKD,111.89,14.3082,75380,9.25,Y
+3/6/25,Prime A,3898 HK,Zhuzhou CRRC Times Electric,HK,Financials,HKD,187.72,24.0051,404075,2,N
+3/6/25,Prime B,388 HK,Hong Kong Exchanges & Clearing,HK,Financials,HKD,270.59,34.6023,2530614,5.75,N
+3/6/25,Prime B,2610 TT,China Airlines,TW,Industrials,TWD,381.36,11.9925,1630119,0.25,N
+3/6/25,Prime C,2610 TT,China Airlines,TW,Industrials,TWD,381.36,11.9925,2910400,0.25,N
+3/6/25,Prime C,41 HK,Great Eagle,HK,Financials,HKD,111.89,14.3082,2648813,4.5,N
+3/6/25,Prime C,4 HK,Wharf Holdings,HK,Financials,HKD,27.87,3.5639,1300037,1.75,N
+3/6/25,Prime A,4 HK,Wharf Holdings,HK,Financials,HKD,27.87,3.5639,2726547,1.5,N
+3/6/25,Prime B,4 HK,Wharf Holdings,HK,Financials,HKD,27.87,3.5639,2209531,1.5,N
+3/6/25,Prime A,388 HK,Hong Kong Exchanges & Clearing,HK,Financials,HKD,270.59,34.6023,531289,3.5,N
+3/6/25,Prime C,388 HK,Hong Kong Exchanges & Clearing,HK,Financials,HKD,270.59,34.6023,1018512,2.75,N
+3/6/25,Prime C,3800 HK,GCL Technology,HK,Financials,HKD,94.12,12.0358,1594641,7.75,N
+3/6/25,Prime B,373220 KS,LG Energy Solution,KR,Information Technology,KRW,93680,70.7019,69580,14.25,Y
+3/6/25,Prime A,2618 TT,EVA Air,TW,Industrials,TWD,355.25,11.1714,491660,0.25,N
+3/6/25,Prime B,2618 TT,EVA Air,TW,Industrials,TWD,355.25,11.1714,1147726,0.25,N
+3/6/25,Prime C,2618 TT,EVA Air,TW,Industrials,TWD,355.25,11.1714,1273461,0.25,N
+3/6/25,Prime A,2630 TT,Air Asia Company Limited (AACL),TW,Information Technology,TWD,546.78,17.1943,2820082,0.25,N
+3/6/25,Prime A,373220 KS,LG Energy Solution,KR,Information Technology,KRW,93680,70.7019,176745,10.75,Y
+3/6/25,Prime C,373220 KS,LG Energy Solution,KR,Information Technology,KRW,93680,70.7019,155506,10.5,Y
+3/6/25,Prime B,3665 TT,Bizlink Holding,TW,Industrials,TWD,372.54,11.7151,1529915,5.5,N
+3/6/25,Prime A,051910 KS,LG Chem,KR,Materials,KRW,85225,64.3208,1675889,0.25,N
+3/6/25,Prime B,2630 TT,Air Asia Company Limited (AACL),TW,Information Technology,TWD,546.78,17.1943,873268,0.25,N
+3/6/25,Prime C,2630 TT,Air Asia Company Limited (AACL),TW,Information Technology,TWD,546.78,17.1943,2481454,0.5,N
+3/6/25,Prime C,2633 TT,Taiwan High Speed Rail,TW,Industrials,TWD,568.43,17.8752,53740,8.75,Y
+3/6/25,Prime B,6758 JP,Sony,JP,Consumer Discretionary,JPY,43619,291.7659,153616,8.5,Y
+3/6/25,Prime C,6758 JP,Sony,JP,Consumer Discretionary,JPY,43619,291.7659,2175154,4.25,N
+3/6/25,Prime A,6758 JP,Sony,JP,Consumer Discretionary,JPY,43619,291.7659,832950,1.25,N
+3/6/25,Prime B,3800 HK,GCL Technology,HK,Financials,HKD,94.12,12.0358,2830079,7.25,N
+3/6/25,Prime A,3800 HK,GCL Technology,HK,Financials,HKD,94.12,12.0358,61753,2,N
+3/6/25,Prime A,373 HK,Allied Group Limited,HK,Financials,HKD,87.38,11.1739,1507598,0.25,N
+3/6/25,Prime A,3665 TT,Bizlink Holding,TW,Industrials,TWD,372.54,11.7151,2053242,3.5,N
+3/6/25,Prime B,373 HK,Allied Group Limited,HK,Financials,HKD,87.38,11.1739,468551,0.25,N
+3/6/25,Prime C,373 HK,Allied Group Limited,HK,Financials,HKD,87.38,11.1739,389273,0.25,N
+3/6/25,Prime A,2633 TT,Taiwan High Speed Rail,TW,Industrials,TWD,568.43,17.8752,174001,8.5,Y
+3/6/25,Prime C,3665 TT,Bizlink Holding,TW,Industrials,TWD,372.54,11.7151,2362226,3.5,N
+3/6/25,Prime C,3661 TT,Alchip Technologies,TW,Information Technology,TWD,183.53,5.7714,74143,9,Y
+3/6/25,Prime A,6857 JP,Advantest,JP,Information Technology,JPY,34255,229.1304,1840195,0.25,N
+3/6/25,Prime B,6857 JP,Advantest,JP,Information Technology,JPY,34255,229.1304,1675400,0.25,N
+3/6/25,Prime B,051910 KS,LG Chem,KR,Materials,KRW,85225,64.3208,1964599,0.25,N
+3/6/25,Prime C,363 HK,Shanghai Industrial Holdings,HK,Financials,HKD,160.39,20.5102,1478505,4.5,N
+3/6/25,Prime A,363 HK,Shanghai Industrial Holdings,HK,Financials,HKD,160.39,20.5102,2773693,2,N
+3/6/25,Prime B,363 HK,Shanghai Industrial Holdings,HK,Financials,HKD,160.39,20.5102,2945433,1.75,N
+3/6/25,Prime A,345 HK,Vitasoy,HK,Financials,HKD,60.57,7.7455,2629474,7.25,N
+3/6/25,Prime B,345 HK,Vitasoy,HK,Financials,HKD,60.57,7.7455,1496112,1.5,N
+3/6/25,Prime B,2633 TT,Taiwan High Speed Rail,TW,Industrials,TWD,568.43,17.8752,1913125,2.75,N
+3/6/25,Prime A,2753 TT,Bafang Yunji,TW,Information Technology,TWD,154.39,4.855,888557,0.25,N
+3/6/25,Prime B,2753 TT,Bafang Yunji,TW,Information Technology,TWD,154.39,4.855,2528008,0.25,N
+3/6/25,Prime C,2753 TT,Bafang Yunji,TW,Information Technology,TWD,154.39,4.855,1686289,0.25,N
+3/6/25,Prime C,6857 JP,Advantest,JP,Information Technology,JPY,34255,229.1304,1707800,0.25,N
+3/6/25,Prime C,6861 JP,Keyence,JP,Information Technology,JPY,34153,228.4482,6855,26.75,Y
+3/6/25,Prime C,345 HK,Vitasoy,HK,Financials,HKD,60.57,7.7455,2406657,1.5,N
+3/6/25,Prime A,3330 HK,Lingbao Gold,HK,Financials,HKD,276.76,35.3913,2605571,7.75,N
+3/6/25,Prime A,3661 TT,Alchip Technologies,TW,Information Technology,TWD,183.53,5.7714,1248796,4,N
+3/6/25,Prime B,3661 TT,Alchip Technologies,TW,Information Technology,TWD,183.53,5.7714,2069306,4,N
+3/6/25,Prime A,3659 JP,Nexon,JP,Industrials,JPY,12861,86.0268,337894,1.25,N
+3/6/25,Prime A,2834 TT,Taiwan Business Bank,TW,Information Technology,TWD,111.42,3.5038,1725027,6.75,N
+3/6/25,Prime A,6861 JP,Keyence,JP,Information Technology,JPY,34153,228.4482,102460,21,Y
+3/6/25,Prime B,6861 JP,Keyence,JP,Information Technology,JPY,34153,228.4482,140827,20.5,Y
+3/6/25,Prime B,3330 HK,Lingbao Gold,HK,Financials,HKD,276.76,35.3913,2055182,4.25,N
+3/6/25,Prime C,2834 TT,Taiwan Business Bank,TW,Information Technology,TWD,111.42,3.5038,449794,4.25,N
+3/6/25,Prime C,3330 HK,Lingbao Gold,HK,Financials,HKD,276.76,35.3913,2359033,2.25,N
+3/6/25,Prime A,3320 HK,China Resources Pharmaceutical Group,HK,Financials,HKD,179.92,23.0077,163027,8.5,Y
+3/6/25,Prime C,3320 HK,China Resources Pharmaceutical Group,HK,Financials,HKD,179.92,23.0077,177662,8.25,Y
+3/6/25,Prime B,3320 HK,China Resources Pharmaceutical Group,HK,Financials,HKD,179.92,23.0077,1006509,6.25,N
+3/6/25,Prime B,2834 TT,Taiwan Business Bank,TW,Information Technology,TWD,111.42,3.5038,1700582,1,N
+3/6/25,Prime C,2880 TT,Hua Nan Financial Holdings,TW,Information Technology,TWD,469.09,14.7513,124902,5.75,N
+3/6/25,Prime B,2880 TT,Hua Nan Financial Holdings,TW,Information Technology,TWD,469.09,14.7513,2484424,3,N
+3/6/25,Prime B,3659 JP,Nexon,JP,Industrials,JPY,12861,86.0268,960056,1.25,N
+3/6/25,Prime C,051910 KS,LG Chem,KR,Materials,KRW,85225,64.3208,1988054,0.25,N
+3/6/25,Prime C,3659 JP,Nexon,JP,Industrials,JPY,12861,86.0268,1129357,1.25,N
+3/6/25,Prime A,3532 TT,Formosa Sumco Technology,TW,Information Technology,TWD,216.69,6.8142,14245,8.25,Y
+3/6/25,Prime A,2880 TT,Hua Nan Financial Holdings,TW,Information Technology,TWD,469.09,14.7513,2096220,1.5,N
+3/6/25,Prime B,3532 TT,Formosa Sumco Technology,TW,Information Technology,TWD,216.69,6.8142,2587662,5,N
+3/6/25,Prime C,3532 TT,Formosa Sumco Technology,TW,Information Technology,TWD,216.69,6.8142,2495177,3.75,N
+3/6/25,Prime A,3481 TT,Innolux,TW,Information Technology,TWD,376.33,11.8343,143563,9.75,Y
+3/6/25,Prime C,3481 TT,Innolux,TW,Information Technology,TWD,376.33,11.8343,149648,9,Y
+3/6/25,Prime B,3481 TT,Innolux,TW,Information Technology,TWD,376.33,11.8343,187572,6.75,N
+3/6/25,Prime C,336260 KS,Doosan Fuel Cell,KR,Information Technology,KRW,102816,77.597,2583554,5,N
+3/6/25,Prime A,336260 KS,Doosan Fuel Cell,KR,Information Technology,KRW,102816,77.597,2017905,2,N
+3/6/25,Prime B,336260 KS,Doosan Fuel Cell,KR,Information Technology,KRW,102816,77.597,241131,0.5,N
+3/6/25,Prime A,3311 HK,China State Construction International,HK,Financials,HKD,267.94,34.2634,555114,3,N
+3/6/25,Prime B,3311 HK,China State Construction International,HK,Financials,HKD,267.94,34.2634,2995776,3,N
+3/6/25,Prime A,2882 TT,Cathay Financial Holding,TW,Financials,TWD,315.44,9.9195,2836558,0.25,N
+3/6/25,Prime B,2882 TT,Cathay Financial Holding,TW,Financials,TWD,315.44,9.9195,193880,0.25,N
+3/6/25,Prime C,2882 TT,Cathay Financial Holding,TW,Financials,TWD,315.44,9.9195,1898112,0.5,N
+3/6/25,Prime A,2883 TT,KGI Financial Holding,TW,Information Technology,TWD,390.29,12.2733,1523992,0.25,N
+3/6/25,Prime C,3311 HK,China State Construction International,HK,Financials,HKD,267.94,34.2634,2215442,2.75,N
+3/6/25,Prime A,3293 TT,International Games System,TW,Information Technology,TWD,139.78,4.3956,2945138,3.25,N
+3/6/25,Prime B,2883 TT,KGI Financial Holding,TW,Information Technology,TWD,390.29,12.2733,1964617,0.25,N
+3/6/25,Prime C,2883 TT,KGI Financial Holding,TW,Information Technology,TWD,390.29,12.2733,1279076,0.25,N
+3/6/25,Prime B,3293 TT,International Games System,TW,Information Technology,TWD,139.78,4.3956,932926,3.25,N
+3/6/25,Prime C,3293 TT,International Games System,TW,Information Technology,TWD,139.78,4.3956,2483630,1.25,N
+3/6/25,Prime A,329180 KS,HD Hyundai Heavy Industries,KR,Information Technology,KRW,53256,40.1932,987621,2.75,N
+3/6/25,Prime A,047050 KS,Posco International,KR,Industrials,KRW,32182,24.2883,906879,0.25,N
+3/6/25,Prime B,047050 KS,Posco International,KR,Industrials,KRW,32182,24.2883,2790601,0.25,N
+3/6/25,Prime C,047050 KS,Posco International,KR,Industrials,KRW,32182,24.2883,51580,0.25,N
+3/6/25,Prime A,042700 KS,HANMI Semiconductor,KR,Information Technology,KRW,106252,80.1902,1040361,0.25,N
+3/6/25,Prime B,042700 KS,HANMI Semiconductor,KR,Information Technology,KRW,106252,80.1902,343536,0.25,N
+3/6/25,Prime B,329180 KS,HD Hyundai Heavy Industries,KR,Information Technology,KRW,53256,40.1932,266481,2.75,N
+3/6/25,Prime C,329180 KS,HD Hyundai Heavy Industries,KR,Information Technology,KRW,53256,40.1932,1659984,2.75,N
+3/6/25,Prime A,3231 TT,Wistron Corporation,TW,Information Technology,TWD,122.17,3.8418,168482,8.25,Y
+3/6/25,Prime C,3231 TT,Wistron Corporation,TW,Information Technology,TWD,122.17,3.8418,2295445,3.5,N
+3/6/25,Prime B,3231 TT,Wistron Corporation,TW,Information Technology,TWD,122.17,3.8418,1818933,2.5,N
+3/6/25,Prime A,3222 TT,Himax,TW,Information Technology,TWD,263.69,8.2921,721798,2.75,N
+3/6/25,Prime A,6920 JP,Lasertec,JP,Information Technology,JPY,22720,151.9732,1933784,0.25,N
+3/6/25,Prime B,6920 JP,Lasertec,JP,Information Technology,JPY,22720,151.9732,2577607,0.25,N
+3/6/25,Prime C,042700 KS,HANMI Semiconductor,KR,Information Technology,KRW,106252,80.1902,2372014,0.25,N
+3/6/25,Prime C,3222 TT,Himax,TW,Information Technology,TWD,263.69,8.2921,628292,2.75,N
+3/6/25,Prime B,3222 TT,Himax,TW,Information Technology,TWD,263.69,8.2921,1404184,2.5,N
+3/6/25,Prime B,316 HK,Orient Overseas Container Line,HK,Financials,HKD,99.14,12.6777,1074400,3.25,N
+3/6/25,Prime C,316 HK,Orient Overseas Container Line,HK,Financials,HKD,99.14,12.6777,2624714,3,N
+3/6/25,Prime C,6920 JP,Lasertec,JP,Information Technology,JPY,22720,151.9732,1688963,0.25,N
+3/6/25,Prime C,6954 JP,Fanuc,JP,Industrials,JPY,52012,347.9064,129003,31.75,Y
+3/6/25,Prime A,316 HK,Orient Overseas Container Line,HK,Financials,HKD,99.14,12.6777,1421173,2.75,N
+3/6/25,Prime A,3105 TT,WIN Semiconductors,TW,Information Technology,TWD,133.75,4.206,2279240,6.75,N
+3/6/25,Prime A,3 HK,Hong Kong and China Gas,HK,Utilities,HKD,222.28,28.4246,2029431,7.75,N
+3/6/25,Prime C,3 HK,Hong Kong and China Gas,HK,Utilities,HKD,222.28,28.4246,387522,7.75,N
+3/6/25,Prime B,3 HK,Hong Kong and China Gas,HK,Utilities,HKD,222.28,28.4246,2775441,2.75,N
+3/6/25,Prime B,3105 TT,WIN Semiconductors,TW,Information Technology,TWD,133.75,4.206,1629098,3.25,N
+3/6/25,Prime C,3105 TT,WIN Semiconductors,TW,Information Technology,TWD,133.75,4.206,1320284,3.25,N
+3/6/25,Prime B,6954 JP,Fanuc,JP,Industrials,JPY,52012,347.9064,8968,25,Y
+3/6/25,Prime A,6954 JP,Fanuc,JP,Industrials,JPY,52012,347.9064,113051,19.5,Y
+3/6/25,Prime C,3045 TT,Taiwan Mobile,TW,Communication Services,TWD,45.17,1.4204,2033758,5.75,N
+3/6/25,Prime A,3045 TT,Taiwan Mobile,TW,Communication Services,TWD,45.17,1.4204,754419,4.25,N
+3/6/25,Prime B,3045 TT,Taiwan Mobile,TW,Communication Services,TWD,45.17,1.4204,792937,1.25,N
+3/6/25,Prime A,3037 TT,Unimicron,TW,Information Technology,TWD,598.5,18.8208,927449,1.75,N
+3/6/25,Prime C,3037 TT,Unimicron,TW,Information Technology,TWD,598.5,18.8208,2948916,1.5,N
+3/6/25,Prime B,3037 TT,Unimicron,TW,Information Technology,TWD,598.5,18.8208,1720541,1.25,N
+3/6/25,Prime B,293 HK,Cathay Pacific,HK,Industrials,HKD,35.01,4.477,776483,8,Y
+3/6/25,Prime A,303 HK,Vtech,HK,Financials,HKD,224.54,28.7136,2163461,0.25,N
+3/6/25,Prime B,303 HK,Vtech,HK,Financials,HKD,224.54,28.7136,457173,0.25,N
+3/6/25,Prime C,303 HK,Vtech,HK,Financials,HKD,224.54,28.7136,1479884,0.25,N
+3/6/25,Prime C,3008 TT,Largan Precision,TW,Information Technology,TWD,161.02,5.0635,726751,1,N
+3/6/25,Prime A,3008 TT,Largan Precision,TW,Information Technology,TWD,161.02,5.0635,1128859,0.75,N
+3/6/25,Prime B,3008 TT,Largan Precision,TW,Information Technology,TWD,161.02,5.0635,2297539,0.75,N
+3/6/25,Prime A,293490 KS,Kakao Games,KR,Information Technology,KRW,112250,84.717,186820,10.25,Y
+3/6/25,Prime A,036460 KS,Korea Gas,KR,Utilities,KRW,5804,4.3804,2522168,1.25,N
+3/6/25,Prime B,036460 KS,Korea Gas,KR,Utilities,KRW,5804,4.3804,756774,1,N
+3/6/25,Prime C,293 HK,Cathay Pacific,HK,Industrials,HKD,35.01,4.477,2111266,5.75,N
+3/6/25,Prime B,293490 KS,Kakao Games,KR,Information Technology,KRW,112250,84.717,98291,12.75,Y
+3/6/25,Prime C,293490 KS,Kakao Games,KR,Information Technology,KRW,112250,84.717,181184,8.25,Y
+3/6/25,Prime B,2888 TT,Shin Kong Financial Holding,TW,Financials,TWD,557.46,17.5302,1447592,7.5,N
+3/6/25,Prime A,2890 TT,Sinopac Financial Holdings,TW,Financials,TWD,64.16,2.0176,1331942,0.25,N
+3/6/25,Prime B,2890 TT,Sinopac Financial Holdings,TW,Financials,TWD,64.16,2.0176,1424915,0.25,N
+3/6/25,Prime C,2890 TT,Sinopac Financial Holdings,TW,Financials,TWD,64.16,2.0176,2308249,0.25,N
+3/6/25,Prime C,2891 TT,CTBC Financial Holding,TW,Information Technology,TWD,625.77,19.6783,63036,24,Y
+3/6/25,Prime B,2891 TT,CTBC Financial Holding,TW,Information Technology,TWD,625.77,19.6783,141691,21.5,Y
+3/6/25,Prime C,6981 JP,Murata Manufacturing,JP,Information Technology,JPY,6892,46.1003,2010129,6,N
+3/6/25,Prime C,036460 KS,Korea Gas,KR,Utilities,KRW,5804,4.3804,2243010,0.5,N
+3/6/25,Prime A,2888 TT,Shin Kong Financial Holding,TW,Financials,TWD,557.46,17.5302,1540415,6,N
+3/6/25,Prime C,2888 TT,Shin Kong Financial Holding,TW,Financials,TWD,557.46,17.5302,2049760,2,N
+3/6/25,Prime A,2887 TT,Taishin Financial Holdings,TW,Information Technology,TWD,512.78,16.1252,2773370,3.5,N
+3/6/25,Prime A,293 HK,Cathay Pacific,HK,Industrials,HKD,35.01,4.477,314178,0.75,N
+3/6/25,Prime A,291 HK,China Resources Beer,HK,Consumer Staples,HKD,18.87,2.413,1100663,0.25,N
+3/6/25,Prime A,2891 TT,CTBC Financial Holding,TW,Information Technology,TWD,625.77,19.6783,86678,18.75,Y
+3/6/25,Prime A,2892 TT,First Financial Holding,TW,Financials,TWD,215.94,6.7906,1915239,6.25,N
+3/6/25,Prime B,2892 TT,First Financial Holding,TW,Financials,TWD,215.94,6.7906,2225540,6.25,N
+3/6/25,Prime C,2892 TT,First Financial Holding,TW,Financials,TWD,215.94,6.7906,236899,2.25,N
+3/6/25,Prime A,035720 KS,Kakao,KR,Communication Services,KRW,29806,22.4951,1631174,0.25,N
+3/6/25,Prime B,035720 KS,Kakao,KR,Communication Services,KRW,29806,22.4951,2383481,0.25,N
+3/6/25,Prime C,035720 KS,Kakao,KR,Communication Services,KRW,29806,22.4951,801383,0.25,N
+3/6/25,Prime B,291 HK,China Resources Beer,HK,Consumer Staples,HKD,18.87,2.413,1480263,0.25,N
+3/6/25,Prime C,291 HK,China Resources Beer,HK,Consumer Staples,HKD,18.87,2.413,2726507,0.25,N
+3/6/25,Prime A,2912 TT,President Chain Store (PSCS),TW,Consumer Staples,TWD,161.14,5.0673,197318,8.5,Y
+3/6/25,Prime C,2912 TT,President Chain Store (PSCS),TW,Consumer Staples,TWD,161.14,5.0673,489474,1.25,N
+3/6/25,Prime B,2912 TT,President Chain Store (PSCS),TW,Consumer Staples,TWD,161.14,5.0673,1768649,0.75,N
+3/6/25,Prime B,2887 TT,Taishin Financial Holdings,TW,Information Technology,TWD,512.78,16.1252,731118,3.5,N
+3/6/25,Prime A,6981 JP,Murata Manufacturing,JP,Information Technology,JPY,6892,46.1003,1461484,5.25,N
+3/6/25,Prime A,035420 KS,Naver,KR,Communication Services,KRW,51406,38.797,872197,0.25,N
+3/6/25,Prime B,035420 KS,Naver,KR,Communication Services,KRW,51406,38.797,1953542,0.25,N
+3/6/25,Prime C,2880 HK,Futu Holdings,HK,Financials,HKD,123,15.7289,78270,28.75,Y
+3/6/25,Prime B,2880 HK,Futu Holdings,HK,Financials,HKD,123,15.7289,150352,23,Y
+3/6/25,Prime A,2880 HK,Futu Holdings,HK,Financials,HKD,123,15.7289,114470,20.5,Y
+3/6/25,Prime C,2887 TT,Taishin Financial Holdings,TW,Information Technology,TWD,512.78,16.1252,2023702,0.25,N
+3/6/25,Prime B,2886 TT,MFHC,TW,Financials,TWD,196.43,6.177,419221,6.75,N
+3/6/25,Prime A,3034 TT,Novatek Microelectronics,TW,Information Technology,TWD,149.8,4.7107,46764,0.25,N
+3/6/25,Prime B,6981 JP,Murata Manufacturing,JP,Information Technology,JPY,6892,46.1003,621008,0.75,N
+3/6/25,Prime A,2886 TT,MFHC,TW,Financials,TWD,196.43,6.177,815521,3,N
+3/6/25,Prime C,035420 KS,Naver,KR,Communication Services,KRW,51406,38.797,243820,0.25,N
+3/6/25,Prime B,035250 KS,Kangwon Land,KR,Consumer Staples,KRW,42556,32.1177,122728,17,Y
+3/6/25,Prime A,288 HK,WH Group,HK,Financials,HKD,79.76,10.1995,643633,0.25,N
+3/6/25,Prime B,288 HK,WH Group,HK,Financials,HKD,79.76,10.1995,1535074,0.25,N
+3/6/25,Prime C,288 HK,WH Group,HK,Financials,HKD,79.76,10.1995,795655,0.25,N
+3/6/25,Prime C,2886 TT,MFHC,TW,Financials,TWD,196.43,6.177,1877257,2.5,N
+3/6/25,Prime B,3034 TT,Novatek Microelectronics,TW,Information Technology,TWD,149.8,4.7107,1724492,0.25,N
+3/6/25,Prime C,3034 TT,Novatek Microelectronics,TW,Information Technology,TWD,149.8,4.7107,1944187,0.25,N
+3/6/25,Prime B,2885 TT,Yuanta Financial Holding,TW,Financials,TWD,50.42,1.5855,184784,8.25,Y
+3/6/25,Prime A,2885 TT,Yuanta Financial Holding,TW,Financials,TWD,50.42,1.5855,776806,5.5,N
+3/6/25,Prime C,2885 TT,Yuanta Financial Holding,TW,Financials,TWD,50.42,1.5855,680735,4.25,N
+3/6/25,Prime C,7012 JP,Kawasaki Heavy Industries,JP,Industrials,JPY,1121,7.4983,430050,4.25,N
+3/6/25,Prime A,7012 JP,Kawasaki Heavy Industries,JP,Industrials,JPY,1121,7.4983,1392874,3.75,N
+3/6/25,Prime A,2884 TT,E.SUN Bank,TW,Financials,TWD,104.28,3.2792,1969526,2.75,N
+3/6/25,Prime B,2884 TT,E.SUN Bank,TW,Financials,TWD,104.28,3.2792,1126771,2.75,N
+3/6/25,Prime C,2884 TT,E.SUN Bank,TW,Financials,TWD,104.28,3.2792,578218,2.75,N
+3/6/25,Prime A,2881 TT,Fubon Financial,TW,Financials,TWD,77.78,2.4459,456181,0.75,N
+3/6/25,Prime B,2881 TT,Fubon Financial,TW,Financials,TWD,77.78,2.4459,106116,0.25,N
+3/6/25,Prime C,2881 TT,Fubon Financial,TW,Financials,TWD,77.78,2.4459,226805,0.25,N
+3/6/25,Prime B,7012 JP,Kawasaki Heavy Industries,JP,Industrials,JPY,1121,7.4983,1277937,0.5,N
+3/6/25,Prime A,2801 TT,Chang Hwa Commercial Bank,TW,Financials,TWD,161.07,5.0651,2001606,2.5,N
+3/6/25,Prime B,2801 TT,Chang Hwa Commercial Bank,TW,Financials,TWD,161.07,5.0651,310962,2.5,N
+3/6/25,Prime C,2801 TT,Chang Hwa Commercial Bank,TW,Financials,TWD,161.07,5.0651,1139579,2.5,N
+3/6/25,Prime C,035250 KS,Kangwon Land,KR,Consumer Staples,KRW,42556,32.1177,16368,14.25,Y
+3/6/25,Prime A,28 HK,Tian An China Investments Company,HK,Financials,HKD,140.15,17.922,2334376,2.25,N
+3/6/25,Prime B,28 HK,Tian An China Investments Company,HK,Financials,HKD,140.15,17.922,1068991,2.25,N
+3/6/25,Prime A,27 HK,Galaxy Entertainment,HK,Financials,HKD,240.28,30.7263,1014756,5,N
+3/6/25,Prime C,28 HK,Tian An China Investments Company,HK,Financials,HKD,140.15,17.922,1732102,2.25,N
+3/6/25,Prime A,2778 HK,Champion REIT,HK,Financials,HKD,18.91,2.4182,964334,1.5,N
+3/6/25,Prime A,3083 TT,Chinese Gamer International,TW,Information Technology,TWD,491.35,15.4513,1084360,6.25,N
+3/6/25,Prime B,7182 JP,Japan Post Bank,JP,Industrials,JPY,48844,326.7157,89571,8.5,Y
+3/6/25,Prime A,7182 JP,Japan Post Bank,JP,Industrials,JPY,48844,326.7157,891632,7.5,N
+3/6/25,Prime A,035250 KS,Kangwon Land,KR,Consumer Staples,KRW,42556,32.1177,95416,11.25,Y
+3/6/25,Prime B,2778 HK,Champion REIT,HK,Financials,HKD,18.91,2.4182,1234225,1.5,N
+3/6/25,Prime C,2778 HK,Champion REIT,HK,Financials,HKD,18.91,2.4182,722241,1.5,N
+3/6/25,Prime B,27 HK,Galaxy Entertainment,HK,Financials,HKD,240.28,30.7263,319157,4,N
+3/6/25,Prime C,27 HK,Galaxy Entertainment,HK,Financials,HKD,240.28,30.7263,2113698,3.75,N
+3/6/25,Prime A,2638 HK,HK Electric Investments,HK,Financials,HKD,188.16,24.0614,1520207,0.25,N
+3/6/25,Prime B,2638 HK,HK Electric Investments,HK,Financials,HKD,188.16,24.0614,579713,0.25,N
+3/6/25,Prime C,3083 TT,Chinese Gamer International,TW,Information Technology,TWD,491.35,15.4513,2368908,5.5,N
+3/6/25,Prime B,3083 TT,Chinese Gamer International,TW,Information Technology,TWD,491.35,15.4513,2041478,2.75,N
+3/6/25,Prime C,3086 TT,Wayi International Digital Entertainment,TW,Information Technology,TWD,269.42,8.4723,1153225,8,Y
+3/6/25,Prime A,3086 TT,Wayi International Digital Entertainment,TW,Information Technology,TWD,269.42,8.4723,2680575,4,N
+3/6/25,Prime C,7182 JP,Japan Post Bank,JP,Industrials,JPY,48844,326.7157,277539,1.5,N
+3/6/25,Prime C,7203 JP,Toyota,JP,Consumer Discretionary,JPY,41389,276.8495,2035807,6.75,N
+3/6/25,Prime B,7203 JP,Toyota,JP,Consumer Discretionary,JPY,41389,276.8495,455930,5.75,N
+3/6/25,Prime A,7203 JP,Toyota,JP,Consumer Discretionary,JPY,41389,276.8495,2650584,2.25,N
+3/6/25,Prime A,271560 KS,ORION,KR,Information Technology,KRW,105454,79.5879,1460513,1.5,N
+3/6/25,Prime A,034220 KS,LG Display,KR,Information Technology,KRW,68630,51.7962,186582,0.25,N
+3/6/25,Prime C,034220 KS,LG Display,KR,Information Technology,KRW,68630,51.7962,2557885,0.25,N
+3/6/25,Prime B,271560 KS,ORION,KR,Information Technology,KRW,105454,79.5879,1222695,1.25,N
+3/6/25,Prime C,2638 HK,HK Electric Investments,HK,Financials,HKD,188.16,24.0614,2724998,0.25,N
+3/6/25,Prime C,271560 KS,ORION,KR,Information Technology,KRW,105454,79.5879,2869028,1.25,N
+3/6/25,Prime B,2615 TT,Wan Hai Lines,TW,Information Technology,TWD,149.32,4.6956,459574,4,N
+3/6/25,Prime B,7267 JP,Honda,JP,Consumer Discretionary,JPY,13064,87.3846,140792,4,N
+3/6/25,Prime C,7267 JP,Honda,JP,Consumer Discretionary,JPY,13064,87.3846,2553627,3,N
+3/6/25,Prime C,2615 TT,Wan Hai Lines,TW,Information Technology,TWD,149.32,4.6956,319872,2.25,N
+3/6/25,Prime A,2615 TT,Wan Hai Lines,TW,Information Technology,TWD,149.32,4.6956,725440,0.5,N
+3/6/25,Prime A,2609 TT,Yang Ming,TW,Information Technology,TWD,128.59,4.0437,95925,2.5,N
+3/6/25,Prime B,3086 TT,Wayi International Digital Entertainment,TW,Information Technology,TWD,269.42,8.4723,1400785,1.5,N
+3/6/25,Prime B,2609 TT,Yang Ming,TW,Information Technology,TWD,128.59,4.0437,346203,2.25,N
+3/6/25,Prime C,2609 TT,Yang Ming,TW,Information Technology,TWD,128.59,4.0437,1635096,2.25,N
+3/6/25,Prime A,257 HK,China Everbright Environment Group,HK,Financials,HKD,183.11,23.4156,1618726,7.75,N
+3/6/25,Prime A,7267 JP,Honda,JP,Consumer Discretionary,JPY,13064,87.3846,2444080,2,N
+3/6/25,Prime B,257 HK,China Everbright Environment Group,HK,Financials,HKD,183.11,23.4156,621753,5.25,N
+3/6/25,Prime C,257 HK,China Everbright Environment Group,HK,Financials,HKD,183.11,23.4156,2432327,1.75,N
+3/6/25,Prime B,2501 TT,Cathay Real Estate Development,TW,Information Technology,TWD,511.84,16.0956,1395715,5.25,N
+3/6/25,Prime A,2501 TT,Cathay Real Estate Development,TW,Information Technology,TWD,511.84,16.0956,349282,3.25,N
+3/6/25,Prime C,2501 TT,Cathay Real Estate Development,TW,Information Technology,TWD,511.84,16.0956,2894505,3.25,N
+3/6/25,Prime B,2474 TT,Catcher Technology,TW,Information Technology,TWD,42.34,1.3314,807566,6.25,N
+3/6/25,Prime B,032830 KS,Samsung Life Insurance,KR,Financials,KRW,20200,15.2453,2240343,4.25,N
+3/6/25,Prime A,032830 KS,Samsung Life Insurance,KR,Financials,KRW,20200,15.2453,106252,1.5,N
+3/6/25,Prime C,2474 TT,Catcher Technology,TW,Information Technology,TWD,42.34,1.3314,308062,4,N
+3/6/25,Prime A,2474 TT,Catcher Technology,TW,Information Technology,TWD,42.34,1.3314,1278880,1.25,N
+3/6/25,Prime B,2408 TT,Nanya Technology,TW,Information Technology,TWD,429.06,13.4925,1073658,3.25,N
+3/6/25,Prime C,2408 TT,Nanya Technology,TW,Information Technology,TWD,429.06,13.4925,1512930,3.25,N
+3/6/25,Prime A,2408 TT,Nanya Technology,TW,Information Technology,TWD,429.06,13.4925,2915232,0.25,N
+3/6/25,Prime C,032830 KS,Samsung Life Insurance,KR,Financials,KRW,20200,15.2453,2464594,0.75,N
+3/6/25,Prime A,2388 HK,Bank of China (Hong Kong),HK,Financials,HKD,196.4,25.1151,2711297,7.25,N
+3/6/25,Prime C,241 HK,Alibaba Health Information Technology,HK,Financials,HKD,191.89,24.5384,584479,7.25,N
+3/6/25,Prime B,2388 HK,Bank of China (Hong Kong),HK,Financials,HKD,196.4,25.1151,230947,3.25,N
+3/6/25,Prime C,2388 HK,Bank of China (Hong Kong),HK,Financials,HKD,196.4,25.1151,635787,3,N
+3/6/25,Prime A,2382 TT,Quanta Computer,TW,Information Technology,TWD,467.7,14.7075,690241,1,N
+3/6/25,Prime C,2382 TT,Quanta Computer,TW,Information Technology,TWD,467.7,14.7075,2455573,1,N
+3/6/25,Prime B,2382 TT,Quanta Computer,TW,Information Technology,TWD,467.7,14.7075,2588308,0.5,N
+3/6/25,Prime A,028670 KS,Pan Ocean,KR,Information Technology,KRW,110932,83.7223,2468289,7.25,N
+3/6/25,Prime B,241 HK,Alibaba Health Information Technology,HK,Financials,HKD,191.89,24.5384,2999329,5.75,N
+3/6/25,Prime A,241 HK,Alibaba Health Information Technology,HK,Financials,HKD,191.89,24.5384,509826,1,N
+3/6/25,Prime C,2377 TT,MSI (Micro-Star International),TW,Information Technology,TWD,289.14,9.0925,2931882,3.75,N
+3/6/25,Prime A,2377 TT,MSI (Micro-Star International),TW,Information Technology,TWD,289.14,9.0925,2985230,2.75,N
+3/6/25,Prime B,2377 TT,MSI (Micro-Star International),TW,Information Technology,TWD,289.14,9.0925,1817259,1,N
+3/6/25,Prime B,3443 TT,Global Unichip Corp.,TW,Information Technology,TWD,590.04,18.5547,1742979,2.75,N
+3/6/25,Prime C,3443 TT,Global Unichip Corp.,TW,Information Technology,TWD,590.04,18.5547,2571627,1.75,N
+3/6/25,Prime A,3443 TT,Global Unichip Corp.,TW,Information Technology,TWD,590.04,18.5547,1907769,0.75,N
+3/6/25,Prime A,2357 TT,ASUS,TW,Information Technology,TWD,413.49,13.0028,1482735,0.75,N
+3/6/25,Prime B,2357 TT,ASUS,TW,Information Technology,TWD,413.49,13.0028,790215,0.75,N
+3/6/25,Prime C,2357 TT,ASUS,TW,Information Technology,TWD,413.49,13.0028,1973508,0.75,N
+3/6/25,Prime B,2353 TT,Acer,TW,Information Technology,TWD,481.75,15.1494,1428457,1.25,N
+3/6/25,Prime A,7751 JP,Canon,JP,Information Technology,JPY,34193,228.7157,2860491,0.25,N
+3/6/25,Prime B,7751 JP,Canon,JP,Information Technology,JPY,34193,228.7157,802717,0.25,N
+3/6/25,Prime C,028670 KS,Pan Ocean,KR,Information Technology,KRW,110932,83.7223,1206898,2.75,N
+3/6/25,Prime B,028670 KS,Pan Ocean,KR,Information Technology,KRW,110932,83.7223,68904,2,N
+3/6/25,Prime C,2353 TT,Acer,TW,Information Technology,TWD,481.75,15.1494,1794772,1.25,N
+3/6/25,Prime A,2353 TT,Acer,TW,Information Technology,TWD,481.75,15.1494,1836751,0.75,N
+3/6/25,Prime B,2347 TT,Synnex Technology International,TW,Information Technology,TWD,516.93,16.2557,217721,1.75,N
+3/6/25,Prime B,2380 HK,China Power International Development,HK,Financials,HKD,123.25,15.7609,3154,8.75,Y
+3/6/25,Prime C,2380 HK,China Power International Development,HK,Financials,HKD,123.25,15.7609,172594,4.25,N
+3/6/25,Prime C,2347 TT,Synnex Technology International,TW,Information Technology,TWD,516.93,16.2557,1441294,1.5,N
+3/6/25,Prime A,2347 TT,Synnex Technology International,TW,Information Technology,TWD,516.93,16.2557,2726538,0.25,N
+3/6/25,Prime C,7751 JP,Canon,JP,Information Technology,JPY,34193,228.7157,984145,0.25,N
+3/6/25,Prime A,7832 JP,Bandai Namco,JP,Consumer Discretionary,JPY,38443,257.1438,1013812,0.25,N
+3/6/25,Prime B,7832 JP,Bandai Namco,JP,Consumer Discretionary,JPY,38443,257.1438,2991299,0.25,N
+3/6/25,Prime A,2380 HK,China Power International Development,HK,Financials,HKD,123.25,15.7609,629718,3.75,N
+3/6/25,Prime C,2356 HK,Dah Sing Banking Group,HK,Financials,HKD,255.61,32.6867,2040024,5.25,N
+3/6/25,Prime A,2356 HK,Dah Sing Banking Group,HK,Financials,HKD,255.61,32.6867,1053614,3.75,N
+3/6/25,Prime B,2356 HK,Dah Sing Banking Group,HK,Financials,HKD,255.61,32.6867,2716837,2.5,N
+3/6/25,Prime A,2345 TT,Accton Technology,TW,Information Technology,TWD,611.99,19.245,1537775,1.25,N
+3/6/25,Prime B,2345 TT,Accton Technology,TW,Information Technology,TWD,611.99,19.245,1300909,1.25,N
+3/6/25,Prime C,2345 TT,Accton Technology,TW,Information Technology,TWD,611.99,19.245,296683,1.25,N
+3/6/25,Prime C,2343 HK,Pacific Basin Shipping,HK,Financials,HKD,235.69,30.1394,34801,22.25,Y
+3/6/25,Prime C,3529 TT,eMemory Technology,TW,Information Technology,TWD,579.84,18.234,161284,32.25,Y
+3/6/25,Prime C,7832 JP,Bandai Namco,JP,Consumer Discretionary,JPY,38443,257.1438,2280421,0.5,N
+3/6/25,Prime A,7936 JP,ASICS Corporation,JP,Consumer Discretionary,JPY,32516,217.4983,2499051,0.25,N
+3/6/25,Prime B,7936 JP,ASICS Corporation,JP,Consumer Discretionary,JPY,32516,217.4983,1760925,0.25,N
+3/6/25,Prime C,7936 JP,ASICS Corporation,JP,Consumer Discretionary,JPY,32516,217.4983,2490749,0.25,N
+3/6/25,Prime A,7974 JP,Nintendo,JP,Communication Services,JPY,54655,365.5853,1890267,6.25,N
+3/6/25,Prime A,2343 HK,Pacific Basin Shipping,HK,Financials,HKD,235.69,30.1394,5661,19.5,Y
+3/6/25,Prime B,2343 HK,Pacific Basin Shipping,HK,Financials,HKD,235.69,30.1394,86833,17,Y
+3/6/25,Prime A,2330 TT,TSMC,TW,Information Technology,TWD,111.56,3.5082,68435,0,N
+3/6/25,Prime C,23 HK,Bank of East Asia,HK,Financials,HKD,252.51,32.2903,188608,8.75,Y
+3/6/25,Prime B,23 HK,Bank of East Asia,HK,Financials,HKD,252.51,32.2903,21829,3.75,N
+3/6/25,Prime A,23 HK,Bank of East Asia,HK,Financials,HKD,252.51,32.2903,2150122,0.75,N
+3/6/25,Prime B,3529 TT,eMemory Technology,TW,Information Technology,TWD,579.84,18.234,81596,20.5,Y
+3/6/25,Prime A,3529 TT,eMemory Technology,TW,Information Technology,TWD,579.84,18.234,13960,18.75,Y
+3/6/25,Prime C,2330 TT,TSMC,TW,Information Technology,TWD,111.56,3.5082,2112097,0.01,N
+3/6/25,Prime B,7974 JP,Nintendo,JP,Communication Services,JPY,54655,365.5853,880147,4.5,N
+3/6/25,Prime C,7974 JP,Nintendo,JP,Communication Services,JPY,54655,365.5853,2806052,2.5,N
+3/6/25,Prime B,2330 TT,TSMC,TW,Information Technology,TWD,111.56,3.5082,188534,0.25,N
+3/6/25,Prime C,2317 TT,Foxconn (Hon Hai Precision Industry),TW,Information Technology,TWD,88.24,2.7748,2487827,2,N
+3/6/25,Prime A,2317 TT,Foxconn (Hon Hai Precision Industry),TW,Information Technology,TWD,88.24,2.7748,473193,1.75,N
+3/6/25,Prime B,2317 TT,Foxconn (Hon Hai Precision Industry),TW,Information Technology,TWD,88.24,2.7748,1909653,1.5,N
+3/6/25,Prime A,2301 TT,Lite-On Technology,TW,Information Technology,TWD,608.11,19.123,2359579,3.25,N
+3/6/25,Prime B,2301 TT,Lite-On Technology,TW,Information Technology,TWD,608.11,19.123,2864065,3.25,N
+3/6/25,Prime C,2301 TT,Lite-On Technology,TW,Information Technology,TWD,608.11,19.123,2643206,3,N
+3/6/25,Prime B,3546 TT,Userjoy Technology,TW,Information Technology,TWD,387.84,12.1962,136350,8.75,Y
+3/6/25,Prime B,2232 HK,Crystal International,HK,Financials,HKD,215.05,27.5,2627466,2.5,N
+3/6/25,Prime A,2232 HK,Crystal International,HK,Financials,HKD,215.05,27.5,2936379,2.25,N
+3/6/25,Prime C,2232 HK,Crystal International,HK,Financials,HKD,215.05,27.5,991593,2.25,N
+3/6/25,Prime A,2207 TT,Hotai Motor,TW,Consumer Discretionary,TWD,613.57,19.2947,2697215,3,N
+3/6/25,Prime B,2207 TT,Hotai Motor,TW,Consumer Discretionary,TWD,613.57,19.2947,2864181,2.75,N
+3/6/25,Prime C,2207 TT,Hotai Motor,TW,Consumer Discretionary,TWD,613.57,19.2947,9208,2.75,N
+3/6/25,Prime A,215 HK,Hutchison Telecommunications Hong Kong,HK,Financials,HKD,266.79,34.1164,110845,9.5,Y
+3/6/25,Prime C,215 HK,Hutchison Telecommunications Hong Kong,HK,Financials,HKD,266.79,34.1164,2589561,2.5,N
+3/6/25,Prime B,215 HK,Hutchison Telecommunications Hong Kong,HK,Financials,HKD,266.79,34.1164,1951232,1.5,N
+3/6/25,Prime C,3546 TT,Userjoy Technology,TW,Information Technology,TWD,387.84,12.1962,612459,5,N
+3/6/25,Prime A,3546 TT,Userjoy Technology,TW,Information Technology,TWD,387.84,12.1962,1596183,4.25,N
+3/6/25,Prime A,2 HK,CLP Group,HK,Utilities,HKD,189.28,24.2046,1828490,1.5,N
+3/6/25,Prime B,2 HK,CLP Group,HK,Utilities,HKD,189.28,24.2046,1653737,1.5,N
+3/6/25,Prime C,2 HK,CLP Group,HK,Utilities,HKD,189.28,24.2046,2733295,1.5,N
+3/6/25,Prime C,1925 JP,Daiwa House,JP,Industrials,JPY,49696,332.4147,1607289,5.75,N
+3/6/25,Prime A,8031 JP,Mitsui Bussan,JP,Industrials,JPY,8974,60.0268,1045807,0.25,N
+3/6/25,Prime B,8031 JP,Mitsui Bussan,JP,Industrials,JPY,8974,60.0268,249365,0.25,N
+3/6/25,Prime A,020560 KS,Asiana Airlines,KR,Information Technology,KRW,12966,9.7857,109562,15.25,Y
+3/6/25,Prime B,020560 KS,Asiana Airlines,KR,Information Technology,KRW,12966,9.7857,51163,13.5,Y
+3/6/25,Prime B,1925 JP,Daiwa House,JP,Industrials,JPY,49696,332.4147,923810,4.5,N
+3/6/25,Prime A,1925 JP,Daiwa House,JP,Industrials,JPY,49696,332.4147,2195493,3.25,N
+3/6/25,Prime A,1908 HK,C&D International Investment Group,HK,Financials,HKD,140.29,17.9399,2120864,1,N
+3/6/25,Prime B,1908 HK,C&D International Investment Group,HK,Financials,HKD,140.29,17.9399,2257966,1,N
+3/6/25,Prime C,8031 JP,Mitsui Bussan,JP,Industrials,JPY,8974,60.0268,2687609,0.25,N
+3/6/25,Prime A,8035 JP,Tokyo Electron,JP,Information Technology,JPY,41103,274.9365,2233101,7.25,N
+3/6/25,Prime C,8035 JP,Tokyo Electron,JP,Information Technology,JPY,41103,274.9365,555814,3.75,N
+3/6/25,Prime C,020560 KS,Asiana Airlines,KR,Information Technology,KRW,12966,9.7857,8038,11,Y
+3/6/25,Prime C,017670 KS,SK Telecom,KR,Communication Services,KRW,40902,30.8694,2661750,5.5,N
+3/6/25,Prime C,1908 HK,C&D International Investment Group,HK,Financials,HKD,140.29,17.9399,1707100,1,N
+3/6/25,Prime B,1801 JP,Taisei Corporation,JP,Industrials,JPY,25199,168.5552,418271,0.25,N
+3/6/25,Prime C,200 HK,Melco International Development,HK,Financials,HKD,261.92,33.4936,2775526,7.25,N
+3/6/25,Prime A,200 HK,Melco International Development,HK,Financials,HKD,261.92,33.4936,2141297,6.5,N
+3/6/25,Prime B,200 HK,Melco International Development,HK,Financials,HKD,261.92,33.4936,2791685,3.25,N
+3/6/25,Prime C,1801 JP,Taisei Corporation,JP,Industrials,JPY,25199,168.5552,2565141,0.25,N
+3/6/25,Prime A,1801 JP,Taisei Corporation,JP,Industrials,JPY,25199,168.5552,1614176,0.25,N
+3/6/25,Prime A,3687 TT,MacroWell OMG Digital Entertainment,TW,Information Technology,TWD,492.43,15.4852,780815,0.25,N
+3/6/25,Prime B,3687 TT,MacroWell OMG Digital Entertainment,TW,Information Technology,TWD,492.43,15.4852,1820694,0.25,N
+3/6/25,Prime C,3687 TT,MacroWell OMG Digital Entertainment,TW,Information Technology,TWD,492.43,15.4852,97812,0.25,N
+3/6/25,Prime C,1686 HK,SUNeVision,HK,Financials,HKD,180.08,23.0281,1738266,6,N
+3/6/25,Prime B,1686 HK,SUNeVision,HK,Financials,HKD,180.08,23.0281,1944861,5,N
+3/6/25,Prime B,8035 JP,Tokyo Electron,JP,Information Technology,JPY,41103,274.9365,475310,3.5,N
+3/6/25,Prime C,8053 JP,Sumitomo,JP,Industrials,JPY,20869,139.592,1377861,6,N
+3/6/25,Prime B,8053 JP,Sumitomo,JP,Industrials,JPY,20869,139.592,541066,4.5,N
+3/6/25,Prime A,8053 JP,Sumitomo,JP,Industrials,JPY,20869,139.592,1671527,1.25,N
+3/6/25,Prime A,017670 KS,SK Telecom,KR,Communication Services,KRW,40902,30.8694,2638912,5.25,N
+3/6/25,Prime A,1686 HK,SUNeVision,HK,Financials,HKD,180.08,23.0281,2111359,4,N
+3/6/25,Prime C,1997 HK,Wharf REIC,HK,Real Estate,HKD,108.2,13.8363,87466,8.25,Y
+3/6/25,Prime A,1997 HK,Wharf REIC,HK,Real Estate,HKD,108.2,13.8363,2654429,3.5,N
+3/6/25,Prime A,151 HK,Want Want China,HK,Financials,HKD,77.96,9.9693,602120,1.25,N
+3/6/25,Prime A,4938 TT,Pegatron,TW,Information Technology,TWD,56.71,1.7833,1500115,0.25,N
+3/6/25,Prime B,4938 TT,Pegatron,TW,Information Technology,TWD,56.71,1.7833,1033713,0.25,N
+3/6/25,Prime B,151 HK,Want Want China,HK,Financials,HKD,77.96,9.9693,539289,1.25,N
+3/6/25,Prime C,151 HK,Want Want China,HK,Financials,HKD,77.96,9.9693,2264745,1,N
+3/6/25,Prime B,017670 KS,SK Telecom,KR,Communication Services,KRW,40902,30.8694,1381014,2.75,N
+3/6/25,Prime B,1997 HK,Wharf REIC,HK,Real Estate,HKD,108.2,13.8363,2211085,1.5,N
+3/6/25,Prime A,1972 HK,Swire Properties,HK,Financials,HKD,151.67,19.3951,1719894,0.25,N
+3/6/25,Prime B,1972 HK,Swire Properties,HK,Financials,HKD,151.67,19.3951,1573558,0.25,N
+3/6/25,Prime C,1972 HK,Swire Properties,HK,Financials,HKD,151.67,19.3951,2740555,0.25,N
+3/6/25,Prime C,1929 HK,Chow Tai Fook,HK,Financials,HKD,248.89,31.8274,115861,8.25,Y
+3/6/25,Prime A,1929 HK,Chow Tai Fook,HK,Financials,HKD,248.89,31.8274,125591,4.5,N
+3/6/25,Prime C,4938 TT,Pegatron,TW,Information Technology,TWD,56.71,1.7833,1487227,0.25,N
+3/6/25,Prime A,144 HK,China Merchants Port,HK,Financials,HKD,192.17,24.5742,811476,1,N
+3/6/25,Prime B,144 HK,China Merchants Port,HK,Financials,HKD,192.17,24.5742,2778513,0.75,N
+3/6/25,Prime C,144 HK,China Merchants Port,HK,Financials,HKD,192.17,24.5742,2296119,0.75,N
+3/6/25,Prime A,142 HK,First Pacific Company,HK,Financials,HKD,4.24,0.5422,2326396,2.5,N
+3/6/25,Prime B,142 HK,First Pacific Company,HK,Financials,HKD,4.24,0.5422,2708753,1.75,N
+3/6/25,Prime C,142 HK,First Pacific Company,HK,Financials,HKD,4.24,0.5422,517589,2.5,N
+3/6/25,Prime C,14 HK,Hysan Development,HK,Financials,HKD,211.79,27.0831,2554250,0.5,N
+3/6/25,Prime A,14 HK,Hysan Development,HK,Financials,HKD,211.79,27.0831,2962097,0.25,N
+3/6/25,Prime B,1929 HK,Chow Tai Fook,HK,Financials,HKD,248.89,31.8274,2689066,3,N
+3/6/25,Prime B,14 HK,Hysan Development,HK,Financials,HKD,211.79,27.0831,695247,0.25,N
+3/6/25,Prime B,1313 HK,China Resources Building Materials Technology,HK,Financials,HKD,114.04,14.5831,1770960,1.25,N
+3/6/25,Prime A,1313 HK,China Resources Building Materials Technology,HK,Financials,HKD,114.04,14.5831,1073912,1,N
+3/6/25,Prime A,19 HK,Swire Pacific,HK,Industrials,HKD,52.4,6.7008,2196634,5.75,N
+3/6/25,Prime C,1313 HK,China Resources Building Materials Technology,HK,Financials,HKD,114.04,14.5831,2704144,1,N
+3/6/25,Prime A,5274 TT,ASPEED Technology,TW,Information Technology,TWD,423.66,13.3226,833549,4.25,N
+3/6/25,Prime B,5274 TT,ASPEED Technology,TW,Information Technology,TWD,423.66,13.3226,1228230,4,N
+3/6/25,Prime C,5274 TT,ASPEED Technology,TW,Information Technology,TWD,423.66,13.3226,1522892,1.5,N
+3/6/25,Prime B,5347 TT,Vanguard International Semiconductor,TW,Information Technology,TWD,547.85,17.228,1179198,7,N
+3/6/25,Prime A,8267 JP,Aeon,JP,Consumer Staples,JPY,31402,210.0468,2440917,4.75,N
+3/6/25,Prime C,8267 JP,Aeon,JP,Consumer Staples,JPY,31402,210.0468,1465628,4.25,N
+3/6/25,Prime B,8267 JP,Aeon,JP,Consumer Staples,JPY,31402,210.0468,1020774,1,N
+3/6/25,Prime A,8306 JP,Mitsubishi UFJ Financial,JP,Financials,JPY,29066,194.4214,2077976,6,N
+3/6/25,Prime A,1301 TT,Formosa Plastics,TW,Materials,TWD,462.34,14.539,902204,2.25,N
+3/6/25,Prime B,19 HK,Swire Pacific,HK,Industrials,HKD,52.4,6.7008,1701031,4.75,N
+3/6/25,Prime C,19 HK,Swire Pacific,HK,Industrials,HKD,52.4,6.7008,2652633,0.5,N
+3/6/25,Prime C,1882 HK,Haitian International Holdings,HK,Financials,HKD,137.48,17.5806,2903519,6.25,N
+3/6/25,Prime A,5347 TT,Vanguard International Semiconductor,TW,Information Technology,TWD,547.85,17.228,1917637,6.75,N
+3/6/25,Prime C,5347 TT,Vanguard International Semiconductor,TW,Information Technology,TWD,547.85,17.228,1118300,1.75,N
+3/6/25,Prime B,1301 TT,Formosa Plastics,TW,Materials,TWD,462.34,14.539,1499620,2,N
+3/6/25,Prime C,1301 TT,Formosa Plastics,TW,Materials,TWD,462.34,14.539,2995691,1.75,N
+3/6/25,Prime B,123 HK,Yuexiu Property,HK,Financials,HKD,142.14,18.1765,180208,24,Y
+3/6/25,Prime C,8306 JP,Mitsubishi UFJ Financial,JP,Financials,JPY,29066,194.4214,2469748,5.75,N
+3/6/25,Prime A,012450 KS,Hanwha Aerospace,KR,Industrials,KRW,63349,47.8106,2999353,4.5,N
+3/6/25,Prime C,012450 KS,Hanwha Aerospace,KR,Industrials,KRW,63349,47.8106,2932926,4,N
+3/6/25,Prime B,012450 KS,Hanwha Aerospace,KR,Industrials,KRW,63349,47.8106,1857470,2.75,N
+3/6/25,Prime B,1882 HK,Haitian International Holdings,HK,Financials,HKD,137.48,17.5806,1118756,3,N
+3/6/25,Prime A,1882 HK,Haitian International Holdings,HK,Financials,HKD,137.48,17.5806,2292042,1.5,N
+3/6/25,Prime A,1876 HK,Budweiser APAC,HK,Consumer Staples,HKD,128.11,16.3824,2088196,0.25,N
+3/6/25,Prime B,1876 HK,Budweiser APAC,HK,Consumer Staples,HKD,128.11,16.3824,2822964,0.25,N
+3/6/25,Prime B,5483 TT,Sino-American Silicon Products,TW,Information Technology,TWD,566.55,17.816,993267,2.25,N
+3/6/25,Prime A,5483 TT,Sino-American Silicon Products,TW,Information Technology,TWD,566.55,17.816,2282613,1,N
+3/6/25,Prime B,8306 JP,Mitsubishi UFJ Financial,JP,Financials,JPY,29066,194.4214,1101017,5.25,N
+3/6/25,Prime A,012330 KS,Hyundai Mobis,KR,Consumer Discretionary,KRW,38654,29.1728,1678353,0.25,N
+3/6/25,Prime C,5483 TT,Sino-American Silicon Products,TW,Information Technology,TWD,566.55,17.816,2549979,0.75,N
+3/6/25,Prime A,123 HK,Yuexiu Property,HK,Financials,HKD,142.14,18.1765,153871,22,Y
+3/6/25,Prime B,012330 KS,Hyundai Mobis,KR,Consumer Discretionary,KRW,38654,29.1728,2147009,0.25,N
+3/6/25,Prime C,012330 KS,Hyundai Mobis,KR,Consumer Discretionary,KRW,38654,29.1728,1485463,0.25,N
+3/6/25,Prime B,011780 KS,Kumho Petrochemical,KR,Health Care,KRW,27947,21.0921,46132,9,Y
+3/6/25,Prime C,1876 HK,Budweiser APAC,HK,Consumer Staples,HKD,128.11,16.3824,2566582,0.25,N
+3/6/25,Prime C,17 HK,New World Development Company,HK,Real Estate,HKD,199.87,25.5588,68622,7.75,N
+3/6/25,Prime B,17 HK,New World Development Company,HK,Real Estate,HKD,199.87,25.5588,1038715,3.5,N
+3/6/25,Prime C,123 HK,Yuexiu Property,HK,Financials,HKD,142.14,18.1765,126241,22,Y
+3/6/25,Prime A,122870 KS,YG Entertainment,KR,Information Technology,KRW,43033,32.4777,444452,2,N
+3/6/25,Prime C,011780 KS,Kumho Petrochemical,KR,Health Care,KRW,27947,21.0921,1929695,5.75,N
+3/6/25,Prime A,011780 KS,Kumho Petrochemical,KR,Health Care,KRW,27947,21.0921,807777,1,N
+3/6/25,Prime C,011200 KS,HMM,KR,Information Technology,KRW,96074,72.5087,780357,7.25,N
+3/6/25,Prime A,17 HK,New World Development Company,HK,Real Estate,HKD,199.87,25.5588,1269888,1.5,N
+3/6/25,Prime B,122870 KS,YG Entertainment,KR,Information Technology,KRW,43033,32.4777,1588642,1.75,N
+3/6/25,Prime C,122870 KS,YG Entertainment,KR,Information Technology,KRW,43033,32.4777,16419,0.75,N
+3/6/25,Prime A,8309 JP,Sumitomo Mitsui Trust Holdings,JP,Financials,JPY,20045,134.0803,745779,0.25,N
+3/6/25,Prime B,8309 JP,Sumitomo Mitsui Trust Holdings,JP,Financials,JPY,20045,134.0803,1428882,0.25,N
+3/6/25,Prime C,8309 JP,Sumitomo Mitsui Trust Holdings,JP,Financials,JPY,20045,134.0803,1636390,0.25,N
+3/6/25,Prime C,8316 JP,Sumitomo Mitsui Financial Group,JP,Financials,JPY,48903,327.1104,167313,16.5,Y
+3/6/25,Prime B,8316 JP,Sumitomo Mitsui Financial Group,JP,Financials,JPY,48903,327.1104,141395,14.25,Y
+3/6/25,Prime A,8316 JP,Sumitomo Mitsui Financial Group,JP,Financials,JPY,48903,327.1104,152491,12,Y
+3/6/25,Prime A,1199 HK,COSCO SHIPPING Ports,HK,Financials,HKD,106.63,13.6355,2895889,1,N
+3/6/25,Prime C,1199 HK,COSCO SHIPPING Ports,HK,Financials,HKD,106.63,13.6355,2402749,1,N
+3/6/25,Prime B,1199 HK,COSCO SHIPPING Ports,HK,Financials,HKD,106.63,13.6355,1935267,0.75,N
+3/6/25,Prime A,8591 JP,ORIX,JP,Industrials,JPY,3957,26.4682,2467058,2.75,N
+3/6/25,Prime B,8591 JP,ORIX,JP,Industrials,JPY,3957,26.4682,2942743,1.25,N
+3/6/25,Prime C,8591 JP,ORIX,JP,Industrials,JPY,3957,26.4682,1829372,1.25,N
+3/6/25,Prime A,8604 JP,Nomura Holdings,JP,Financials,JPY,2246,15.0234,498698,0.25,N
+3/6/25,Prime B,8604 JP,Nomura Holdings,JP,Financials,JPY,2246,15.0234,1738599,0.25,N
+3/6/25,Prime C,8604 JP,Nomura Holdings,JP,Financials,JPY,2246,15.0234,2362809,0.25,N
+3/6/25,Prime B,101 HK,Hang Lung Properties,HK,Real Estate,HKD,74.96,9.5857,180256,9.5,Y
+3/6/25,Prime A,101 HK,Hang Lung Properties,HK,Real Estate,HKD,74.96,9.5857,540772,2.25,N
+3/6/25,Prime C,101 HK,Hang Lung Properties,HK,Real Estate,HKD,74.96,9.5857,1180461,2.25,N
+3/6/25,Prime A,8725 JP,MS&AD Insurance,JP,Financials,JPY,30091,201.2776,1438375,0.25,N
+3/6/25,Prime B,8725 JP,MS&AD Insurance,JP,Financials,JPY,30091,201.2776,841802,0.25,N
+3/6/25,Prime C,8725 JP,MS&AD Insurance,JP,Financials,JPY,30091,201.2776,2851363,0.25,N
+3/6/25,Prime A,8750 JP,Dai-ichi Life Holdings,JP,Financials,JPY,13511,90.3746,2028984,7.75,N
+3/6/25,Prime C,8750 JP,Dai-ichi Life Holdings,JP,Financials,JPY,13511,90.3746,714648,7.25,N
+3/6/25,Prime A,011200 KS,HMM,KR,Information Technology,KRW,96074,72.5087,1337261,6.25,N
+3/6/25,Prime B,011200 KS,HMM,KR,Information Technology,KRW,96074,72.5087,2995204,5.25,N
+3/6/25,Prime A,096775 KS,SK Innovation,KR,Information Technology,KRW,11747,8.8657,1280621,4.5,N
+3/6/25,Prime B,096775 KS,SK Innovation,KR,Information Technology,KRW,11747,8.8657,2841237,4.5,N
+3/6/25,Prime C,096775 KS,SK Innovation,KR,Information Technology,KRW,11747,8.8657,1925738,3.75,N
+3/6/25,Prime A,010950 KS,S-OIL,KR,Energy,KRW,43730,33.0038,69683,0.25,N
+3/6/25,Prime B,010950 KS,S-OIL,KR,Energy,KRW,43730,33.0038,2055564,0.25,N
+3/6/25,Prime B,090430 KS,Amorepacific,KR,Consumer Staples,KRW,95442,72.0317,1318572,7.25,N
+3/6/25,Prime A,090430 KS,Amorepacific,KR,Consumer Staples,KRW,95442,72.0317,2414537,3.25,N
+3/6/25,Prime C,090430 KS,Amorepacific,KR,Consumer Staples,KRW,95442,72.0317,1102367,3.25,N
+3/6/25,Prime A,010130 KS,Korea Zinc,KR,Materials,KRW,79004,59.6257,94072,21.5,Y
+3/6/25,Prime C,010130 KS,Korea Zinc,KR,Materials,KRW,79004,59.6257,97941,19.75,Y
+3/6/25,Prime B,010130 KS,Korea Zinc,KR,Materials,KRW,79004,59.6257,163785,18.5,Y
+3/6/25,Prime A,009830 KS,Hanwha Solutions,KR,Information Technology,KRW,42562,32.1223,969036,0.25,N
+3/6/25,Prime B,009830 KS,Hanwha Solutions,KR,Information Technology,KRW,42562,32.1223,1339051,0.25,N
+3/6/25,Prime C,009830 KS,Hanwha Solutions,KR,Information Technology,KRW,42562,32.1223,1644028,0.25,N
+3/6/25,Prime A,086280 KS,Hyundai Glovis,KR,Industrials,KRW,76758,57.9306,1091918,1.75,N
+3/6/25,Prime B,086280 KS,Hyundai Glovis,KR,Industrials,KRW,76758,57.9306,1037711,1.75,N
+3/6/25,Prime C,086280 KS,Hyundai Glovis,KR,Industrials,KRW,76758,57.9306,2484098,1.75,N
+3/6/25,Prime C,009155 KS,Samsung Electro-Mechanics,KR,Information Technology,KRW,36363,27.4438,186726,0.25,N
+3/6/25,Prime A,009155 KS,Samsung Electro-Mechanics,KR,Information Technology,KRW,36363,27.4438,49947,0.5,N
+3/6/25,Prime B,009155 KS,Samsung Electro-Mechanics,KR,Information Technology,KRW,36363,27.4438,68111,0.25,N
+3/6/25,Prime A,064350 KS,Hyundai Rotem Company,KR,Information Technology,KRW,111322,84.0166,119508,19.5,Y
+3/6/25,Prime B,064350 KS,Hyundai Rotem Company,KR,Information Technology,KRW,111322,84.0166,111625,21,Y
+3/6/25,Prime C,064350 KS,Hyundai Rotem Company,KR,Information Technology,KRW,111322,84.0166,34719,17.5,Y
+3/6/25,Prime B,058470 KS,LEENO Industrial,KR,Information Technology,KRW,105393,79.5419,1206323,1.25,N
+3/6/25,Prime C,058470 KS,LEENO Industrial,KR,Information Technology,KRW,105393,79.5419,996634,1.25,N
+3/6/25,Prime A,058470 KS,LEENO Industrial,KR,Information Technology,KRW,105393,79.5419,1384721,1,N
+3/6/25,Prime C,055550 KS,Shinhan Financial Group,KR,Financials,KRW,13307,10.043,1641136,0.5,N
+3/6/25,Prime A,165 HK,China Everbright Limited,HK,Financials,HKD,58.32,7.4578,2158221,0.25,N
+3/6/25,Prime B,165 HK,China Everbright Limited,HK,Financials,HKD,58.32,7.4578,1210693,0.25,N
+3/6/25,Prime C,165 HK,China Everbright Limited,HK,Financials,HKD,58.32,7.4578,1431469,0.25,N
+3/6/25,Prime B,16 HK,Sun Hung Kai Properties,HK,Real Estate,HKD,81.4,10.4092,1297295,6.5,N
+3/6/25,Prime A,16 HK,Sun Hung Kai Properties,HK,Real Estate,HKD,81.4,10.4092,1049448,5.25,N
+3/6/25,Prime C,16 HK,Sun Hung Kai Properties,HK,Real Estate,HKD,81.4,10.4092,1159044,3.5,N
+3/6/25,Prime B,152 HK,Shenzhen International Holdings,HK,Financials,HKD,158.53,20.2724,577659,5.75,N
+3/6/25,Prime A,152 HK,Shenzhen International Holdings,HK,Financials,HKD,158.53,20.2724,557743,5,N
+3/6/25,Prime C,152 HK,Shenzhen International Holdings,HK,Financials,HKD,158.53,20.2724,1681320,1,N
+3/6/25,Prime A,055550 KS,Shinhan Financial Group,KR,Financials,KRW,13307,10.043,1964574,0.25,N
+3/6/25,Prime B,055550 KS,Shinhan Financial Group,KR,Financials,KRW,13307,10.043,2914834,0.25,N
+3/6/25,Prime B,051905 KS,LG Household & Health Care,KR,Information Technology,KRW,62830,47.4189,1480809,2.75,N
+3/6/25,Prime A,148 HK,Kingboard Holdings,HK,Financials,HKD,4.75,0.6074,142145,0.25,N
+3/6/25,Prime B,148 HK,Kingboard Holdings,HK,Financials,HKD,4.75,0.6074,830946,0.25,N
+3/6/25,Prime C,148 HK,Kingboard Holdings,HK,Financials,HKD,4.75,0.6074,298028,0.25,N
+3/6/25,Prime C,051905 KS,LG Household & Health Care,KR,Information Technology,KRW,62830,47.4189,345683,2.75,N
+3/6/25,Prime A,051905 KS,LG Household & Health Care,KR,Information Technology,KRW,62830,47.4189,2087428,2.5,N
+3/6/25,Prime A,047810 KS,Korea Aerospace Industries,KR,Information Technology,KRW,117143,88.4098,1568054,1.25,N
+3/6/25,Prime B,047810 KS,Korea Aerospace Industries,KR,Information Technology,KRW,117143,88.4098,2776626,4,N
+3/6/25,Prime C,047810 KS,Korea Aerospace Industries,KR,Information Technology,KRW,117143,88.4098,175573,2.5,N
+3/6/25,Prime A,042660 KS,Hanwha Ocean (DSME),KR,Information Technology,KRW,99837,75.3487,171500,18.5,Y
+3/6/25,Prime B,042660 KS,Hanwha Ocean (DSME),KR,Information Technology,KRW,99837,75.3487,34475,20,Y
+3/6/25,Prime C,042660 KS,Hanwha Ocean (DSME),KR,Information Technology,KRW,99837,75.3487,152717,19.5,Y
+3/6/25,Prime A,041510 KS,SM Entertainment,KR,Health Care,KRW,59066,44.5781,96421,20.25,Y
+3/6/25,Prime B,135 HK,Kunlun Energy Company,HK,Financials,HKD,78.61,10.0524,397800,7.25,N
+3/6/25,Prime C,135 HK,Kunlun Energy Company,HK,Financials,HKD,78.61,10.0524,1088803,3.75,N
+3/6/25,Prime A,5871 TT,Chailease Holding,TW,Information Technology,TWD,512.88,16.1283,91971,0.25,N
+3/6/25,Prime B,5871 TT,Chailease Holding,TW,Information Technology,TWD,512.88,16.1283,2714765,0.25,N
+3/6/25,Prime C,5871 TT,Chailease Holding,TW,Information Technology,TWD,512.88,16.1283,1573443,0.25,N
+3/6/25,Prime A,5876 TT,Shanghai Commercial and Savings Bank,TW,Information Technology,TWD,241.69,7.6003,297177,0.25,N
+3/6/25,Prime B,5876 TT,Shanghai Commercial and Savings Bank,TW,Information Technology,TWD,241.69,7.6003,384871,0.25,N
+3/6/25,Prime C,5876 TT,Shanghai Commercial and Savings Bank,TW,Information Technology,TWD,241.69,7.6003,1383208,0.25,N
+3/6/25,Prime C,5880 TT,Taiwan Cooperative Financial,TW,Financials,TWD,191.97,6.0368,1262981,7.75,N
+3/6/25,Prime B,5880 TT,Taiwan Cooperative Financial,TW,Financials,TWD,191.97,6.0368,540324,7.5,N
+3/6/25,Prime A,5880 TT,Taiwan Cooperative Financial,TW,Financials,TWD,191.97,6.0368,1060628,2.5,N
+3/6/25,Prime B,6111 TT,Softstar Entertainment,TW,Information Technology,TWD,196.86,6.1906,177305,17.5,Y
+3/6/25,Prime A,6111 TT,Softstar Entertainment,TW,Information Technology,TWD,196.86,6.1906,191641,16.75,Y
+3/6/25,Prime C,6111 TT,Softstar Entertainment,TW,Information Technology,TWD,196.86,6.1906,9457,11.5,Y
+3/6/25,Prime C,6180 TT,Gamania Digital,TW,Information Technology,TWD,343.38,10.7981,164651,17.5,Y
+3/6/25,Prime A,6180 TT,Gamania Digital,TW,Information Technology,TWD,343.38,10.7981,107619,15,Y
+3/6/25,Prime B,6180 TT,Gamania Digital,TW,Information Technology,TWD,343.38,10.7981,96735,13,Y
+3/6/25,Prime B,6446 TT,PharmaEssentia,TW,Health Care,TWD,165,5.1887,152376,17.5,Y
+3/6/25,Prime A,6446 TT,PharmaEssentia,TW,Health Care,TWD,165,5.1887,52859,16.5,Y
+3/6/25,Prime C,6446 TT,PharmaEssentia,TW,Health Care,TWD,165,5.1887,29517,16,Y
+3/6/25,Prime B,041510 KS,SM Entertainment,KR,Health Care,KRW,59066,44.5781,143556,19.5,Y
+3/6/25,Prime C,041510 KS,SM Entertainment,KR,Health Care,KRW,59066,44.5781,27053,13.75,Y
+3/6/25,Prime B,8750 JP,Dai-ichi Life Holdings,JP,Financials,JPY,13511,90.3746,1283802,6,N
+3/6/25,Prime C,8766 JP,Tokio Marine,JP,Financials,JPY,50474,337.6187,765195,5.5,N
+3/6/25,Prime A,8766 JP,Tokio Marine,JP,Financials,JPY,50474,337.6187,945564,3.5,N
+3/6/25,Prime B,8766 JP,Tokio Marine,JP,Financials,JPY,50474,337.6187,2354954,0.75,N
+3/6/25,Prime B,8801 JP,Mitsui Fudosan,JP,Real Estate,JPY,7824,52.3344,20636,24.25,Y
+3/6/25,Prime C,8801 JP,Mitsui Fudosan,JP,Real Estate,JPY,7824,52.3344,25738,21,Y
+3/6/25,Prime A,8801 JP,Mitsui Fudosan,JP,Real Estate,JPY,7824,52.3344,69226,19.75,Y
+3/6/25,Prime A,8802 JP,Mitsubishi Estate,JP,Real Estate,JPY,32174,215.2107,109844,15.5,Y
+3/6/25,Prime B,8802 JP,Mitsubishi Estate,JP,Real Estate,JPY,32174,215.2107,55397,10.5,Y
+3/6/25,Prime C,8802 JP,Mitsubishi Estate,JP,Real Estate,JPY,32174,215.2107,30172,10,Y
+3/6/25,Prime A,8830 JP,Sumitomo Realty & Development,JP,Real Estate,JPY,9716,64.99,2108454,7.25,N
+3/6/25,Prime B,8830 JP,Sumitomo Realty & Development,JP,Real Estate,JPY,9716,64.99,2915524,5.25,N
+3/6/25,Prime C,8830 JP,Sumitomo Realty & Development,JP,Real Estate,JPY,9716,64.99,1489581,3.75,N
+3/6/25,Prime A,9020 JP,East Japan Railway,JP,Industrials,JPY,41850,279.9331,1171724,0.25,N
+3/6/25,Prime B,9020 JP,East Japan Railway,JP,Industrials,JPY,41850,279.9331,1288854,0.25,N
+3/6/25,Prime C,9020 JP,East Japan Railway,JP,Industrials,JPY,41850,279.9331,1706446,0.25,N
+3/6/25,Prime C,9022 JP,Central Japan Railway,JP,Industrials,JPY,45615,305.1171,765227,7.75,N
+3/6/25,Prime B,9022 JP,Central Japan Railway,JP,Industrials,JPY,45615,305.1171,544839,6.25,N
+3/6/25,Prime A,9022 JP,Central Japan Railway,JP,Industrials,JPY,45615,305.1171,2673330,5.75,N
+3/6/25,Prime C,036570 KS,NCsoft,KR,Communication Services,KRW,8014,6.0483,1191070,0.75,N
+3/6/25,Prime A,036570 KS,NCsoft,KR,Communication Services,KRW,8014,6.0483,774942,0.5,N
+3/6/25,Prime B,036570 KS,NCsoft,KR,Communication Services,KRW,8014,6.0483,1886675,0.5,N
+3/6/25,Prime A,006405 KS,Samsung SDI,KR,Information Technology,KRW,60997,46.0355,2892886,0.25,N
+3/6/25,Prime B,006405 KS,Samsung SDI,KR,Information Technology,KRW,60997,46.0355,1672555,0.25,N
+3/6/25,Prime C,006405 KS,Samsung SDI,KR,Information Technology,KRW,60997,46.0355,746912,0.25,N
+3/6/25,Prime A,035900 KS,JYP Entertainment,KR,Information Technology,KRW,96950,73.1698,342735,0.75,N
+3/6/25,Prime B,035900 KS,JYP Entertainment,KR,Information Technology,KRW,96950,73.1698,1180054,0.75,N
+3/6/25,Prime C,035900 KS,JYP Entertainment,KR,Information Technology,KRW,96950,73.1698,1755980,1,N
+3/6/25,Prime A,034730 KS,SK Group,KR,Industrials,KRW,17317,13.0694,199590,21,Y
+3/6/25,Prime C,034730 KS,SK Group,KR,Industrials,KRW,17317,13.0694,72816,19.5,Y
+3/6/25,Prime B,034730 KS,SK Group,KR,Industrials,KRW,17317,13.0694,170941,20.5,Y
+3/6/25,Prime B,005490 KS,POSCO,KR,Materials,KRW,86501,65.2838,87216,0.25,N
+3/6/25,Prime C,005490 KS,POSCO,KR,Materials,KRW,86501,65.2838,306220,0.25,N
+3/6/25,Prime A,005490 KS,POSCO,KR,Materials,KRW,86501,65.2838,1124125,0.5,N
+3/6/25,Prime B,005380 KS,Hyundai,KR,Consumer Discretionary,KRW,66146,49.9215,1715028,5.25,N
+3/6/25,Prime A,005380 KS,Hyundai,KR,Consumer Discretionary,KRW,66146,49.9215,704274,3,N
+3/6/25,Prime C,005380 KS,Hyundai,KR,Consumer Discretionary,KRW,66146,49.9215,1581863,1,N
+3/6/25,Prime A,004990 KS,LOTTE Corporation,KR,Information Technology,KRW,87228,65.8325,1148106,0.25,N
+3/6/25,Prime B,004990 KS,LOTTE Corporation,KR,Information Technology,KRW,87228,65.8325,366566,0.25,N
+3/6/25,Prime C,004990 KS,LOTTE Corporation,KR,Information Technology,KRW,87228,65.8325,599277,0.25,N
+3/6/25,Prime A,004370 KS,Nongshim,KR,Information Technology,KRW,100628,75.9457,1603915,6.25,N
+3/6/25,Prime C,004370 KS,Nongshim,KR,Information Technology,KRW,100628,75.9457,1249391,5,N
+3/6/25,Prime B,004370 KS,Nongshim,KR,Information Technology,KRW,100628,75.9457,516803,4.75,N
+3/6/25,Prime C,004170 KS,Shinsegae,KR,Consumer Staples,KRW,33283,25.1192,2061666,5.5,N
+3/6/25,Prime B,004170 KS,Shinsegae,KR,Consumer Staples,KRW,33283,25.1192,2443698,3.25,N
+3/6/25,Prime A,004170 KS,Shinsegae,KR,Consumer Staples,KRW,33283,25.1192,1257908,2.5,N
+3/6/25,Prime C,003670 KS,POSCO Chemical,KR,Information Technology,KRW,101988,76.9721,35099,0.25,N
+3/6/25,Prime B,003670 KS,POSCO Chemical,KR,Information Technology,KRW,101988,76.9721,74099,23,Y
+3/6/25,Prime A,003670 KS,POSCO Chemical,KR,Information Technology,KRW,101988,76.9721,101597,21.75,Y
+3/6/25,Prime B,003550 KS,LG Corp,KR,Industrials,KRW,108163,81.6325,2371348,7.25,N
+3/6/25,Prime A,135 HK,Kunlun Energy Company,HK,Financials,HKD,78.61,10.0524,2949301,1.25,N
+3/6/25,Prime C,034020 KS,Doosan Enerbility,KR,Information Technology,KRW,66087,49.877,1052303,0.5,N
+3/6/25,Prime A,034020 KS,Doosan Enerbility,KR,Information Technology,KRW,66087,49.877,224349,0.25,N
+3/6/25,Prime B,034020 KS,Doosan Enerbility,KR,Information Technology,KRW,66087,49.877,2348514,0.25,N
+3/6/25,Prime A,1308 HK,SITC International,HK,Financials,HKD,193.81,24.7839,1356741,0.25,N
+3/6/25,Prime B,1308 HK,SITC International,HK,Financials,HKD,193.81,24.7839,1294482,0.25,N
+3/6/25,Prime C,1308 HK,SITC International,HK,Financials,HKD,193.81,24.7839,756274,0.25,N
+3/6/25,Prime A,1299 HK,AIA,HK,Financials,HKD,102.28,13.0793,32916,7,N
+3/6/25,Prime B,1299 HK,AIA,HK,Financials,HKD,102.28,13.0793,145824,3.75,N
+3/6/25,Prime C,1299 HK,AIA,HK,Financials,HKD,102.28,13.0793,802171,3.75,N
+3/6/25,Prime B,033780 KS,KT&G (Korea Tobacco),KR,Consumer Staples,KRW,118327,89.3034,2128394,1,N
+3/6/25,Prime A,033780 KS,KT&G (Korea Tobacco),KR,Consumer Staples,KRW,118327,89.3034,893876,0.75,N
+3/6/25,Prime C,033780 KS,KT&G (Korea Tobacco),KR,Consumer Staples,KRW,118327,89.3034,2176154,0.5,N
+3/6/25,Prime B,12 HK,Henderson Land Development,HK,Real Estate,HKD,39.29,5.0243,1274072,7,N
+3/6/25,Prime C,12 HK,Henderson Land Development,HK,Real Estate,HKD,39.29,5.0243,9286,7,N
+3/6/25,Prime A,12 HK,Henderson Land Development,HK,Real Estate,HKD,39.29,5.0243,2648548,5.5,N
+3/6/25,Prime B,030200 KS,KT Corporation,KR,Communication Services,KRW,19607,14.7977,2952516,2.25,N
+3/6/25,Prime C,030200 KS,KT Corporation,KR,Communication Services,KRW,19607,14.7977,2548814,2.25,N
+3/6/25,Prime A,030200 KS,KT Corporation,KR,Communication Services,KRW,19607,14.7977,629296,2,N
+3/6/25,Prime A,1193 HK,China Resources Gas Group,HK,Financials,HKD,123.13,15.7455,377712,0.25,N
+3/6/25,Prime B,1193 HK,China Resources Gas Group,HK,Financials,HKD,123.13,15.7455,1051291,0.25,N
+3/6/25,Prime C,1193 HK,China Resources Gas Group,HK,Financials,HKD,123.13,15.7455,1475388,0.25,N
+3/6/25,Prime C,1164 HK,CGN Mining Company,HK,Financials,HKD,163.89,20.9578,165430,26.25,Y
+3/6/25,Prime A,1164 HK,CGN Mining Company,HK,Financials,HKD,163.89,20.9578,3501,21.25,Y
+3/6/25,Prime B,1164 HK,CGN Mining Company,HK,Financials,HKD,163.89,20.9578,123240,19,Y
+3/6/25,Prime B,116 HK,Chow Sang Sang Holdings,HK,Financials,HKD,30.52,3.9028,112904,22.25,Y
+3/6/25,Prime C,116 HK,Chow Sang Sang Holdings,HK,Financials,HKD,30.52,3.9028,92098,21.25,Y
+3/6/25,Prime A,024110 KS,Industrial Bank of Korea (IBK),KR,Financials,KRW,105082,79.3072,25974,8.5,Y
+3/6/25,Prime B,024110 KS,Industrial Bank of Korea (IBK),KR,Financials,KRW,105082,79.3072,1490361,6,N
+3/6/25,Prime C,024110 KS,Industrial Bank of Korea (IBK),KR,Financials,KRW,105082,79.3072,2389206,4.5,N
+3/6/25,Prime A,021240 KS,Coway,KR,Consumer Discretionary,KRW,9460,7.1396,534193,4.5,N
+3/6/25,Prime B,021240 KS,Coway,KR,Consumer Discretionary,KRW,9460,7.1396,706901,3.25,N
+3/6/25,Prime C,021240 KS,Coway,KR,Consumer Discretionary,KRW,9460,7.1396,24187,1.5,N
+3/6/25,Prime C,015760 KS,Korea Electric Power,KR,Utilities,KRW,62222,46.96,1475037,4,N
+3/6/25,Prime A,015760 KS,Korea Electric Power,KR,Utilities,KRW,62222,46.96,903826,2.75,N
+3/6/25,Prime B,015760 KS,Korea Electric Power,KR,Utilities,KRW,62222,46.96,2370477,2.75,N
+3/6/25,Prime A,014680 KS,Hansol Chemical,KR,Information Technology,KRW,84335,63.6491,2450165,3,N
+3/6/25,Prime B,014680 KS,Hansol Chemical,KR,Information Technology,KRW,84335,63.6491,676511,2.5,N
+3/6/25,Prime C,014680 KS,Hansol Chemical,KR,Information Technology,KRW,84335,63.6491,1869428,2.5,N
+3/6/25,Prime C,011170 KS,LOTTE Chemical,KR,Materials,KRW,8507,6.4204,1932625,2.25,N
+3/6/25,Prime C,6669 TT,Wiwynn,TW,Information Technology,TWD,215.36,6.7723,1234208,7,N
+3/6/25,Prime B,6669 TT,Wiwynn,TW,Information Technology,TWD,215.36,6.7723,1536039,2.75,N
+3/6/25,Prime A,6669 TT,Wiwynn,TW,Information Technology,TWD,215.36,6.7723,1990549,2.25,N
+3/6/25,Prime B,6770 TT,Powerchip Semiconductor Manufacturing,TW,Information Technology,TWD,478.99,15.0626,116199,16.25,Y
+3/6/25,Prime C,6770 TT,Powerchip Semiconductor Manufacturing,TW,Information Technology,TWD,478.99,15.0626,8866,10,Y
+3/6/25,Prime A,6770 TT,Powerchip Semiconductor Manufacturing,TW,Information Technology,TWD,478.99,15.0626,28001,9.75,Y
+3/6/25,Prime A,6789 TT,VisEra Technologies,TW,Information Technology,TWD,435.06,13.6811,546170,0.25,N
+3/6/25,Prime A,9433 JP,KDDI,JP,Communication Services,JPY,2461,16.4615,2694955,7.5,N
+3/6/25,Prime C,9433 JP,KDDI,JP,Communication Services,JPY,2461,16.4615,421471,5.5,N
+3/6/25,Prime B,9433 JP,KDDI,JP,Communication Services,JPY,2461,16.4615,700880,4.75,N
+3/6/25,Prime A,011170 KS,LOTTE Chemical,KR,Materials,KRW,8507,6.4204,1013083,2,N
+3/6/25,Prime B,011170 KS,LOTTE Chemical,KR,Materials,KRW,8507,6.4204,1844500,2,N
+3/6/25,Prime A,010140 KS,Samsung Heavy Industries,KR,Industrials,KRW,40896,30.8649,552999,4.75,N
+3/6/25,Prime B,010140 KS,Samsung Heavy Industries,KR,Industrials,KRW,40896,30.8649,2157623,4.75,N
+3/6/25,Prime C,010140 KS,Samsung Heavy Industries,KR,Industrials,KRW,40896,30.8649,532524,1.5,N
+3/6/25,Prime C,009540 KS,HD Korea Shipbuilding & Offshore Engineering,KR,Industrials,KRW,54693,41.2777,422357,0.5,N
+3/6/25,Prime A,009540 KS,HD Korea Shipbuilding & Offshore Engineering,KR,Industrials,KRW,54693,41.2777,2245368,0.25,N
+3/6/25,Prime B,009540 KS,HD Korea Shipbuilding & Offshore Engineering,KR,Industrials,KRW,54693,41.2777,2483440,0.25,N
+3/6/25,Prime A,9735 JP,Secom,JP,Industrials,JPY,34849,233.1037,322007,0.25,N
+3/6/25,Prime B,9735 JP,Secom,JP,Industrials,JPY,34849,233.1037,64530,0.25,N
+3/6/25,Prime C,9735 JP,Secom,JP,Industrials,JPY,34849,233.1037,2345361,0.25,N
+3/6/25,Prime A,008930 KS,Hanmi Pharmaceutical,KR,Information Technology,KRW,54241,40.9366,1574996,0.25,N
+3/6/25,Prime B,008930 KS,Hanmi Pharmaceutical,KR,Information Technology,KRW,54241,40.9366,2516521,0.25,N
+3/6/25,Prime C,008930 KS,Hanmi Pharmaceutical,KR,Information Technology,KRW,54241,40.9366,1480779,0.25,N
+3/6/25,Prime A,9983 JP,Fast Retailing,JP,Consumer Discretionary,JPY,6116,40.9097,337328,0.25,N
+3/6/25,Prime B,9983 JP,Fast Retailing,JP,Consumer Discretionary,JPY,6116,40.9097,1260687,0.25,N
+3/6/25,Prime C,9983 JP,Fast Retailing,JP,Consumer Discretionary,JPY,6116,40.9097,2602111,0.25,N
+3/6/25,Prime C,9984 JP,SoftBank,JP,Communication Services,JPY,4174,27.9197,1114009,6.75,N
+3/6/25,Prime A,9984 JP,SoftBank,JP,Communication Services,JPY,4174,27.9197,1498052,2.25,N
+3/6/25,Prime B,9984 JP,SoftBank,JP,Communication Services,JPY,4174,27.9197,931036,2,N
+3/6/25,Prime A,003550 KS,LG Corp,KR,Industrials,KRW,108163,81.6325,2793729,4.75,N
+3/6/25,Prime C,003550 KS,LG Corp,KR,Industrials,KRW,108163,81.6325,1834589,1.5,N
+3/6/25,Prime A,007310 KS,Ottogi,KR,Consumer Discretionary,KRW,76006,57.363,185835,21.5,Y
+3/6/25,Prime C,007310 KS,Ottogi,KR,Consumer Discretionary,KRW,76006,57.363,146079,21.25,Y
+3/6/25,Prime B,007310 KS,Ottogi,KR,Consumer Discretionary,KRW,76006,57.363,158395,16.75,Y
+3/6/25,Prime A,003230 KS,Samyang Foods,KR,Information Technology,KRW,45993,34.7117,196509,8.5,Y
+3/6/25,Prime C,003230 KS,Samyang Foods,KR,Information Technology,KRW,45993,34.7117,177799,8.5,Y
+3/6/25,Prime B,003230 KS,Samyang Foods,KR,Information Technology,KRW,45993,34.7117,1794366,8,Y
+3/6/25,Prime C,006260 KS,LS Corp.,KR,Information Technology,KRW,118950,89.7736,2190820,7,N
+3/6/25,Prime A,006260 KS,LS Corp.,KR,Information Technology,KRW,118950,89.7736,402604,6.75,N
+3/6/25,Prime B,006260 KS,LS Corp.,KR,Information Technology,KRW,118950,89.7736,1183845,4.75,N
+3/6/25,Prime B,005930 KS,Samsung,KR,Information Technology,KRW,75377,56.8883,1155886,0,N
+3/6/25,Prime C,005930 KS,Samsung,KR,Information Technology,KRW,75377,56.8883,921139,0.01,N
+3/6/25,Prime A,005930 KS,Samsung,KR,Information Technology,KRW,75377,56.8883,704479,0.25,N
+3/6/25,Prime C,000660 KS,SK Hynix,KR,Information Technology,KRW,61099,46.1125,71990,0.25,N
+3/6/25,Prime A,000660 KS,SK Hynix,KR,Information Technology,KRW,61099,46.1125,152697,0.25,N
+3/6/25,Prime A,003495 KS,Korean Air Lines,KR,Information Technology,KRW,68942,52.0317,865652,3,N
+3/6/25,Prime C,003495 KS,Korean Air Lines,KR,Information Technology,KRW,68942,52.0317,2389557,1.75,N
+3/6/25,Prime B,003495 KS,Korean Air Lines,KR,Information Technology,KRW,68942,52.0317,2226650,0.25,N
+3/6/25,Prime A,002380 KS,KCC Corp,KR,Industrials,KRW,67256,50.7592,2471994,0.75,N
+3/6/25,Prime B,002380 KS,KCC Corp,KR,Industrials,KRW,67256,50.7592,2349737,0.5,N
+3/6/25,Prime C,002380 KS,KCC Corp,KR,Industrials,KRW,67256,50.7592,1049202,0.25,N
+3/6/25,Prime A,000100 KS,Yuhan,KR,Health Care,KRW,38646,29.1668,480384,0.25,N
+3/6/25,Prime B,000100 KS,Yuhan,KR,Health Care,KRW,38646,29.1668,1271236,0.25,N
+3/6/25,Prime C,000100 KS,Yuhan,KR,Health Care,KRW,38646,29.1668,459728,0.25,N
+3/6/25,Prime C,000080 KS,HiteJinro,KR,Consumer Staples,KRW,108999,82.2634,1187349,7.75,N
+3/6/25,Prime B,000080 KS,HiteJinro,KR,Consumer Staples,KRW,108999,82.2634,2238617,5,N
+3/6/25,Prime A,000080 KS,HiteJinro,KR,Consumer Staples,KRW,108999,82.2634,1039952,3.25,N
+3/6/25,Prime A,116 HK,Chow Sang Sang Holdings,HK,Financials,HKD,30.52,3.9028,34077,19.25,Y
+3/6/25,Prime A,1113 HK,CK Asset Holdings,HK,Financials,HKD,147.18,18.821,2982390,0.25,N
+3/6/25,Prime B,1113 HK,CK Asset Holdings,HK,Financials,HKD,147.18,18.821,2926568,0.25,N
+3/6/25,Prime C,1113 HK,CK Asset Holdings,HK,Financials,HKD,147.18,18.821,1853967,0.25,N
+3/6/25,Prime A,1109 HK,China Resources Land,HK,Real Estate,HKD,40.82,5.2199,1854855,7,N
+3/6/25,Prime C,1109 HK,China Resources Land,HK,Real Estate,HKD,40.82,5.2199,1752312,6.75,N
+3/6/25,Prime B,1109 HK,China Resources Land,HK,Real Estate,HKD,40.82,5.2199,1154602,0.5,N
+3/6/25,Prime A,1038 HK,CK Infrastructure,HK,Utilities,HKD,22.68,2.9003,178376,16,Y
+3/6/25,Prime B,1038 HK,CK Infrastructure,HK,Utilities,HKD,22.68,2.9003,86004,13.75,Y
+3/6/25,Prime C,1038 HK,CK Infrastructure,HK,Utilities,HKD,22.68,2.9003,136732,12,Y
+3/6/25,Prime A,0011 HK,Jardine Matheson,HK,Financials,HKD,22.01,2.8146,170555,0.25,N
+3/6/25,Prime C,0011 HK,Jardine Matheson,HK,Financials,HKD,22.01,2.8146,74377,0.25,N
+3/6/25,Prime B,0011 HK,Jardine Matheson,HK,Financials,HKD,22.01,2.8146,64304,0.5,N
+3/6/25,Prime B,10 HK,Hang Lung Group,HK,Financials,HKD,35.55,4.546,325003,6,N
+3/6/25,Prime A,10 HK,Hang Lung Group,HK,Financials,HKD,35.55,4.546,2941854,5.5,N
+3/6/25,Prime C,10 HK,Hang Lung Group,HK,Financials,HKD,35.55,4.546,2961307,4.25,N
+3/6/25,Prime B,1 HK,CK Hutchison Holdings,HK,Industrials,HKD,142.9,18.2737,1827693,6.25,N
+3/6/25,Prime C,1 HK,CK Hutchison Holdings,HK,Industrials,HKD,142.9,18.2737,1649277,3.75,N
+3/6/25,Prime A,1 HK,CK Hutchison Holdings,HK,Industrials,HKD,142.9,18.2737,2872311,0.75,N
+3/6/25,Prime A,0013 HK,HUTCHMED,HK,Financials,HKD,141.45,18.0882,173037,8.25,Y
+3/6/25,Prime B,0013 HK,HUTCHMED,HK,Financials,HKD,141.45,18.0882,2147718,4.75,N
+3/6/25,Prime C,0013 HK,HUTCHMED,HK,Financials,HKD,141.45,18.0882,284293,0.75,N
+3/6/25,Prime B,001040 KS,CJ Group,KR,Materials,KRW,50149,37.8483,838076,6.75,N
+3/6/25,Prime A,001040 KS,CJ Group,KR,Materials,KRW,50149,37.8483,704032,2.75,N
+3/6/25,Prime C,001040 KS,CJ Group,KR,Materials,KRW,50149,37.8483,1966887,0.25,N
+3/6/25,Prime B,6789 TT,VisEra Technologies,TW,Information Technology,TWD,435.06,13.6811,2473650,0.25,N
+3/6/25,Prime C,6789 TT,VisEra Technologies,TW,Information Technology,TWD,435.06,13.6811,1759061,0.25,N
+3/6/25,Prime B,6919 TT,Caliway Biopharmaceuticals,TW,Information Technology,TWD,154.16,4.8478,33348,7,N
+3/6/25,Prime C,6919 TT,Caliway Biopharmaceuticals,TW,Information Technology,TWD,154.16,4.8478,2712817,6.75,N
+3/6/25,Prime A,6919 TT,Caliway Biopharmaceuticals,TW,Information Technology,TWD,154.16,4.8478,1380455,3.5,N
+3/6/25,Prime A,000270 KS,Kia,KR,Consumer Discretionary,KRW,114722,86.5826,2690978,0.25,N
+3/6/25,Prime B,000270 KS,Kia,KR,Consumer Discretionary,KRW,114722,86.5826,1236975,0.25,N
+3/6/25,Prime C,000270 KS,Kia,KR,Consumer Discretionary,KRW,114722,86.5826,972254,0.25,N
+3/6/25,Prime A,8150 TT,ChipMOS Technologies,TW,Information Technology,TWD,383.41,12.0569,1202506,0.25,N
+3/6/25,Prime B,8150 TT,ChipMOS Technologies,TW,Information Technology,TWD,383.41,12.0569,2477539,0.25,N
+3/6/25,Prime C,8150 TT,ChipMOS Technologies,TW,Information Technology,TWD,383.41,12.0569,2465573,0.25,N
+3/6/25,Prime C,8299 TT,Phison Electronics,TW,Information Technology,TWD,562.94,17.7025,145928,32,Y
+3/6/25,Prime B,8299 TT,Phison Electronics,TW,Information Technology,TWD,562.94,17.7025,147224,21.75,Y
+3/6/25,Prime A,8299 TT,Phison Electronics,TW,Information Technology,TWD,562.94,17.7025,20175,20.75,Y
+3/6/25,Prime B,000150 KS,Doosan,KR,Industrials,KRW,19426,14.6611,145048,18.5,Y
+3/6/25,Prime C,000150 KS,Doosan,KR,Industrials,KRW,19426,14.6611,29864,21.75,Y
+3/6/25,Prime A,000150 KS,Doosan,KR,Industrials,KRW,19426,14.6611,10982,19.25,Y
+3/6/25,Prime C,9914 TT,Merida Industry,TW,Information Technology,TWD,286.71,9.016,2274120,2.25,N
+3/6/25,Prime A,9914 TT,Merida Industry,TW,Information Technology,TWD,286.71,9.016,2709681,1,N
+3/6/25,Prime B,9914 TT,Merida Industry,TW,Information Technology,TWD,286.71,9.016,953413,0.75,N

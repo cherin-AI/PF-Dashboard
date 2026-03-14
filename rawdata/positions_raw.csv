@@ -1,0 +1,151 @@
+date,ticker,name,country,sector,fund,side,abs_shares,price_usd,price_local,currency,gross_exposure_usd,borrow_rate_pct,htb_flag,daily_borrow_cost_usd,annual_borrow_cost_usd,prime_broker
+3/6/25,6701 JP,NEC Corp,JP,Industrials,Asia Long/Short,Short,1600,323.0635,48298,JPY,516901.6,23.5,Y,337.4218778,121471.876,Prime B
+3/6/25,034730 KS,SK Group,KR,Industrials,Asia Long/Short,Short,124300,13.0694,17317,KRW,1624526.42,21.665,Y,977.6490247,351953.6489,Prime A
+3/6/25,123 HK,Yuexiu Property,HK,Financials,Asia Long/Short,Short,186400,18.1765,142.14,HKD,3388099.6,19.5,Y,1835.220617,660679.422,Prime A
+3/6/25,2343 HK,Pacific Basin Shipping,HK,Financials,Quant Asia,Short,53300,30.1394,235.69,HKD,1606430.02,21.5,Y,959.3957064,345382.4543,Prime B
+3/6/25,042660 KS,Hanwha Ocean (DSME),KR,Information Technology,Asia Alpha Master,Short,40400,75.3487,99837,KRW,3044087.48,20,Y,1691.159711,608817.496,Prime C
+3/6/25,688 HK,China Overseas Land & Investment,HK,Real Estate,Quant Asia,Short,420700,2.4079,18.83,HKD,1013003.53,21.55,Y,606.3951687,218302.2607,Prime A
+3/6/25,000150 KS,Doosan,KR,Industrials,Quant Asia,Short,205700,14.6611,19426,KRW,3015788.27,19.778,Y,1656.840567,596462.604,Prime B
+3/6/25,064350 KS,Hyundai Rotem Company,KR,Information Technology,Asia Long/Short,Short,67300,84.0166,111322,KRW,5654317.18,22,Y,3455.416054,1243949.78,Prime B
+3/6/25,6 HK,Power Assets,HK,Utilities,Asia Alpha Master,Short,6383300,1.1458,8.96,HKD,7313985.14,21.261,Y,4319.517724,1555026.381,Prime A
+3/6/25,007310 KS,Ottogi,KR,Consumer Discretionary,Asia Alpha Master,Short,23100,57.363,76006,KRW,1325085.3,20.5,Y,754.5624625,271642.4865,Prime A
+3/6/25,5016 JP,JX Advanced Metals,JP,Industrials,Asia Alpha Master,Short,32700,93.291,13947,JPY,3050615.7,19,Y,1610.047175,579616.983,Prime B
+3/6/25,041510 KS,SM Entertainment,KR,Health Care,Asia Long/Short,Short,44500,44.5781,59066,KRW,1983725.45,18.17,Y,1001.230317,360442.9143,Prime A
+3/6/25,6902 JP,Denso,JP,Consumer Discretionary,Quant Asia,Short,26500,129.5452,19367,JPY,3432947.8,16.834,Y,1605.284535,577902.4327,Prime B
+3/6/25,373220 KS,LG Energy Solution,KR,Information Technology,Quant Asia,Short,62400,70.7019,93680,KRW,4411798.56,14.25,Y,1746.33693,628681.2948,Prime B
+3/6/25,443060 KS,HD Hyundai Marine Solution,KR,Information Technology,Asia Alpha Master,Short,107900,45.2619,59972,KRW,4883759.01,11.75,Y,1594.004677,573841.6837,Prime B
+3/6/25,293490 KS,Kakao Games,KR,Information Technology,Asia Long/Short,Short,17200,84.717,112250,KRW,1457132.4,10.25,Y,414.877975,149356.071,Prime A
+3/6/25,4689 JP,LY Corporation,JP,Communication Services,Asia Long/Short,Short,6000,240.6488,35977,JPY,1443892.8,10.25,Y,411.1083667,147999.012,Prime C
+3/6/25,41 HK,Great Eagle,HK,Financials,Quant Asia,Short,66400,14.3082,111.89,HKD,950064.48,9.25,Y,244.11379,87880.9644,Prime B
+3/6/25,257 HK,China Everbright Environment Group,HK,Financials,Quant Asia,Short,144700,23.4156,183.11,HKD,3388237.32,5.261,N,495.1532372,178255.1654,Prime A
+3/6/25,6273 JP,SMC Corp,JP,Industrials,Quant Asia,Short,17800,190.5351,28485,JPY,3391524.78,5.15,N,485.1764616,174663.5262,Prime A
+3/6/25,336260 KS,Doosan Fuel Cell,KR,Information Technology,Quant Asia,Short,43700,77.597,102816,KRW,3390988.9,5,N,470.9706806,169549.445,Prime A
+3/6/25,6055 HK,China Tobacco International,HK,Financials,Quant Asia,Short,208200,12.8005,100.1,HKD,2665064.1,5,N,370.1477917,133253.205,Prime C
+3/6/25,215 HK,Hutchison Telecommunications Hong Kong,HK,Financials,Asia Long/Short,Short,142300,34.1164,266.79,HKD,4854763.72,5,N,674.2727389,242738.186,Prime A
+3/6/25,7013 JP,IHI Corporation,JP,Industrials,Asia Long/Short,Short,13300,235.6589,35231,JPY,3134263.37,5,N,435.3143569,156713.1685,Prime A
+3/6/25,0011 HK,Jardine Matheson,HK,Financials,Asia Alpha Master,Short,250500,2.8146,22.01,HKD,705057.3,5,N,97.924625,35252.865,Prime C
+3/6/25,6178 JP,Japan Post Holdings,JP,Industrials,Quant Asia,Short,4200,83.6722,12509,JPY,351423.24,5,N,48.80878333,17571.162,Prime C
+3/6/25,3532 TT,Formosa Sumco Technology,TW,Information Technology,Asia Alpha Master,Short,471200,6.8142,216.69,TWD,3210851.04,5,N,445.9515333,160542.552,Prime B
+3/6/25,3481 TT,Innolux,TW,Information Technology,Quant Asia,Short,286400,11.8343,376.33,TWD,3389343.52,5,N,470.7421556,169467.176,Prime A
+3/6/25,2888 TT,Shin Kong Financial Holding,TW,Financials,Quant Asia,Short,36800,17.5302,557.46,TWD,645111.36,5,N,89.5988,32255.568,Prime C
+3/6/25,2885 TT,Yuanta Financial Holding,TW,Financials,Asia Long/Short,Short,4983300,1.5855,50.42,TWD,7901022.15,4.976,N,1092.096839,393154.8622,Prime A
+3/6/25,8058 JP,Mitsubishi Corporation,JP,Industrials,Asia Long/Short,Short,98900,34.2876,5126,JPY,3391043.64,4.792,N,451.3855867,162498.8112,Prime B
+3/6/25,762 HK,China Unicom,HK,Communication Services,Asia Long/Short,Short,144900,21.0038,164.25,HKD,3043450.62,4.753,N,401.8200221,144655.208,Prime C
+3/6/25,006260 KS,LS Corp.,KR,Information Technology,Asia Long/Short,Short,11400,89.7736,118950,KRW,1023419.04,4.75,N,135.0344567,48612.4044,Prime C
+3/6/25,003495 KS,Korean Air Lines,KR,Information Technology,Quant Asia,Short,26200,52.0317,68942,KRW,1363230.54,4.75,N,179.8706963,64753.45065,Prime B
+3/6/25,6762 JP,TDK,JP,Information Technology,Asia Alpha Master,Short,15900,360.2274,53854,JPY,5727615.66,4.75,N,755.7270663,272061.7439,Prime A
+3/6/25,101 HK,Hang Lung Properties,HK,Real Estate,Quant Asia,Short,30000,9.5857,74.96,HKD,287571,4.75,N,37.94339583,13659.6225,Prime A
+3/6/25,010140 KS,Samsung Heavy Industries,KR,Industrials,Quant Asia,Short,176100,30.8649,40896,KRW,5435308.89,4.747,N,716.7058695,258014.113,Prime A
+3/6/25,1925 JP,Daiwa House,JP,Industrials,Asia Alpha Master,Short,20100,332.4147,49696,JPY,6681535.47,4.72,N,876.0235394,315368.4742,Prime A
+3/6/25,6472 TT,Bora Pharmaceuticals,TW,Information Technology,Asia Alpha Master,Short,146500,17.1903,546.65,TWD,2518378.95,4.539,N,317.5256126,114309.2205,Prime A
+3/6/25,096775 KS,SK Innovation,KR,Information Technology,Asia Alpha Master,Short,524800,8.8657,11747,KRW,4652719.36,4.528,N,585.2087017,210675.1326,Prime A
+3/6/25,021240 KS,Coway,KR,Consumer Discretionary,Asia Long/Short,Short,474700,7.1396,9460,KRW,3389168.12,4.5,N,423.646015,152512.5654,Prime A
+3/6/25,8308 JP,Resona Holdings,JP,Industrials,Asia Alpha Master,Short,6400,253.1438,37845,JPY,1620120.32,4.5,N,202.51504,72905.4144,Prime C
+3/6/25,6505 TT,Formosa Petrochemical,TW,Energy,Asia Alpha Master,Short,1016500,4.9069,156.04,TWD,4987863.85,4.5,N,623.4829813,224453.8733,Prime B
+3/6/25,6823 HK,Hong Kong Telecom,HK,Financials,Quant Asia,Short,44400,29.7941,232.99,HKD,1322858.04,4.5,N,165.357255,59528.6118,Prime B
+3/6/25,6146 JP,Disco Corp.,JP,Industrials,Asia Long/Short,Short,33200,199.6722,29851,JPY,6629117.04,4.469,N,822.9312237,296255.2405,Prime A
+3/6/25,8002 JP,Marubeni,JP,Industrials,Quant Asia,Short,15400,221.0301,33044,JPY,3403863.54,4.25,N,401.8450013,144664.2005,Prime A
+3/6/25,2474 TT,Catcher Technology,TW,Information Technology,Asia Alpha Master,Short,1584800,1.3314,42.34,TWD,2110002.72,4.25,N,249.0975433,89675.1156,Prime C
+3/6/25,1686 HK,SUNeVision,HK,Financials,Quant Asia,Short,274500,23.0281,180.08,HKD,6321213.45,4.25,N,746.2543656,268651.5716,Prime A
+3/6/25,024110 KS,Industrial Bank of Korea (IBK),KR,Financials,Quant Asia,Short,42800,79.3072,105082,KRW,3394348.16,4.191,N,395.1586983,142257.1314,Prime B
+3/6/25,3045 TT,Taiwan Mobile,TW,Communication Services,Asia Long/Short,Short,2110000,1.4204,45.17,TWD,2997044,4.161,N,346.4083357,124707.0008,Prime A
+3/6/25,2377 TT,MSI (Micro-Star International),TW,Information Technology,Asia Alpha Master,Short,317000,9.0925,289.14,TWD,2882322.5,4.018,N,321.6992168,115811.7181,Prime C
+3/6/25,1801 JP,Taisei Corporation,JP,Industrials,Quant Asia,Short,10900,168.5552,25199,JPY,1837251.68,4,N,204.1390756,73490.0672,Prime B
+3/6/25,9766 JP,Konami Holdings,JP,Industrials,Asia Alpha Master,Short,8200,249.5117,37302,JPY,2045995.94,4,N,227.3328822,81839.8376,Prime A
+3/6/25,2330 TT,TSMC,TW,Information Technology,Quant Asia,Short,722900,3.5082,111.56,TWD,2536077.78,4,N,281.78642,101443.1112,Prime B
+3/6/25,015760 KS,Korea Electric Power,KR,Utilities,Quant Asia,Short,74400,46.96,62222,KRW,3493824,4,N,388.2026667,139752.96,Prime A
+3/6/25,3661 TT,Alchip Technologies,TW,Information Technology,Asia Alpha Master,Short,587400,5.7714,183.53,TWD,3390120.36,4,N,376.68004,135604.8144,Prime B
+3/6/25,2347 TT,Synnex Technology International,TW,Information Technology,Asia Long/Short,Short,50400,16.2557,516.93,TWD,819287.28,4,N,91.03192,32771.4912,Prime C
+3/6/25,2615 TT,Wan Hai Lines,TW,Information Technology,Asia Long/Short,Short,171000,4.6956,149.32,TWD,802947.6,3.977,N,88.7034057,31933.22605,Prime A
+3/6/25,5020 JP,ENEOS Holdings,JP,Industrials,Quant Asia,Short,9000,280.1405,41881,JPY,2521264.5,3.81,N,266.8338263,96060.17745,Prime B
+3/6/25,5803 JP,Fujikura,JP,Industrials,Quant Asia,Short,26500,125.0502,18695,JPY,3313830.3,3.75,N,345.1906563,124268.6363,Prime A
+3/6/25,2886 TT,MFHC,TW,Financials,Quant Asia,Short,511300,6.177,196.43,TWD,3158300.1,3.75,N,328.9895938,118436.2538,Prime B
+3/6/25,7011 JP,Mitsubishi Heavy Industries,JP,Industrials,Quant Asia,Short,4000,153.5184,22951,JPY,614073.6,3.75,N,63.966,23027.76,Prime A
+3/6/25,047810 KS,Korea Aerospace Industries,KR,Information Technology,Quant Asia,Short,9900,88.4098,117143,KRW,875257.02,3.663,N,89.05740179,32060.66464,Prime C
+3/6/25,5478 TT,Soft-World International,TW,Information Technology,Asia Long/Short,Short,234200,12.9984,413.35,TWD,3044225.28,3.636,N,307.4667533,110688.0312,Prime A
+3/6/25,001040 KS,CJ Group,KR,Materials,Asia Long/Short,Short,65200,37.8483,50149,KRW,2467709.16,3.614,N,247.7305807,89183.00904,Prime B
+3/6/25,2887 TT,Taishin Financial Holdings,TW,Information Technology,Asia Long/Short,Short,70700,16.1252,512.78,TWD,1140051.64,3.547,N,112.3267546,40437.63167,Prime C
+3/6/25,3231 TT,Wistron Corporation,TW,Information Technology,Asia Long/Short,Short,234000,3.8418,122.17,TWD,898981.2,3.5,N,87.40095,31464.342,Prime A
+3/6/25,3665 TT,Bizlink Holding,TW,Industrials,Asia Alpha Master,Short,289300,11.7151,372.54,TWD,3389178.43,3.5,N,329.5034585,118621.2451,Prime B
+3/6/25,8001 JP,Itochu Shoji,JP,Industrials,Asia Long/Short,Short,17700,191.1237,28573,JPY,3382889.49,3.5,N,328.8920338,118401.1322,Prime B
+3/6/25,2408 TT,Nanya Technology,TW,Information Technology,Asia Alpha Master,Short,133300,13.4925,429.06,TWD,1798550.25,3.274,N,163.5681533,58884.53519,Prime C
+3/6/25,3105 TT,WIN Semiconductors,TW,Information Technology,Quant Asia,Short,801900,4.206,133.75,TWD,3372791.4,3.25,N,304.4881125,109615.7205,Prime B
+3/6/25,6752 JP,Panasonic,JP,Consumer Discretionary,Asia Alpha Master,Short,5700,55.4716,8293,JPY,316188.12,3.25,N,28.54476083,10276.1139,Prime B
+3/6/25,090430 KS,Amorepacific,KR,Consumer Staples,Asia Alpha Master,Short,42000,72.0317,95442,KRW,3025331.4,3.25,N,273.1201958,98323.2705,Prime C
+3/6/25,2388 HK,Bank of China (Hong Kong),HK,Financials,Quant Asia,Short,52800,25.1151,196.4,HKD,1326077.28,3.25,N,119.71531,43097.5116,Prime C
+3/6/25,2501 TT,Cathay Real Estate Development,TW,Information Technology,Asia Long/Short,Short,67300,16.0956,511.84,TWD,1083233.88,3.25,N,97.7919475,35205.1011,Prime A
+3/6/25,3293 TT,International Games System,TW,Information Technology,Quant Asia,Short,554200,4.3956,139.78,TWD,2436041.52,3.25,N,219.920415,79171.3494,Prime A
+3/6/25,8046 TT,Nan Ya PCB,TW,Information Technology,Asia Alpha Master,Short,156100,11.7006,372.08,TWD,1826463.66,3.059,N,155.198676,55871.52336,Prime A
+3/6/25,2301 TT,Lite-On Technology,TW,Information Technology,Asia Long/Short,Short,412800,19.123,608.11,TWD,7893974.4,3,N,657.8312,236819.232,Prime A
+3/6/25,2207 TT,Hotai Motor,TW,Consumer Discretionary,Asia Long/Short,Short,278100,19.2947,613.57,TWD,5365856.07,3,N,447.1546725,160975.6821,Prime B
+3/6/25,8630 JP,Sompo Holdings,JP,Financials,Asia Long/Short,Short,10400,118.7625,17755,JPY,1235130,3,N,102.9275,37053.9,Prime A
+3/6/25,7269 JP,Suzuki Motor,JP,Industrials,Asia Alpha Master,Short,34800,97.1839,14529,JPY,3381999.72,3,N,281.83331,101459.9916,Prime B
+3/6/25,3311 HK,China State Construction International,HK,Financials,Quant Asia,Short,99000,34.2634,267.94,HKD,3392076.6,3,N,282.67305,101762.298,Prime B
+3/6/25,000270 KS,Kia,KR,Consumer Discretionary,Quant Asia,Short,71000,86.5826,114722,KRW,6147364.6,3,N,512.2803833,184420.938,Prime A
+3/6/25,316 HK,Orient Overseas Container Line,HK,Financials,Asia Alpha Master,Short,65600,12.6777,99.14,HKD,831657.12,2.997,N,69.23545524,24924.76389,Prime B
+3/6/25,329180 KS,HD Hyundai Heavy Industries,KR,Information Technology,Asia Long/Short,Short,84400,40.1932,53256,KRW,3392306.08,2.761,N,260.1710302,93661.57087,Prime A
+3/6/25,014680 KS,Hansol Chemical,KR,Information Technology,Asia Long/Short,Short,9700,63.6491,84335,KRW,617396.27,2.75,N,47.16221507,16978.39743,Prime B
+3/6/25,8454 TT,momo.com Inc.,TW,Information Technology,Quant Asia,Short,608200,9.8516,313.28,TWD,5991743.12,2.75,N,457.7025994,164772.9358,Prime B
+3/6/25,2884 TT,E.SUN Bank,TW,Financials,Quant Asia,Short,1033800,3.2792,104.28,TWD,3390036.96,2.75,N,258.9611567,93226.0164,Prime B
+3/6/25,4994 TT,X-Legend Entertainment,TW,Information Technology,Asia Alpha Master,Short,337300,9.0245,286.98,TWD,3043963.85,2.75,N,232.5250163,83709.00588,Prime A
+3/6/25,3222 TT,Himax,TW,Information Technology,Asia Long/Short,Short,408700,8.2921,263.69,TWD,3388981.27,2.64,N,248.5252931,89469.10553,Prime B
+3/6/25,2609 TT,Yang Ming,TW,Information Technology,Quant Asia,Short,493400,4.0437,128.59,TWD,1995161.58,2.602,N,144.2058453,51914.10431,Prime B
+3/6/25,142 HK,First Pacific Company,HK,Financials,Asia Alpha Master,Short,14937300,0.5422,4.24,HKD,8099004.06,2.531,N,569.4049799,204985.7928,Prime A
+3/6/25,051905 KS,LG Household & Health Care,KR,Information Technology,Asia Alpha Master,Short,15200,47.4189,62830,KRW,720767.28,2.5,N,50.05328333,18019.182,Prime B
+3/6/25,055550 KS,Shinhan Financial Group,KR,Financials,Quant Asia,Short,337500,10.043,13307,KRW,3389512.5,2.5,N,235.3828125,84737.8125,Prime B
+3/6/25,2801 TT,Chang Hwa Commercial Bank,TW,Financials,Asia Long/Short,Short,134100,5.0651,161.07,TWD,679229.91,2.5,N,47.16874375,16980.74775,Prime A
+3/6/25,6482 TT,Fun Yours Technology,TW,Information Technology,Quant Asia,Short,1158300,1.617,51.42,TWD,1872971.1,2.303,N,119.8181234,43134.52443,Prime C
+3/6/25,9531 JP,Tokyo Gas,JP,Industrials,Quant Asia,Short,4000,143.5385,21459,JPY,574154,2.25,N,35.884625,12918.465,Prime C
+3/6/25,28 HK,Tian An China Investments Company,HK,Financials,Asia Long/Short,Short,287400,17.922,140.15,HKD,5150782.8,2.25,N,321.923925,115892.613,Prime A
+3/6/25,836 HK,China Resources Power Holdings,HK,Financials,Asia Long/Short,Short,10300,35.1867,275.16,HKD,362423.01,2.25,N,22.65143813,8154.517725,Prime A
+3/6/25,030200 KS,KT Corporation,KR,Communication Services,Quant Asia,Short,151200,14.7977,19607,KRW,2237412.24,2.25,N,139.838265,50341.7754,Prime B
+3/6/25,2232 HK,Crystal International,HK,Financials,Asia Alpha Master,Short,134400,27.5,215.05,HKD,3696000,2.217,N,227.612,81940.32,Prime B
+3/6/25,011170 KS,LOTTE Chemical,KR,Materials,Quant Asia,Short,271600,6.4204,8507,KRW,1743780.64,2,N,96.87670222,34875.6128,Prime C
+3/6/25,6971 JP,Kyocera,JP,Information Technology,Quant Asia,Short,11200,146.3612,21881,JPY,1639245.44,2,N,91.06919111,32784.9088,Prime B
+3/6/25,005930 KS,Samsung,KR,Information Technology,Asia Long/Short,Short,53500,56.8883,75377,KRW,3043524.05,2,N,169.0846694,60870.481,Prime A
+3/6/25,1301 TT,Formosa Plastics,TW,Materials,Quant Asia,Short,568600,14.539,462.34,TWD,8266875.4,2,N,459.2708556,165337.508,Prime A
+3/6/25,7532 JP,Pan Pacific International Holdings,JP,Industrials,Quant Asia,Short,21900,58.5151,8748,JPY,1281480.69,2,N,71.19337167,25629.6138,Prime C
+3/6/25,4 HK,Wharf Holdings,HK,Financials,Asia Long/Short,Short,2110300,3.5639,27.87,HKD,7520898.17,1.791,N,374.164684,134699.2862,Prime A
+3/6/25,2317 TT,Foxconn (Hon Hai Precision Industry),TW,Information Technology,Quant Asia,Short,518600,2.7748,88.24,TWD,1439011.28,1.75,N,69.95193722,25182.6974,Prime A
+3/6/25,086280 KS,Hyundai Glovis,KR,Industrials,Asia Alpha Master,Short,47000,57.9306,76758,KRW,2722738.2,1.75,N,132.3553292,47647.9185,Prime A
+3/6/25,6488 TT,GlobalWafers,TW,Information Technology,Asia Long/Short,Short,545800,4.3371,137.92,TWD,2367189.18,1.75,N,115.0716963,41425.81065,Prime A
+3/6/25,122870 KS,YG Entertainment,KR,Information Technology,Quant Asia,Short,206400,32.4777,43033,KRW,6703397.28,1.75,N,325.85959,117309.4524,Prime A
+3/6/25,9503 JP,KEPCO,JP,Industrials,Asia Alpha Master,Short,3500,319.291,47734,JPY,1117518.5,1.75,N,54.32381597,19556.57375,Prime B
+3/6/25,6542 TT,Gamesparcs,TW,Information Technology,Asia Alpha Master,Short,313000,9.7245,309.24,TWD,3043768.5,1.522,N,128.6837683,46326.15657,Prime B
+3/6/25,7741 JP,Hoya,JP,Health Care,Asia Long/Short,Short,3300,288.2943,43100,JPY,951371.19,1.5,N,39.64046625,14270.56785,Prime C
+3/6/25,3037 TT,Unimicron,TW,Information Technology,Quant Asia,Short,143400,18.8208,598.5,TWD,2698902.72,1.5,N,112.45428,40483.5408,Prime C
+3/6/25,2 HK,CLP Group,HK,Utilities,Quant Asia,Short,125800,24.2046,189.28,HKD,3044938.68,1.5,N,126.872445,45674.0802,Prime A
+3/6/25,2778 HK,Champion REIT,HK,Financials,Asia Long/Short,Short,1258800,2.4182,18.91,HKD,3044030.16,1.5,N,126.83459,45660.4524,Prime B
+3/6/25,4307 JP,Nomura Research Institute,JP,Information Technology,Asia Alpha Master,Short,18400,337.8729,50512,JPY,6216861.36,1.492,N,257.6543653,92755.57149,Prime B
+3/6/25,3659 JP,Nexon,JP,Industrials,Quant Asia,Short,36400,86.0268,12861,JPY,3131375.52,1.25,N,108.7283167,39142.194,Prime B
+3/6/25,271560 KS,ORION,KR,Information Technology,Quant Asia,Short,38200,79.5879,105454,KRW,3040257.78,1.25,N,105.5645063,38003.22225,Prime A
+3/6/25,8411 JP,Mizuho Financial Group,JP,Financials,Asia Alpha Master,Short,21900,343.8796,51410,JPY,7530963.24,1.25,N,261.4917792,94137.0405,Prime A
+3/6/25,2345 TT,Accton Technology,TW,Information Technology,Asia Alpha Master,Short,158200,19.245,611.99,TWD,3044559,1.25,N,105.7138542,38056.9875,Prime B
+3/6/25,9532 JP,Osaka Gas,JP,Industrials,Asia Long/Short,Short,30100,58.3278,8720,JPY,1755666.78,1.21,N,59.00991122,21243.56804,Prime A
+3/6/25,1313 HK,China Resources Building Materials Technology,HK,Financials,Quant Asia,Short,137400,14.5831,114.04,HKD,2003717.94,1,N,55.65883167,20037.1794,Prime C
+3/6/25,868 HK,Xinyi Glass Holdings,HK,Financials,Asia Alpha Master,Short,216100,8.2711,64.68,HKD,1787384.71,1,N,49.64957528,17873.8471,Prime B
+3/6/25,1199 HK,COSCO SHIPPING Ports,HK,Financials,Quant Asia,Short,150300,13.6355,106.63,HKD,2049415.65,1,N,56.9282125,20494.1565,Prime B
+3/6/25,2353 TT,Acer,TW,Information Technology,Quant Asia,Short,170800,15.1494,481.75,TWD,2587517.52,1,N,71.87548667,25875.1752,Prime A
+3/6/25,144 HK,China Merchants Port,HK,Financials,Asia Long/Short,Short,123900,24.5742,192.17,HKD,3044743.38,1,N,84.576205,30447.4338,Prime C
+3/6/25,2357 TT,ASUS,TW,Information Technology,Asia Long/Short,Short,240900,13.0028,413.49,TWD,3132374.52,1,N,87.01040333,31323.7452,Prime A
+3/6/25,058470 KS,LEENO Industrial,KR,Information Technology,Asia Alpha Master,Short,96500,79.5419,105393,KRW,7675793.35,1,N,213.2164819,76757.9335,Prime A
+3/6/25,9432 JP,NTT (Nippon Telegraph & Telephone),JP,Communication Services,Quant Asia,Short,10300,327.9599,49030,JPY,3377986.97,1,N,93.83297139,33779.8697,Prime A
+3/6/25,3008 TT,Largan Precision,TW,Information Technology,Asia Alpha Master,Short,474400,5.0635,161.02,TWD,2402124.4,1,N,66.72567778,24021.244,Prime C
+3/6/25,151 HK,Want Want China,HK,Financials,Quant Asia,Short,68900,9.9693,77.96,HKD,686884.77,1,N,19.0801325,6868.8477,Prime B
+3/6/25,1908 HK,C&D International Investment Group,HK,Financials,Asia Alpha Master,Short,23600,17.9399,140.29,HKD,423381.64,0.962,N,11.31369827,4072.931377,Prime A
+3/6/25,033780 KS,KT&G (Korea Tobacco),KR,Consumer Staples,Asia Long/Short,Short,11100,89.3034,118327,KRW,991267.74,0.75,N,20.65141125,7434.50805,Prime B
+3/6/25,4519 JP,Chugai Pharmaceutical,JP,Health Care,Asia Alpha Master,Short,13900,218.8896,32724,JPY,3042565.44,0.5,N,42.25785333,15212.8272,Prime B
+3/6/25,440 HK,Dah Sing Financial,HK,Financials,Quant Asia,Short,139300,21.8683,171.01,HKD,3046254.19,0.75,N,63.46362896,22846.90643,Prime B
+3/6/25,2382 TT,Quanta Computer,TW,Information Technology,Asia Long/Short,Short,230500,14.7075,467.7,TWD,3390078.75,0.749,N,70.53247177,25391.68984,Prime A
+3/6/25,035900 KS,JYP Entertainment,KR,Information Technology,Quant Asia,Short,41600,73.1698,96950,KRW,3043863.68,0.727,N,61.46913598,22128.88895,Prime C
+3/6/25,036570 KS,NCsoft,KR,Communication Services,Quant Asia,Short,456800,6.0483,8014,KRW,2762863.44,0.25,N,19.18655167,6907.1586,Prime B
+3/6/25,62 HK,Transport International Holdings,HK,Financials,Quant Asia,Short,90000,29.9412,234.14,HKD,2694708,0.5,N,37.4265,13473.54,Prime B
+3/6/25,002380 KS,KCC Corp,KR,Industrials,Asia Long/Short,Short,49500,50.7592,67256,KRW,2512580.4,0.25,N,17.448475,6281.451,Prime C
+3/6/25,009540 KS,HD Korea Shipbuilding & Offshore Engineering,KR,Industrials,Quant Asia,Short,74900,41.2777,54693,KRW,3091699.73,0.5,N,42.94027403,15458.49865,Prime A
+3/6/25,8015 JP,Toyota Tsusho,JP,Industrials,Asia Long/Short,Short,3300,359.8863,53803,JPY,1187624.79,0.25,N,8.247394375,2969.061975,Prime B
+3/6/25,2881 TT,Fubon Financial,TW,Financials,Asia Long/Short,Short,1386000,2.4459,77.78,TWD,3390017.4,0.5,N,47.083575,16950.087,Prime A
+3/6/25,034020 KS,Doosan Enerbility,KR,Information Technology,Asia Alpha Master,Short,50800,49.877,66087,KRW,2533751.6,0.365,N,25.68942594,9248.19334,Prime C
+3/6/25,008930 KS,Hanmi Pharmaceutical,KR,Information Technology,Quant Asia,Short,11100,40.9366,54241,KRW,454396.26,0.356,N,4.493474127,1617.650686,Prime C
+3/6/25,14 HK,Hysan Development,HK,Financials,Asia Long/Short,Short,121500,27.0831,211.79,HKD,3290596.65,0.344,N,31.4434791,11319.65248,Prime A
+3/6/25,303 HK,Vtech,HK,Financials,Asia Long/Short,Short,29200,28.7136,224.54,HKD,838437.12,0.338,N,7.87199296,2833.917466,Prime A
+3/6/25,4904 TT,Far EasTone,TW,Communication Services,Asia Alpha Master,Short,971700,2.7736,88.2,TWD,2695107.12,0.25,N,18.71602167,6737.7678,Prime A
