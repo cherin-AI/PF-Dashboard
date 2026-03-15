@@ -1,12 +1,12 @@
 # PF/ASIA -- Portfolio Finance Dashboard
 
-Portfolio Finance monitoring dashboard for **APAC equity long/short
-portfolios**, designed to simulate how a hedge fund treasury or
+Portfolio Finance monitoring dashboard for **APAC equity short
+positions**, designed to simulate how a hedge fund treasury or
 portfolio finance team tracks borrow costs and financing opportunities.
 
 The dashboard visualizes financing exposure across **Prime Brokers,
-markets, sectors, and strategies**, and highlights potential
-**refinancing opportunities to reduce borrow costs**.
+markets, sectors and funds**, and highlights potential
+**refinancing opportunities to optimize borrow costs**.
 
 **Markets covered**
 
@@ -15,12 +15,18 @@ markets, sectors, and strategies**, and highlights potential
 -   Taiwan
 -   Japan
 
+  
+
 **Technology**
 
 HTML, JavaScript, Chart.js
 
 The dashboard runs as a **standalone HTML application** with simulated
 financial data.
+
+The design can be extended to support automated data ingestion via APIs or data pipelines, allowing the dashboard to refresh with updated portfolio datasets.
+
+Data in this project is simulated and does not represent any real portfolio.
 
 ------------------------------------------------------------------------
 
@@ -32,10 +38,10 @@ Provides a high-level view of the portfolio's financing profile.
 
 Key sections
 
--   **KPI summary** -- exposure, borrow cost, HTB concentration\
--   **Exposure by Prime Broker** -- financing distribution across PBs\
--   **Sector and Market exposure** -- portfolio concentration analysis\
--   **Borrow rate distribution** -- cost structure of the book\
+-   **KPI summary** -- exposure, borrow cost, HTB concentration
+-   **Exposure by Prime Broker** -- financing distribution across PBs
+-   **Sector and Market exposure** -- portfolio concentration analysis
+-   **Borrow rate distribution** -- cost structure of the book
 -   **Top positions by borrow cost** -- largest financing cost
     contributors
 
@@ -53,12 +59,11 @@ brokers**.
 Features
 
 -   Estimated **saving in basis points**
--   **Daily cost saving**
--   Filters by market, strategy, and HTB classification
+-   Filters by market, fund and HTB classification
+-   Sorts by **Daily cost saving**, bps, positon notional $
 
 Purpose\
-Identify positions where **switching prime brokers could reduce
-financing cost**.
+Identify positions where borrow costs can be reduced either through **renegotiation with the current prime broker** or **switching to another broker offering lower rates**, after accounting for crossing costs such as comms and stamp charges.
 
 ------------------------------------------------------------------------
 
@@ -89,16 +94,12 @@ structured and visualized** to support:
 -   Financing decision support
 -   Short inventory analysis
 
-The goal is to replicate the **type of monitoring tools used by hedge
+The goal is to replicate the **consolidated monitoring tools used by hedge
 fund portfolio finance and treasury teams**.
 
 ------------------------------------------------------------------------
 
 # Preview
-
-(Add screenshots here when publishing the project)
-
-Example
 
 /images/dashboard_snapshot.png\
 /images/refinancing_opportunities.png\
@@ -108,7 +109,11 @@ Example
 
 # Author
 
-Cherin Kim\
+Cherin Kim
 Portfolio Finance / Equity Finance
 
-Demo dashboard built with **simulated financial data**
+------------------------------------------------------------------------
+
+# Updates & Latest Deployments
+
+Mar 15th, 2025
