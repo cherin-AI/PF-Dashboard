@@ -1,0 +1,2368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>PF/ASIA · Portfolio Finance</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#07090f;--s1:#0b1018;--s2:#0f1520;--s3:#131c2a;--s4:#182236;
+  --b1:#1b2a42;--b2:#213352;--b3:#2a4068;
+  --t1:#d4e4f8;--t2:#8ba8cc;--t3:#4a6080;--t4:#2a3a52;
+  --ac:#8177F5;--gr:#3CC8B8;--rd:#E86060;--am:#FFCC30;--pu:#FF9040;--te:#3CC8B8;--co:#FF9040;
+  --pA:#8177F5;--pB:#3CC8B8;--pC:#FF9040;
+  --fn:'DM Sans',sans-serif;--fm:'JetBrains Mono',monospace
+}
+html,body{height:100%;background:var(--bg);color:var(--t1);font-family:var(--fn);font-size:13px;line-height:1.5;overflow-x:hidden}
+
+/* ── HEADER ── */
+#hdr{
+  display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px;
+  padding:0 24px;height:52px;
+  background:var(--s1);border-bottom:1px solid var(--b1);
+  position:sticky;top:0;z-index:200
+}
+.brand{display:flex;align-items:baseline;gap:8px}
+.brand-name{font-family:var(--fm);font-weight:700;font-size:15px;color:#ffffff;letter-spacing:.04em}
+.brand-sub{font-family:var(--fm);font-size:10px;color:var(--t4);letter-spacing:.12em}
+.brand-date{font-family:var(--fm);font-size:11px;color:var(--t3);border:1px solid var(--b1);padding:2px 8px;border-radius:3px}
+.nav{display:flex;gap:2px;justify-content:center}
+.nb{
+  font-family:var(--fn);font-size:12px;font-weight:500;
+  padding:6px 20px;border-radius:4px;cursor:pointer;
+  background:none;border:1px solid transparent;color:var(--t3);
+  transition:all .12s
+}
+.nb:hover{color:var(--t1);border-color:var(--b2)}
+.nb.on{background:var(--s3);border-color:var(--ac);color:var(--ac)}
+.hdr-right{display:flex;align-items:center;gap:14px;justify-content:flex-end;font-family:var(--fn);font-size:11px;color:var(--t3)}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--gr);box-shadow:0 0 6px var(--gr)}
+
+/* ── LAYOUT ── */
+#main{padding:16px 24px;max-width:1680px;margin:0 auto}
+.pg{display:none}.pg.on{display:block}
+
+/* ── CARDS & GRID ── */
+.row{display:grid;gap:12px;margin-bottom:14px}
+.c2{grid-template-columns:1fr 1fr}
+.c3{grid-template-columns:1fr 1fr 1fr}
+.c4{grid-template-columns:1fr 1fr 1fr 1fr}
+.c5{grid-template-columns:repeat(5,1fr)}
+.card{background:var(--s2);border:1px solid var(--b1);border-radius:8px;padding:14px 16px;min-width:0}
+
+/* ── KPI ── */
+.kpi-label{font-family:var(--fm);font-size:9px;font-weight:500;letter-spacing:.14em;color:var(--t3);text-transform:uppercase;margin-bottom:6px}
+.kpi-val{font-family:var(--fm);font-size:20px;font-weight:700;line-height:1;color:var(--t1)}
+.kpi-val.c-ac{color:var(--ac)}.kpi-val.c-gr{color:var(--gr)}.kpi-val.c-rd{color:var(--rd)}
+.kpi-val.c-am{color:var(--am)}.kpi-val.c-pu{color:var(--pu)}.kpi-val.c-pA{color:var(--pA)}
+.kpi-val.c-pB{color:var(--pB)}.kpi-val.c-pC{color:var(--pC)}
+.kpi-sub{font-family:var(--fm);font-size:10px;color:var(--t3);margin-top:4px}
+
+/* ── CHART CARDS ── */
+.chart-card{background:var(--s2);border:1px solid var(--b1);border-radius:8px;padding:14px 16px;min-width:0}
+.chart-title{font-family:var(--fm);font-size:9px;font-weight:600;letter-spacing:.12em;color:var(--t3);text-transform:uppercase;margin-bottom:12px}
+.chart-wrap{position:relative;width:100%}
+.chart-wrap canvas{display:block;width:100%!important}
+
+/* ── TABLES ── */
+.tbl-card{background:var(--s2);border:1px solid var(--b1);border-radius:8px;padding:14px 16px;min-width:0;margin-bottom:14px}
+.tbl-title{font-family:var(--fm);font-size:9px;font-weight:600;letter-spacing:.12em;color:var(--t3);text-transform:uppercase;margin-bottom:10px}
+.tbl-outer{overflow-x:auto}
+.tbl-scroll{overflow-y:auto}
+table{width:100%;border-collapse:collapse;font-family:var(--fm);font-size:11px}
+thead th{
+  position:sticky;top:0;z-index:2;background:var(--s2);
+  font-size:9px;font-weight:600;letter-spacing:.08em;color:var(--t3);
+  padding:7px 10px;text-align:right;white-space:nowrap;
+  border-bottom:1px solid var(--b2)
+}
+th.tl,td.tl{text-align:left!important}
+td{padding:5px 10px;text-align:right;border-bottom:1px solid rgba(27,42,66,.5);color:var(--t2)}
+tr:hover td{background:rgba(21,31,48,.9)}
+.tk{font-weight:600;color:var(--t1);font-size:10px;white-space:nowrap}
+
+/* ── RATE TYPE TOOLTIP ── */
+.rt-info{display:inline-flex;align-items:center;justify-content:center;width:13px;height:13px;border-radius:50%;background:var(--b2);color:var(--t2);font-size:9px;font-weight:700;cursor:default;margin-left:5px;vertical-align:middle;font-family:var(--fn);line-height:1}
+#rt-tooltip{display:none;position:fixed;z-index:9999;background:var(--s3);border:1px solid var(--b2);border-radius:4px;padding:8px 11px;white-space:nowrap;font-size:10px;line-height:2;font-family:var(--fn);font-weight:400;box-shadow:0 4px 14px rgba(0,0,0,.5);pointer-events:none}
+.rt-tip-gc{color:var(--t2)}.rt-tip-warm{color:var(--pu)}.rt-tip-htb{color:var(--am)}
+
+/* ── BADGES ── */
+.badge{display:inline-flex;align-items:center;border-radius:3px;padding:1px 6px;font-size:9px;font-weight:600;letter-spacing:.04em;white-space:nowrap}
+.b-htb{background:rgba(255,204,48,.12);color:var(--am);border:1px solid rgba(255,204,48,.3)}
+.b-gc{background:var(--s3);color:var(--t3);border:1px solid var(--b1)}
+.b-warm{background:rgba(255,144,64,.1);color:var(--pu);border:1px solid rgba(255,144,64,.25)}
+.b-pA{background:rgba(129,119,245,.1);color:var(--pA);border:1px solid rgba(129,119,245,.25)}
+.b-pB{background:rgba(60,200,184,.1);color:var(--pB);border:1px solid rgba(60,200,184,.25)}
+.b-pC{background:rgba(255,144,64,.1);color:var(--pC);border:1px solid rgba(255,144,64,.25)}
+.b-L{color:var(--ac)}.b-S{color:var(--rd)}
+.mHK{color:#8177F5}.mKR{color:#3CC8B8}.mTW{color:#FF9040}.mJP{color:#FFCC30}
+
+/* ── FILTER BAR ── */
+.fbar{
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  background:var(--s2);border:1px solid var(--b1);border-radius:8px;
+  padding:10px 14px;margin-bottom:12px
+}
+.fl{font-family:var(--fm);font-size:9px;font-weight:600;letter-spacing:.12em;color:var(--t3);text-transform:uppercase;white-space:nowrap}
+.chips{display:flex;gap:4px}
+.chip{
+  font-family:var(--fm);font-size:10px;padding:4px 12px;border-radius:4px;cursor:pointer;
+  background:var(--s3);border:1px solid var(--b1);color:var(--t2);transition:all .1s
+}
+.chip.on{background:rgba(129,119,245,.1);border-color:var(--ac);color:var(--ac)}
+.chip:hover:not(.on){border-color:var(--b2);color:var(--t1)}
+.fsel{
+  font-family:var(--fn);font-size:12px;padding:5px 10px;border-radius:4px;cursor:pointer;
+  background:var(--s3);border:1px solid var(--b1);color:var(--t1);outline:none
+}
+.fsel:focus{border-color:var(--b2)}
+
+/* ── PB TABS (page 3) ── */
+.pb-tabs{display:flex;gap:6px;margin-bottom:14px}
+.pb-tab{
+  font-family:var(--fn);font-size:12px;font-weight:500;
+  padding:7px 20px;border-radius:5px;cursor:pointer;
+  background:var(--s2);border:1px solid var(--b1);color:var(--t2);transition:all .12s
+}
+.pb-tab[data-pb="A"].on{border-color:var(--pA);color:var(--pA);background:rgba(129,119,245,.06)}
+.pb-tab[data-pb="B"].on{border-color:var(--pB);color:var(--pB);background:rgba(60,200,184,.06)}
+.pb-tab[data-pb="C"].on{border-color:var(--pC);color:var(--pC);background:rgba(255,144,64,.06)}
+.pb-tab[data-pb="ALL"].on{border-color:var(--am);color:var(--am);background:rgba(255,204,48,.06)}
+
+/* ── SAVING HIGHLIGHT CARD ── */
+.sv-card{border-color:rgba(60,200,184,.25)!important;background:rgba(60,200,184,.02)!important}
+
+/* ── COLOR UTILS ── */
+.c-hi{color:var(--gr);font-weight:600}.c-med{color:var(--am)}.c-lo{color:var(--t2)}
+.c-rd{color:var(--rd)}.c-ac{color:var(--ac)}.c-gr{color:var(--gr)}
+</style>
+</head>
+<body>
+
+<div id="hdr">
+  <div class="brand">
+    <span class="brand-name">APAC PORTFOLIO FINANCE MONITOR</span>
+    <span class="live-dot"></span>
+    <span class="brand-date">2025-03-06</span>
+  </div>
+  <nav class="nav">
+    <button class="nb on" onclick="goPage(0,this)">Portfolio Snapshot</button>
+    <button class="nb" onclick="goPage(1,this)">Refinancing Opps</button>
+    <button class="nb" onclick="goPage(2,this)">Daily Avail</button>
+  </nav>
+  <div class="hdr-right">
+    <span style="font-family:var(--fm); font-size:11px; color:var(--t3); text-align:right; line-height:1.4; margin-right:12px;">
+      Cherin Kim | cherin0508@gmail.com<br>
+      Sample portfolio dashboard built with simulated financial data
+    </span>
+    <span id="hdr-pos">—</span>
+  </div>
+</div>
+
+<div id="main">
+
+<!-- ═══════════ PAGE 1 ═══════════ -->
+<div class="pg on" id="p0">
+
+  <!-- KPI row -->
+  <div class="row c4" id="kpi-row"></div>
+
+  <!-- Charts row 1: 3 charts -->
+  <div class="row c3">
+    <div class="chart-card">
+      <div class="chart-title">Short Exposure by PB</div>
+      <div class="chart-wrap" style="height:200px"><canvas id="ch-pb"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Short Exposure by Sector (Top 10)</div>
+      <div class="chart-wrap" style="height:200px"><canvas id="ch-sec"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Short Exposure by Fund</div>
+      <div class="chart-wrap" style="height:200px"><canvas id="ch-ls"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Charts row 2: 3 charts -->
+  <div class="row c3">
+    <div class="chart-card">
+      <div class="chart-title">Short Exposure by Market</div>
+      <div class="chart-wrap" style="height:160px"><canvas id="ch-mkt"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Borrow Cost by Rate Type</div>
+      <div class="chart-wrap" style="height:160px"><canvas id="ch-htbgc"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Borrow Rate Distribution</div>
+      <div class="chart-wrap" style="height:160px"><canvas id="ch-rdist"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Top 30 table -->
+  <div class="tbl-card">
+    <div class="tbl-title">Top 30 Positions — Daily Borrow Cost</div>
+    <div class="tbl-outer"><div class="tbl-scroll" style="max-height:340px">
+      <table><thead><tr>
+        <th class="tl">Ticker</th><th class="tl">Name</th>
+        <th class="tl">Mkt</th><th class="tl">Sector</th>
+        <th class="tl">PB</th><th class="tl">Fund</th>
+        <th class="tl">Rate Type<span class="rt-info">i</span></th><th class="tl">Side</th>
+        <th>Shares</th><th>Notional USD</th><th>Rate %</th><th>Daily Cost</th>
+      </tr></thead>
+      <tbody id="tb-top30"></tbody>
+      </table>
+    </div></div>
+  </div>
+</div>
+
+
+<!-- ═══════════ PAGE 2 ═══════════ -->
+<div class="pg" id="p1">
+
+  <!-- Summary KPI -->
+  <div class="row c5" id="p2-kpi"></div>
+
+  <!-- Filter bar -->
+  <div class="fbar">
+    <span class="fl">Saving</span>
+    <div class="chips">
+      <span class="chip on" onclick="setThr(this,0)">All</span>
+      <span class="chip" onclick="setThr(this,25)">≥25 bps</span>
+      <span class="chip" onclick="setThr(this,50)">≥50 bps</span>
+      <span class="chip" onclick="setThr(this,100)">≥100 bps</span>
+    </div>
+    <span class="fl">Type</span>
+    <div class="chips">
+      <span class="chip on" onclick="setHtbF(this,'all')">All</span>
+      <span class="chip" onclick="setHtbF(this,'htb')">HTB</span>
+      <span class="chip" onclick="setHtbF(this,'warm')">Warm</span>
+      <span class="chip" onclick="setHtbF(this,'gc')">GC</span>
+    </div>
+    <span class="fl">Market</span>
+    <select class="fsel" id="f-mkt" onchange="renderP2()">
+      <option value="">All Markets</option>
+      <option>HK</option><option>KR</option><option>TW</option><option>JP</option>
+    </select>
+    <span class="fl">Fund</span>
+    <select class="fsel" id="f-fund" onchange="renderP2()">
+      <option value="">All Funds</option>
+      <option>Asia Long/Short</option><option>Asia Alpha Master</option><option>Quant Asia</option>
+    </select>
+    <span class="fl" style="margin-left:auto">Sort</span>
+    <select class="fsel" id="f-sort" onchange="renderP2()">
+      <option value="usd">Daily Saving $</option>
+      <option value="bps">Saving bps</option>
+      <option value="notional">Notional</option>
+    </select>
+  </div>
+
+  <!-- Refi table -->
+  <div class="tbl-card">
+    <div class="tbl-title" id="refi-title">Refinancing Opportunities</div>
+    <div class="tbl-outer"><div class="tbl-scroll" style="max-height:520px">
+      <table><thead><tr>
+        <th class="tl">Ticker</th><th class="tl">Name</th>
+        <th class="tl">Mkt</th><th class="tl">Sector</th>
+        <th class="tl">Fund</th><th class="tl">Rate Type<span class="rt-info">i</span></th>
+        <th class="tl">Current PB</th><th>Curr Rate%</th>
+        <th class="tl">Best PB</th><th>Best Rate%</th>
+        <th>Saving bps</th><th>Notional USD</th><th>Daily Saving $</th>
+      </tr></thead>
+      <tbody id="tb-refi"></tbody>
+      </table>
+    </div></div>
+  </div>
+</div>
+
+
+<!-- ═══════════ PAGE 3 ═══════════ -->
+<div class="pg" id="p2">
+  <div class="pb-tabs">
+    <div class="pb-tab on" data-pb="ALL" onclick="setPbTab('ALL')">All PBs</div>
+    <div class="pb-tab" data-pb="A" onclick="setPbTab('A')">Prime A</div>
+    <div class="pb-tab" data-pb="B" onclick="setPbTab('B')">Prime B</div>
+    <div class="pb-tab" data-pb="C" onclick="setPbTab('C')">Prime C</div>
+  </div>
+  <div id="avail-body"></div>
+</div>
+
+</div><!-- /main -->
+
+<script>
+// ─────────────────────────────────────────────
+// DATA
+// ─────────────────────────────────────────────
+const POS_RAW=[
+["6701 JP","NEC Corp","JP","Industrials","Asia Long/Short","Short",1600,323.0635,516901.6,23.5,"HTB",337.4218778,"Prime B"],
+["034730 KS","SK Group","KR","Industrials","Asia Long/Short","Short",124300,13.0694,1624526.42,21.665,"HTB",977.6490247,"Prime A"],
+["123 HK","Yuexiu Property","HK","Financials","Asia Long/Short","Short",186400,18.1765,3388099.6,19.5,"HTB",1835.220617,"Prime A"],
+["2343 HK","Pacific Basin Shipping","HK","Financials","Quant Asia","Short",53300,30.1394,1606430.02,21.5,"HTB",959.3957064,"Prime B"],
+["042660 KS","Hanwha Ocean (DSME)","KR","Information Technology","Asia Alpha Master","Short",40400,75.3487,3044087.48,20,"HTB",1691.159711,"Prime C"],
+["688 HK","China Overseas Land & Investment","HK","Real Estate","Quant Asia","Short",420700,2.4079,1013003.53,21.55,"HTB",606.3951687,"Prime A"],
+["000150 KS","Doosan","KR","Industrials","Quant Asia","Short",205700,14.6611,3015788.27,19.778,"HTB",1656.840567,"Prime B"],
+["064350 KS","Hyundai Rotem Company","KR","Information Technology","Asia Long/Short","Short",67300,84.0166,5654317.18,22,"HTB",3455.416054,"Prime B"],
+["6 HK","Power Assets","HK","Utilities","Asia Alpha Master","Short",6383300,1.1458,7313985.14,21.261,"HTB",4319.517724,"Prime A"],
+["007310 KS","Ottogi","KR","Consumer Discretionary","Asia Alpha Master","Short",23100,57.363,1325085.3,20.5,"HTB",754.5624625,"Prime A"],
+["5016 JP","JX Advanced Metals","JP","Industrials","Asia Alpha Master","Short",32700,93.291,3050615.7,19,"HTB",1610.047175,"Prime B"],
+["041510 KS","SM Entertainment","KR","Health Care","Asia Long/Short","Short",44500,44.5781,1983725.45,18.17,"HTB",1001.230317,"Prime A"],
+["6902 JP","Denso","JP","Consumer Discretionary","Quant Asia","Short",26500,129.5452,3432947.8,16.834,"HTB",1605.284535,"Prime B"],
+["373220 KS","LG Energy Solution","KR","Information Technology","Quant Asia","Short",62400,70.7019,4411798.56,14.25,"HTB",1746.33693,"Prime B"],
+["443060 KS","HD Hyundai Marine Solution","KR","Information Technology","Asia Alpha Master","Short",107900,45.2619,4883759.01,11.75,"HTB",1594.004677,"Prime B"],
+["293490 KS","Kakao Games","KR","Information Technology","Asia Long/Short","Short",17200,84.717,1457132.4,10.25,"HTB",414.877975,"Prime A"],
+["4689 JP","LY Corporation","JP","Communication Services","Asia Long/Short","Short",6000,240.6488,1443892.8,10.25,"HTB",411.1083667,"Prime C"],
+["41 HK","Great Eagle","HK","Financials","Quant Asia","Short",66400,14.3082,950064.48,9.25,"HTB",244.11379,"Prime B"],
+["257 HK","China Everbright Environment Group","HK","Financials","Quant Asia","Short",144700,23.4156,3388237.32,5.261,"HTB",495.1532372,"Prime A"],
+["6273 JP","SMC Corp","JP","Industrials","Quant Asia","Short",17800,190.5351,3391524.78,5.15,"HTB",485.1764616,"Prime A"],
+["336260 KS","Doosan Fuel Cell","KR","Information Technology","Quant Asia","Short",43700,77.597,3390988.9,5,"Warm",470.9706806,"Prime A"],
+["6055 HK","China Tobacco International","HK","Financials","Quant Asia","Short",208200,12.8005,2665064.1,5,"Warm",370.1477917,"Prime C"],
+["215 HK","Hutchison Telecommunications Hong Kong","HK","Financials","Asia Long/Short","Short",142300,34.1164,4854763.72,5,"Warm",674.2727389,"Prime A"],
+["7013 JP","IHI Corporation","JP","Industrials","Asia Long/Short","Short",13300,235.6589,3134263.37,5,"Warm",435.3143569,"Prime A"],
+["0011 HK","Jardine Matheson","HK","Financials","Asia Alpha Master","Short",250500,2.8146,705057.3,5,"Warm",97.924625,"Prime C"],
+["6178 JP","Japan Post Holdings","JP","Industrials","Quant Asia","Short",4200,83.6722,351423.24,5,"Warm",48.80878333,"Prime C"],
+["3532 TT","Formosa Sumco Technology","TW","Information Technology","Asia Alpha Master","Short",471200,6.8142,3210851.04,5,"Warm",445.9515333,"Prime B"],
+["3481 TT","Innolux","TW","Information Technology","Quant Asia","Short",286400,11.8343,3389343.52,5,"Warm",470.7421556,"Prime A"],
+["2888 TT","Shin Kong Financial Holding","TW","Financials","Quant Asia","Short",36800,17.5302,645111.36,5,"Warm",89.5988,"Prime C"],
+["2885 TT","Yuanta Financial Holding","TW","Financials","Asia Long/Short","Short",4983300,1.5855,7901022.15,4.976,"Warm",1092.096839,"Prime A"],
+["8058 JP","Mitsubishi Corporation","JP","Industrials","Asia Long/Short","Short",98900,34.2876,3391043.64,4.792,"Warm",451.3855867,"Prime B"],
+["762 HK","China Unicom","HK","Communication Services","Asia Long/Short","Short",144900,21.0038,3043450.62,4.753,"Warm",401.8200221,"Prime C"],
+["006260 KS","LS Corp.","KR","Information Technology","Asia Long/Short","Short",11400,89.7736,1023419.04,4.75,"Warm",135.0344567,"Prime C"],
+["003495 KS","Korean Air Lines","KR","Information Technology","Quant Asia","Short",26200,52.0317,1363230.54,4.75,"Warm",179.8706963,"Prime B"],
+["6762 JP","TDK","JP","Information Technology","Asia Alpha Master","Short",15900,360.2274,5727615.66,4.75,"Warm",755.7270663,"Prime A"],
+["101 HK","Hang Lung Properties","HK","Real Estate","Quant Asia","Short",30000,9.5857,287571,4.75,"Warm",37.94339583,"Prime A"],
+["010140 KS","Samsung Heavy Industries","KR","Industrials","Quant Asia","Short",176100,30.8649,5435308.89,4.747,"Warm",716.7058695,"Prime A"],
+["1925 JP","Daiwa House","JP","Industrials","Asia Alpha Master","Short",20100,332.4147,6681535.47,4.72,"Warm",876.0235394,"Prime A"],
+["6472 TT","Bora Pharmaceuticals","TW","Information Technology","Asia Alpha Master","Short",146500,17.1903,2518378.95,4.539,"Warm",317.5256126,"Prime A"],
+["096775 KS","SK Innovation","KR","Information Technology","Asia Alpha Master","Short",524800,8.8657,4652719.36,4.528,"Warm",585.2087017,"Prime A"],
+["021240 KS","Coway","KR","Consumer Discretionary","Asia Long/Short","Short",474700,7.1396,3389168.12,4.5,"Warm",423.646015,"Prime A"],
+["8308 JP","Resona Holdings","JP","Industrials","Asia Alpha Master","Short",6400,253.1438,1620120.32,4.5,"Warm",202.51504,"Prime C"],
+["6505 TT","Formosa Petrochemical","TW","Energy","Asia Alpha Master","Short",1016500,4.9069,4987863.85,4.5,"Warm",623.4829813,"Prime B"],
+["6823 HK","Hong Kong Telecom","HK","Financials","Quant Asia","Short",44400,29.7941,1322858.04,4.5,"Warm",165.357255,"Prime B"],
+["6146 JP","Disco Corp.","JP","Industrials","Asia Long/Short","Short",33200,199.6722,6629117.04,4.469,"Warm",822.9312237,"Prime A"],
+["8002 JP","Marubeni","JP","Industrials","Quant Asia","Short",15400,221.0301,3403863.54,4.25,"Warm",401.8450013,"Prime A"],
+["2474 TT","Catcher Technology","TW","Information Technology","Asia Alpha Master","Short",1584800,1.3314,2110002.72,4.25,"Warm",249.0975433,"Prime C"],
+["1686 HK","SUNeVision","HK","Financials","Quant Asia","Short",274500,23.0281,6321213.45,4.25,"Warm",746.2543656,"Prime A"],
+["024110 KS","Industrial Bank of Korea (IBK)","KR","Financials","Quant Asia","Short",42800,79.3072,3394348.16,4.191,"Warm",395.1586983,"Prime B"],
+["3045 TT","Taiwan Mobile","TW","Communication Services","Asia Long/Short","Short",2110000,1.4204,2997044,4.161,"Warm",346.4083357,"Prime A"],
+["2377 TT","MSI (Micro-Star International)","TW","Information Technology","Asia Alpha Master","Short",317000,9.0925,2882322.5,4.018,"Warm",321.6992168,"Prime C"],
+["1801 JP","Taisei Corporation","JP","Industrials","Quant Asia","Short",10900,168.5552,1837251.68,4,"Warm",204.1390756,"Prime B"],
+["9766 JP","Konami Holdings","JP","Industrials","Asia Alpha Master","Short",8200,249.5117,2045995.94,4,"Warm",227.3328822,"Prime A"],
+["2330 TT","TSMC","TW","Information Technology","Quant Asia","Short",722900,3.5082,2536077.78,4,"Warm",281.78642,"Prime B"],
+["015760 KS","Korea Electric Power","KR","Utilities","Quant Asia","Short",74400,46.96,3493824,4,"Warm",388.2026667,"Prime A"],
+["3661 TT","Alchip Technologies","TW","Information Technology","Asia Alpha Master","Short",587400,5.7714,3390120.36,4,"Warm",376.68004,"Prime B"],
+["2347 TT","Synnex Technology International","TW","Information Technology","Asia Long/Short","Short",50400,16.2557,819287.28,4,"Warm",91.03192,"Prime C"],
+["2615 TT","Wan Hai Lines","TW","Information Technology","Asia Long/Short","Short",171000,4.6956,802947.6,3.977,"Warm",88.7034057,"Prime A"],
+["5020 JP","ENEOS Holdings","JP","Industrials","Quant Asia","Short",9000,280.1405,2521264.5,3.81,"Warm",266.8338263,"Prime B"],
+["5803 JP","Fujikura","JP","Industrials","Quant Asia","Short",26500,125.0502,3313830.3,3.75,"Warm",345.1906563,"Prime A"],
+["2886 TT","MFHC","TW","Financials","Quant Asia","Short",511300,6.177,3158300.1,3.75,"Warm",328.9895938,"Prime B"],
+["7011 JP","Mitsubishi Heavy Industries","JP","Industrials","Quant Asia","Short",4000,153.5184,614073.6,3.75,"Warm",63.966,"Prime A"],
+["047810 KS","Korea Aerospace Industries","KR","Information Technology","Quant Asia","Short",9900,88.4098,875257.02,3.663,"Warm",89.05740179,"Prime C"],
+["5478 TT","Soft-World International","TW","Information Technology","Asia Long/Short","Short",234200,12.9984,3044225.28,3.636,"Warm",307.4667533,"Prime A"],
+["001040 KS","CJ Group","KR","Materials","Asia Long/Short","Short",65200,37.8483,2467709.16,3.614,"Warm",247.7305807,"Prime B"],
+["2887 TT","Taishin Financial Holdings","TW","Information Technology","Asia Long/Short","Short",70700,16.1252,1140051.64,3.547,"Warm",112.3267546,"Prime C"],
+["3231 TT","Wistron Corporation","TW","Information Technology","Asia Long/Short","Short",234000,3.8418,898981.2,3.5,"Warm",87.40095,"Prime A"],
+["3665 TT","Bizlink Holding","TW","Industrials","Asia Alpha Master","Short",289300,11.7151,3389178.43,3.5,"Warm",329.5034585,"Prime B"],
+["8001 JP","Itochu Shoji","JP","Industrials","Asia Long/Short","Short",17700,191.1237,3382889.49,3.5,"Warm",328.8920338,"Prime B"],
+["2408 TT","Nanya Technology","TW","Information Technology","Asia Alpha Master","Short",133300,13.4925,1798550.25,3.274,"Warm",163.5681533,"Prime C"],
+["3105 TT","WIN Semiconductors","TW","Information Technology","Quant Asia","Short",801900,4.206,3372791.4,3.25,"Warm",304.4881125,"Prime B"],
+["6752 JP","Panasonic","JP","Consumer Discretionary","Asia Alpha Master","Short",5700,55.4716,316188.12,3.25,"Warm",28.54476083,"Prime B"],
+["090430 KS","Amorepacific","KR","Consumer Staples","Asia Alpha Master","Short",42000,72.0317,3025331.4,3.25,"Warm",273.1201958,"Prime C"],
+["2388 HK","Bank of China (Hong Kong)","HK","Financials","Quant Asia","Short",52800,25.1151,1326077.28,3.25,"Warm",119.71531,"Prime C"],
+["2501 TT","Cathay Real Estate Development","TW","Information Technology","Asia Long/Short","Short",67300,16.0956,1083233.88,3.25,"Warm",97.7919475,"Prime A"],
+["3293 TT","International Games System","TW","Information Technology","Quant Asia","Short",554200,4.3956,2436041.52,3.25,"Warm",219.920415,"Prime A"],
+["8046 TT","Nan Ya PCB","TW","Information Technology","Asia Alpha Master","Short",156100,11.7006,1826463.66,3.059,"Warm",155.198676,"Prime A"],
+["2301 TT","Lite-On Technology","TW","Information Technology","Asia Long/Short","Short",412800,19.123,7893974.4,3,"Warm",657.8312,"Prime A"],
+["2207 TT","Hotai Motor","TW","Consumer Discretionary","Asia Long/Short","Short",278100,19.2947,5365856.07,3,"Warm",447.1546725,"Prime B"],
+["8630 JP","Sompo Holdings","JP","Financials","Asia Long/Short","Short",10400,118.7625,1235130,3,"Warm",102.9275,"Prime A"],
+["7269 JP","Suzuki Motor","JP","Industrials","Asia Alpha Master","Short",34800,97.1839,3381999.72,3,"Warm",281.83331,"Prime B"],
+["3311 HK","China State Construction International","HK","Financials","Quant Asia","Short",99000,34.2634,3392076.6,3,"Warm",282.67305,"Prime B"],
+["000270 KS","Kia","KR","Consumer Discretionary","Quant Asia","Short",71000,86.5826,6147364.6,3,"Warm",512.2803833,"Prime A"],
+["316 HK","Orient Overseas Container Line","HK","Financials","Asia Alpha Master","Short",65600,12.6777,831657.12,2.997,"Warm",69.23545524,"Prime B"],
+["329180 KS","HD Hyundai Heavy Industries","KR","Information Technology","Asia Long/Short","Short",84400,40.1932,3392306.08,2.761,"Warm",260.1710302,"Prime A"],
+["014680 KS","Hansol Chemical","KR","Information Technology","Asia Long/Short","Short",9700,63.6491,617396.27,2.75,"Warm",47.16221507,"Prime B"],
+["8454 TT","momo.com Inc.","TW","Information Technology","Quant Asia","Short",608200,9.8516,5991743.12,2.75,"Warm",457.7025994,"Prime B"],
+["2884 TT","E.SUN Bank","TW","Financials","Quant Asia","Short",1033800,3.2792,3390036.96,2.75,"Warm",258.9611567,"Prime B"],
+["4994 TT","X-Legend Entertainment","TW","Information Technology","Asia Alpha Master","Short",337300,9.0245,3043963.85,2.75,"Warm",232.5250163,"Prime A"],
+["3222 TT","Himax","TW","Information Technology","Asia Long/Short","Short",408700,8.2921,3388981.27,2.64,"Warm",248.5252931,"Prime B"],
+["2609 TT","Yang Ming","TW","Information Technology","Quant Asia","Short",493400,4.0437,1995161.58,2.602,"Warm",144.2058453,"Prime B"],
+["142 HK","First Pacific Company","HK","Financials","Asia Alpha Master","Short",14937300,0.5422,8099004.06,2.531,"Warm",569.4049799,"Prime A"],
+["051905 KS","LG Household & Health Care","KR","Information Technology","Asia Alpha Master","Short",15200,47.4189,720767.28,2.5,"Warm",50.05328333,"Prime B"],
+["055550 KS","Shinhan Financial Group","KR","Financials","Quant Asia","Short",337500,10.043,3389512.5,2.5,"Warm",235.3828125,"Prime B"],
+["2801 TT","Chang Hwa Commercial Bank","TW","Financials","Asia Long/Short","Short",134100,5.0651,679229.91,2.5,"Warm",47.16874375,"Prime A"],
+["6482 TT","Fun Yours Technology","TW","Information Technology","Quant Asia","Short",1158300,1.617,1872971.1,2.303,"Warm",119.8181234,"Prime C"],
+["9531 JP","Tokyo Gas","JP","Industrials","Quant Asia","Short",4000,143.5385,574154,2.25,"Warm",35.884625,"Prime C"],
+["28 HK","Tian An China Investments Company","HK","Financials","Asia Long/Short","Short",287400,17.922,5150782.8,2.25,"Warm",321.923925,"Prime A"],
+["836 HK","China Resources Power Holdings","HK","Financials","Asia Long/Short","Short",10300,35.1867,362423.01,2.25,"Warm",22.65143813,"Prime A"],
+["030200 KS","KT Corporation","KR","Communication Services","Quant Asia","Short",151200,14.7977,2237412.24,2.25,"Warm",139.838265,"Prime B"],
+["2232 HK","Crystal International","HK","Financials","Asia Alpha Master","Short",134400,27.5,3696000,2.217,"Warm",227.612,"Prime B"],
+["011170 KS","LOTTE Chemical","KR","Materials","Quant Asia","Short",271600,6.4204,1743780.64,2,"Warm",96.87670222,"Prime C"],
+["6971 JP","Kyocera","JP","Information Technology","Quant Asia","Short",11200,146.3612,1639245.44,2,"Warm",91.06919111,"Prime B"],
+["005930 KS","Samsung","KR","Information Technology","Asia Long/Short","Short",53500,56.8883,3043524.05,2,"Warm",169.0846694,"Prime A"],
+["1301 TT","Formosa Plastics","TW","Materials","Quant Asia","Short",568600,14.539,8266875.4,2,"Warm",459.2708556,"Prime A"],
+["7532 JP","Pan Pacific International Holdings","JP","Industrials","Quant Asia","Short",21900,58.5151,1281480.69,2,"Warm",71.19337167,"Prime C"],
+["4 HK","Wharf Holdings","HK","Financials","Asia Long/Short","Short",2110300,3.5639,7520898.17,1.791,"Warm",374.164684,"Prime A"],
+["2317 TT","Foxconn (Hon Hai Precision Industry)","TW","Information Technology","Quant Asia","Short",518600,2.7748,1439011.28,1.75,"Warm",69.95193722,"Prime A"],
+["086280 KS","Hyundai Glovis","KR","Industrials","Asia Alpha Master","Short",47000,57.9306,2722738.2,1.75,"Warm",132.3553292,"Prime A"],
+["6488 TT","GlobalWafers","TW","Information Technology","Asia Long/Short","Short",545800,4.3371,2367189.18,1.75,"Warm",115.0716963,"Prime A"],
+["122870 KS","YG Entertainment","KR","Information Technology","Quant Asia","Short",206400,32.4777,6703397.28,1.75,"Warm",325.85959,"Prime A"],
+["9503 JP","KEPCO","JP","Industrials","Asia Alpha Master","Short",3500,319.291,1117518.5,1.75,"Warm",54.32381597,"Prime B"],
+["6542 TT","Gamesparcs","TW","Information Technology","Asia Alpha Master","Short",313000,9.7245,3043768.5,1.522,"Warm",128.6837683,"Prime B"],
+["7741 JP","Hoya","JP","Health Care","Asia Long/Short","Short",3300,288.2943,951371.19,1.5,"Warm",39.64046625,"Prime C"],
+["3037 TT","Unimicron","TW","Information Technology","Quant Asia","Short",143400,18.8208,2698902.72,1.5,"Warm",112.45428,"Prime C"],
+["2 HK","CLP Group","HK","Utilities","Quant Asia","Short",125800,24.2046,3044938.68,1.5,"Warm",126.872445,"Prime A"],
+["2778 HK","Champion REIT","HK","Financials","Asia Long/Short","Short",1258800,2.4182,3044030.16,1.5,"Warm",126.83459,"Prime B"],
+["4307 JP","Nomura Research Institute","JP","Information Technology","Asia Alpha Master","Short",18400,337.8729,6216861.36,1.492,"Warm",257.6543653,"Prime B"],
+["3659 JP","Nexon","JP","Industrials","Quant Asia","Short",36400,86.0268,3131375.52,1.25,"Warm",108.7283167,"Prime B"],
+["271560 KS","ORION","KR","Information Technology","Quant Asia","Short",38200,79.5879,3040257.78,1.25,"Warm",105.5645063,"Prime A"],
+["8411 JP","Mizuho Financial Group","JP","Financials","Asia Alpha Master","Short",21900,343.8796,7530963.24,1.25,"Warm",261.4917792,"Prime A"],
+["2345 TT","Accton Technology","TW","Information Technology","Asia Alpha Master","Short",158200,19.245,3044559,1.25,"Warm",105.7138542,"Prime B"],
+["9532 JP","Osaka Gas","JP","Industrials","Asia Long/Short","Short",30100,58.3278,1755666.78,1.21,"Warm",59.00991122,"Prime A"],
+["1313 HK","China Resources Building Materials Technology","HK","Financials","Quant Asia","Short",137400,14.5831,2003717.94,1,"Warm",55.65883167,"Prime C"],
+["868 HK","Xinyi Glass Holdings","HK","Financials","Asia Alpha Master","Short",216100,8.2711,1787384.71,1,"Warm",49.64957528,"Prime B"],
+["1199 HK","COSCO SHIPPING Ports","HK","Financials","Quant Asia","Short",150300,13.6355,2049415.65,1,"Warm",56.9282125,"Prime B"],
+["2353 TT","Acer","TW","Information Technology","Quant Asia","Short",170800,15.1494,2587517.52,1,"Warm",71.87548667,"Prime A"],
+["144 HK","China Merchants Port","HK","Financials","Asia Long/Short","Short",123900,24.5742,3044743.38,1,"Warm",84.576205,"Prime C"],
+["2357 TT","ASUS","TW","Information Technology","Asia Long/Short","Short",240900,13.0028,3132374.52,1,"Warm",87.01040333,"Prime A"],
+["058470 KS","LEENO Industrial","KR","Information Technology","Asia Alpha Master","Short",96500,79.5419,7675793.35,1,"Warm",213.2164819,"Prime A"],
+["9432 JP","NTT (Nippon Telegraph & Telephone)","JP","Communication Services","Quant Asia","Short",10300,327.9599,3377986.97,1,"Warm",93.83297139,"Prime A"],
+["3008 TT","Largan Precision","TW","Information Technology","Asia Alpha Master","Short",474400,5.0635,2402124.4,1,"Warm",66.72567778,"Prime C"],
+["151 HK","Want Want China","HK","Financials","Quant Asia","Short",68900,9.9693,686884.77,1,"Warm",19.0801325,"Prime B"],
+["1908 HK","C&D International Investment Group","HK","Financials","Asia Alpha Master","Short",23600,17.9399,423381.64,0.962,"Warm",11.31369827,"Prime A"],
+["033780 KS","KT&G (Korea Tobacco)","KR","Consumer Staples","Asia Long/Short","Short",11100,89.3034,991267.74,0.75,"Warm",20.65141125,"Prime B"],
+["4519 JP","Chugai Pharmaceutical","JP","Health Care","Asia Alpha Master","Short",13900,218.8896,3042565.44,0.5,"Warm",42.25785333,"Prime B"],
+["440 HK","Dah Sing Financial","HK","Financials","Quant Asia","Short",139300,21.8683,3046254.19,0.75,"Warm",63.46362896,"Prime B"],
+["2382 TT","Quanta Computer","TW","Information Technology","Asia Long/Short","Short",230500,14.7075,3390078.75,0.749,"Warm",70.53247177,"Prime A"],
+["035900 KS","JYP Entertainment","KR","Information Technology","Quant Asia","Short",41600,73.1698,3043863.68,0.727,"Warm",61.46913598,"Prime C"],
+["036570 KS","NCsoft","KR","Communication Services","Quant Asia","Short",456800,6.0483,2762863.44,0.25,"GC",19.18655167,"Prime B"],
+["62 HK","Transport International Holdings","HK","Financials","Quant Asia","Short",90000,29.9412,2694708,0.5,"Warm",37.4265,"Prime B"],
+["002380 KS","KCC Corp","KR","Industrials","Asia Long/Short","Short",49500,50.7592,2512580.4,0.25,"GC",17.448475,"Prime C"],
+["009540 KS","HD Korea Shipbuilding & Offshore Engineering","KR","Industrials","Quant Asia","Short",74900,41.2777,3091699.73,0.5,"Warm",42.94027403,"Prime A"],
+["8015 JP","Toyota Tsusho","JP","Industrials","Asia Long/Short","Short",3300,359.8863,1187624.79,0.25,"GC",8.247394375,"Prime B"],
+["2881 TT","Fubon Financial","TW","Financials","Asia Long/Short","Short",1386000,2.4459,3390017.4,0.5,"Warm",47.083575,"Prime A"],
+["034020 KS","Doosan Enerbility","KR","Information Technology","Asia Alpha Master","Short",50800,49.877,2533751.6,0.365,"GC",25.68942594,"Prime C"],
+["008930 KS","Hanmi Pharmaceutical","KR","Information Technology","Quant Asia","Short",11100,40.9366,454396.26,0.356,"GC",4.493474127,"Prime C"],
+["14 HK","Hysan Development","HK","Financials","Asia Long/Short","Short",121500,27.0831,3290596.65,0.344,"GC",31.4434791,"Prime A"],
+["303 HK","Vtech","HK","Financials","Asia Long/Short","Short",29200,28.7136,838437.12,0.338,"GC",7.87199296,"Prime A"],
+["4904 TT","Far EasTone","TW","Communication Services","Asia Alpha Master","Short",971700,2.7736,2695107.12,0.25,"GC",18.71602167,"Prime A"],
+];
+const AV_A=[
+["1101 TT","Taiwan Cement","TW","Materials",3.25,"Warm",867344,2.845],
+["462870 KS","SHIFT UP","KR","Information Technology",15.75,"HTB",2126347,52.9758],
+["992 HK","Lenovo","HK","Information Technology",0.25,"GC",975856,26.2711],
+["9766 JP","Konami Holdings","JP","Industrials",4,"Warm",874460,249.5117],
+["1605 JP","Inpex","JP","Industrials",0.75,"Warm",1197333,282.9164],
+["402340 KS","SK Square","KR","Information Technology",0.25,"GC",506591,38.0543],
+["966 HK","China Taiping Insurance","HK","Financials",3.75,"Warm",437388,35.3696],
+["9532 JP","Osaka Gas","JP","Industrials",1,"Warm",2145620,58.3278],
+["963 HK","Bloomage BioTechnology","HK","Financials",6.25,"HTB",40286,15.8056],
+["1102 TT","Asia Cement","TW","Information Technology",13.25,"HTB",105552,3.8173],
+["9531 JP","Tokyo Gas","JP","Industrials",2.25,"Warm",1707509,143.5385],
+["880 HK","SJM Holdings","HK","Financials",5.25,"HTB",2119747,20.6714],
+["383220 KS","F&F Co","KR","Information Technology",7.5,"HTB",665877,21.7932],
+["377300 KS","Kakao Pay","KR","Information Technology",0.25,"GC",1721360,50.7502],
+["352820 KS","HYBE","KR","Communication Services",14.5,"HTB",106089,40.286],
+["9503 JP","KEPCO","JP","Industrials",1.5,"Warm",1427394,319.291],
+["1802 JP","Obayashi","JP","Industrials",5.75,"HTB",347584,23.2575],
+["1216 TT","Uni-President Enterprises","TW","Consumer Staples",6.25,"HTB",1844972,9.3013],
+["1812 JP","Kajima","JP","Industrials",8.75,"HTB",93812,356.0936],
+["9432 JP","NTT (Nippon Telegraph & Telephone)","JP","Communication Services",1,"Warm",556327,327.9599],
+["868 HK","Xinyi Glass Holdings","HK","Financials",1,"Warm",759074,8.2711],
+["8630 JP","Sompo Holdings","JP","Financials",2.75,"Warm",2515694,118.7625],
+["2802 JP","Ajinomoto","JP","Industrials",7.75,"HTB",364942,6.0803],
+["86 HK","Sun Hung Kai & Co.","HK","Financials",3.25,"Warm",911635,3.8747],
+["8454 TT","momo.com Inc.","TW","Information Technology",2.5,"Warm",2894357,9.8516],
+["8411 JP","Mizuho Financial Group","JP","Financials",1.5,"Warm",1041252,343.8796],
+["323410 KS","KakaoBank","KR","Information Technology",3,"Warm",2659672,10.3706],
+["2914 JP","Japan Tobacco","JP","Consumer Staples",14.5,"HTB",148145,183.1304],
+["1303 TT","Nan Ya Plastics","TW","Materials",5.5,"HTB",1751878,8.8808],
+["1326 TT","Formosa Chemicals & Fibre","TW","Materials",0.25,"GC",756124,9.1066],
+["316140 KS","Woori Financial Group","KR","Financials",7.5,"HTB",1969294,20.3947],
+["3382 JP","7-Eleven","JP","Consumer Staples",0.25,"GC",311500,42.8361],
+["836 HK","China Resources Power Holdings","HK","Financials",2.5,"Warm",1253384,35.1867],
+["1402 TT","Far Eastern New Century","TW","Consumer Discretionary",0.25,"GC",1467679,4.3925],
+["83 HK","Sino Land","HK","Real Estate",5,"Warm",2194733,23.1816],
+["8308 JP","Resona Holdings","JP","Industrials",2.75,"Warm",1623620,253.1438],
+["282330 KS","BGF Retail","KR","Information Technology",6.75,"HTB",2078709,30.9238],
+["4063 JP","Shin-Etsu Chemical","JP","Materials",5.25,"HTB",1945924,152.495],
+["1434 TT","Formosa Taffeta","TW","Information Technology",17.75,"HTB",189437,10.8484],
+["272210 KS","Hanwha Systems","KR","Information Technology",0.25,"GC",1972608,78.1064],
+["4091 JP","Nippon Sanso","JP","Industrials",0.25,"GC",187432,95.6856],
+["8058 JP","Mitsubishi Corporation","JP","Industrials",4.75,"Warm",744567,34.2876],
+["8046 TT","Nan Ya PCB","TW","Information Technology",3,"Warm",21605,11.7006],
+["1590 TT","AirTAC International","TW","Industrials",8,"HTB",1753755,12.2654],
+["267260 KS","HD Hyundai Electric","KR","Information Technology",6,"HTB",111752,11.7592],
+["263750 KS","Pearl Abyss","KR","Information Technology",4,"Warm",1983297,21.114],
+["823 HK","Link REIT","HK","Real Estate",0.25,"GC",1273140,34.4425],
+["259960 KS","Krafton","KR","Information Technology",3.5,"Warm",144914,80.3004],
+["251270 KS","Netmarble","KR","Communication Services",0.25,"GC",712884,32.4936],
+["4452 JP","Kao","JP","Consumer Staples",1.5,"Warm",2769076,256.1338],
+["4502 JP","Takeda Pharmaceutical","JP","Health Care",0.25,"GC",2031676,210.3545],
+["2002A TT","China Steel","TW","Information Technology",4.75,"Warm",1597055,15.0286],
+["8 HK","PCCW","HK","Financials",0.25,"GC",740189,23.7698],
+["2201 TT","Yulon Motor Company","TW","Information Technology",9,"HTB",141105,12.0362],
+["4503 JP","Astellas Pharma","JP","Industrials",1.5,"Warm",422673,221.3645],
+["247540 KS","Ecopro BM","KR","Information Technology",8.5,"HTB",46201,69.3472],
+["8015 JP","Toyota Tsusho","JP","Industrials",0.25,"GC",2447451,359.8863],
+["778 HK","Fortune REIT","HK","Financials",7.75,"HTB",2729178,30.8683],
+["241560 KS","Doosan Bobcat","KR","Information Technology",0.25,"GC",2890274,14.8604],
+["8002 JP","Marubeni","JP","Industrials",2.25,"Warm",925110,221.0301],
+["4507 JP","Shionogi","JP","Industrials",15,"HTB",171339,281.0903],
+["8001 JP","Itochu Shoji","JP","Industrials",3,"Warm",271830,191.1237],
+["207940 KS","Samsung Biologics","KR","Health Care",4.75,"Warm",277804,53.046],
+["71 HK","Miramar Hotel and Investment","HK","Financials",0.25,"GC",41020,12.0141],
+["2303 TT","United Microelectronics","TW","Information Technology",1.25,"Warm",944639,6.423],
+["7741 JP","Hoya","JP","Health Care",1.5,"Warm",651744,288.2943],
+["196170 KS","Alteogen","KR","Information Technology",16.5,"HTB",186246,67.9547],
+["69 HK","Shangri-La","HK","Financials",0.25,"GC",782816,20.2379],
+["181710 KS","NHN Corp","KR","Information Technology",0.25,"GC",2368475,32.5555],
+["2308 TT","Delta Electronics","TW","Information Technology",19.25,"HTB",57359,15.9651],
+["762 HK","China Unicom","HK","Communication Services",1,"Warm",2495860,21.0038],
+["683 HK","Kerry Properties","HK","Financials",0.25,"GC",761837,5.491],
+["2311 TT","ASE Group","TW","Information Technology",3.25,"Warm",155753,16.3582],
+["4543 JP","Terumo","JP","Health Care",3.75,"Warm",405027,213.0769],
+["7532 JP","Pan Pacific International Holdings","JP","Industrials",1.75,"Warm",2160255,58.5151],
+["4568 JP","Daiichi Sankyo","JP","Health Care",9.5,"HTB",50081,350.0201],
+["161390 KS","Hankook Tire","KR","Consumer Discretionary",3,"Warm",1460716,71.9615],
+["7269 JP","Suzuki Motor","JP","Industrials",2.75,"Warm",1854204,97.1839],
+["138040 KS","Meritz Financial Group","KR","Financials",0.25,"GC",1073096,4.2392],
+["669 HK","Techtronic Industries","HK","Financials",9,"HTB",181811,8.9309],
+["7013 JP","IHI Corporation","JP","Industrials",7.75,"HTB",1156398,235.6589],
+["4578 JP","Otsuka Holdings","JP","Health Care",4.25,"Warm",742670,247.6388],
+["4661 JP","Oriental Land","JP","Consumer Discretionary",0.25,"GC",314060,367.6589],
+["2327 TT","Yageo","TW","Information Technology",0.25,"GC",1490503,6.5987],
+["7011 JP","Mitsubishi Heavy Industries","JP","Industrials",5.75,"HTB",639549,153.5184],
+["105560 KS","KB Financial Group","KR","Financials",0.25,"GC",152804,83.0777],
+["66 HK","MTR Corporation","HK","Industrials",0.25,"GC",2864884,3.6982],
+["6971 JP","Kyocera","JP","Information Technology",2,"Warm",989316,146.3612],
+["659 HK","CTF Services Limited","HK","Financials",0.25,"GC",751931,25.5179],
+["636 HK","Kerry Logistics Network","HK","Financials",0.25,"GC",2821441,18.6931],
+["6902 JP","Denso","JP","Consumer Discretionary",16.75,"HTB",25866,129.5452],
+["4901 JP","Fujifilm","JP","Information Technology",19.75,"HTB",85417,25.3311],
+["688 HK","China Overseas Land & Investment","HK","Real Estate",19.5,"HTB",174881,2.4079],
+["6823 HK","Hong Kong Telecom","HK","Financials",4.5,"Warm",997812,29.7941],
+["098460 KS","Koh Young Technology","KR","Information Technology",3.25,"Warm",2543875,47.997],
+["6762 JP","TDK","JP","Information Technology",3.75,"Warm",878715,360.2274],
+["6752 JP","Panasonic","JP","Consumer Discretionary",4.5,"Warm",1227119,55.4716],
+["6701 JP","NEC Corp","JP","Industrials",22,"HTB",136673,323.0635],
+["6542 TT","Gamesparcs","TW","Information Technology",1,"Warm",1573615,9.7245],
+["6505 TT","Formosa Petrochemical","TW","Energy",7.25,"HTB",2281658,4.9069],
+["5108 JP","Bridgestone","JP","Consumer Discretionary",7.5,"HTB",1341198,248.5485],
+["6178 HK","Everbright Securities Company","HK","Financials",11,"HTB",90091,17.7353],
+["6488 TT","GlobalWafers","TW","Information Technology",1.5,"Warm",1033683,4.3371],
+["6110 HK","Topsports International","HK","Financials",0.25,"GC",980319,17.2212],
+["6482 TT","Fun Yours Technology","TW","Information Technology",2.25,"Warm",1715360,1.617],
+["5401 JP","Nippon Steel","JP","Materials",5.75,"HTB",2128986,341.1104],
+["2379 TT","Realtek","TW","Information Technology",3.5,"Warm",39209,3.9531],
+["6472 TT","Bora Pharmaceuticals","TW","Information Technology",3,"Warm",2698889,17.1903],
+["086790 KS","Hana Financial Group","KR","Financials",0.25,"GC",1410610,21.8015],
+["6273 JP","SMC Corp","JP","Industrials",5.25,"HTB",2971352,190.5351],
+["5713 JP","Sumitomo Metal Mining","JP","Industrials",1,"Warm",201628,234.3679],
+["5802 JP","Sumitomo Denki Kogyo","JP","Industrials",0.25,"GC",183596,137.4448],
+["62 HK","Transport International Holdings","HK","Financials",0.75,"Warm",930844,29.9412],
+["6178 JP","Japan Post Holdings","JP","Industrials",5,"Warm",239740,83.6722],
+["6098 JP","Recruit","JP","Real Estate",2,"Warm",84063,314.9833],
+["53 HK","Guoco","HK","Financials",0.25,"GC",2574548,1.9578],
+["6146 JP","Disco Corp.","JP","Industrials",2,"Warm",2866686,199.6722],
+["6055 HK","China Tobacco International","HK","Financials",1.75,"Warm",961136,12.8005],
+["086520 KS","Ecopro","KR","Information Technology",8.25,"HTB",18413,52.3668],
+["522 HK","ASMPT (ASM Pacific Technology)","HK","Financials",0.25,"GC",745616,21.7187],
+["2395 TT","Advantech","TW","Information Technology",7,"HTB",2220849,4.0846],
+["6 HK","Power Assets","HK","Utilities",22,"HTB",97878,1.1458],
+["5803 JP","Fujikura","JP","Industrials",7.75,"HTB",2484309,125.0502],
+["6201 JP","Toyota Industries","JP","Industrials",1.25,"Warm",2944371,196.495],
+["5478 TT","Soft-World International","TW","Information Technology",7.25,"HTB",181766,12.9984],
+["45 HK","Hongkong and Shanghai Hotels","HK","Financials",0.25,"GC",390011,24.1637],
+["081660 KS","Misto Holdings (Fila)","KR","Information Technology",1,"Warm",1312217,14.7411],
+["2412 TT","Chunghwa Telecom","TW","Communication Services",15,"HTB",115787,9.5343],
+["6301 JP","Komatsu","JP","Industrials",2.75,"Warm",2030818,259.9064],
+["079550 KS","LIG Nex1","KR","Information Technology",0.25,"GC",2371272,79.3117],
+["5020 JP","ENEOS Holdings","JP","Industrials",3.75,"Warm",2280292,280.1405],
+["6326 JP","Kubota","JP","Industrials",14,"HTB",2493,114.796],
+["5016 JP","JX Advanced Metals","JP","Industrials",16.75,"HTB",40035,93.291],
+["6367 JP","Daikin","JP","Industrials",0.25,"GC",1463698,258.1003],
+["4994 TT","X-Legend Entertainment","TW","Information Technology",3,"Warm",1447475,9.0245],
+["2454 TT","MediaTek","TW","Information Technology",1,"Warm",815946,10.1462],
+["6501 JP","Hitachi","JP","Industrials",0.25,"GC",618401,27.6722],
+["073240 KS","Kumho Tire","KR","Consumer Discretionary",9,"HTB",191304,47.9819],
+["4904 TT","Far EasTone","TW","Communication Services",0.25,"GC",360831,2.7736],
+["068270 KS","Celltrion","KR","Health Care",20,"HTB",38616,22.7117],
+["066570 KS","LG Electronics","KR","Consumer Discretionary",0.25,"GC",2803901,30.4083],
+["6503 JP","Mitsubishi Electric","JP","Industrials",0.25,"GC",1088869,165.9732],
+["4689 JP","LY Corporation","JP","Communication Services",9.5,"HTB",41363,240.6488],
+["3998 HK","Bosideng","HK","Financials",0.25,"GC",2081715,17.1714],
+["6594 JP","Nidec","JP","Industrials",3.5,"Warm",1819094,177.9398],
+["4519 JP","Chugai Pharmaceutical","JP","Health Care",0.5,"Warm",415825,218.8896],
+["443060 KS","HD Hyundai Marine Solution","KR","Information Technology",11.75,"HTB",133473,45.2619],
+["440 HK","Dah Sing Financial","HK","Financials",0.75,"Warm",1732444,21.8683],
+["6702 JP","Fujitsu","JP","Information Technology",0.25,"GC",2112042,129.9398],
+["392 HK","Beijing Enterprises Holdings","HK","Financials",0.25,"GC",645138,12.1957],
+["2603 TT","Evergreen Marine","TW","Information Technology",7.75,"HTB",2743832,8.1528],
+["4307 JP","Nomura Research Institute","JP","Information Technology",1.5,"Warm",855689,337.8729],
+["6723 JP","Renesas Electronics","JP","Information Technology",20.5,"HTB",157143,74.107],
+["2610 TT","China Airlines","TW","Industrials",0.25,"GC",1588496,11.9925],
+["41 HK","Great Eagle","HK","Financials",9.25,"HTB",75380,14.3082],
+["3898 HK","Zhuzhou CRRC Times Electric","HK","Financials",2,"Warm",404075,24.0051],
+["4 HK","Wharf Holdings","HK","Financials",1.5,"Warm",2726547,3.5639],
+["388 HK","Hong Kong Exchanges & Clearing","HK","Financials",3.5,"Warm",531289,34.6023],
+["2618 TT","EVA Air","TW","Industrials",0.25,"GC",491660,11.1714],
+["2630 TT","Air Asia Company Limited (AACL)","TW","Information Technology",0.25,"GC",2820082,17.1943],
+["373220 KS","LG Energy Solution","KR","Information Technology",10.75,"HTB",176745,70.7019],
+["051910 KS","LG Chem","KR","Materials",0.25,"GC",1675889,64.3208],
+["6758 JP","Sony","JP","Consumer Discretionary",1.25,"Warm",832950,291.7659],
+["3800 HK","GCL Technology","HK","Financials",2,"Warm",61753,12.0358],
+["373 HK","Allied Group Limited","HK","Financials",0.25,"GC",1507598,11.1739],
+["3665 TT","Bizlink Holding","TW","Industrials",3.5,"Warm",2053242,11.7151],
+["2633 TT","Taiwan High Speed Rail","TW","Industrials",8.5,"HTB",174001,17.8752],
+["6857 JP","Advantest","JP","Information Technology",0.25,"GC",1840195,229.1304],
+["363 HK","Shanghai Industrial Holdings","HK","Financials",2,"Warm",2773693,20.5102],
+["345 HK","Vitasoy","HK","Financials",7.25,"HTB",2629474,7.7455],
+["2753 TT","Bafang Yunji","TW","Information Technology",0.25,"GC",888557,4.855],
+["3330 HK","Lingbao Gold","HK","Financials",7.75,"HTB",2605571,35.3913],
+["3661 TT","Alchip Technologies","TW","Information Technology",4,"Warm",1248796,5.7714],
+["3659 JP","Nexon","JP","Industrials",1.25,"Warm",337894,86.0268],
+["2834 TT","Taiwan Business Bank","TW","Information Technology",6.75,"HTB",1725027,3.5038],
+["6861 JP","Keyence","JP","Information Technology",21,"HTB",102460,228.4482],
+["3320 HK","China Resources Pharmaceutical Group","HK","Financials",8.5,"HTB",163027,23.0077],
+["3532 TT","Formosa Sumco Technology","TW","Information Technology",8.25,"HTB",14245,6.8142],
+["2880 TT","Hua Nan Financial Holdings","TW","Information Technology",1.5,"Warm",2096220,14.7513],
+["3481 TT","Innolux","TW","Information Technology",9.75,"HTB",143563,11.8343],
+["336260 KS","Doosan Fuel Cell","KR","Information Technology",2,"Warm",2017905,77.597],
+["3311 HK","China State Construction International","HK","Financials",3,"Warm",555114,34.2634],
+["2882 TT","Cathay Financial Holding","TW","Financials",0.25,"GC",2836558,9.9195],
+["2883 TT","KGI Financial Holding","TW","Information Technology",0.25,"GC",1523992,12.2733],
+["3293 TT","International Games System","TW","Information Technology",3.25,"Warm",2945138,4.3956],
+["329180 KS","HD Hyundai Heavy Industries","KR","Information Technology",2.75,"Warm",987621,40.1932],
+["047050 KS","Posco International","KR","Industrials",0.25,"GC",906879,24.2883],
+["042700 KS","HANMI Semiconductor","KR","Information Technology",0.25,"GC",1040361,80.1902],
+["3231 TT","Wistron Corporation","TW","Information Technology",8.25,"HTB",168482,3.8418],
+["3222 TT","Himax","TW","Information Technology",2.75,"Warm",721798,8.2921],
+["6920 JP","Lasertec","JP","Information Technology",0.25,"GC",1933784,151.9732],
+["316 HK","Orient Overseas Container Line","HK","Financials",2.75,"Warm",1421173,12.6777],
+["3105 TT","WIN Semiconductors","TW","Information Technology",6.75,"HTB",2279240,4.206],
+["3 HK","Hong Kong and China Gas","HK","Utilities",7.75,"HTB",2029431,28.4246],
+["6954 JP","Fanuc","JP","Industrials",19.5,"HTB",113051,347.9064],
+["3045 TT","Taiwan Mobile","TW","Communication Services",4.25,"Warm",754419,1.4204],
+["3037 TT","Unimicron","TW","Information Technology",1.75,"Warm",927449,18.8208],
+["303 HK","Vtech","HK","Financials",0.25,"GC",2163461,28.7136],
+["3008 TT","Largan Precision","TW","Information Technology",0.75,"Warm",1128859,5.0635],
+["293490 KS","Kakao Games","KR","Information Technology",10.25,"HTB",186820,84.717],
+["036460 KS","Korea Gas","KR","Utilities",1.25,"Warm",2522168,4.3804],
+["2890 TT","Sinopac Financial Holdings","TW","Financials",0.25,"GC",1331942,2.0176],
+["2888 TT","Shin Kong Financial Holding","TW","Financials",6,"HTB",1540415,17.5302],
+["2887 TT","Taishin Financial Holdings","TW","Information Technology",3.5,"Warm",2773370,16.1252],
+["293 HK","Cathay Pacific","HK","Industrials",0.75,"Warm",314178,4.477],
+["291 HK","China Resources Beer","HK","Consumer Staples",0.25,"GC",1100663,2.413],
+["2891 TT","CTBC Financial Holding","TW","Information Technology",18.75,"HTB",86678,19.6783],
+["2892 TT","First Financial Holding","TW","Financials",6.25,"HTB",1915239,6.7906],
+["035720 KS","Kakao","KR","Communication Services",0.25,"GC",1631174,22.4951],
+["2912 TT","President Chain Store (PSCS)","TW","Consumer Staples",8.5,"HTB",197318,5.0673],
+["6981 JP","Murata Manufacturing","JP","Information Technology",5.25,"HTB",1461484,46.1003],
+["035420 KS","Naver","KR","Communication Services",0.25,"GC",872197,38.797],
+["2880 HK","Futu Holdings","HK","Financials",20.5,"HTB",114470,15.7289],
+["3034 TT","Novatek Microelectronics","TW","Information Technology",0.25,"GC",46764,4.7107],
+["2886 TT","MFHC","TW","Financials",3,"Warm",815521,6.177],
+["288 HK","WH Group","HK","Financials",0.25,"GC",643633,10.1995],
+["2885 TT","Yuanta Financial Holding","TW","Financials",5.5,"HTB",776806,1.5855],
+["7012 JP","Kawasaki Heavy Industries","JP","Industrials",3.75,"Warm",1392874,7.4983],
+["2884 TT","E.SUN Bank","TW","Financials",2.75,"Warm",1969526,3.2792],
+["2881 TT","Fubon Financial","TW","Financials",0.75,"Warm",456181,2.4459],
+["2801 TT","Chang Hwa Commercial Bank","TW","Financials",2.5,"Warm",2001606,5.0651],
+["28 HK","Tian An China Investments Company","HK","Financials",2.25,"Warm",2334376,17.922],
+["27 HK","Galaxy Entertainment","HK","Financials",5,"Warm",1014756,30.7263],
+["2778 HK","Champion REIT","HK","Financials",1.5,"Warm",964334,2.4182],
+["3083 TT","Chinese Gamer International","TW","Information Technology",6.25,"HTB",1084360,15.4513],
+["7182 JP","Japan Post Bank","JP","Industrials",7.5,"HTB",891632,326.7157],
+["035250 KS","Kangwon Land","KR","Consumer Staples",11.25,"HTB",95416,32.1177],
+["2638 HK","HK Electric Investments","HK","Financials",0.25,"GC",1520207,24.0614],
+["3086 TT","Wayi International Digital Entertainment","TW","Information Technology",4,"Warm",2680575,8.4723],
+["7203 JP","Toyota","JP","Consumer Discretionary",2.25,"Warm",2650584,276.8495],
+["271560 KS","ORION","KR","Information Technology",1.5,"Warm",1460513,79.5879],
+["034220 KS","LG Display","KR","Information Technology",0.25,"GC",186582,51.7962],
+["2615 TT","Wan Hai Lines","TW","Information Technology",0.5,"Warm",725440,4.6956],
+["2609 TT","Yang Ming","TW","Information Technology",2.5,"Warm",95925,4.0437],
+["257 HK","China Everbright Environment Group","HK","Financials",7.75,"HTB",1618726,23.4156],
+["7267 JP","Honda","JP","Consumer Discretionary",2,"Warm",2444080,87.3846],
+["2501 TT","Cathay Real Estate Development","TW","Information Technology",3.25,"Warm",349282,16.0956],
+["032830 KS","Samsung Life Insurance","KR","Financials",1.5,"Warm",106252,15.2453],
+["2474 TT","Catcher Technology","TW","Information Technology",1.25,"Warm",1278880,1.3314],
+["2408 TT","Nanya Technology","TW","Information Technology",0.25,"GC",2915232,13.4925],
+["2388 HK","Bank of China (Hong Kong)","HK","Financials",7.25,"HTB",2711297,25.1151],
+["2382 TT","Quanta Computer","TW","Information Technology",1,"Warm",690241,14.7075],
+["028670 KS","Pan Ocean","KR","Information Technology",7.25,"HTB",2468289,83.7223],
+["241 HK","Alibaba Health Information Technology","HK","Financials",1,"Warm",509826,24.5384],
+["2377 TT","MSI (Micro-Star International)","TW","Information Technology",2.75,"Warm",2985230,9.0925],
+["3443 TT","Global Unichip Corp.","TW","Information Technology",0.75,"Warm",1907769,18.5547],
+["2357 TT","ASUS","TW","Information Technology",0.75,"Warm",1482735,13.0028],
+["7751 JP","Canon","JP","Information Technology",0.25,"GC",2860491,228.7157],
+["2353 TT","Acer","TW","Information Technology",0.75,"Warm",1836751,15.1494],
+["2347 TT","Synnex Technology International","TW","Information Technology",0.25,"GC",2726538,16.2557],
+["7832 JP","Bandai Namco","JP","Consumer Discretionary",0.25,"GC",1013812,257.1438],
+["2380 HK","China Power International Development","HK","Financials",3.75,"Warm",629718,15.7609],
+["2356 HK","Dah Sing Banking Group","HK","Financials",3.75,"Warm",1053614,32.6867],
+["2345 TT","Accton Technology","TW","Information Technology",1.25,"Warm",1537775,19.245],
+["7936 JP","ASICS Corporation","JP","Consumer Discretionary",0.25,"GC",2499051,217.4983],
+["7974 JP","Nintendo","JP","Communication Services",6.25,"HTB",1890267,365.5853],
+["2343 HK","Pacific Basin Shipping","HK","Financials",19.5,"HTB",5661,30.1394],
+["2330 TT","TSMC","TW","Information Technology",0,"GC",68435,3.5082],
+["23 HK","Bank of East Asia","HK","Financials",0.75,"Warm",2150122,32.2903],
+["3529 TT","eMemory Technology","TW","Information Technology",18.75,"HTB",13960,18.234],
+["2317 TT","Foxconn (Hon Hai Precision Industry)","TW","Information Technology",1.75,"Warm",473193,2.7748],
+["2301 TT","Lite-On Technology","TW","Information Technology",3.25,"Warm",2359579,19.123],
+["2232 HK","Crystal International","HK","Financials",2.25,"Warm",2936379,27.5],
+["2207 TT","Hotai Motor","TW","Consumer Discretionary",3,"Warm",2697215,19.2947],
+["215 HK","Hutchison Telecommunications Hong Kong","HK","Financials",9.5,"HTB",110845,34.1164],
+["3546 TT","Userjoy Technology","TW","Information Technology",4.25,"Warm",1596183,12.1962],
+["2 HK","CLP Group","HK","Utilities",1.5,"Warm",1828490,24.2046],
+["8031 JP","Mitsui Bussan","JP","Industrials",0.25,"GC",1045807,60.0268],
+["020560 KS","Asiana Airlines","KR","Information Technology",15.25,"HTB",109562,9.7857],
+["1925 JP","Daiwa House","JP","Industrials",3.25,"Warm",2195493,332.4147],
+["1908 HK","C&D International Investment Group","HK","Financials",1,"Warm",2120864,17.9399],
+["8035 JP","Tokyo Electron","JP","Information Technology",7.25,"HTB",2233101,274.9365],
+["200 HK","Melco International Development","HK","Financials",6.5,"HTB",2141297,33.4936],
+["1801 JP","Taisei Corporation","JP","Industrials",0.25,"GC",1614176,168.5552],
+["3687 TT","MacroWell OMG Digital Entertainment","TW","Information Technology",0.25,"GC",780815,15.4852],
+["8053 JP","Sumitomo","JP","Industrials",1.25,"Warm",1671527,139.592],
+["017670 KS","SK Telecom","KR","Communication Services",5.25,"HTB",2638912,30.8694],
+["1686 HK","SUNeVision","HK","Financials",4,"Warm",2111359,23.0281],
+["1997 HK","Wharf REIC","HK","Real Estate",3.5,"Warm",2654429,13.8363],
+["151 HK","Want Want China","HK","Financials",1.25,"Warm",602120,9.9693],
+["4938 TT","Pegatron","TW","Information Technology",0.25,"GC",1500115,1.7833],
+["1972 HK","Swire Properties","HK","Financials",0.25,"GC",1719894,19.3951],
+["1929 HK","Chow Tai Fook","HK","Financials",4.5,"Warm",125591,31.8274],
+["144 HK","China Merchants Port","HK","Financials",1,"Warm",811476,24.5742],
+["142 HK","First Pacific Company","HK","Financials",2.5,"Warm",2326396,0.5422],
+["14 HK","Hysan Development","HK","Financials",0.25,"GC",2962097,27.0831],
+["1313 HK","China Resources Building Materials Technology","HK","Financials",1,"Warm",1073912,14.5831],
+["19 HK","Swire Pacific","HK","Industrials",5.75,"HTB",2196634,6.7008],
+["5274 TT","ASPEED Technology","TW","Information Technology",4.25,"Warm",833549,13.3226],
+["8267 JP","Aeon","JP","Consumer Staples",4.75,"Warm",2440917,210.0468],
+["8306 JP","Mitsubishi UFJ Financial","JP","Financials",6,"HTB",2077976,194.4214],
+["1301 TT","Formosa Plastics","TW","Materials",2.25,"Warm",902204,14.539],
+["5347 TT","Vanguard International Semiconductor","TW","Information Technology",6.75,"HTB",1917637,17.228],
+["012450 KS","Hanwha Aerospace","KR","Industrials",4.5,"Warm",2999353,47.8106],
+["1882 HK","Haitian International Holdings","HK","Financials",1.5,"Warm",2292042,17.5806],
+["1876 HK","Budweiser APAC","HK","Consumer Staples",0.25,"GC",2088196,16.3824],
+["5483 TT","Sino-American Silicon Products","TW","Information Technology",1,"Warm",2282613,17.816],
+["012330 KS","Hyundai Mobis","KR","Consumer Discretionary",0.25,"GC",1678353,29.1728],
+["123 HK","Yuexiu Property","HK","Financials",22,"HTB",153871,18.1765],
+["122870 KS","YG Entertainment","KR","Information Technology",2,"Warm",444452,32.4777],
+["011780 KS","Kumho Petrochemical","KR","Health Care",1,"Warm",807777,21.0921],
+["17 HK","New World Development Company","HK","Real Estate",1.5,"Warm",1269888,25.5588],
+["8309 JP","Sumitomo Mitsui Trust Holdings","JP","Financials",0.25,"GC",745779,134.0803],
+["8316 JP","Sumitomo Mitsui Financial Group","JP","Financials",12,"HTB",152491,327.1104],
+["1199 HK","COSCO SHIPPING Ports","HK","Financials",1,"Warm",2895889,13.6355],
+["8591 JP","ORIX","JP","Industrials",2.75,"Warm",2467058,26.4682],
+["8604 JP","Nomura Holdings","JP","Financials",0.25,"GC",498698,15.0234],
+["101 HK","Hang Lung Properties","HK","Real Estate",2.25,"Warm",540772,9.5857],
+["8725 JP","MS&AD Insurance","JP","Financials",0.25,"GC",1438375,201.2776],
+["8750 JP","Dai-ichi Life Holdings","JP","Financials",7.75,"HTB",2028984,90.3746],
+["011200 KS","HMM","KR","Information Technology",6.25,"HTB",1337261,72.5087],
+["096775 KS","SK Innovation","KR","Information Technology",4.5,"Warm",1280621,8.8657],
+["010950 KS","S-OIL","KR","Energy",0.25,"GC",69683,33.0038],
+["090430 KS","Amorepacific","KR","Consumer Staples",3.25,"Warm",2414537,72.0317],
+["010130 KS","Korea Zinc","KR","Materials",21.5,"HTB",94072,59.6257],
+["009830 KS","Hanwha Solutions","KR","Information Technology",0.25,"GC",969036,32.1223],
+["086280 KS","Hyundai Glovis","KR","Industrials",1.75,"Warm",1091918,57.9306],
+["009155 KS","Samsung Electro-Mechanics","KR","Information Technology",0.5,"Warm",49947,27.4438],
+["064350 KS","Hyundai Rotem Company","KR","Information Technology",19.5,"HTB",119508,84.0166],
+["058470 KS","LEENO Industrial","KR","Information Technology",1,"Warm",1384721,79.5419],
+["165 HK","China Everbright Limited","HK","Financials",0.25,"GC",2158221,7.4578],
+["16 HK","Sun Hung Kai Properties","HK","Real Estate",5.25,"HTB",1049448,10.4092],
+["152 HK","Shenzhen International Holdings","HK","Financials",5,"Warm",557743,20.2724],
+["055550 KS","Shinhan Financial Group","KR","Financials",0.25,"GC",1964574,10.043],
+["148 HK","Kingboard Holdings","HK","Financials",0.25,"GC",142145,0.6074],
+["051905 KS","LG Household & Health Care","KR","Information Technology",2.5,"Warm",2087428,47.4189],
+["047810 KS","Korea Aerospace Industries","KR","Information Technology",1.25,"Warm",1568054,88.4098],
+["042660 KS","Hanwha Ocean (DSME)","KR","Information Technology",18.5,"HTB",171500,75.3487],
+["041510 KS","SM Entertainment","KR","Health Care",20.25,"HTB",96421,44.5781],
+["5871 TT","Chailease Holding","TW","Information Technology",0.25,"GC",91971,16.1283],
+["5876 TT","Shanghai Commercial and Savings Bank","TW","Information Technology",0.25,"GC",297177,7.6003],
+["5880 TT","Taiwan Cooperative Financial","TW","Financials",2.5,"Warm",1060628,6.0368],
+["6111 TT","Softstar Entertainment","TW","Information Technology",16.75,"HTB",191641,6.1906],
+["6180 TT","Gamania Digital","TW","Information Technology",15,"HTB",107619,10.7981],
+["6446 TT","PharmaEssentia","TW","Health Care",16.5,"HTB",52859,5.1887],
+["8766 JP","Tokio Marine","JP","Financials",3.5,"Warm",945564,337.6187],
+["8801 JP","Mitsui Fudosan","JP","Real Estate",19.75,"HTB",69226,52.3344],
+["8802 JP","Mitsubishi Estate","JP","Real Estate",15.5,"HTB",109844,215.2107],
+["8830 JP","Sumitomo Realty & Development","JP","Real Estate",7.25,"HTB",2108454,64.99],
+["9020 JP","East Japan Railway","JP","Industrials",0.25,"GC",1171724,279.9331],
+["9022 JP","Central Japan Railway","JP","Industrials",5.75,"HTB",2673330,305.1171],
+["036570 KS","NCsoft","KR","Communication Services",0.5,"Warm",774942,6.0483],
+["006405 KS","Samsung SDI","KR","Information Technology",0.25,"GC",2892886,46.0355],
+["035900 KS","JYP Entertainment","KR","Information Technology",0.75,"Warm",342735,73.1698],
+["034730 KS","SK Group","KR","Industrials",21,"HTB",199590,13.0694],
+["005490 KS","POSCO","KR","Materials",0.5,"Warm",1124125,65.2838],
+["005380 KS","Hyundai","KR","Consumer Discretionary",3,"Warm",704274,49.9215],
+["004990 KS","LOTTE Corporation","KR","Information Technology",0.25,"GC",1148106,65.8325],
+["004370 KS","Nongshim","KR","Information Technology",6.25,"HTB",1603915,75.9457],
+["004170 KS","Shinsegae","KR","Consumer Staples",2.5,"Warm",1257908,25.1192],
+["003670 KS","POSCO Chemical","KR","Information Technology",21.75,"HTB",101597,76.9721],
+["135 HK","Kunlun Energy Company","HK","Financials",1.25,"Warm",2949301,10.0524],
+["034020 KS","Doosan Enerbility","KR","Information Technology",0.25,"GC",224349,49.877],
+["1308 HK","SITC International","HK","Financials",0.25,"GC",1356741,24.7839],
+["1299 HK","AIA","HK","Financials",7,"HTB",32916,13.0793],
+["033780 KS","KT&G (Korea Tobacco)","KR","Consumer Staples",0.75,"Warm",893876,89.3034],
+["12 HK","Henderson Land Development","HK","Real Estate",5.5,"HTB",2648548,5.0243],
+["030200 KS","KT Corporation","KR","Communication Services",2,"Warm",629296,14.7977],
+["1193 HK","China Resources Gas Group","HK","Financials",0.25,"GC",377712,15.7455],
+["1164 HK","CGN Mining Company","HK","Financials",21.25,"HTB",3501,20.9578],
+["024110 KS","Industrial Bank of Korea (IBK)","KR","Financials",8.5,"HTB",25974,79.3072],
+["021240 KS","Coway","KR","Consumer Discretionary",4.5,"Warm",534193,7.1396],
+["015760 KS","Korea Electric Power","KR","Utilities",2.75,"Warm",903826,46.96],
+["014680 KS","Hansol Chemical","KR","Information Technology",3,"Warm",2450165,63.6491],
+["6669 TT","Wiwynn","TW","Information Technology",2.25,"Warm",1990549,6.7723],
+["6770 TT","Powerchip Semiconductor Manufacturing","TW","Information Technology",9.75,"HTB",28001,15.0626],
+["6789 TT","VisEra Technologies","TW","Information Technology",0.25,"GC",546170,13.6811],
+["9433 JP","KDDI","JP","Communication Services",7.5,"HTB",2694955,16.4615],
+["011170 KS","LOTTE Chemical","KR","Materials",2,"Warm",1013083,6.4204],
+["010140 KS","Samsung Heavy Industries","KR","Industrials",4.75,"Warm",552999,30.8649],
+["009540 KS","HD Korea Shipbuilding & Offshore Engineering","KR","Industrials",0.25,"GC",2245368,41.2777],
+["9735 JP","Secom","JP","Industrials",0.25,"GC",322007,233.1037],
+["008930 KS","Hanmi Pharmaceutical","KR","Information Technology",0.25,"GC",1574996,40.9366],
+["9983 JP","Fast Retailing","JP","Consumer Discretionary",0.25,"GC",337328,40.9097],
+["9984 JP","SoftBank","JP","Communication Services",2.25,"Warm",1498052,27.9197],
+["003550 KS","LG Corp","KR","Industrials",4.75,"Warm",2793729,81.6325],
+["007310 KS","Ottogi","KR","Consumer Discretionary",21.5,"HTB",185835,57.363],
+["003230 KS","Samyang Foods","KR","Information Technology",8.5,"HTB",196509,34.7117],
+["006260 KS","LS Corp.","KR","Information Technology",6.75,"HTB",402604,89.7736],
+["005930 KS","Samsung","KR","Information Technology",0.25,"GC",704479,56.8883],
+["000660 KS","SK Hynix","KR","Information Technology",0.25,"GC",152697,46.1125],
+["003495 KS","Korean Air Lines","KR","Information Technology",3,"Warm",865652,52.0317],
+["002380 KS","KCC Corp","KR","Industrials",0.75,"Warm",2471994,50.7592],
+["000100 KS","Yuhan","KR","Health Care",0.25,"GC",480384,29.1668],
+["000080 KS","HiteJinro","KR","Consumer Staples",3.25,"Warm",1039952,82.2634],
+["116 HK","Chow Sang Sang Holdings","HK","Financials",19.25,"HTB",34077,3.9028],
+["1113 HK","CK Asset Holdings","HK","Financials",0.25,"GC",2982390,18.821],
+["1109 HK","China Resources Land","HK","Real Estate",7,"HTB",1854855,5.2199],
+["1038 HK","CK Infrastructure","HK","Utilities",16,"HTB",178376,2.9003],
+["0011 HK","Jardine Matheson","HK","Financials",0.25,"GC",170555,2.8146],
+["10 HK","Hang Lung Group","HK","Financials",5.5,"HTB",2941854,4.546],
+["1 HK","CK Hutchison Holdings","HK","Industrials",0.75,"Warm",2872311,18.2737],
+["0013 HK","HUTCHMED","HK","Financials",8.25,"HTB",173037,18.0882],
+["001040 KS","CJ Group","KR","Materials",2.75,"Warm",704032,37.8483],
+["6919 TT","Caliway Biopharmaceuticals","TW","Information Technology",3.5,"Warm",1380455,4.8478],
+["000270 KS","Kia","KR","Consumer Discretionary",0.25,"GC",2690978,86.5826],
+["8150 TT","ChipMOS Technologies","TW","Information Technology",0.25,"GC",1202506,12.0569],
+["8299 TT","Phison Electronics","TW","Information Technology",20.75,"HTB",20175,17.7025],
+["000150 KS","Doosan","KR","Industrials",19.25,"HTB",10982,14.6611],
+["9914 TT","Merida Industry","TW","Information Technology",1,"Warm",2709681,9.016],
+];
+const AV_B=[
+["462870 KS","SHIFT UP","KR","Information Technology",14.5,"HTB",1283964,52.9758],
+["1605 JP","Inpex","JP","Industrials",1.75,"Warm",1305230,282.9164],
+["9766 JP","Konami Holdings","JP","Industrials",4,"Warm",1408807,249.5117],
+["992 HK","Lenovo","HK","Information Technology",0.5,"Warm",982548,26.2711],
+["1101 TT","Taiwan Cement","TW","Materials",2,"Warm",1568309,2.845],
+["966 HK","China Taiping Insurance","HK","Financials",4,"Warm",201202,35.3696],
+["963 HK","Bloomage BioTechnology","HK","Financials",5.75,"HTB",1572947,15.8056],
+["402340 KS","SK Square","KR","Information Technology",0.25,"GC",452777,38.0543],
+["383220 KS","F&F Co","KR","Information Technology",6,"HTB",1595260,21.7932],
+["377300 KS","Kakao Pay","KR","Information Technology",0.25,"GC",386731,50.7502],
+["1102 TT","Asia Cement","TW","Information Technology",13.25,"HTB",81702,3.8173],
+["9531 JP","Tokyo Gas","JP","Industrials",2.25,"Warm",746496,143.5385],
+["880 HK","SJM Holdings","HK","Financials",4,"Warm",2705866,20.6714],
+["1802 JP","Obayashi","JP","Industrials",7.5,"HTB",664398,23.2575],
+["352820 KS","HYBE","KR","Communication Services",12.25,"HTB",148667,40.286],
+["9503 JP","KEPCO","JP","Industrials",1.5,"Warm",2737451,319.291],
+["1216 TT","Uni-President Enterprises","TW","Consumer Staples",4,"Warm",1123137,9.3013],
+["9432 JP","NTT (Nippon Telegraph & Telephone)","JP","Communication Services",1,"Warm",1925582,327.9599],
+["868 HK","Xinyi Glass Holdings","HK","Financials",1,"Warm",2255816,8.2711],
+["1812 JP","Kajima","JP","Industrials",1,"Warm",2029983,356.0936],
+["8630 JP","Sompo Holdings","JP","Financials",3,"Warm",112133,118.7625],
+["8454 TT","momo.com Inc.","TW","Information Technology",2.75,"Warm",2134303,9.8516],
+["323410 KS","KakaoBank","KR","Information Technology",7.5,"HTB",2688515,10.3706],
+["86 HK","Sun Hung Kai & Co.","HK","Financials",3.25,"Warm",792640,3.8747],
+["2802 JP","Ajinomoto","JP","Industrials",2.25,"Warm",2710651,6.0803],
+["8411 JP","Mizuho Financial Group","JP","Financials",1.25,"Warm",204481,343.8796],
+["2914 JP","Japan Tobacco","JP","Consumer Staples",14,"HTB",132445,183.1304],
+["1303 TT","Nan Ya Plastics","TW","Materials",6.25,"HTB",1745189,8.8808],
+["1326 TT","Formosa Chemicals & Fibre","TW","Materials",0.25,"GC",2440372,9.1066],
+["3382 JP","7-Eleven","JP","Consumer Staples",0.25,"GC",1094791,42.8361],
+["836 HK","China Resources Power Holdings","HK","Financials",2.25,"Warm",2370633,35.1867],
+["8308 JP","Resona Holdings","JP","Industrials",6.5,"HTB",1373530,253.1438],
+["1402 TT","Far Eastern New Century","TW","Consumer Discretionary",0.25,"GC",1860186,4.3925],
+["8058 JP","Mitsubishi Corporation","JP","Industrials",6.75,"HTB",1891755,34.2876],
+["4063 JP","Shin-Etsu Chemical","JP","Materials",7.25,"HTB",1920179,152.495],
+["282330 KS","BGF Retail","KR","Information Technology",2.75,"Warm",1517139,30.9238],
+["1434 TT","Formosa Taffeta","TW","Information Technology",13.25,"HTB",82737,10.8484],
+["4091 JP","Nippon Sanso","JP","Industrials",0.25,"GC",2237076,95.6856],
+["83 HK","Sino Land","HK","Real Estate",1.5,"Warm",582977,23.1816],
+["8046 TT","Nan Ya PCB","TW","Information Technology",4.75,"Warm",1712000,11.7006],
+["1590 TT","AirTAC International","TW","Industrials",1,"Warm",1205537,12.2654],
+["267260 KS","HD Hyundai Electric","KR","Information Technology",8.75,"HTB",37655,11.7592],
+["8015 JP","Toyota Tsusho","JP","Industrials",0.75,"Warm",835655,359.8863],
+["823 HK","Link REIT","HK","Real Estate",0.25,"GC",345985,34.4425],
+["263750 KS","Pearl Abyss","KR","Information Technology",4.5,"Warm",59085,21.114],
+["2002A TT","China Steel","TW","Information Technology",5.75,"HTB",2556960,15.0286],
+["259960 KS","Krafton","KR","Information Technology",3,"Warm",1917855,80.3004],
+["4452 JP","Kao","JP","Consumer Staples",7,"HTB",553356,256.1338],
+["251270 KS","Netmarble","KR","Communication Services",0.25,"GC",706806,32.4936],
+["4502 JP","Takeda Pharmaceutical","JP","Health Care",0.25,"GC",2528200,210.3545],
+["2201 TT","Yulon Motor Company","TW","Information Technology",8.75,"HTB",172884,12.0362],
+["4503 JP","Astellas Pharma","JP","Industrials",8.5,"HTB",145393,221.3645],
+["8 HK","PCCW","HK","Financials",0.25,"GC",2369815,23.7698],
+["778 HK","Fortune REIT","HK","Financials",2.25,"Warm",2052304,30.8683],
+["247540 KS","Ecopro BM","KR","Information Technology",3.25,"Warm",83093,69.3472],
+["241560 KS","Doosan Bobcat","KR","Information Technology",0.25,"GC",148404,14.8604],
+["8002 JP","Marubeni","JP","Industrials",1.5,"Warm",126300,221.0301],
+["8001 JP","Itochu Shoji","JP","Industrials",3.5,"Warm",469489,191.1237],
+["2303 TT","United Microelectronics","TW","Information Technology",2,"Warm",2713391,6.423],
+["207940 KS","Samsung Biologics","KR","Health Care",7.75,"HTB",2164894,53.046],
+["4507 JP","Shionogi","JP","Industrials",9.5,"HTB",42390,281.0903],
+["7741 JP","Hoya","JP","Health Care",1.25,"Warm",2491325,288.2943],
+["71 HK","Miramar Hotel and Investment","HK","Financials",0.25,"GC",882209,12.0141],
+["196170 KS","Alteogen","KR","Information Technology",9.75,"HTB",19887,67.9547],
+["2308 TT","Delta Electronics","TW","Information Technology",19.75,"HTB",81833,15.9651],
+["4543 JP","Terumo","JP","Health Care",5.75,"HTB",2987428,213.0769],
+["69 HK","Shangri-La","HK","Financials",0.25,"GC",2640836,20.2379],
+["2311 TT","ASE Group","TW","Information Technology",7.75,"HTB",2549618,16.3582],
+["181710 KS","NHN Corp","KR","Information Technology",0.25,"GC",906600,32.5555],
+["7532 JP","Pan Pacific International Holdings","JP","Industrials",2,"Warm",833584,58.5151],
+["4568 JP","Daiichi Sankyo","JP","Health Care",13.75,"HTB",20643,350.0201],
+["161390 KS","Hankook Tire","KR","Consumer Discretionary",4.5,"Warm",846484,71.9615],
+["683 HK","Kerry Properties","HK","Financials",0.25,"GC",855594,5.491],
+["7269 JP","Suzuki Motor","JP","Industrials",3,"Warm",2189347,97.1839],
+["4578 JP","Otsuka Holdings","JP","Health Care",4.5,"Warm",2651807,247.6388],
+["138040 KS","Meritz Financial Group","KR","Financials",0.25,"GC",2047053,4.2392],
+["669 HK","Techtronic Industries","HK","Financials",6.5,"HTB",2306021,8.9309],
+["4661 JP","Oriental Land","JP","Consumer Discretionary",0.25,"GC",2284518,367.6589],
+["7013 JP","IHI Corporation","JP","Industrials",1.25,"Warm",182853,235.6589],
+["2327 TT","Yageo","TW","Information Technology",0.25,"GC",45384,6.5987],
+["7011 JP","Mitsubishi Heavy Industries","JP","Industrials",2.75,"Warm",1818621,153.5184],
+["6971 JP","Kyocera","JP","Information Technology",2.25,"Warm",1561073,146.3612],
+["66 HK","MTR Corporation","HK","Industrials",0.25,"GC",937640,3.6982],
+["105560 KS","KB Financial Group","KR","Financials",10.25,"HTB",162061,83.0777],
+["4901 JP","Fujifilm","JP","Information Technology",20,"HTB",27375,25.3311],
+["098460 KS","Koh Young Technology","KR","Information Technology",5.25,"HTB",2644118,47.997],
+["659 HK","CTF Services Limited","HK","Financials",0.25,"GC",1375474,25.5179],
+["636 HK","Kerry Logistics Network","HK","Financials",0.25,"GC",336845,18.6931],
+["6902 JP","Denso","JP","Consumer Discretionary",16.75,"HTB",84979,129.5452],
+["688 HK","China Overseas Land & Investment","HK","Real Estate",24.5,"HTB",44076,2.4079],
+["6823 HK","Hong Kong Telecom","HK","Financials",1,"Warm",610901,29.7941],
+["6762 JP","TDK","JP","Information Technology",4,"Warm",1277686,360.2274],
+["6752 JP","Panasonic","JP","Consumer Discretionary",2.5,"Warm",2613846,55.4716],
+["6701 JP","NEC Corp","JP","Industrials",23.25,"HTB",56488,323.0635],
+["6542 TT","Gamesparcs","TW","Information Technology",1.75,"Warm",2910883,9.7245],
+["6505 TT","Formosa Petrochemical","TW","Energy",8.25,"HTB",170598,4.9069],
+["5108 JP","Bridgestone","JP","Consumer Discretionary",5,"Warm",1677853,248.5485],
+["6178 HK","Everbright Securities Company","HK","Financials",12,"HTB",38691,17.7353],
+["6488 TT","GlobalWafers","TW","Information Technology",2,"Warm",2542399,4.3371],
+["6482 TT","Fun Yours Technology","TW","Information Technology",2.25,"Warm",2802769,1.617],
+["6110 HK","Topsports International","HK","Financials",0.25,"GC",1636857,17.2212],
+["2379 TT","Realtek","TW","Information Technology",5,"Warm",190981,3.9531],
+["5401 JP","Nippon Steel","JP","Materials",1.75,"Warm",622376,341.1104],
+["6472 TT","Bora Pharmaceuticals","TW","Information Technology",4.5,"Warm",2885054,17.1903],
+["5713 JP","Sumitomo Metal Mining","JP","Industrials",5.5,"HTB",1058738,234.3679],
+["086790 KS","Hana Financial Group","KR","Financials",0.25,"GC",1747978,21.8015],
+["5802 JP","Sumitomo Denki Kogyo","JP","Industrials",0.25,"GC",1468439,137.4448],
+["6273 JP","SMC Corp","JP","Industrials",1,"Warm",1825574,190.5351],
+["62 HK","Transport International Holdings","HK","Financials",0.5,"Warm",1479093,29.9412],
+["6098 JP","Recruit","JP","Real Estate",8.25,"HTB",165899,314.9833],
+["6178 JP","Japan Post Holdings","JP","Industrials",5,"Warm",1580312,83.6722],
+["6146 JP","Disco Corp.","JP","Industrials",4.5,"Warm",986660,199.6722],
+["53 HK","Guoco","HK","Financials",0.25,"GC",2392199,1.9578],
+["6055 HK","China Tobacco International","HK","Financials",4.75,"Warm",1915926,12.8005],
+["086520 KS","Ecopro","KR","Information Technology",7,"HTB",2157269,52.3668],
+["2395 TT","Advantech","TW","Information Technology",4.25,"Warm",520349,4.0846],
+["522 HK","ASMPT (ASM Pacific Technology)","HK","Financials",0.25,"GC",73470,21.7187],
+["6 HK","Power Assets","HK","Utilities",16.5,"HTB",34511,1.1458],
+["6201 JP","Toyota Industries","JP","Industrials",6.5,"HTB",255138,196.495],
+["5803 JP","Fujikura","JP","Industrials",7.75,"HTB",2483573,125.0502],
+["2412 TT","Chunghwa Telecom","TW","Communication Services",16,"HTB",8268,9.5343],
+["5478 TT","Soft-World International","TW","Information Technology",3.75,"Warm",2820694,12.9984],
+["45 HK","Hongkong and Shanghai Hotels","HK","Financials",0.25,"GC",2456848,24.1637],
+["081660 KS","Misto Holdings (Fila)","KR","Information Technology",1.25,"Warm",2044038,14.7411],
+["6301 JP","Komatsu","JP","Industrials",2.25,"Warm",2592844,259.9064],
+["6326 JP","Kubota","JP","Industrials",16.75,"HTB",26922,114.796],
+["5020 JP","ENEOS Holdings","JP","Industrials",3.75,"Warm",1894720,280.1405],
+["2454 TT","MediaTek","TW","Information Technology",7.25,"HTB",2793427,10.1462],
+["079550 KS","LIG Nex1","KR","Information Technology",0.25,"GC",241994,79.3117],
+["5016 JP","JX Advanced Metals","JP","Industrials",19,"HTB",159682,93.291],
+["4994 TT","X-Legend Entertainment","TW","Information Technology",2.75,"Warm",1546688,9.0245],
+["073240 KS","Kumho Tire","KR","Consumer Discretionary",15.5,"HTB",144278,47.9819],
+["6367 JP","Daikin","JP","Industrials",0.25,"GC",132565,258.1003],
+["6501 JP","Hitachi","JP","Industrials",0.25,"GC",2358536,27.6722],
+["068270 KS","Celltrion","KR","Health Care",13.75,"HTB",189858,22.7117],
+["4904 TT","Far EasTone","TW","Communication Services",0.5,"Warm",336594,2.7736],
+["4689 JP","LY Corporation","JP","Communication Services",10.25,"HTB",13509,240.6488],
+["066570 KS","LG Electronics","KR","Consumer Discretionary",0.25,"GC",18016,30.4083],
+["6503 JP","Mitsubishi Electric","JP","Industrials",0.25,"GC",2225744,165.9732],
+["4519 JP","Chugai Pharmaceutical","JP","Health Care",0.75,"Warm",2394912,218.8896],
+["3998 HK","Bosideng","HK","Financials",0.25,"GC",2544004,17.1714],
+["6594 JP","Nidec","JP","Industrials",6.5,"HTB",2896083,177.9398],
+["443060 KS","HD Hyundai Marine Solution","KR","Information Technology",12.25,"HTB",41546,45.2619],
+["392 HK","Beijing Enterprises Holdings","HK","Financials",0.25,"GC",2120217,12.1957],
+["440 HK","Dah Sing Financial","HK","Financials",0.5,"Warm",1475511,21.8683],
+["6702 JP","Fujitsu","JP","Information Technology",0.25,"GC",2761270,129.9398],
+["2603 TT","Evergreen Marine","TW","Information Technology",5,"Warm",160214,8.1528],
+["4307 JP","Nomura Research Institute","JP","Information Technology",1.5,"Warm",2496623,337.8729],
+["6723 JP","Renesas Electronics","JP","Information Technology",20,"HTB",72715,74.107],
+["3898 HK","Zhuzhou CRRC Times Electric","HK","Financials",8,"HTB",1142877,24.0051],
+["41 HK","Great Eagle","HK","Financials",10,"HTB",74637,14.3082],
+["388 HK","Hong Kong Exchanges & Clearing","HK","Financials",5.75,"HTB",2530614,34.6023],
+["2610 TT","China Airlines","TW","Industrials",0.25,"GC",1630119,11.9925],
+["4 HK","Wharf Holdings","HK","Financials",1.5,"Warm",2209531,3.5639],
+["373220 KS","LG Energy Solution","KR","Information Technology",14.25,"HTB",69580,70.7019],
+["2618 TT","EVA Air","TW","Industrials",0.25,"GC",1147726,11.1714],
+["3665 TT","Bizlink Holding","TW","Industrials",5.5,"HTB",1529915,11.7151],
+["2630 TT","Air Asia Company Limited (AACL)","TW","Information Technology",0.25,"GC",873268,17.1943],
+["6758 JP","Sony","JP","Consumer Discretionary",8.5,"HTB",153616,291.7659],
+["3800 HK","GCL Technology","HK","Financials",7.25,"HTB",2830079,12.0358],
+["373 HK","Allied Group Limited","HK","Financials",0.25,"GC",468551,11.1739],
+["6857 JP","Advantest","JP","Information Technology",0.25,"GC",1675400,229.1304],
+["051910 KS","LG Chem","KR","Materials",0.25,"GC",1964599,64.3208],
+["363 HK","Shanghai Industrial Holdings","HK","Financials",1.75,"Warm",2945433,20.5102],
+["345 HK","Vitasoy","HK","Financials",1.5,"Warm",1496112,7.7455],
+["2633 TT","Taiwan High Speed Rail","TW","Industrials",2.75,"Warm",1913125,17.8752],
+["2753 TT","Bafang Yunji","TW","Information Technology",0.25,"GC",2528008,4.855],
+["3661 TT","Alchip Technologies","TW","Information Technology",4,"Warm",2069306,5.7714],
+["6861 JP","Keyence","JP","Information Technology",20.5,"HTB",140827,228.4482],
+["3330 HK","Lingbao Gold","HK","Financials",4.25,"Warm",2055182,35.3913],
+["3320 HK","China Resources Pharmaceutical Group","HK","Financials",6.25,"HTB",1006509,23.0077],
+["2834 TT","Taiwan Business Bank","TW","Information Technology",1,"Warm",1700582,3.5038],
+["2880 TT","Hua Nan Financial Holdings","TW","Information Technology",3,"Warm",2484424,14.7513],
+["3659 JP","Nexon","JP","Industrials",1.25,"Warm",960056,86.0268],
+["3532 TT","Formosa Sumco Technology","TW","Information Technology",5,"Warm",2587662,6.8142],
+["3481 TT","Innolux","TW","Information Technology",6.75,"HTB",187572,11.8343],
+["336260 KS","Doosan Fuel Cell","KR","Information Technology",0.5,"Warm",241131,77.597],
+["3311 HK","China State Construction International","HK","Financials",3,"Warm",2995776,34.2634],
+["2882 TT","Cathay Financial Holding","TW","Financials",0.25,"GC",193880,9.9195],
+["2883 TT","KGI Financial Holding","TW","Information Technology",0.25,"GC",1964617,12.2733],
+["3293 TT","International Games System","TW","Information Technology",3.25,"Warm",932926,4.3956],
+["047050 KS","Posco International","KR","Industrials",0.25,"GC",2790601,24.2883],
+["042700 KS","HANMI Semiconductor","KR","Information Technology",0.25,"GC",343536,80.1902],
+["329180 KS","HD Hyundai Heavy Industries","KR","Information Technology",2.75,"Warm",266481,40.1932],
+["3231 TT","Wistron Corporation","TW","Information Technology",2.5,"Warm",1818933,3.8418],
+["6920 JP","Lasertec","JP","Information Technology",0.25,"GC",2577607,151.9732],
+["3222 TT","Himax","TW","Information Technology",2.5,"Warm",1404184,8.2921],
+["316 HK","Orient Overseas Container Line","HK","Financials",3.25,"Warm",1074400,12.6777],
+["3 HK","Hong Kong and China Gas","HK","Utilities",2.75,"Warm",2775441,28.4246],
+["3105 TT","WIN Semiconductors","TW","Information Technology",3.25,"Warm",1629098,4.206],
+["6954 JP","Fanuc","JP","Industrials",25,"HTB",8968,347.9064],
+["3045 TT","Taiwan Mobile","TW","Communication Services",1.25,"Warm",792937,1.4204],
+["3037 TT","Unimicron","TW","Information Technology",1.25,"Warm",1720541,18.8208],
+["293 HK","Cathay Pacific","HK","Industrials",8,"HTB",776483,4.477],
+["303 HK","Vtech","HK","Financials",0.25,"GC",457173,28.7136],
+["3008 TT","Largan Precision","TW","Information Technology",0.75,"Warm",2297539,5.0635],
+["036460 KS","Korea Gas","KR","Utilities",1,"Warm",756774,4.3804],
+["293490 KS","Kakao Games","KR","Information Technology",12.75,"HTB",98291,84.717],
+["2888 TT","Shin Kong Financial Holding","TW","Financials",7.5,"HTB",1447592,17.5302],
+["2890 TT","Sinopac Financial Holdings","TW","Financials",0.25,"GC",1424915,2.0176],
+["2891 TT","CTBC Financial Holding","TW","Information Technology",21.5,"HTB",141691,19.6783],
+["2892 TT","First Financial Holding","TW","Financials",6.25,"HTB",2225540,6.7906],
+["035720 KS","Kakao","KR","Communication Services",0.25,"GC",2383481,22.4951],
+["291 HK","China Resources Beer","HK","Consumer Staples",0.25,"GC",1480263,2.413],
+["2912 TT","President Chain Store (PSCS)","TW","Consumer Staples",0.75,"Warm",1768649,5.0673],
+["2887 TT","Taishin Financial Holdings","TW","Information Technology",3.5,"Warm",731118,16.1252],
+["035420 KS","Naver","KR","Communication Services",0.25,"GC",1953542,38.797],
+["2880 HK","Futu Holdings","HK","Financials",23,"HTB",150352,15.7289],
+["2886 TT","MFHC","TW","Financials",6.75,"HTB",419221,6.177],
+["6981 JP","Murata Manufacturing","JP","Information Technology",0.75,"Warm",621008,46.1003],
+["035250 KS","Kangwon Land","KR","Consumer Staples",17,"HTB",122728,32.1177],
+["288 HK","WH Group","HK","Financials",0.25,"GC",1535074,10.1995],
+["3034 TT","Novatek Microelectronics","TW","Information Technology",0.25,"GC",1724492,4.7107],
+["2885 TT","Yuanta Financial Holding","TW","Financials",8.25,"HTB",184784,1.5855],
+["2884 TT","E.SUN Bank","TW","Financials",2.75,"Warm",1126771,3.2792],
+["2881 TT","Fubon Financial","TW","Financials",0.25,"GC",106116,2.4459],
+["7012 JP","Kawasaki Heavy Industries","JP","Industrials",0.5,"Warm",1277937,7.4983],
+["2801 TT","Chang Hwa Commercial Bank","TW","Financials",2.5,"Warm",310962,5.0651],
+["28 HK","Tian An China Investments Company","HK","Financials",2.25,"Warm",1068991,17.922],
+["7182 JP","Japan Post Bank","JP","Industrials",8.5,"HTB",89571,326.7157],
+["2778 HK","Champion REIT","HK","Financials",1.5,"Warm",1234225,2.4182],
+["27 HK","Galaxy Entertainment","HK","Financials",4,"Warm",319157,30.7263],
+["2638 HK","HK Electric Investments","HK","Financials",0.25,"GC",579713,24.0614],
+["3083 TT","Chinese Gamer International","TW","Information Technology",2.75,"Warm",2041478,15.4513],
+["7203 JP","Toyota","JP","Consumer Discretionary",5.75,"HTB",455930,276.8495],
+["271560 KS","ORION","KR","Information Technology",1.25,"Warm",1222695,79.5879],
+["2615 TT","Wan Hai Lines","TW","Information Technology",4,"Warm",459574,4.6956],
+["7267 JP","Honda","JP","Consumer Discretionary",4,"Warm",140792,87.3846],
+["3086 TT","Wayi International Digital Entertainment","TW","Information Technology",1.5,"Warm",1400785,8.4723],
+["2609 TT","Yang Ming","TW","Information Technology",2.25,"Warm",346203,4.0437],
+["257 HK","China Everbright Environment Group","HK","Financials",5.25,"HTB",621753,23.4156],
+["2501 TT","Cathay Real Estate Development","TW","Information Technology",5.25,"HTB",1395715,16.0956],
+["2474 TT","Catcher Technology","TW","Information Technology",6.25,"HTB",807566,1.3314],
+["032830 KS","Samsung Life Insurance","KR","Financials",4.25,"Warm",2240343,15.2453],
+["2408 TT","Nanya Technology","TW","Information Technology",3.25,"Warm",1073658,13.4925],
+["2388 HK","Bank of China (Hong Kong)","HK","Financials",3.25,"Warm",230947,25.1151],
+["2382 TT","Quanta Computer","TW","Information Technology",0.5,"Warm",2588308,14.7075],
+["241 HK","Alibaba Health Information Technology","HK","Financials",5.75,"HTB",2999329,24.5384],
+["2377 TT","MSI (Micro-Star International)","TW","Information Technology",1,"Warm",1817259,9.0925],
+["3443 TT","Global Unichip Corp.","TW","Information Technology",2.75,"Warm",1742979,18.5547],
+["2357 TT","ASUS","TW","Information Technology",0.75,"Warm",790215,13.0028],
+["2353 TT","Acer","TW","Information Technology",1.25,"Warm",1428457,15.1494],
+["7751 JP","Canon","JP","Information Technology",0.25,"GC",802717,228.7157],
+["028670 KS","Pan Ocean","KR","Information Technology",2,"Warm",68904,83.7223],
+["2347 TT","Synnex Technology International","TW","Information Technology",1.75,"Warm",217721,16.2557],
+["2380 HK","China Power International Development","HK","Financials",8.75,"HTB",3154,15.7609],
+["7832 JP","Bandai Namco","JP","Consumer Discretionary",0.25,"GC",2991299,257.1438],
+["2356 HK","Dah Sing Banking Group","HK","Financials",2.5,"Warm",2716837,32.6867],
+["2345 TT","Accton Technology","TW","Information Technology",1.25,"Warm",1300909,19.245],
+["7936 JP","ASICS Corporation","JP","Consumer Discretionary",0.25,"GC",1760925,217.4983],
+["2343 HK","Pacific Basin Shipping","HK","Financials",17,"HTB",86833,30.1394],
+["23 HK","Bank of East Asia","HK","Financials",3.75,"Warm",21829,32.2903],
+["3529 TT","eMemory Technology","TW","Information Technology",20.5,"HTB",81596,18.234],
+["7974 JP","Nintendo","JP","Communication Services",4.5,"Warm",880147,365.5853],
+["2330 TT","TSMC","TW","Information Technology",0.25,"GC",188534,3.5082],
+["2317 TT","Foxconn (Hon Hai Precision Industry)","TW","Information Technology",1.5,"Warm",1909653,2.7748],
+["2301 TT","Lite-On Technology","TW","Information Technology",3.25,"Warm",2864065,19.123],
+["3546 TT","Userjoy Technology","TW","Information Technology",8.75,"HTB",136350,12.1962],
+["2232 HK","Crystal International","HK","Financials",2.5,"Warm",2627466,27.5],
+["2207 TT","Hotai Motor","TW","Consumer Discretionary",2.75,"Warm",2864181,19.2947],
+["215 HK","Hutchison Telecommunications Hong Kong","HK","Financials",1.5,"Warm",1951232,34.1164],
+["2 HK","CLP Group","HK","Utilities",1.5,"Warm",1653737,24.2046],
+["8031 JP","Mitsui Bussan","JP","Industrials",0.25,"GC",249365,60.0268],
+["020560 KS","Asiana Airlines","KR","Information Technology",13.5,"HTB",51163,9.7857],
+["1925 JP","Daiwa House","JP","Industrials",4.5,"Warm",923810,332.4147],
+["1908 HK","C&D International Investment Group","HK","Financials",1,"Warm",2257966,17.9399],
+["1801 JP","Taisei Corporation","JP","Industrials",0.25,"GC",418271,168.5552],
+["200 HK","Melco International Development","HK","Financials",3.25,"Warm",2791685,33.4936],
+["3687 TT","MacroWell OMG Digital Entertainment","TW","Information Technology",0.25,"GC",1820694,15.4852],
+["1686 HK","SUNeVision","HK","Financials",5,"Warm",1944861,23.0281],
+["8035 JP","Tokyo Electron","JP","Information Technology",3.5,"Warm",475310,274.9365],
+["8053 JP","Sumitomo","JP","Industrials",4.5,"Warm",541066,139.592],
+["4938 TT","Pegatron","TW","Information Technology",0.25,"GC",1033713,1.7833],
+["151 HK","Want Want China","HK","Financials",1.25,"Warm",539289,9.9693],
+["017670 KS","SK Telecom","KR","Communication Services",2.75,"Warm",1381014,30.8694],
+["1997 HK","Wharf REIC","HK","Real Estate",1.5,"Warm",2211085,13.8363],
+["1972 HK","Swire Properties","HK","Financials",0.25,"GC",1573558,19.3951],
+["144 HK","China Merchants Port","HK","Financials",0.75,"Warm",2778513,24.5742],
+["142 HK","First Pacific Company","HK","Financials",1.75,"Warm",2708753,0.5422],
+["1929 HK","Chow Tai Fook","HK","Financials",3,"Warm",2689066,31.8274],
+["14 HK","Hysan Development","HK","Financials",0.25,"GC",695247,27.0831],
+["1313 HK","China Resources Building Materials Technology","HK","Financials",1.25,"Warm",1770960,14.5831],
+["5274 TT","ASPEED Technology","TW","Information Technology",4,"Warm",1228230,13.3226],
+["5347 TT","Vanguard International Semiconductor","TW","Information Technology",7,"HTB",1179198,17.228],
+["8267 JP","Aeon","JP","Consumer Staples",1,"Warm",1020774,210.0468],
+["19 HK","Swire Pacific","HK","Industrials",4.75,"Warm",1701031,6.7008],
+["1301 TT","Formosa Plastics","TW","Materials",2,"Warm",1499620,14.539],
+["123 HK","Yuexiu Property","HK","Financials",24,"HTB",180208,18.1765],
+["012450 KS","Hanwha Aerospace","KR","Industrials",2.75,"Warm",1857470,47.8106],
+["1882 HK","Haitian International Holdings","HK","Financials",3,"Warm",1118756,17.5806],
+["1876 HK","Budweiser APAC","HK","Consumer Staples",0.25,"GC",2822964,16.3824],
+["5483 TT","Sino-American Silicon Products","TW","Information Technology",2.25,"Warm",993267,17.816],
+["8306 JP","Mitsubishi UFJ Financial","JP","Financials",5.25,"HTB",1101017,194.4214],
+["012330 KS","Hyundai Mobis","KR","Consumer Discretionary",0.25,"GC",2147009,29.1728],
+["011780 KS","Kumho Petrochemical","KR","Health Care",9,"HTB",46132,21.0921],
+["17 HK","New World Development Company","HK","Real Estate",3.5,"Warm",1038715,25.5588],
+["122870 KS","YG Entertainment","KR","Information Technology",1.75,"Warm",1588642,32.4777],
+["8309 JP","Sumitomo Mitsui Trust Holdings","JP","Financials",0.25,"GC",1428882,134.0803],
+["8316 JP","Sumitomo Mitsui Financial Group","JP","Financials",14.25,"HTB",141395,327.1104],
+["1199 HK","COSCO SHIPPING Ports","HK","Financials",0.75,"Warm",1935267,13.6355],
+["8591 JP","ORIX","JP","Industrials",1.25,"Warm",2942743,26.4682],
+["8604 JP","Nomura Holdings","JP","Financials",0.25,"GC",1738599,15.0234],
+["101 HK","Hang Lung Properties","HK","Real Estate",9.5,"HTB",180256,9.5857],
+["8725 JP","MS&AD Insurance","JP","Financials",0.25,"GC",841802,201.2776],
+["011200 KS","HMM","KR","Information Technology",5.25,"HTB",2995204,72.5087],
+["096775 KS","SK Innovation","KR","Information Technology",4.5,"Warm",2841237,8.8657],
+["010950 KS","S-OIL","KR","Energy",0.25,"GC",2055564,33.0038],
+["090430 KS","Amorepacific","KR","Consumer Staples",7.25,"HTB",1318572,72.0317],
+["010130 KS","Korea Zinc","KR","Materials",18.5,"HTB",163785,59.6257],
+["009830 KS","Hanwha Solutions","KR","Information Technology",0.25,"GC",1339051,32.1223],
+["086280 KS","Hyundai Glovis","KR","Industrials",1.75,"Warm",1037711,57.9306],
+["009155 KS","Samsung Electro-Mechanics","KR","Information Technology",0.25,"GC",68111,27.4438],
+["064350 KS","Hyundai Rotem Company","KR","Information Technology",21,"HTB",111625,84.0166],
+["058470 KS","LEENO Industrial","KR","Information Technology",1.25,"Warm",1206323,79.5419],
+["165 HK","China Everbright Limited","HK","Financials",0.25,"GC",1210693,7.4578],
+["16 HK","Sun Hung Kai Properties","HK","Real Estate",6.5,"HTB",1297295,10.4092],
+["152 HK","Shenzhen International Holdings","HK","Financials",5.75,"HTB",577659,20.2724],
+["055550 KS","Shinhan Financial Group","KR","Financials",0.25,"GC",2914834,10.043],
+["051905 KS","LG Household & Health Care","KR","Information Technology",2.75,"Warm",1480809,47.4189],
+["148 HK","Kingboard Holdings","HK","Financials",0.25,"GC",830946,0.6074],
+["047810 KS","Korea Aerospace Industries","KR","Information Technology",4,"Warm",2776626,88.4098],
+["042660 KS","Hanwha Ocean (DSME)","KR","Information Technology",20,"HTB",34475,75.3487],
+["135 HK","Kunlun Energy Company","HK","Financials",7.25,"HTB",397800,10.0524],
+["5871 TT","Chailease Holding","TW","Information Technology",0.25,"GC",2714765,16.1283],
+["5876 TT","Shanghai Commercial and Savings Bank","TW","Information Technology",0.25,"GC",384871,7.6003],
+["5880 TT","Taiwan Cooperative Financial","TW","Financials",7.5,"HTB",540324,6.0368],
+["6111 TT","Softstar Entertainment","TW","Information Technology",17.5,"HTB",177305,6.1906],
+["6180 TT","Gamania Digital","TW","Information Technology",13,"HTB",96735,10.7981],
+["6446 TT","PharmaEssentia","TW","Health Care",17.5,"HTB",152376,5.1887],
+["041510 KS","SM Entertainment","KR","Health Care",19.5,"HTB",143556,44.5781],
+["8750 JP","Dai-ichi Life Holdings","JP","Financials",6,"HTB",1283802,90.3746],
+["8766 JP","Tokio Marine","JP","Financials",0.75,"Warm",2354954,337.6187],
+["8801 JP","Mitsui Fudosan","JP","Real Estate",24.25,"HTB",20636,52.3344],
+["8802 JP","Mitsubishi Estate","JP","Real Estate",10.5,"HTB",55397,215.2107],
+["8830 JP","Sumitomo Realty & Development","JP","Real Estate",5.25,"HTB",2915524,64.99],
+["9020 JP","East Japan Railway","JP","Industrials",0.25,"GC",1288854,279.9331],
+["9022 JP","Central Japan Railway","JP","Industrials",6.25,"HTB",544839,305.1171],
+["036570 KS","NCsoft","KR","Communication Services",0.5,"Warm",1886675,6.0483],
+["006405 KS","Samsung SDI","KR","Information Technology",0.25,"GC",1672555,46.0355],
+["035900 KS","JYP Entertainment","KR","Information Technology",0.75,"Warm",1180054,73.1698],
+["034730 KS","SK Group","KR","Industrials",20.5,"HTB",170941,13.0694],
+["005490 KS","POSCO","KR","Materials",0.25,"GC",87216,65.2838],
+["005380 KS","Hyundai","KR","Consumer Discretionary",5.25,"HTB",1715028,49.9215],
+["004990 KS","LOTTE Corporation","KR","Information Technology",0.25,"GC",366566,65.8325],
+["004370 KS","Nongshim","KR","Information Technology",4.75,"Warm",516803,75.9457],
+["004170 KS","Shinsegae","KR","Consumer Staples",3.25,"Warm",2443698,25.1192],
+["003670 KS","POSCO Chemical","KR","Information Technology",23,"HTB",74099,76.9721],
+["003550 KS","LG Corp","KR","Industrials",7.25,"HTB",2371348,81.6325],
+["034020 KS","Doosan Enerbility","KR","Information Technology",0.25,"GC",2348514,49.877],
+["1308 HK","SITC International","HK","Financials",0.25,"GC",1294482,24.7839],
+["1299 HK","AIA","HK","Financials",3.75,"Warm",145824,13.0793],
+["033780 KS","KT&G (Korea Tobacco)","KR","Consumer Staples",1,"Warm",2128394,89.3034],
+["12 HK","Henderson Land Development","HK","Real Estate",7,"HTB",1274072,5.0243],
+["030200 KS","KT Corporation","KR","Communication Services",2.25,"Warm",2952516,14.7977],
+["1193 HK","China Resources Gas Group","HK","Financials",0.25,"GC",1051291,15.7455],
+["1164 HK","CGN Mining Company","HK","Financials",19,"HTB",123240,20.9578],
+["116 HK","Chow Sang Sang Holdings","HK","Financials",22.25,"HTB",112904,3.9028],
+["024110 KS","Industrial Bank of Korea (IBK)","KR","Financials",6,"HTB",1490361,79.3072],
+["021240 KS","Coway","KR","Consumer Discretionary",3.25,"Warm",706901,7.1396],
+["015760 KS","Korea Electric Power","KR","Utilities",2.75,"Warm",2370477,46.96],
+["014680 KS","Hansol Chemical","KR","Information Technology",2.5,"Warm",676511,63.6491],
+["6669 TT","Wiwynn","TW","Information Technology",2.75,"Warm",1536039,6.7723],
+["6770 TT","Powerchip Semiconductor Manufacturing","TW","Information Technology",16.25,"HTB",116199,15.0626],
+["9433 JP","KDDI","JP","Communication Services",4.75,"Warm",700880,16.4615],
+["011170 KS","LOTTE Chemical","KR","Materials",2,"Warm",1844500,6.4204],
+["010140 KS","Samsung Heavy Industries","KR","Industrials",4.75,"Warm",2157623,30.8649],
+["009540 KS","HD Korea Shipbuilding & Offshore Engineering","KR","Industrials",0.25,"GC",2483440,41.2777],
+["9735 JP","Secom","JP","Industrials",0.25,"GC",64530,233.1037],
+["008930 KS","Hanmi Pharmaceutical","KR","Information Technology",0.25,"GC",2516521,40.9366],
+["9983 JP","Fast Retailing","JP","Consumer Discretionary",0.25,"GC",1260687,40.9097],
+["9984 JP","SoftBank","JP","Communication Services",2,"Warm",931036,27.9197],
+["007310 KS","Ottogi","KR","Consumer Discretionary",16.75,"HTB",158395,57.363],
+["003230 KS","Samyang Foods","KR","Information Technology",8,"HTB",1794366,34.7117],
+["006260 KS","LS Corp.","KR","Information Technology",4.75,"Warm",1183845,89.7736],
+["005930 KS","Samsung","KR","Information Technology",0,"GC",1155886,56.8883],
+["003495 KS","Korean Air Lines","KR","Information Technology",0.25,"GC",2226650,52.0317],
+["002380 KS","KCC Corp","KR","Industrials",0.5,"Warm",2349737,50.7592],
+["000100 KS","Yuhan","KR","Health Care",0.25,"GC",1271236,29.1668],
+["000080 KS","HiteJinro","KR","Consumer Staples",5,"Warm",2238617,82.2634],
+["1113 HK","CK Asset Holdings","HK","Financials",0.25,"GC",2926568,18.821],
+["1109 HK","China Resources Land","HK","Real Estate",0.5,"Warm",1154602,5.2199],
+["1038 HK","CK Infrastructure","HK","Utilities",13.75,"HTB",86004,2.9003],
+["0011 HK","Jardine Matheson","HK","Financials",0.5,"Warm",64304,2.8146],
+["10 HK","Hang Lung Group","HK","Financials",6,"HTB",325003,4.546],
+["1 HK","CK Hutchison Holdings","HK","Industrials",6.25,"HTB",1827693,18.2737],
+["0013 HK","HUTCHMED","HK","Financials",4.75,"Warm",2147718,18.0882],
+["001040 KS","CJ Group","KR","Materials",6.75,"HTB",838076,37.8483],
+["6789 TT","VisEra Technologies","TW","Information Technology",0.25,"GC",2473650,13.6811],
+["6919 TT","Caliway Biopharmaceuticals","TW","Information Technology",7,"HTB",33348,4.8478],
+["000270 KS","Kia","KR","Consumer Discretionary",0.25,"GC",1236975,86.5826],
+["8150 TT","ChipMOS Technologies","TW","Information Technology",0.25,"GC",2477539,12.0569],
+["8299 TT","Phison Electronics","TW","Information Technology",21.75,"HTB",147224,17.7025],
+["000150 KS","Doosan","KR","Industrials",18.5,"HTB",145048,14.6611],
+["9914 TT","Merida Industry","TW","Information Technology",0.75,"Warm",953413,9.016],
+];
+const AV_C=[
+["1101 TT","Taiwan Cement","TW","Materials",1.5,"Warm",2710527,2.845],
+["1605 JP","Inpex","JP","Industrials",5.25,"HTB",1195611,282.9164],
+["992 HK","Lenovo","HK","Information Technology",0.25,"GC",195795,26.2711],
+["462870 KS","SHIFT UP","KR","Information Technology",11.5,"HTB",1007844,52.9758],
+["966 HK","China Taiping Insurance","HK","Financials",5.75,"HTB",1310843,35.3696],
+["9766 JP","Konami Holdings","JP","Industrials",3.25,"Warm",1043447,249.5117],
+["9532 JP","Osaka Gas","JP","Industrials",1.5,"Warm",2466445,58.3278],
+["402340 KS","SK Square","KR","Information Technology",0.25,"GC",2294189,38.0543],
+["383220 KS","F&F Co","KR","Information Technology",7.75,"HTB",2498087,21.7932],
+["963 HK","Bloomage BioTechnology","HK","Financials",3.5,"Warm",1539721,15.8056],
+["880 HK","SJM Holdings","HK","Financials",5.25,"HTB",752719,20.6714],
+["377300 KS","Kakao Pay","KR","Information Technology",0.25,"GC",1051096,50.7502],
+["9531 JP","Tokyo Gas","JP","Industrials",2.25,"Warm",461793,143.5385],
+["9503 JP","KEPCO","JP","Industrials",1.75,"Warm",2450721,319.291],
+["1102 TT","Asia Cement","TW","Information Technology",10.25,"HTB",54054,3.8173],
+["1802 JP","Obayashi","JP","Industrials",5.25,"HTB",2218559,23.2575],
+["352820 KS","HYBE","KR","Communication Services",9.5,"HTB",86545,40.286],
+["9432 JP","NTT (Nippon Telegraph & Telephone)","JP","Communication Services",1.25,"Warm",2072468,327.9599],
+["1812 JP","Kajima","JP","Industrials",6.25,"HTB",894923,356.0936],
+["868 HK","Xinyi Glass Holdings","HK","Financials",1,"Warm",1609355,8.2711],
+["8630 JP","Sompo Holdings","JP","Financials",3.25,"Warm",1151170,118.7625],
+["1216 TT","Uni-President Enterprises","TW","Consumer Staples",1.75,"Warm",592813,9.3013],
+["86 HK","Sun Hung Kai & Co.","HK","Financials",3.75,"Warm",273470,3.8747],
+["323410 KS","KakaoBank","KR","Information Technology",4.75,"Warm",1091608,10.3706],
+["8454 TT","momo.com Inc.","TW","Information Technology",2.75,"Warm",634947,9.8516],
+["2802 JP","Ajinomoto","JP","Industrials",2.25,"Warm",865420,6.0803],
+["1303 TT","Nan Ya Plastics","TW","Materials",6.75,"HTB",375834,8.8808],
+["8411 JP","Mizuho Financial Group","JP","Financials",1,"Warm",133481,343.8796],
+["2914 JP","Japan Tobacco","JP","Consumer Staples",12.25,"HTB",79962,183.1304],
+["3382 JP","7-Eleven","JP","Consumer Staples",0.25,"GC",1007813,42.8361],
+["316140 KS","Woori Financial Group","KR","Financials",3,"Warm",1554647,20.3947],
+["836 HK","China Resources Power Holdings","HK","Financials",2.5,"Warm",1789843,35.1867],
+["1326 TT","Formosa Chemicals & Fibre","TW","Materials",0.25,"GC",2756469,9.1066],
+["8308 JP","Resona Holdings","JP","Industrials",4.5,"Warm",1497062,253.1438],
+["1402 TT","Far Eastern New Century","TW","Consumer Discretionary",0.25,"GC",540120,4.3925],
+["282330 KS","BGF Retail","KR","Information Technology",2.5,"Warm",464804,30.9238],
+["4063 JP","Shin-Etsu Chemical","JP","Materials",4.75,"Warm",1956031,152.495],
+["272210 KS","Hanwha Systems","KR","Information Technology",0.25,"GC",896169,78.1064],
+["4091 JP","Nippon Sanso","JP","Industrials",0.25,"GC",1263349,95.6856],
+["83 HK","Sino Land","HK","Real Estate",3.5,"Warm",771140,23.1816],
+["8058 JP","Mitsubishi Corporation","JP","Industrials",4.25,"Warm",2391418,34.2876],
+["1434 TT","Formosa Taffeta","TW","Information Technology",9.5,"HTB",4609,10.8484],
+["1590 TT","AirTAC International","TW","Industrials",5.25,"HTB",1330793,12.2654],
+["2002A TT","China Steel","TW","Information Technology",6.75,"HTB",1963871,15.0286],
+["267260 KS","HD Hyundai Electric","KR","Information Technology",8.5,"HTB",187517,11.7592],
+["8046 TT","Nan Ya PCB","TW","Information Technology",3,"Warm",2709863,11.7006],
+["4452 JP","Kao","JP","Consumer Staples",7.5,"HTB",1820465,256.1338],
+["263750 KS","Pearl Abyss","KR","Information Technology",4,"Warm",2492415,21.114],
+["823 HK","Link REIT","HK","Real Estate",0.25,"GC",1416365,34.4425],
+["259960 KS","Krafton","KR","Information Technology",2.25,"Warm",582553,80.3004],
+["251270 KS","Netmarble","KR","Communication Services",0.25,"GC",1732180,32.4936],
+["4502 JP","Takeda Pharmaceutical","JP","Health Care",0.25,"GC",2067275,210.3545],
+["2201 TT","Yulon Motor Company","TW","Information Technology",6,"HTB",2090364,12.0362],
+["247540 KS","Ecopro BM","KR","Information Technology",9,"HTB",67005,69.3472],
+["4503 JP","Astellas Pharma","JP","Industrials",8.5,"HTB",5652,221.3645],
+["8 HK","PCCW","HK","Financials",0.25,"GC",2039894,23.7698],
+["778 HK","Fortune REIT","HK","Financials",0.75,"Warm",2394412,30.8683],
+["8015 JP","Toyota Tsusho","JP","Industrials",0.25,"GC",350584,359.8863],
+["8002 JP","Marubeni","JP","Industrials",2.5,"Warm",217726,221.0301],
+["241560 KS","Doosan Bobcat","KR","Information Technology",0.25,"GC",290439,14.8604],
+["4507 JP","Shionogi","JP","Industrials",11.75,"HTB",30045,281.0903],
+["8001 JP","Itochu Shoji","JP","Industrials",0.5,"Warm",2581489,191.1237],
+["207940 KS","Samsung Biologics","KR","Health Care",5.5,"HTB",238172,53.046],
+["2303 TT","United Microelectronics","TW","Information Technology",1,"Warm",1756449,6.423],
+["7741 JP","Hoya","JP","Health Care",1.5,"Warm",989234,288.2943],
+["196170 KS","Alteogen","KR","Information Technology",15.25,"HTB",139706,67.9547],
+["71 HK","Miramar Hotel and Investment","HK","Financials",0.25,"GC",304461,12.0141],
+["2308 TT","Delta Electronics","TW","Information Technology",22.25,"HTB",123831,15.9651],
+["69 HK","Shangri-La","HK","Financials",0.25,"GC",45255,20.2379],
+["762 HK","China Unicom","HK","Communication Services",3,"Warm",970921,21.0038],
+["2311 TT","ASE Group","TW","Information Technology",3.5,"Warm",1555439,16.3582],
+["181710 KS","NHN Corp","KR","Information Technology",0.5,"Warm",649742,32.5555],
+["161390 KS","Hankook Tire","KR","Consumer Discretionary",5.75,"HTB",2493808,71.9615],
+["4543 JP","Terumo","JP","Health Care",0.5,"Warm",1118831,213.0769],
+["4568 JP","Daiichi Sankyo","JP","Health Care",17.75,"HTB",120464,350.0201],
+["683 HK","Kerry Properties","HK","Financials",0.25,"GC",2059569,5.491],
+["7532 JP","Pan Pacific International Holdings","JP","Industrials",2,"Warm",1016426,58.5151],
+["4578 JP","Otsuka Holdings","JP","Health Care",7.75,"HTB",1369140,247.6388],
+["7269 JP","Suzuki Motor","JP","Industrials",2.75,"Warm",1133298,97.1839],
+["669 HK","Techtronic Industries","HK","Financials",7,"HTB",2296625,8.9309],
+["138040 KS","Meritz Financial Group","KR","Financials",0.25,"GC",55151,4.2392],
+["7013 JP","IHI Corporation","JP","Industrials",7,"HTB",2477781,235.6589],
+["4661 JP","Oriental Land","JP","Consumer Discretionary",0.25,"GC",1749277,367.6589],
+["7011 JP","Mitsubishi Heavy Industries","JP","Industrials",8.75,"HTB",101317,153.5184],
+["2327 TT","Yageo","TW","Information Technology",0.25,"GC",2247171,6.5987],
+["4901 JP","Fujifilm","JP","Information Technology",22.5,"HTB",114798,25.3311],
+["105560 KS","KB Financial Group","KR","Financials",0.5,"Warm",176906,83.0777],
+["66 HK","MTR Corporation","HK","Industrials",0.25,"GC",2776481,3.6982],
+["6971 JP","Kyocera","JP","Information Technology",1.75,"Warm",1357377,146.3612],
+["659 HK","CTF Services Limited","HK","Financials",0.25,"GC",1629557,25.5179],
+["098460 KS","Koh Young Technology","KR","Information Technology",4,"Warm",71258,47.997],
+["636 HK","Kerry Logistics Network","HK","Financials",0.25,"GC",1434854,18.6931],
+["6902 JP","Denso","JP","Consumer Discretionary",16.25,"HTB",58805,129.5452],
+["688 HK","China Overseas Land & Investment","HK","Real Estate",23.5,"HTB",155880,2.4079],
+["6823 HK","Hong Kong Telecom","HK","Financials",7.75,"HTB",2509696,29.7941],
+["6762 JP","TDK","JP","Information Technology",2.5,"Warm",1591253,360.2274],
+["6752 JP","Panasonic","JP","Consumer Discretionary",4.75,"Warm",2155638,55.4716],
+["6701 JP","NEC Corp","JP","Industrials",18,"HTB",78977,323.0635],
+["6542 TT","Gamesparcs","TW","Information Technology",1.5,"Warm",485855,9.7245],
+["6178 HK","Everbright Securities Company","HK","Financials",14,"HTB",160533,17.7353],
+["6505 TT","Formosa Petrochemical","TW","Energy",3.75,"Warm",412236,4.9069],
+["5401 JP","Nippon Steel","JP","Materials",6,"HTB",688580,341.1104],
+["6488 TT","GlobalWafers","TW","Information Technology",1.75,"Warm",1645630,4.3371],
+["6482 TT","Fun Yours Technology","TW","Information Technology",2,"Warm",2963740,1.617],
+["6110 HK","Topsports International","HK","Financials",0.25,"GC",132553,17.2212],
+["2379 TT","Realtek","TW","Information Technology",1.75,"Warm",723481,3.9531],
+["6472 TT","Bora Pharmaceuticals","TW","Information Technology",5.75,"HTB",1889288,17.1903],
+["5713 JP","Sumitomo Metal Mining","JP","Industrials",5.75,"HTB",2178600,234.3679],
+["086790 KS","Hana Financial Group","KR","Financials",0.25,"GC",1897216,21.8015],
+["5802 JP","Sumitomo Denki Kogyo","JP","Industrials",0.25,"GC",1836426,137.4448],
+["6273 JP","SMC Corp","JP","Industrials",5.25,"HTB",1164655,190.5351],
+["62 HK","Transport International Holdings","HK","Financials",0.5,"Warm",1836708,29.9412],
+["6098 JP","Recruit","JP","Real Estate",6,"HTB",2357543,314.9833],
+["6178 JP","Japan Post Holdings","JP","Industrials",1.5,"Warm",64796,83.6722],
+["6146 JP","Disco Corp.","JP","Industrials",4.5,"Warm",1602188,199.6722],
+["6055 HK","China Tobacco International","HK","Financials",3.5,"Warm",2109743,12.8005],
+["53 HK","Guoco","HK","Financials",0.25,"GC",1886418,1.9578],
+["2395 TT","Advantech","TW","Information Technology",4.5,"Warm",1621332,4.0846],
+["522 HK","ASMPT (ASM Pacific Technology)","HK","Financials",0.25,"GC",823868,21.7187],
+["6 HK","Power Assets","HK","Utilities",21.25,"HTB",139811,1.1458],
+["086520 KS","Ecopro","KR","Information Technology",7.75,"HTB",1300295,52.3668],
+["5803 JP","Fujikura","JP","Industrials",3.75,"Warm",1809491,125.0502],
+["6201 JP","Toyota Industries","JP","Industrials",1,"Warm",2752944,196.495],
+["5478 TT","Soft-World International","TW","Information Technology",6.5,"HTB",1982937,12.9984],
+["5020 JP","ENEOS Holdings","JP","Industrials",4.5,"Warm",2908173,280.1405],
+["6301 JP","Komatsu","JP","Industrials",7,"HTB",2074383,259.9064],
+["081660 KS","Misto Holdings (Fila)","KR","Information Technology",2.25,"Warm",1119481,14.7411],
+["45 HK","Hongkong and Shanghai Hotels","HK","Financials",0.25,"GC",401659,24.1637],
+["2412 TT","Chunghwa Telecom","TW","Communication Services",12.5,"HTB",134944,9.5343],
+["5016 JP","JX Advanced Metals","JP","Industrials",15.25,"HTB",52492,93.291],
+["6326 JP","Kubota","JP","Industrials",10.25,"HTB",67158,114.796],
+["079550 KS","LIG Nex1","KR","Information Technology",0.25,"GC",404287,79.3117],
+["2454 TT","MediaTek","TW","Information Technology",4.25,"Warm",151952,10.1462],
+["073240 KS","Kumho Tire","KR","Consumer Discretionary",16.75,"HTB",118406,47.9819],
+["4994 TT","X-Legend Entertainment","TW","Information Technology",2.5,"Warm",1644222,9.0245],
+["6367 JP","Daikin","JP","Industrials",0.25,"GC",2393019,258.1003],
+["068270 KS","Celltrion","KR","Health Care",12.5,"HTB",54575,22.7117],
+["6501 JP","Hitachi","JP","Industrials",0.25,"GC",368112,27.6722],
+["4904 TT","Far EasTone","TW","Communication Services",0.25,"GC",502767,2.7736],
+["4689 JP","LY Corporation","JP","Communication Services",10.25,"HTB",167629,240.6488],
+["066570 KS","LG Electronics","KR","Consumer Discretionary",0.25,"GC",1556178,30.4083],
+["6503 JP","Mitsubishi Electric","JP","Industrials",0.25,"GC",1115230,165.9732],
+["6594 JP","Nidec","JP","Industrials",3.75,"Warm",201868,177.9398],
+["4519 JP","Chugai Pharmaceutical","JP","Health Care",0.75,"Warm",2553281,218.8896],
+["443060 KS","HD Hyundai Marine Solution","KR","Information Technology",14.75,"HTB",40232,45.2619],
+["440 HK","Dah Sing Financial","HK","Financials",0.75,"Warm",2790971,21.8683],
+["2603 TT","Evergreen Marine","TW","Information Technology",3.75,"Warm",2621443,8.1528],
+["392 HK","Beijing Enterprises Holdings","HK","Financials",0.25,"GC",1031793,12.1957],
+["6702 JP","Fujitsu","JP","Information Technology",0.25,"GC",1245556,129.9398],
+["6723 JP","Renesas Electronics","JP","Information Technology",18,"HTB",18531,74.107],
+["3898 HK","Zhuzhou CRRC Times Electric","HK","Financials",2.5,"Warm",1133623,24.0051],
+["4307 JP","Nomura Research Institute","JP","Information Technology",1.5,"Warm",848604,337.8729],
+["2610 TT","China Airlines","TW","Industrials",0.25,"GC",2910400,11.9925],
+["41 HK","Great Eagle","HK","Financials",4.5,"Warm",2648813,14.3082],
+["4 HK","Wharf Holdings","HK","Financials",1.75,"Warm",1300037,3.5639],
+["388 HK","Hong Kong Exchanges & Clearing","HK","Financials",2.75,"Warm",1018512,34.6023],
+["3800 HK","GCL Technology","HK","Financials",7.75,"HTB",1594641,12.0358],
+["2618 TT","EVA Air","TW","Industrials",0.25,"GC",1273461,11.1714],
+["373220 KS","LG Energy Solution","KR","Information Technology",10.5,"HTB",155506,70.7019],
+["2630 TT","Air Asia Company Limited (AACL)","TW","Information Technology",0.5,"Warm",2481454,17.1943],
+["2633 TT","Taiwan High Speed Rail","TW","Industrials",8.75,"HTB",53740,17.8752],
+["6758 JP","Sony","JP","Consumer Discretionary",4.25,"Warm",2175154,291.7659],
+["373 HK","Allied Group Limited","HK","Financials",0.25,"GC",389273,11.1739],
+["3665 TT","Bizlink Holding","TW","Industrials",3.5,"Warm",2362226,11.7151],
+["3661 TT","Alchip Technologies","TW","Information Technology",9,"HTB",74143,5.7714],
+["363 HK","Shanghai Industrial Holdings","HK","Financials",4.5,"Warm",1478505,20.5102],
+["2753 TT","Bafang Yunji","TW","Information Technology",0.25,"GC",1686289,4.855],
+["6857 JP","Advantest","JP","Information Technology",0.25,"GC",1707800,229.1304],
+["6861 JP","Keyence","JP","Information Technology",26.75,"HTB",6855,228.4482],
+["345 HK","Vitasoy","HK","Financials",1.5,"Warm",2406657,7.7455],
+["2834 TT","Taiwan Business Bank","TW","Information Technology",4.25,"Warm",449794,3.5038],
+["3330 HK","Lingbao Gold","HK","Financials",2.25,"Warm",2359033,35.3913],
+["3320 HK","China Resources Pharmaceutical Group","HK","Financials",8.25,"HTB",177662,23.0077],
+["2880 TT","Hua Nan Financial Holdings","TW","Information Technology",5.75,"HTB",124902,14.7513],
+["051910 KS","LG Chem","KR","Materials",0.25,"GC",1988054,64.3208],
+["3659 JP","Nexon","JP","Industrials",1.25,"Warm",1129357,86.0268],
+["3532 TT","Formosa Sumco Technology","TW","Information Technology",3.75,"Warm",2495177,6.8142],
+["3481 TT","Innolux","TW","Information Technology",9,"HTB",149648,11.8343],
+["336260 KS","Doosan Fuel Cell","KR","Information Technology",5,"Warm",2583554,77.597],
+["2882 TT","Cathay Financial Holding","TW","Financials",0.5,"Warm",1898112,9.9195],
+["3311 HK","China State Construction International","HK","Financials",2.75,"Warm",2215442,34.2634],
+["2883 TT","KGI Financial Holding","TW","Information Technology",0.25,"GC",1279076,12.2733],
+["3293 TT","International Games System","TW","Information Technology",1.25,"Warm",2483630,4.3956],
+["047050 KS","Posco International","KR","Industrials",0.25,"GC",51580,24.2883],
+["329180 KS","HD Hyundai Heavy Industries","KR","Information Technology",2.75,"Warm",1659984,40.1932],
+["3231 TT","Wistron Corporation","TW","Information Technology",3.5,"Warm",2295445,3.8418],
+["042700 KS","HANMI Semiconductor","KR","Information Technology",0.25,"GC",2372014,80.1902],
+["3222 TT","Himax","TW","Information Technology",2.75,"Warm",628292,8.2921],
+["316 HK","Orient Overseas Container Line","HK","Financials",3,"Warm",2624714,12.6777],
+["6920 JP","Lasertec","JP","Information Technology",0.25,"GC",1688963,151.9732],
+["6954 JP","Fanuc","JP","Industrials",31.75,"HTB",129003,347.9064],
+["3 HK","Hong Kong and China Gas","HK","Utilities",7.75,"HTB",387522,28.4246],
+["3105 TT","WIN Semiconductors","TW","Information Technology",3.25,"Warm",1320284,4.206],
+["3045 TT","Taiwan Mobile","TW","Communication Services",5.75,"HTB",2033758,1.4204],
+["3037 TT","Unimicron","TW","Information Technology",1.5,"Warm",2948916,18.8208],
+["303 HK","Vtech","HK","Financials",0.25,"GC",1479884,28.7136],
+["3008 TT","Largan Precision","TW","Information Technology",1,"Warm",726751,5.0635],
+["293 HK","Cathay Pacific","HK","Industrials",5.75,"HTB",2111266,4.477],
+["293490 KS","Kakao Games","KR","Information Technology",8.25,"HTB",181184,84.717],
+["2890 TT","Sinopac Financial Holdings","TW","Financials",0.25,"GC",2308249,2.0176],
+["2891 TT","CTBC Financial Holding","TW","Information Technology",24,"HTB",63036,19.6783],
+["6981 JP","Murata Manufacturing","JP","Information Technology",6,"HTB",2010129,46.1003],
+["036460 KS","Korea Gas","KR","Utilities",0.5,"Warm",2243010,4.3804],
+["2888 TT","Shin Kong Financial Holding","TW","Financials",2,"Warm",2049760,17.5302],
+["2892 TT","First Financial Holding","TW","Financials",2.25,"Warm",236899,6.7906],
+["035720 KS","Kakao","KR","Communication Services",0.25,"GC",801383,22.4951],
+["291 HK","China Resources Beer","HK","Consumer Staples",0.25,"GC",2726507,2.413],
+["2912 TT","President Chain Store (PSCS)","TW","Consumer Staples",1.25,"Warm",489474,5.0673],
+["2880 HK","Futu Holdings","HK","Financials",28.75,"HTB",78270,15.7289],
+["2887 TT","Taishin Financial Holdings","TW","Information Technology",0.25,"GC",2023702,16.1252],
+["035420 KS","Naver","KR","Communication Services",0.25,"GC",243820,38.797],
+["288 HK","WH Group","HK","Financials",0.25,"GC",795655,10.1995],
+["2886 TT","MFHC","TW","Financials",2.5,"Warm",1877257,6.177],
+["3034 TT","Novatek Microelectronics","TW","Information Technology",0.25,"GC",1944187,4.7107],
+["2885 TT","Yuanta Financial Holding","TW","Financials",4.25,"Warm",680735,1.5855],
+["7012 JP","Kawasaki Heavy Industries","JP","Industrials",4.25,"Warm",430050,7.4983],
+["2884 TT","E.SUN Bank","TW","Financials",2.75,"Warm",578218,3.2792],
+["2881 TT","Fubon Financial","TW","Financials",0.25,"GC",226805,2.4459],
+["2801 TT","Chang Hwa Commercial Bank","TW","Financials",2.5,"Warm",1139579,5.0651],
+["035250 KS","Kangwon Land","KR","Consumer Staples",14.25,"HTB",16368,32.1177],
+["28 HK","Tian An China Investments Company","HK","Financials",2.25,"Warm",1732102,17.922],
+["2778 HK","Champion REIT","HK","Financials",1.5,"Warm",722241,2.4182],
+["27 HK","Galaxy Entertainment","HK","Financials",3.75,"Warm",2113698,30.7263],
+["3083 TT","Chinese Gamer International","TW","Information Technology",5.5,"HTB",2368908,15.4513],
+["3086 TT","Wayi International Digital Entertainment","TW","Information Technology",8,"HTB",1153225,8.4723],
+["7182 JP","Japan Post Bank","JP","Industrials",1.5,"Warm",277539,326.7157],
+["7203 JP","Toyota","JP","Consumer Discretionary",6.75,"HTB",2035807,276.8495],
+["034220 KS","LG Display","KR","Information Technology",0.25,"GC",2557885,51.7962],
+["2638 HK","HK Electric Investments","HK","Financials",0.25,"GC",2724998,24.0614],
+["271560 KS","ORION","KR","Information Technology",1.25,"Warm",2869028,79.5879],
+["7267 JP","Honda","JP","Consumer Discretionary",3,"Warm",2553627,87.3846],
+["2615 TT","Wan Hai Lines","TW","Information Technology",2.25,"Warm",319872,4.6956],
+["2609 TT","Yang Ming","TW","Information Technology",2.25,"Warm",1635096,4.0437],
+["257 HK","China Everbright Environment Group","HK","Financials",1.75,"Warm",2432327,23.4156],
+["2501 TT","Cathay Real Estate Development","TW","Information Technology",3.25,"Warm",2894505,16.0956],
+["2474 TT","Catcher Technology","TW","Information Technology",4,"Warm",308062,1.3314],
+["2408 TT","Nanya Technology","TW","Information Technology",3.25,"Warm",1512930,13.4925],
+["032830 KS","Samsung Life Insurance","KR","Financials",0.75,"Warm",2464594,15.2453],
+["241 HK","Alibaba Health Information Technology","HK","Financials",7.25,"HTB",584479,24.5384],
+["2388 HK","Bank of China (Hong Kong)","HK","Financials",3,"Warm",635787,25.1151],
+["2382 TT","Quanta Computer","TW","Information Technology",1,"Warm",2455573,14.7075],
+["2377 TT","MSI (Micro-Star International)","TW","Information Technology",3.75,"Warm",2931882,9.0925],
+["3443 TT","Global Unichip Corp.","TW","Information Technology",1.75,"Warm",2571627,18.5547],
+["2357 TT","ASUS","TW","Information Technology",0.75,"Warm",1973508,13.0028],
+["028670 KS","Pan Ocean","KR","Information Technology",2.75,"Warm",1206898,83.7223],
+["2353 TT","Acer","TW","Information Technology",1.25,"Warm",1794772,15.1494],
+["2380 HK","China Power International Development","HK","Financials",4.25,"Warm",172594,15.7609],
+["2347 TT","Synnex Technology International","TW","Information Technology",1.5,"Warm",1441294,16.2557],
+["7751 JP","Canon","JP","Information Technology",0.25,"GC",984145,228.7157],
+["2356 HK","Dah Sing Banking Group","HK","Financials",5.25,"HTB",2040024,32.6867],
+["2345 TT","Accton Technology","TW","Information Technology",1.25,"Warm",296683,19.245],
+["2343 HK","Pacific Basin Shipping","HK","Financials",22.25,"HTB",34801,30.1394],
+["3529 TT","eMemory Technology","TW","Information Technology",32.25,"HTB",161284,18.234],
+["7832 JP","Bandai Namco","JP","Consumer Discretionary",0.5,"Warm",2280421,257.1438],
+["7936 JP","ASICS Corporation","JP","Consumer Discretionary",0.25,"GC",2490749,217.4983],
+["23 HK","Bank of East Asia","HK","Financials",8.75,"HTB",188608,32.2903],
+["2330 TT","TSMC","TW","Information Technology",0.01,"GC",2112097,3.5082],
+["7974 JP","Nintendo","JP","Communication Services",2.5,"Warm",2806052,365.5853],
+["2317 TT","Foxconn (Hon Hai Precision Industry)","TW","Information Technology",2,"Warm",2487827,2.7748],
+["2301 TT","Lite-On Technology","TW","Information Technology",3,"Warm",2643206,19.123],
+["2232 HK","Crystal International","HK","Financials",2.25,"Warm",991593,27.5],
+["2207 TT","Hotai Motor","TW","Consumer Discretionary",2.75,"Warm",9208,19.2947],
+["215 HK","Hutchison Telecommunications Hong Kong","HK","Financials",2.5,"Warm",2589561,34.1164],
+["3546 TT","Userjoy Technology","TW","Information Technology",5,"Warm",612459,12.1962],
+["2 HK","CLP Group","HK","Utilities",1.5,"Warm",2733295,24.2046],
+["1925 JP","Daiwa House","JP","Industrials",5.75,"HTB",1607289,332.4147],
+["8031 JP","Mitsui Bussan","JP","Industrials",0.25,"GC",2687609,60.0268],
+["8035 JP","Tokyo Electron","JP","Information Technology",3.75,"Warm",555814,274.9365],
+["020560 KS","Asiana Airlines","KR","Information Technology",11,"HTB",8038,9.7857],
+["017670 KS","SK Telecom","KR","Communication Services",5.5,"HTB",2661750,30.8694],
+["1908 HK","C&D International Investment Group","HK","Financials",1,"Warm",1707100,17.9399],
+["200 HK","Melco International Development","HK","Financials",7.25,"HTB",2775526,33.4936],
+["1801 JP","Taisei Corporation","JP","Industrials",0.25,"GC",2565141,168.5552],
+["3687 TT","MacroWell OMG Digital Entertainment","TW","Information Technology",0.25,"GC",97812,15.4852],
+["1686 HK","SUNeVision","HK","Financials",6,"HTB",1738266,23.0281],
+["8053 JP","Sumitomo","JP","Industrials",6,"HTB",1377861,139.592],
+["1997 HK","Wharf REIC","HK","Real Estate",8.25,"HTB",87466,13.8363],
+["151 HK","Want Want China","HK","Financials",1,"Warm",2264745,9.9693],
+["1972 HK","Swire Properties","HK","Financials",0.25,"GC",2740555,19.3951],
+["1929 HK","Chow Tai Fook","HK","Financials",8.25,"HTB",115861,31.8274],
+["4938 TT","Pegatron","TW","Information Technology",0.25,"GC",1487227,1.7833],
+["144 HK","China Merchants Port","HK","Financials",0.75,"Warm",2296119,24.5742],
+["142 HK","First Pacific Company","HK","Financials",2.5,"Warm",517589,0.5422],
+["14 HK","Hysan Development","HK","Financials",0.5,"Warm",2554250,27.0831],
+["1313 HK","China Resources Building Materials Technology","HK","Financials",1,"Warm",2704144,14.5831],
+["5274 TT","ASPEED Technology","TW","Information Technology",1.5,"Warm",1522892,13.3226],
+["8267 JP","Aeon","JP","Consumer Staples",4.25,"Warm",1465628,210.0468],
+["19 HK","Swire Pacific","HK","Industrials",0.5,"Warm",2652633,6.7008],
+["1882 HK","Haitian International Holdings","HK","Financials",6.25,"HTB",2903519,17.5806],
+["5347 TT","Vanguard International Semiconductor","TW","Information Technology",1.75,"Warm",1118300,17.228],
+["1301 TT","Formosa Plastics","TW","Materials",1.75,"Warm",2995691,14.539],
+["8306 JP","Mitsubishi UFJ Financial","JP","Financials",5.75,"HTB",2469748,194.4214],
+["012450 KS","Hanwha Aerospace","KR","Industrials",4,"Warm",2932926,47.8106],
+["5483 TT","Sino-American Silicon Products","TW","Information Technology",0.75,"Warm",2549979,17.816],
+["012330 KS","Hyundai Mobis","KR","Consumer Discretionary",0.25,"GC",1485463,29.1728],
+["1876 HK","Budweiser APAC","HK","Consumer Staples",0.25,"GC",2566582,16.3824],
+["17 HK","New World Development Company","HK","Real Estate",7.75,"HTB",68622,25.5588],
+["123 HK","Yuexiu Property","HK","Financials",22,"HTB",126241,18.1765],
+["011780 KS","Kumho Petrochemical","KR","Health Care",5.75,"HTB",1929695,21.0921],
+["011200 KS","HMM","KR","Information Technology",7.25,"HTB",780357,72.5087],
+["122870 KS","YG Entertainment","KR","Information Technology",0.75,"Warm",16419,32.4777],
+["8309 JP","Sumitomo Mitsui Trust Holdings","JP","Financials",0.25,"GC",1636390,134.0803],
+["8316 JP","Sumitomo Mitsui Financial Group","JP","Financials",16.5,"HTB",167313,327.1104],
+["1199 HK","COSCO SHIPPING Ports","HK","Financials",1,"Warm",2402749,13.6355],
+["8591 JP","ORIX","JP","Industrials",1.25,"Warm",1829372,26.4682],
+["8604 JP","Nomura Holdings","JP","Financials",0.25,"GC",2362809,15.0234],
+["101 HK","Hang Lung Properties","HK","Real Estate",2.25,"Warm",1180461,9.5857],
+["8725 JP","MS&AD Insurance","JP","Financials",0.25,"GC",2851363,201.2776],
+["8750 JP","Dai-ichi Life Holdings","JP","Financials",7.25,"HTB",714648,90.3746],
+["096775 KS","SK Innovation","KR","Information Technology",3.75,"Warm",1925738,8.8657],
+["090430 KS","Amorepacific","KR","Consumer Staples",3.25,"Warm",1102367,72.0317],
+["010130 KS","Korea Zinc","KR","Materials",19.75,"HTB",97941,59.6257],
+["009830 KS","Hanwha Solutions","KR","Information Technology",0.25,"GC",1644028,32.1223],
+["086280 KS","Hyundai Glovis","KR","Industrials",1.75,"Warm",2484098,57.9306],
+["009155 KS","Samsung Electro-Mechanics","KR","Information Technology",0.25,"GC",186726,27.4438],
+["064350 KS","Hyundai Rotem Company","KR","Information Technology",17.5,"HTB",34719,84.0166],
+["058470 KS","LEENO Industrial","KR","Information Technology",1.25,"Warm",996634,79.5419],
+["055550 KS","Shinhan Financial Group","KR","Financials",0.5,"Warm",1641136,10.043],
+["165 HK","China Everbright Limited","HK","Financials",0.25,"GC",1431469,7.4578],
+["16 HK","Sun Hung Kai Properties","HK","Real Estate",3.5,"Warm",1159044,10.4092],
+["152 HK","Shenzhen International Holdings","HK","Financials",1,"Warm",1681320,20.2724],
+["148 HK","Kingboard Holdings","HK","Financials",0.25,"GC",298028,0.6074],
+["051905 KS","LG Household & Health Care","KR","Information Technology",2.75,"Warm",345683,47.4189],
+["047810 KS","Korea Aerospace Industries","KR","Information Technology",2.5,"Warm",175573,88.4098],
+["042660 KS","Hanwha Ocean (DSME)","KR","Information Technology",19.5,"HTB",152717,75.3487],
+["135 HK","Kunlun Energy Company","HK","Financials",3.75,"Warm",1088803,10.0524],
+["5871 TT","Chailease Holding","TW","Information Technology",0.25,"GC",1573443,16.1283],
+["5876 TT","Shanghai Commercial and Savings Bank","TW","Information Technology",0.25,"GC",1383208,7.6003],
+["5880 TT","Taiwan Cooperative Financial","TW","Financials",7.75,"HTB",1262981,6.0368],
+["6111 TT","Softstar Entertainment","TW","Information Technology",11.5,"HTB",9457,6.1906],
+["6180 TT","Gamania Digital","TW","Information Technology",17.5,"HTB",164651,10.7981],
+["6446 TT","PharmaEssentia","TW","Health Care",16,"HTB",29517,5.1887],
+["041510 KS","SM Entertainment","KR","Health Care",13.75,"HTB",27053,44.5781],
+["8766 JP","Tokio Marine","JP","Financials",5.5,"HTB",765195,337.6187],
+["8801 JP","Mitsui Fudosan","JP","Real Estate",21,"HTB",25738,52.3344],
+["8802 JP","Mitsubishi Estate","JP","Real Estate",10,"HTB",30172,215.2107],
+["8830 JP","Sumitomo Realty & Development","JP","Real Estate",3.75,"Warm",1489581,64.99],
+["9020 JP","East Japan Railway","JP","Industrials",0.25,"GC",1706446,279.9331],
+["9022 JP","Central Japan Railway","JP","Industrials",7.75,"HTB",765227,305.1171],
+["036570 KS","NCsoft","KR","Communication Services",0.75,"Warm",1191070,6.0483],
+["006405 KS","Samsung SDI","KR","Information Technology",0.25,"GC",746912,46.0355],
+["035900 KS","JYP Entertainment","KR","Information Technology",1,"Warm",1755980,73.1698],
+["034730 KS","SK Group","KR","Industrials",19.5,"HTB",72816,13.0694],
+["005490 KS","POSCO","KR","Materials",0.25,"GC",306220,65.2838],
+["005380 KS","Hyundai","KR","Consumer Discretionary",1,"Warm",1581863,49.9215],
+["004990 KS","LOTTE Corporation","KR","Information Technology",0.25,"GC",599277,65.8325],
+["004370 KS","Nongshim","KR","Information Technology",5,"Warm",1249391,75.9457],
+["004170 KS","Shinsegae","KR","Consumer Staples",5.5,"HTB",2061666,25.1192],
+["003670 KS","POSCO Chemical","KR","Information Technology",0.25,"GC",35099,76.9721],
+["034020 KS","Doosan Enerbility","KR","Information Technology",0.5,"Warm",1052303,49.877],
+["1308 HK","SITC International","HK","Financials",0.25,"GC",756274,24.7839],
+["1299 HK","AIA","HK","Financials",3.75,"Warm",802171,13.0793],
+["033780 KS","KT&G (Korea Tobacco)","KR","Consumer Staples",0.5,"Warm",2176154,89.3034],
+["12 HK","Henderson Land Development","HK","Real Estate",7,"HTB",9286,5.0243],
+["030200 KS","KT Corporation","KR","Communication Services",2.25,"Warm",2548814,14.7977],
+["1193 HK","China Resources Gas Group","HK","Financials",0.25,"GC",1475388,15.7455],
+["1164 HK","CGN Mining Company","HK","Financials",26.25,"HTB",165430,20.9578],
+["116 HK","Chow Sang Sang Holdings","HK","Financials",21.25,"HTB",92098,3.9028],
+["024110 KS","Industrial Bank of Korea (IBK)","KR","Financials",4.5,"Warm",2389206,79.3072],
+["021240 KS","Coway","KR","Consumer Discretionary",1.5,"Warm",24187,7.1396],
+["015760 KS","Korea Electric Power","KR","Utilities",4,"Warm",1475037,46.96],
+["014680 KS","Hansol Chemical","KR","Information Technology",2.5,"Warm",1869428,63.6491],
+["011170 KS","LOTTE Chemical","KR","Materials",2.25,"Warm",1932625,6.4204],
+["6669 TT","Wiwynn","TW","Information Technology",7,"HTB",1234208,6.7723],
+["6770 TT","Powerchip Semiconductor Manufacturing","TW","Information Technology",10,"HTB",8866,15.0626],
+["9433 JP","KDDI","JP","Communication Services",5.5,"HTB",421471,16.4615],
+["010140 KS","Samsung Heavy Industries","KR","Industrials",1.5,"Warm",532524,30.8649],
+["009540 KS","HD Korea Shipbuilding & Offshore Engineering","KR","Industrials",0.5,"Warm",422357,41.2777],
+["9735 JP","Secom","JP","Industrials",0.25,"GC",2345361,233.1037],
+["008930 KS","Hanmi Pharmaceutical","KR","Information Technology",0.25,"GC",1480779,40.9366],
+["9983 JP","Fast Retailing","JP","Consumer Discretionary",0.25,"GC",2602111,40.9097],
+["9984 JP","SoftBank","JP","Communication Services",6.75,"HTB",1114009,27.9197],
+["003550 KS","LG Corp","KR","Industrials",1.5,"Warm",1834589,81.6325],
+["007310 KS","Ottogi","KR","Consumer Discretionary",21.25,"HTB",146079,57.363],
+["003230 KS","Samyang Foods","KR","Information Technology",8.5,"HTB",177799,34.7117],
+["006260 KS","LS Corp.","KR","Information Technology",7,"HTB",2190820,89.7736],
+["005930 KS","Samsung","KR","Information Technology",0.01,"GC",921139,56.8883],
+["000660 KS","SK Hynix","KR","Information Technology",0.25,"GC",71990,46.1125],
+["003495 KS","Korean Air Lines","KR","Information Technology",1.75,"Warm",2389557,52.0317],
+["002380 KS","KCC Corp","KR","Industrials",0.25,"GC",1049202,50.7592],
+["000100 KS","Yuhan","KR","Health Care",0.25,"GC",459728,29.1668],
+["000080 KS","HiteJinro","KR","Consumer Staples",7.75,"HTB",1187349,82.2634],
+["1113 HK","CK Asset Holdings","HK","Financials",0.25,"GC",1853967,18.821],
+["1109 HK","China Resources Land","HK","Real Estate",6.75,"HTB",1752312,5.2199],
+["1038 HK","CK Infrastructure","HK","Utilities",12,"HTB",136732,2.9003],
+["0011 HK","Jardine Matheson","HK","Financials",0.25,"GC",74377,2.8146],
+["10 HK","Hang Lung Group","HK","Financials",4.25,"Warm",2961307,4.546],
+["1 HK","CK Hutchison Holdings","HK","Industrials",3.75,"Warm",1649277,18.2737],
+["0013 HK","HUTCHMED","HK","Financials",0.75,"Warm",284293,18.0882],
+["001040 KS","CJ Group","KR","Materials",0.25,"GC",1966887,37.8483],
+["6789 TT","VisEra Technologies","TW","Information Technology",0.25,"GC",1759061,13.6811],
+["6919 TT","Caliway Biopharmaceuticals","TW","Information Technology",6.75,"HTB",2712817,4.8478],
+["000270 KS","Kia","KR","Consumer Discretionary",0.25,"GC",972254,86.5826],
+["8150 TT","ChipMOS Technologies","TW","Information Technology",0.25,"GC",2465573,12.0569],
+["8299 TT","Phison Electronics","TW","Information Technology",32,"HTB",145928,17.7025],
+["000150 KS","Doosan","KR","Industrials",21.75,"HTB",29864,14.6611],
+["9914 TT","Merida Industry","TW","Information Technology",2.25,"Warm",2274120,9.016],
+];
+
+
+// Expand: [ticker,name,country,sector,fund,side,shares,price,notional,rate,rate_type,cost,pb]
+const POS = POS_RAW.map(r=>({
+  ticker:r[0],name:r[1],country:r[2],sector:r[3],fund:r[4],side:r[5],
+  abs_shares:r[6],price_usd:r[7],gross_exposure_usd:r[8],
+  borrow_rate_pct:r[9],rate_type:r[10],daily_borrow_cost_usd:r[11],
+  prime_broker:r[12]
+}));
+// Avail: [ticker,name,country,sector,rate,rate_type,shares,price]
+const AVAIL={
+  A:AV_A.map(r=>({ticker:r[0],name:r[1],country:r[2],sector:r[3],borrow_rate_pct:r[4],rate_type:r[5],available_shares:r[6],price_usd:r[7]})),
+  B:AV_B.map(r=>({ticker:r[0],name:r[1],country:r[2],sector:r[3],borrow_rate_pct:r[4],rate_type:r[5],available_shares:r[6],price_usd:r[7]})),
+  C:AV_C.map(r=>({ticker:r[0],name:r[1],country:r[2],sector:r[3],borrow_rate_pct:r[4],rate_type:r[5],available_shares:r[6],price_usd:r[7]})),
+};
+const AM={A:{},B:{},C:{}};
+['A','B','C'].forEach(pb=>AVAIL[pb].forEach(r=>{AM[pb][r.ticker]=r.borrow_rate_pct;}));
+
+// ─────────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────────
+let thrBps=0, htbFilter='all', curPb='A';
+const CHARTS={};
+Chart.register(ChartDataLabels);
+
+// ─────────────────────────────────────────────
+// UTILS
+// ─────────────────────────────────────────────
+const sum=(arr,fn)=>arr.reduce((s,x)=>s+(fn?fn(x):x),0);
+const med=arr=>{if(!arr.length)return 0;const s=[...arr].sort((a,b)=>a-b),m=Math.floor(s.length/2);return s.length%2?s[m]:(s[m-1]+s[m])/2;};
+function fmt(n){n=+n||0;const a=Math.abs(n);if(a>=1e9)return(n/1e9).toFixed(2)+'B';if(a>=1e6)return(n/1e6).toFixed(1)+'M';if(a>=1e3)return(n/1e3).toFixed(1)+'K';return n.toFixed(0);}
+function fmtN(n){return Math.round(+n||0).toLocaleString();}
+function mktTag(c){return`<span class="m${c}">${c}</span>`;}
+function pbBadge(pb){const k=pb.slice(-1);return`<span class="badge b-p${k}">${pb}</span>`;}
+function htbBadge(f){if(f==='HTB')return'<span class="badge b-htb">HTB</span>';if(f==='Warm')return'<span class="badge b-warm">Warm</span>';return'<span class="badge b-gc">GC</span>';}
+
+// ─────────────────────────────────────────────
+// CHART FACTORY  — animation:false, responsive:false
+// ─────────────────────────────────────────────
+const BASE_OPTS={
+  responsive:true,
+  maintainAspectRatio:false,
+  animation:false,
+  plugins:{
+    datalabels:{display:false},
+    legend:{labels:{color:'#4a6080',font:{family:'JetBrains Mono',size:10},boxWidth:9,padding:10}},
+    tooltip:{
+      backgroundColor:'#0f1520',borderColor:'#213352',borderWidth:1,
+      titleColor:'#d4e4f8',bodyColor:'#8ba8cc',
+      titleFont:{family:'JetBrains Mono',size:11},
+      bodyFont:{family:'JetBrains Mono',size:10},padding:10,
+    }
+  }
+};
+const SCALE_Y={
+  grid:{color:'rgba(27,42,66,.8)'},
+  border:{color:'transparent'},
+  ticks:{color:'#2a3a52',font:{family:'JetBrains Mono',size:9},
+    callback:v=>{const a=Math.abs(v);if(a>=1e9)return'$'+(v/1e9).toFixed(1)+'B';if(a>=1e6)return'$'+(v/1e6).toFixed(0)+'M';if(a>=1e3)return'$'+(v/1e3).toFixed(0)+'K';return v;}}
+};
+const SCALE_YN={  // no dollar sign
+  grid:{color:'rgba(27,42,66,.8)'},border:{color:'transparent'},
+  ticks:{color:'#2a3a52',font:{family:'JetBrains Mono',size:9}}
+};
+const SCALE_X={
+  grid:{display:false},border:{color:'transparent'},
+  ticks:{color:'#2a3a52',font:{family:'JetBrains Mono',size:9},maxRotation:0}
+};
+const SCALE_XR=(rot)=>({...SCALE_X,ticks:{...SCALE_X.ticks,maxRotation:rot,minRotation:rot}});
+const NOLEG={plugins:{...BASE_OPTS.plugins,legend:{display:false}}};
+
+function makeChart(id,type,labels,datasets,extra={}){
+  if(CHARTS[id]){CHARTS[id].destroy();delete CHARTS[id];}
+  const el=document.getElementById(id);
+  if(!el)return;
+  const opts=mergeDeep({},BASE_OPTS,extra);
+  CHARTS[id]=new Chart(el,{type,data:{labels,datasets},options:opts});
+}
+function mergeDeep(t,...ss){ss.forEach(s=>{if(!s)return;Object.keys(s).forEach(k=>{if(s[k]&&typeof s[k]==='object'&&!Array.isArray(s[k])){if(!t[k])t[k]={};mergeDeep(t[k],s[k]);}else{t[k]=s[k];}});});return t;}
+
+function donut(id,labels,data,colors,extra={}){
+  const total=data.reduce((a,b)=>a+b,0);
+  makeChart(id,'doughnut',labels,[{data,backgroundColor:colors,borderWidth:0,hoverOffset:3}],
+    mergeDeep({cutout:'62%',plugins:{
+      tooltip:{callbacks:{label:c=>`${c.label}: $${fmt(c.raw)}`}},
+      datalabels:{
+        display:true,
+        anchor:'center',align:'center',
+        color:'#07090f',
+        font:{family:'JetBrains Mono',size:10,weight:'600'},
+        formatter:(v)=>Math.round(v/total*100)+'%'
+      }
+    }},extra));
+}
+function hbar(id,labels,data,color){
+  makeChart(id,'bar',labels,[{data,backgroundColor:color+'60',borderColor:color,borderWidth:1,borderRadius:2}],
+    mergeDeep({indexAxis:'y'},NOLEG,{scales:{x:SCALE_Y,y:{grid:{display:false},border:{color:'transparent'},ticks:{color:'#2a3a52',font:{family:'JetBrains Mono',size:9}}}}}));
+}
+function vbar(id,labels,data,color,scaleOpts={}){
+  makeChart(id,'bar',labels,[{data,backgroundColor:color+'60',borderColor:color,borderWidth:1,borderRadius:2}],
+    mergeDeep({},NOLEG,{scales:{y:mergeDeep({},SCALE_YN,scaleOpts),x:SCALE_X}}));
+}
+function gbar(id,labels,datasets){
+  makeChart(id,'bar',labels,datasets,mergeDeep({},NOLEG,{scales:{y:SCALE_Y,x:SCALE_X}}));
+}
+
+// ─────────────────────────────────────────────
+// PAGE 1
+// ─────────────────────────────────────────────
+function renderP1(){
+  const p=POS;
+  const tExp=sum(p,x=>x.gross_exposure_usd);
+  const tCost=sum(p,x=>x.daily_borrow_cost_usd);
+  const htb=p.filter(x=>x.rate_type==='HTB');
+  const warm=p.filter(x=>x.rate_type==='Warm');
+  const gc=p.filter(x=>x.rate_type==='GC');
+  const htbCost=sum(htb,x=>x.daily_borrow_cost_usd);
+  const warmCost=sum(warm,x=>x.daily_borrow_cost_usd);
+  const gcCost=sum(gc,x=>x.daily_borrow_cost_usd);
+  const lExp=sum(p.filter(x=>x.side==='Long'),x=>x.gross_exposure_usd);
+  const sExp=sum(p.filter(x=>x.side==='Short'),x=>x.gross_exposure_usd);
+  const names=new Set(p.map(x=>x.ticker));
+
+  // document.getElementById('hdr-pos').textContent=`${p.length} legs · ${names.size} names`;
+
+  document.getElementById('kpi-row').innerHTML=`
+    <div class="card"><div class="kpi-label">Total Short Exposure</div>
+      <div class="kpi-val c-ac">$${fmt(tExp)}</div>
+      <div class="kpi-sub">USD notional</div></div>
+    <div class="card"><div class="kpi-label">Daily Borrow Cost</div>
+      <div class="kpi-val c-am">$${fmt(tCost)}</div>
+      <div class="kpi-sub">≈ $${fmt(tCost*360)} / yr</div></div>
+    <div class="card"><div class="kpi-label">HTB Positions</div>
+      <div class="kpi-val c-rd">${htb.length}</div>
+      <div class="kpi-sub">${(htb.length/p.length*100).toFixed(1)}% of legs · $${fmt(htbCost)}/day</div></div>
+    <div class="card"><div class="kpi-label">Active Short Positions</div>
+      <div class="kpi-val c-pu">${names.size}</div>
+      <div class="kpi-sub">3 PBs · 3 Funds</div></div>`;
+
+  // PB donut — fixed order: Prime A, Prime B, Prime C
+  const pbM={};p.forEach(x=>{pbM[x.prime_broker]=(pbM[x.prime_broker]||0)+x.gross_exposure_usd;});
+  const pbColorMap={'Prime A':'#3CC8B8','Prime B':'#8177F5','Prime C':'#FF9040'};
+  const pbOrder=['Prime A','Prime B','Prime C'].filter(k=>k in pbM);
+  donut('ch-pb',pbOrder,pbOrder.map(k=>pbM[k]),pbOrder.map(k=>pbColorMap[k]));
+
+  // Sector hbar
+  const secM={};p.forEach(x=>{secM[x.sector]=(secM[x.sector]||0)+x.gross_exposure_usd;});
+  const secTop=Object.entries(secM).sort((a,b)=>b[1]-a[1]).slice(0,9);
+  hbar('ch-sec',secTop.map(x=>x[0]),secTop.map(x=>x[1]),'#8177F5');
+
+  // L/S grouped bar
+  const fM={};p.forEach(x=>{if(!fM[x.fund])fM[x.fund]={s:0};if(x.side==='Short')fM[x.fund].s+=x.gross_exposure_usd;});
+  const fk=Object.keys(fM);
+  gbar('ch-ls',fk,[
+    {label:'Short',data:fk.map(k=>fM[k].s),backgroundColor:'#E8606055',borderColor:'#E86060',borderWidth:1,borderRadius:2},
+  ]);
+
+  // Market donut
+  const mM={};p.forEach(x=>{mM[x.country]=(mM[x.country]||0)+x.gross_exposure_usd;});
+  donut('ch-mkt',Object.keys(mM),Object.values(mM),['#8177F5','#3CC8B8','#FF9040','#FFCC30']);
+
+  // Borrow cost by rate type donut
+  donut('ch-htbgc',['HTB','Warm','GC'],[htbCost,warmCost,gcCost],['#FFCC30','#FF9040','#4a6080'],
+    {plugins:{tooltip:{callbacks:{label:c=>`${c.label}: $${fmt(c.raw)}/day`}}}});
+
+  // Rate distribution
+  const bkts=[0,1,2,3,5,8,15,100],lbs=['<1','1-2','2-3','3-5','5-8','8-15','>15'],cnts=Array(7).fill(0);
+  p.forEach(x=>{for(let i=0;i<7;i++){if(x.borrow_rate_pct>=bkts[i]&&x.borrow_rate_pct<bkts[i+1]){cnts[i]++;break;}}});
+  vbar('ch-rdist',lbs,cnts,'#3CC8B8',{ticks:{color:'#2a3a52',font:{family:'JetBrains Mono',size:9}}});
+
+
+  // Top 30
+  const t30=[...p].sort((a,b)=>b.daily_borrow_cost_usd-a.daily_borrow_cost_usd).slice(0,30);
+  document.getElementById('tb-top30').innerHTML=t30.map(r=>`<tr>
+    <td class="tl tk">${r.ticker}</td>
+    <td class="tl">${r.name}</td>
+    <td class="tl">${mktTag(r.country)}</td>
+    <td class="tl">${r.sector}</td>
+    <td class="tl">${pbBadge(r.prime_broker)}</td>
+    <td class="tl" style="color:var(--t2);font-size:10px">${r.fund}</td>
+    <td class="tl">${htbBadge(r.rate_type)}</td>
+    <td class="tl"><span class="b-${r.side}">${r.side}</span></td>
+    <td>${fmtN(r.abs_shares)}</td>
+    <td>$${fmt(r.gross_exposure_usd)}</td>
+    <td style="color:${r.borrow_rate_pct>8?'var(--am)':'var(--t2)'}">${r.borrow_rate_pct.toFixed(3)}%</td>
+    <td style="color:var(--am);font-weight:600">$${fmt(r.daily_borrow_cost_usd)}</td>
+  </tr>`).join('');
+}
+
+// ─────────────────────────────────────────────
+// PAGE 2
+// ─────────────────────────────────────────────
+function buildRefi(){
+  return POS.map(p=>{
+    const cr=p.borrow_rate_pct,not=p.gross_exposure_usd;
+    let bR=cr,bPB=p.prime_broker;
+    ['A','B','C'].forEach(pb=>{const r=AM[pb][p.ticker];if(r!==undefined&&r<bR){bR=r;bPB='Prime '+pb;}});
+    return{...p,bestPB:bPB,bestRate:bR,
+      savingBps:Math.round((cr-bR)*100),
+      savingUsd:(cr-bR)/100*not/360};
+  });
+}
+
+function renderP2(){
+  let rows=buildRefi().filter(r=>r.savingBps>=thrBps);
+  if(htbFilter==='htb')rows=rows.filter(r=>r.rate_type==='HTB');
+  if(htbFilter==='gc') rows=rows.filter(r=>r.rate_type==='GC');
+  if(htbFilter==='warm')rows=rows.filter(r=>r.rate_type==='Warm');
+  const mf=document.getElementById('f-mkt').value;
+  const ff=document.getElementById('f-fund').value;
+  const sf=document.getElementById('f-sort').value;
+  if(mf)rows=rows.filter(r=>r.country===mf);
+  if(ff)rows=rows.filter(r=>r.fund===ff);
+  if(sf==='bps')rows.sort((a,b)=>b.savingBps-a.savingBps);
+  else if(sf==='notional')rows.sort((a,b)=>b.gross_exposure_usd-a.gross_exposure_usd);
+  else rows.sort((a,b)=>b.savingUsd-a.savingUsd);
+
+  const tS=sum(rows,r=>r.savingUsd);
+  const htbS=sum(rows.filter(r=>r.rate_type==='HTB'),r=>r.savingUsd);
+  const warmS=sum(rows.filter(r=>r.rate_type==='Warm'),r=>r.savingUsd);
+  const mxB=rows.length?Math.max(...rows.map(r=>r.savingBps)):0;
+
+  document.getElementById('p2-kpi').innerHTML=`
+    <div class="card sv-card"><div class="kpi-label">Total Daily Saving Opp</div>
+      <div class="kpi-val c-gr">$${fmt(tS)}</div></div>
+    <div class="card"><div class="kpi-label">Annualized</div>
+      <div class="kpi-val c-am">$${fmt(tS*360)}</div></div>
+    <div class="card"><div class="kpi-label">HTB Daily Saving</div>
+      <div class="kpi-val c-gr">$${fmt(htbS)}</div></div>
+    <div class="card"><div class="kpi-label">Warm Daily Saving</div>
+      <div class="kpi-val c-pu">$${fmt(warmS)}</div></div>
+    <div class="card"><div class="kpi-label">Max Single (bps)</div>
+      <div class="kpi-val c-ac">${mxB}<span style="font-size:13px;font-weight:400;color:var(--t3)"> bps</span></div></div>`;
+
+  document.getElementById('refi-title').textContent=`Refinancing Opportunities`;
+
+  const top5Set=new Set([...rows].sort((a,b)=>b.savingUsd-a.savingUsd).slice(0,5));
+  const body=rows.slice(0,150).map(r=>`<tr>
+    <td class="tl tk">${r.ticker}</td>
+    <td class="tl">${r.name}</td>
+    <td class="tl">${mktTag(r.country)}</td>
+    <td class="tl">${r.sector}</td>
+    <td class="tl" style="font-size:10px;color:var(--t2)">${r.fund}</td>
+    <td class="tl">${htbBadge(r.rate_type)}</td>
+    <td class="tl">${pbBadge(r.prime_broker)}</td>
+    <td style="color:var(--rd)">${r.borrow_rate_pct.toFixed(3)}%</td>
+    <td class="tl">${pbBadge(r.bestPB)}</td>
+    <td style="color:var(--gr)">${r.bestRate.toFixed(3)}%</td>
+    <td class="${r.savingBps>=100?'c-hi':r.savingBps>=25?'c-med':'c-lo'}">${r.savingBps}</td>
+    <td>$${fmt(r.gross_exposure_usd)}</td>
+    <td style="color:${top5Set.has(r)?'var(--am)':'inherit'}">$${fmt(r.savingUsd)}</td>
+  </tr>`).join('');
+
+  document.getElementById('tb-refi').innerHTML=body||
+    '<tr><td colspan="13" style="text-align:center;padding:40px;color:var(--t3)">No opportunities at current filters</td></tr>';
+}
+
+// ─────────────────────────────────────────────
+// PAGE 3
+// ─────────────────────────────────────────────
+function setPbTab(pb){
+  curPb=pb;
+  document.querySelectorAll('.pb-tab').forEach(t=>t.classList.toggle('on',t.dataset.pb===pb));
+  renderAvail();
+}
+
+function renderAvail(){
+  if(curPb==='ALL'){renderAvailAll();return;}
+  const pb=curPb, rows=AVAIL[pb];
+  const posSet=new Set(POS.map(p=>p.ticker));
+  const htb=rows.filter(r=>r.rate_type==='HTB');
+  const warmA=rows.filter(r=>r.rate_type==='Warm');
+  const newR=rows.filter(r=>!posSet.has(r.ticker));
+  const pbC={A:'var(--pA)',B:'var(--pB)',C:'var(--pC)'}[pb];
+  const pbHex={A:'#8177F5',B:'#3CC8B8',C:'#FF9040'}[pb];
+  const mdn=+med(rows.map(r=>r.borrow_rate_pct)).toFixed(3);
+  const mn=+Math.min(...rows.map(r=>r.borrow_rate_pct)).toFixed(2);
+  const mx=+Math.max(...rows.map(r=>r.borrow_rate_pct)).toFixed(2);
+  const htbMed=htb.length?+med(htb.map(r=>r.borrow_rate_pct)).toFixed(2):0;
+  const warmMed=warmA.length?+med(warmA.map(r=>r.borrow_rate_pct)).toFixed(2):0;
+
+  document.getElementById('avail-body').innerHTML=`
+    <div class="row c5">
+      <div class="card"><div class="kpi-label">Total # Names & $ Notional</div>
+        <div class="kpi-val" style="color:${pbC}">${rows.length} · $${(rows.reduce((a,b)=>a+b.available_shares*b.price_usd,0)/1e9).toFixed(2)}B</div></div>
+      <div class="card"><div class="kpi-label">HTB / Warm Names</div>
+        <div class="kpi-val c-am">${htb.length} <span style="font-size:13px;color:var(--pu)">/ ${warmA.length}</span></div>
+        <div class="kpi-sub">HTB med ${htbMed}% · Warm med ${warmMed}%</div></div>
+      <div class="card"><div class="kpi-label">Median Rate</div>
+        <div class="kpi-val">${mdn}%</div></div>
+      <div class="card"><div class="kpi-label">Rate Range</div>
+        <div class="kpi-val" style="font-size:16px">${mn}–${mx}%</div></div>
+      <div class="card"><div class="kpi-label">New Opps</div>
+        <div class="kpi-val" style="color:${pbC}">${newR.length}</div>
+        <div class="kpi-sub">Not in position</div></div>
+    </div>
+
+    <div class="row c2">
+      <div class="chart-card">
+        <div class="chart-title">Rate Distribution — Prime ${pb}</div>
+        <div class="chart-wrap" style="height:190px"><canvas id="ch-av-dist"></canvas></div>
+      </div>
+      <div class="tbl-card" style="margin-bottom:0">
+        <div class="tbl-title">New Names (avail but not in position) — ${newR.length} names</div>
+        <div class="tbl-outer"><div class="tbl-scroll" style="max-height:220px">
+          <table><thead><tr>
+            <th class="tl">Ticker</th><th class="tl">Name</th>
+            <th class="tl">Mkt</th><th class="tl">Sector</th>
+            <th class="tl">Rate Type<span class="rt-info">i</span></th><th>Rate%</th><th>Avail Shares</th>
+          </tr></thead>
+          <tbody>${newR.slice(0,60).map(r=>`<tr>
+            <td class="tl tk">${r.ticker}</td><td class="tl">${r.name}</td>
+            <td class="tl">${mktTag(r.country)}</td><td class="tl">${r.sector}</td>
+            <td class="tl">${htbBadge(r.rate_type)}</td>
+            <td style="color:${r.borrow_rate_pct>8?'var(--am)':'var(--t2)'}">${r.borrow_rate_pct.toFixed(3)}%</td>
+            <td>${fmtN(r.available_shares)}</td>
+          </tr>`).join('')}
+          </tbody></table>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="tbl-card">
+      <div class="tbl-title">Full Availability — Prime ${pb} <span id="fa-sort-indicator"></span></div>
+      <div class="fbar" id="fa-filter-bar"></div>
+      <div class="tbl-outer"><div class="tbl-scroll" style="max-height:380px">
+        <table id="fa-table"><thead><tr>
+          <th class="tl" data-col="ticker">Ticker</th>
+          <th class="tl" data-col="name">Name</th>
+          <th class="tl" data-col="country">Mkt</th>
+          <th class="tl" data-col="sector">Sector</th>
+          <th class="tl" data-col="rate_type">Rate Type<span class="rt-info">i</span></th>
+          <th data-col="borrow_rate_pct">Rate%</th>
+          <th data-col="available_shares">Avail Shares</th>
+          <th data-col="notional">Notional USD</th>
+          <th data-col="in_pos">In Pos</th>
+        </tr></thead><tbody></tbody></table>
+      </div></div>
+    </div>`;
+    setTimeout(()=>initFullAvailTable(pb, rows, posSet), 0);
+// --- Full Availability Table Filtering & Sorting ---
+function initFullAvailTable(pb, rows, posSet) {
+  const table = document.getElementById('fa-table');
+  const filterBar = document.getElementById('fa-filter-bar');
+  const columns = [
+    {key:'ticker', label:'Ticker'},
+    {key:'name', label:'Name'},
+    {key:'country', label:'Mkt'},
+    {key:'sector', label:'Sector'},
+    {key:'rate_type', label:'Rate Type'},
+    {key:'borrow_rate_pct', label:'Rate%'},
+    {key:'available_shares', label:'Avail Shares'},
+    {key:'notional', label:'Notional USD'},
+    {key:'in_pos', label:'In Pos'}
+  ];
+  // Build filter controls: type-in for ticker/name, dropdown for others
+  filterBar.innerHTML = columns.map(col => {
+    if(['borrow_rate_pct','available_shares','notional'].includes(col.key)) return '';
+    if(col.key==='ticker'||col.key==='name') {
+      return `<input class="fsel" type="text" placeholder="Search ${col.label}" data-col="${col.key}" style="min-width:90px">`;
+    }
+    return `<select class="fsel" multiple data-col="${col.key}" style="min-width:70px">
+      <option value="">All ${col.label}</option>
+    </select>`;
+  }).join('');
+  // Populate dropdowns (except ticker/name)
+  columns.forEach(col => {
+    if(['borrow_rate_pct','available_shares','notional','ticker','name'].includes(col.key)) return;
+    const sel = filterBar.querySelector(`[data-col="${col.key}"]`);
+    if(!sel) return;
+    let vals = [...new Set(rows.map(r => col.key==='in_pos' ? (posSet.has(r.ticker)?'✓':'–') : (col.key==='country'?r[col.key]:r[col.key])))]
+      .filter(x=>x!==undefined&&x!==null).sort();
+    vals.forEach(v => {
+      sel.innerHTML += `<option value="${v}">${v}</option>`;
+    });
+  });
+  // State
+  let filters = {}, sortOrder = [];
+  // Filtering logic
+  function applyFiltersSort() {
+    let filtered = rows.filter(r => {
+      return columns.every(col => {
+        if(['borrow_rate_pct','available_shares','notional'].includes(col.key)) return true;
+        const el = filterBar.querySelector(`[data-col="${col.key}"]`);
+        if(!el) return true;
+        if(col.key==='ticker') {
+          const val = el.value.trim().toLowerCase();
+          if(!val) return true;
+          return (r[col.key]||'').toLowerCase().trim() === val;
+        }
+        if(col.key==='name') {
+          const val = el.value.trim().toLowerCase();
+          if(!val) return true;
+          return (r[col.key]||'').toLowerCase().includes(val);
+        }
+        const vals = Array.from(el.selectedOptions).map(o=>o.value).filter(v=>v);
+        if(!vals.length) return true;
+        let v = col.key==='in_pos' ? (posSet.has(r.ticker)?'✓':'–') : (col.key==='country'?r[col.key]:r[col.key]);
+        return vals.includes(v);
+      });
+    });
+    // Sorting
+    filtered = filtered.slice();
+    sortOrder.slice().reverse().forEach(({col,dir}) => {
+      filtered.sort((a,b) => {
+        let va = col==='notional' ? a.available_shares*a.price_usd : col==='in_pos' ? (posSet.has(a.ticker)?1:0) : a[col];
+        let vb = col==='notional' ? b.available_shares*b.price_usd : col==='in_pos' ? (posSet.has(b.ticker)?1:0) : b[col];
+        if(typeof va==='string') va=va.toLowerCase();
+        if(typeof vb==='string') vb=vb.toLowerCase();
+        if(va<vb) return dir==='asc'?-1:1;
+        if(va>vb) return dir==='asc'?1:-1;
+        return 0;
+      });
+    });
+    renderTable(filtered);
+    // Sort indicator
+    document.getElementById('fa-sort-indicator').textContent = sortOrder.map(s=>columns.find(c=>c.key===s.col).label+(s.dir==='asc'?' ▲':' ▼')).join(', ');
+  }
+  // Render table body
+  function renderTable(data) {
+    table.querySelector('tbody').innerHTML = data.slice(0,250).map(r=>`<tr>
+      <td class="tl tk">${r.ticker}</td><td class="tl">${r.name}</td>
+      <td class="tl">${mktTag(r.country)}</td><td class="tl">${r.sector}</td>
+      <td class="tl">${htbBadge(r.rate_type)}</td>
+      <td style="color:${r.borrow_rate_pct>8?'var(--am)':'var(--t2)'}">${r.borrow_rate_pct.toFixed(3)}%</td>
+      <td>${fmtN(r.available_shares)}</td>
+      <td>$${fmt(r.available_shares*r.price_usd)}</td>
+      <td style="color:${posSet.has(r.ticker)?'var(--gr)':'var(--t3)'};font-size:12px">${posSet.has(r.ticker)?'✓':'–'}</td>
+    </tr>`).join('');
+  }
+  // Dropdown filter events
+  filterBar.querySelectorAll('select').forEach(sel => {
+    sel.addEventListener('change', applyFiltersSort);
+  });
+  // Type-in filter events for ticker/name
+  filterBar.querySelectorAll('input[type="text"]').forEach(inp => {
+    inp.addEventListener('input', applyFiltersSort);
+  });
+  // Sorting events
+  table.querySelectorAll('th').forEach(th => {
+    th.style.cursor = 'pointer';
+    th.addEventListener('click', e => {
+      const col = th.dataset.col;
+      if(!col) return;
+      let idx = sortOrder.findIndex(s=>s.col===col);
+      if(e.shiftKey) {
+        // Multi-column sort
+        if(idx>-1) sortOrder[idx].dir = sortOrder[idx].dir==='asc'?'desc':'asc';
+        else sortOrder.push({col,dir:'asc'});
+      } else {
+        // Single column sort
+        if(idx===0) sortOrder[0].dir = sortOrder[0].dir==='asc'?'desc':'asc';
+        else sortOrder = [{col,dir:'asc'}];
+      }
+      applyFiltersSort();
+    });
+  });
+  // Initial render
+  applyFiltersSort();
+}
+
+  setTimeout(()=>{
+    const bkts=[0,1,2,3,5,8,15,100],lbs=['<1','1-2','2-3','3-5','5-8','8-15','>15'],cnts=Array(7).fill(0);
+    rows.forEach(r=>{for(let i=0;i<7;i++){if(r.borrow_rate_pct>=bkts[i]&&r.borrow_rate_pct<bkts[i+1]){cnts[i]++;break;}}});
+    vbar('ch-av-dist',lbs,cnts,pbHex);
+  },30);
+}
+
+function renderAvailAll(){
+  const pbHex={A:'#8177F5',B:'#3CC8B8',C:'#FF9040'};
+  document.getElementById('avail-body').innerHTML=`
+    <div class="row c3">
+      ${['A','B','C'].map(pb=>{
+        const r=AVAIL[pb],h=r.filter(x=>x.rate_type==='HTB'),w=r.filter(x=>x.rate_type==='Warm');
+        const notional = r.reduce((a,b)=>a+b.available_shares*b.price_usd,0);
+        return`<div class="card">
+          <div class="kpi-label">PRIME ${pb}</div>
+          <div class="kpi-val" style="color:${pbHex[pb]};font-size:28px">${r.length}</div>
+          <div style="height:4px"></div>
+          <div class="kpi-val" style="color:${pbHex[pb]};font-size:22px;font-weight:500;margin-bottom:2px">$${(notional/1e9).toFixed(1)}B</div>
+          <div class="kpi-sub">HTB: ${h.length} · Warm: ${w.length} · Med: ${med(r.map(x=>x.borrow_rate_pct)).toFixed(3)}%</div>
+        </div>`;}).join('')}
+    </div>
+    <div class="row c2">
+      <div class="chart-card">
+        <div class="chart-title">Top Borrow Rates</div>
+        <div class="chart-wrap" style="height:300px"><canvas id="ch-all-htb"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Rate Distribution — All PBs</div>
+        <div class="chart-wrap" style="height:300px"><canvas id="ch-all-dist"></canvas></div>
+      </div>
+    </div>
+    <div class="tbl-card">
+      <div class="tbl-title">Full Availability — All PBs <span id="fa-all-sort-indicator"></span></div>
+      <div class="fbar" id="fa-all-filter-bar"></div>
+      <div class="tbl-outer"><div class="tbl-scroll" style="max-height:420px">
+        <table id="fa-all-table"><thead><tr>
+          <th class="tl" data-col="prime">Prime</th>
+          <th class="tl" data-col="ticker">Ticker</th>
+          <th class="tl" data-col="name">Name</th>
+          <th class="tl" data-col="country">Mkt</th>
+          <th class="tl" data-col="sector">Sector</th>
+          <th class="tl" data-col="rate_type">Rate Type<span class="rt-info">i</span></th>
+          <th data-col="borrow_rate_pct">Rate%</th>
+          <th data-col="available_shares">Avail Shares</th>
+          <th data-col="notional">Notional USD</th>
+          <th data-col="in_pos">In Pos</th>
+        </tr></thead><tbody></tbody></table>
+      </div></div>
+    </div>`;
+  setTimeout(()=>initFullAvailAllTable(), 0);
+// --- Consolidated All PBs Table Filtering & Sorting ---
+function initFullAvailAllTable() {
+  const table = document.getElementById('fa-all-table');
+  const filterBar = document.getElementById('fa-all-filter-bar');
+  const columns = [
+    {key:'prime', label:'Prime'},
+    {key:'ticker', label:'Ticker'},
+    {key:'name', label:'Name'},
+    {key:'country', label:'Mkt'},
+    {key:'sector', label:'Sector'},
+    {key:'rate_type', label:'Rate Type'},
+    {key:'borrow_rate_pct', label:'Rate%'},
+    {key:'available_shares', label:'Avail Shares'},
+    {key:'notional', label:'Notional USD'},
+    {key:'in_pos', label:'In Pos'}
+  ];
+  // Build filter controls: type-in for ticker/name, dropdown for others
+  filterBar.innerHTML = columns.map(col => {
+    if(['borrow_rate_pct','available_shares','notional'].includes(col.key)) return '';
+    if(col.key==='ticker'||col.key==='name') {
+      return `<input class="fsel" type="text" placeholder="Search ${col.label}" data-col="${col.key}" style="min-width:90px">`;
+    }
+    return `<select class="fsel" multiple data-col="${col.key}" style="min-width:70px">
+      <option value="">All ${col.label}</option>
+    </select>`;
+  }).join('');
+  // Gather all rows with prime info
+  let allRows = [];
+  ['A','B','C'].forEach(prime => {
+    AVAIL[prime].forEach(r => {
+      allRows.push({...r, prime});
+    });
+  });
+  // Populate dropdowns (except ticker/name)
+  columns.forEach(col => {
+    if(['borrow_rate_pct','available_shares','notional','ticker','name'].includes(col.key)) return;
+    const sel = filterBar.querySelector(`[data-col="${col.key}"]`);
+    if(!sel) return;
+    let vals = [...new Set(allRows.map(r => col.key==='in_pos' ? (POS.map(p=>p.ticker).includes(r.ticker)?'✓':'–') : (col.key==='country'?r[col.key]:r[col.key])))]
+      .filter(x=>x!==undefined&&x!==null).sort();
+    vals.forEach(v => {
+      sel.innerHTML += `<option value="${v}">${v}</option>`;
+    });
+  });
+  // State
+  let sortOrder = [];
+  // Filtering logic
+  function applyFiltersSort() {
+    let filtered = allRows.filter(r => {
+      return columns.every(col => {
+        if(['borrow_rate_pct','available_shares','notional'].includes(col.key)) return true;
+        const el = filterBar.querySelector(`[data-col="${col.key}"]`);
+        if(!el) return true;
+        if(col.key==='ticker') {
+          const val = el.value.trim().toLowerCase();
+          if(!val) return true;
+          return (r[col.key]||'').toLowerCase().trim() === val;
+        }
+        if(col.key==='name') {
+          const val = el.value.trim().toLowerCase();
+          if(!val) return true;
+          return (r[col.key]||'').toLowerCase().includes(val);
+        }
+        const vals = Array.from(el.selectedOptions).map(o=>o.value).filter(v=>v);
+        if(!vals.length) return true;
+        let v = col.key==='in_pos' ? (POS.map(p=>p.ticker).includes(r.ticker)?'✓':'–') : (col.key==='country'?r[col.key]:r[col.key]);
+        return vals.includes(v);
+      });
+    });
+    // Sorting
+    filtered = filtered.slice();
+    sortOrder.slice().reverse().forEach(({col,dir}) => {
+      filtered.sort((a,b) => {
+        let va = col==='notional' ? a.available_shares*a.price_usd : col==='in_pos' ? (POS.map(p=>p.ticker).includes(a.ticker)?1:0) : a[col];
+        let vb = col==='notional' ? b.available_shares*b.price_usd : col==='in_pos' ? (POS.map(p=>p.ticker).includes(b.ticker)?1:0) : b[col];
+        if(typeof va==='string') va=va.toLowerCase();
+        if(typeof vb==='string') vb=vb.toLowerCase();
+        if(va<vb) return dir==='asc'?-1:1;
+        if(va>vb) return dir==='asc'?1:-1;
+        return 0;
+      });
+    });
+    renderTable(filtered);
+    // Sort indicator
+    document.getElementById('fa-all-sort-indicator').textContent = sortOrder.map(s=>columns.find(c=>c.key===s.col).label+(s.dir==='asc'?' ▲':' ▼')).join(', ');
+  }
+  // Render table body
+  function renderTable(data) {
+    table.querySelector('tbody').innerHTML = data.map(r=>`<tr>
+      <td class="tl">${r.prime}</td>
+      <td class="tl tk">${r.ticker}</td><td class="tl">${r.name}</td>
+      <td class="tl">${mktTag(r.country)}</td><td class="tl">${r.sector}</td>
+      <td class="tl">${htbBadge(r.rate_type)}</td>
+      <td style="color:${r.borrow_rate_pct>8?'var(--am)':'var(--t2)'}">${r.borrow_rate_pct.toFixed(3)}%</td>
+      <td>${fmtN(r.available_shares)}</td>
+      <td>$${fmt(r.available_shares*r.price_usd)}</td>
+      <td style="color:${POS.map(p=>p.ticker).includes(r.ticker)?'var(--gr)':'var(--t3)'};font-size:12px">${POS.map(p=>p.ticker).includes(r.ticker)?'✓':'–'}</td>
+    </tr>`).join('');
+  }
+  // Dropdown filter events
+  filterBar.querySelectorAll('select').forEach(sel => {
+    sel.addEventListener('change', applyFiltersSort);
+  });
+  // Type-in filter events for ticker/name
+  filterBar.querySelectorAll('input[type="text"]').forEach(inp => {
+    inp.addEventListener('input', applyFiltersSort);
+  });
+  // Sorting events
+  table.querySelectorAll('th').forEach(th => {
+    th.style.cursor = 'pointer';
+    th.addEventListener('click', e => {
+      const col = th.dataset.col;
+      if(!col) return;
+      let idx = sortOrder.findIndex(s=>s.col===col);
+      if(e.shiftKey) {
+        // Multi-column sort
+        if(idx>-1) sortOrder[idx].dir = sortOrder[idx].dir==='asc'?'desc':'asc';
+        else sortOrder.push({col,dir:'asc'});
+      } else {
+        // Single column sort
+        if(idx===0) sortOrder[0].dir = sortOrder[0].dir==='asc'?'desc':'asc';
+        else sortOrder = [{col,dir:'asc'}];
+      }
+      applyFiltersSort();
+    });
+  });
+  // Initial render
+  applyFiltersSort();
+}
+
+  setTimeout(()=>{
+    const htbTks=[...new Set(['A','B','C'].flatMap(pb=>AVAIL[pb].filter(r=>r.rate_type==='HTB').map(r=>r.ticker)))].slice(0,30);
+    makeChart('ch-all-htb','bar',htbTks,
+      ['A','B','C'].map(pb=>({
+        label:`Prime ${pb}`,
+        data:htbTks.map(t=>{const r=AVAIL[pb].find(x=>x.ticker===t);return r?r.borrow_rate_pct:null;}),
+        backgroundColor:pbHex[pb]+'55',borderColor:pbHex[pb],borderWidth:1,borderRadius:2,
+      })),
+      {scales:{y:mergeDeep({},SCALE_YN,{ticks:{...SCALE_YN.ticks,callback:v=>v+'%'}}),x:SCALE_XR(50)}}
+    );
+    const bkts=[0,1,2,3,5,8,15,100],lbs=['<1','1-2','2-3','3-5','5-8','8-15','>15'];
+    makeChart('ch-all-dist','bar',lbs,
+      ['A','B','C'].map(pb=>{
+        const c=Array(7).fill(0);
+        AVAIL[pb].forEach(r=>{for(let i=0;i<7;i++){if(r.borrow_rate_pct>=bkts[i]&&r.borrow_rate_pct<bkts[i+1]){c[i]++;break;}}});
+        return{label:`Prime ${pb}`,data:c,backgroundColor:pbHex[pb]+'55',borderColor:pbHex[pb],borderWidth:1,borderRadius:2};
+      }),
+      {scales:{y:mergeDeep({},SCALE_YN,{ticks:{...SCALE_YN.ticks}}),x:SCALE_X}}
+    );
+  },30);
+}
+
+// ─────────────────────────────────────────────
+// NAV & FILTER HANDLERS
+// ─────────────────────────────────────────────
+function goPage(idx,btn){
+  document.querySelectorAll('.pg').forEach((p,i)=>p.classList.toggle('on',i===idx));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  if(idx===2){
+    curPb = 'ALL';
+    renderAvail();
+  }
+}
+function setThr(el,v){
+  thrBps=v;
+  el.closest('.chips').querySelectorAll('.chip').forEach(c=>c.classList.remove('on'));
+  el.classList.add('on');renderP2();
+}
+function setHtbF(el,v){
+  htbFilter=v;
+  el.closest('.chips').querySelectorAll('.chip').forEach(c=>c.classList.remove('on'));
+  el.classList.add('on');renderP2();
+}
+
+// ─────────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded',()=>{
+  document.fonts.ready.then(()=>{
+    renderP1();
+    renderP2();
+  });
+});
+</script>
+<div id="rt-tooltip">
+  <span class="rt-tip-gc">GC &nbsp;&nbsp;&lt;0.5%</span><br>
+  <span class="rt-tip-warm">Warm &nbsp;0.5%–5%</span><br>
+  <span class="rt-tip-htb">HTB &nbsp;&nbsp;&gt;5%</span>
+</div>
+<script>
+(function(){
+  const tip=document.getElementById('rt-tooltip');
+  document.addEventListener('mouseover',function(e){
+    const icon=e.target.closest('.rt-info');
+    if(!icon)return;
+    const r=icon.getBoundingClientRect();
+    tip.style.display='block';
+    tip.style.left=(r.left+r.width/2-tip.offsetWidth/2)+'px';
+    tip.style.top=(r.top-tip.offsetHeight-7)+'px';
+  });
+  document.addEventListener('mouseout',function(e){
+    if(e.target.closest('.rt-info'))tip.style.display='none';
+  });
+})();
+</script>
+</body>
+</html>
