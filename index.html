@@ -17,7 +17,7 @@
   --pA:#8177F5;--pB:#3CC8B8;--pC:#FF9040;
   --fn:'DM Sans',sans-serif;--fm:'JetBrains Mono',monospace
 }
-html,body{height:100%;background:var(--bg);color:var(--t1);font-family:var(--fn);font-size:13px;line-height:1.5;overflow-x:hidden}
+html,body{height:100%;background:var(--bg);color:var(--t1);font-family:var(--fn);font-size:13px;line-height:1.5;overflow-x:hidden;overflow-y:scroll}
 
 /* ── HEADER ── */
 #hdr{
@@ -35,7 +35,6 @@ html,body{height:100%;background:var(--bg);color:var(--t1);font-family:var(--fn)
   font-family:var(--fn);font-size:12px;font-weight:500;
   padding:6px 20px;border-radius:4px;cursor:pointer;
   background:none;border:1px solid transparent;color:var(--t3);
-  transition:all .12s
 }
 .nb:hover{color:var(--t1);border-color:var(--b2)}
 .nb.on{background:var(--s3);border-color:var(--ac);color:var(--ac)}
@@ -44,7 +43,8 @@ html,body{height:100%;background:var(--bg);color:var(--t1);font-family:var(--fn)
 
 /* ── LAYOUT ── */
 #main{padding:16px 24px;max-width:1680px;margin:0 auto}
-.pg{display:none}.pg.on{display:block}
+.pg{display:none}
+.pg.on{display:block}
 
 /* ── CARDS & GRID ── */
 .row{display:grid;gap:12px;margin-bottom:14px}
@@ -55,12 +55,12 @@ html,body{height:100%;background:var(--bg);color:var(--t1);font-family:var(--fn)
 .card{background:var(--s2);border:1px solid var(--b1);border-radius:8px;padding:14px 16px;min-width:0}
 
 /* ── KPI ── */
-.kpi-label{font-family:var(--fm);font-size:9px;font-weight:500;letter-spacing:.14em;color:var(--t3);text-transform:uppercase;margin-bottom:6px}
+.kpi-label{font-family:var(--fm);font-size:9px;font-weight:500;letter-spacing:.14em;color:var(--t2);text-transform:uppercase;margin-bottom:6px}
 .kpi-val{font-family:var(--fm);font-size:20px;font-weight:700;line-height:1;color:var(--t1)}
 .kpi-val.c-ac{color:var(--ac)}.kpi-val.c-gr{color:var(--gr)}.kpi-val.c-rd{color:var(--rd)}
 .kpi-val.c-am{color:var(--am)}.kpi-val.c-pu{color:var(--pu)}.kpi-val.c-pA{color:var(--pA)}
 .kpi-val.c-pB{color:var(--pB)}.kpi-val.c-pC{color:var(--pC)}
-.kpi-sub{font-family:var(--fm);font-size:10px;color:var(--t3);margin-top:4px}
+.kpi-sub{font-family:var(--fm);font-size:10px;color:var(--t2);margin-top:4px}
 
 /* ── CHART CARDS ── */
 .chart-card{background:var(--s2);border:1px solid var(--b1);border-radius:8px;padding:14px 16px;min-width:0}
@@ -73,7 +73,7 @@ html,body{height:100%;background:var(--bg);color:var(--t1);font-family:var(--fn)
 .tbl-title{font-family:var(--fm);font-size:9px;font-weight:600;letter-spacing:.12em;color:var(--t3);text-transform:uppercase;margin-bottom:10px}
 .tbl-outer{overflow-x:auto}
 .tbl-scroll{overflow-y:auto}
-table{width:100%;border-collapse:collapse;font-family:var(--fm);font-size:11px}
+table{width:100%;border-collapse:collapse;font-family:var(--fm);font-size:12px}
 thead th{
   position:sticky;top:0;z-index:2;background:var(--s2);
   font-size:9px;font-weight:600;letter-spacing:.08em;color:var(--t3);
@@ -81,8 +81,9 @@ thead th{
   border-bottom:1px solid var(--b2)
 }
 th.tl,td.tl{text-align:left!important}
-td{padding:5px 10px;text-align:right;border-bottom:1px solid rgba(27,42,66,.5);color:var(--t2)}
-tr:hover td{background:rgba(21,31,48,.9)}
+td{padding:7px 12px;text-align:right;border-bottom:1px solid rgba(27,42,66,.5);color:var(--t2)}
+tr:hover td{background:rgba(40,60,90,0.6)}
+tbody tr:nth-child(even) td{background:rgba(255,255,255,0.018)}
 .tk{font-weight:600;color:var(--t1);font-size:10px;white-space:nowrap}
 
 /* ── RATE TYPE TOOLTIP ── */
@@ -120,6 +121,15 @@ tr:hover td{background:rgba(21,31,48,.9)}
   background:var(--s3);border:1px solid var(--b1);color:var(--t1);outline:none
 }
 .fsel:focus{border-color:var(--b2)}
+.export-btn{
+  font-family:var(--fm);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  padding:5px 14px;border-radius:4px;cursor:pointer;
+  background:transparent;border:1px solid var(--b2);color:var(--t2);
+  transition:all .15s;white-space:nowrap;margin-left:auto
+}
+.export-btn.active{border-color:var(--gr);color:var(--gr)}
+.export-btn:hover{border-color:var(--t1);color:var(--t1)}
+.export-btn.active:hover{background:rgba(80,200,120,.08)}
 
 /* ── PB TABS (page 3) ── */
 .pb-tabs{display:flex;gap:6px;margin-bottom:14px}
@@ -139,6 +149,17 @@ tr:hover td{background:rgba(21,31,48,.9)}
 /* ── COLOR UTILS ── */
 .c-hi{color:var(--gr);font-weight:600}.c-med{color:var(--am)}.c-lo{color:var(--t2)}
 .c-rd{color:var(--rd)}.c-ac{color:var(--ac)}.c-gr{color:var(--gr)}
+
+/* ── ACTION ITEMS PAGE ── */
+.ai-card{display:flex;align-items:flex-start;gap:16px;padding:16px 20px;border-radius:6px;border-left:3px solid transparent;margin-bottom:10px}
+.ai-rank{font-family:var(--fm);font-size:22px;font-weight:700;color:var(--t4);min-width:24px;line-height:1.2;padding-top:3px}
+.ai-content{display:flex;flex-direction:column;gap:4px}
+.ai-badge{display:inline-block;font-family:var(--fm);font-size:8px;font-weight:700;letter-spacing:.1em;padding:2px 8px;border-radius:3px;border:1px solid;margin-bottom:3px;width:fit-content}
+.ai-text{font-family:var(--fn);font-size:13px;color:var(--t1);line-height:1.6}
+.ai-sub{font-family:var(--fn);font-size:11px;color:var(--t3);margin-top:3px;line-height:1.5}
+.ai-saving{margin-left:auto;text-align:right;min-width:80px;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;padding-left:20px}
+.ai-saving-amt{font-family:var(--fm);font-size:24px;font-weight:700;color:var(--gr);line-height:1}
+.ai-saving-lbl{font-family:var(--fm);font-size:10px;color:var(--t3);margin-top:3px}
 </style>
 </head>
 <body>
@@ -147,19 +168,19 @@ tr:hover td{background:rgba(21,31,48,.9)}
   <div class="brand">
     <span class="brand-name">APAC PORTFOLIO FINANCE MONITOR</span>
     <span class="live-dot"></span>
-    <span class="brand-date">2025-03-06</span>
+    <span class="brand-date" id="nav-date"></span>
   </div>
   <nav class="nav">
     <button class="nb on" onclick="goPage(0,this)">Portfolio Snapshot</button>
     <button class="nb" onclick="goPage(1,this)">Refinancing Opps</button>
     <button class="nb" onclick="goPage(2,this)">Daily Avail</button>
+    <button class="nb" onclick="goPage(3,this)">Action Items</button>
   </nav>
   <div class="hdr-right">
     <span style="font-family:var(--fm); font-size:11px; color:var(--t3); text-align:right; line-height:1.4; margin-right:12px;">
       Cherin Kim | cherin0508@gmail.com<br>
       Sample portfolio dashboard built with simulated financial data
     </span>
-    <span id="hdr-pos">—</span>
   </div>
 </div>
 
@@ -227,8 +248,8 @@ tr:hover td{background:rgba(21,31,48,.9)}
   <!-- Summary KPI -->
   <div class="row c5" id="p2-kpi"></div>
 
-  <!-- Filter bar -->
-  <div class="fbar">
+  <!-- Filter bar row 1: scope filters -->
+  <div class="fbar" style="margin-bottom:6px">
     <span class="fl">Saving</span>
     <div class="chips">
       <span class="chip on" onclick="setThr(this,0)">All</span>
@@ -243,6 +264,14 @@ tr:hover td{background:rgba(21,31,48,.9)}
       <span class="chip" onclick="setHtbF(this,'warm')">Warm</span>
       <span class="chip" onclick="setHtbF(this,'gc')">GC</span>
     </div>
+  </div>
+  <!-- Filter bar row 2: view/target filters + export -->
+  <div class="fbar">
+    <span class="fl">Current PB</span>
+    <select class="fsel" id="f-cpb" onchange="renderP2()">
+      <option value="">All PBs</option>
+      <option>Prime A</option><option>Prime B</option><option>Prime C</option>
+    </select>
     <span class="fl">Market</span>
     <select class="fsel" id="f-mkt" onchange="renderP2()">
       <option value="">All Markets</option>
@@ -253,17 +282,21 @@ tr:hover td{background:rgba(21,31,48,.9)}
       <option value="">All Funds</option>
       <option>Asia Long/Short</option><option>Asia Alpha Master</option><option>Quant Asia</option>
     </select>
-    <span class="fl" style="margin-left:auto">Sort</span>
+    <span class="fl">Sort</span>
     <select class="fsel" id="f-sort" onchange="renderP2()">
       <option value="usd">Daily Saving $</option>
       <option value="bps">Saving bps</option>
       <option value="notional">Notional</option>
     </select>
+    <button class="export-btn" id="btn-export" onclick="exportRefiCSV()">Export CSV</button>
   </div>
 
   <!-- Refi table -->
   <div class="tbl-card">
-    <div class="tbl-title" id="refi-title">Refinancing Opportunities</div>
+    <div class="tbl-title" style="display:flex;align-items:center;justify-content:space-between">
+      <span id="refi-title">Refinancing Opportunities</span>
+      <span id="refi-count" style="font-family:var(--fm);font-size:9px;color:var(--t3);font-weight:400;letter-spacing:.08em"></span>
+    </div>
     <div class="tbl-outer"><div class="tbl-scroll" style="max-height:520px">
       <table><thead><tr>
         <th class="tl">Ticker</th><th class="tl">Name</th>
@@ -289,6 +322,12 @@ tr:hover td{background:rgba(21,31,48,.9)}
     <div class="pb-tab" data-pb="C" onclick="setPbTab('C')">Prime C</div>
   </div>
   <div id="avail-body"></div>
+</div>
+
+
+<!-- ═══════════ PAGE 4 ═══════════ -->
+<div class="pg" id="p3">
+  <div id="p4-body"></div>
 </div>
 
 </div><!-- /main -->
@@ -1691,7 +1730,7 @@ const BASE_OPTS={
   animation:false,
   plugins:{
     datalabels:{display:false},
-    legend:{labels:{color:'#4a6080',font:{family:'JetBrains Mono',size:10},boxWidth:9,padding:10}},
+    legend:{labels:{color:'#8ba8cc',font:{family:'JetBrains Mono',size:10},boxWidth:9,padding:10}},
     tooltip:{
       backgroundColor:'#0f1520',borderColor:'#213352',borderWidth:1,
       titleColor:'#d4e4f8',bodyColor:'#8ba8cc',
@@ -1787,7 +1826,7 @@ function renderP1(){
 
   // PB donut — fixed order: Prime A, Prime B, Prime C
   const pbM={};p.forEach(x=>{pbM[x.prime_broker]=(pbM[x.prime_broker]||0)+x.gross_exposure_usd;});
-  const pbColorMap={'Prime A':'#3CC8B8','Prime B':'#8177F5','Prime C':'#FF9040'};
+  const pbColorMap={'Prime A':'#8177F5','Prime B':'#3CC8B8','Prime C':'#FF9040'};
   const pbOrder=['Prime A','Prime B','Prime C'].filter(k=>k in pbM);
   donut('ch-pb',pbOrder,pbOrder.map(k=>pbM[k]),pbOrder.map(k=>pbColorMap[k]));
 
@@ -1854,9 +1893,11 @@ function renderP2(){
   if(htbFilter==='htb')rows=rows.filter(r=>r.rate_type==='HTB');
   if(htbFilter==='gc') rows=rows.filter(r=>r.rate_type==='GC');
   if(htbFilter==='warm')rows=rows.filter(r=>r.rate_type==='Warm');
+  const cpb=document.getElementById('f-cpb').value;
   const mf=document.getElementById('f-mkt').value;
   const ff=document.getElementById('f-fund').value;
   const sf=document.getElementById('f-sort').value;
+  if(cpb)rows=rows.filter(r=>r.prime_broker===cpb);
   if(mf)rows=rows.filter(r=>r.country===mf);
   if(ff)rows=rows.filter(r=>r.fund===ff);
   if(sf==='bps')rows.sort((a,b)=>b.savingBps-a.savingBps);
@@ -1881,6 +1922,10 @@ function renderP2(){
       <div class="kpi-val c-ac">${mxB}<span style="font-size:13px;font-weight:400;color:var(--t3)"> bps</span></div></div>`;
 
   document.getElementById('refi-title').textContent=`Refinancing Opportunities`;
+  const exportBtn=document.getElementById('btn-export');
+  const cpbVal=document.getElementById('f-cpb').value;
+  if(cpbVal){exportBtn.textContent=`↓ Export ${cpbVal}`;exportBtn.classList.add('active');}
+  else{exportBtn.textContent='Export CSV';exportBtn.classList.remove('active');}
 
   const top5Set=new Set([...rows].sort((a,b)=>b.savingUsd-a.savingUsd).slice(0,5));
   const body=rows.slice(0,150).map(r=>`<tr>
@@ -1901,6 +1946,41 @@ function renderP2(){
 
   document.getElementById('tb-refi').innerHTML=body||
     '<tr><td colspan="13" style="text-align:center;padding:40px;color:var(--t3)">No opportunities at current filters</td></tr>';
+  const cntEl=document.getElementById('refi-count');
+  if(cntEl){const shown=Math.min(rows.length,150);cntEl.textContent=rows.length>150?`Showing 150 of ${rows.length}`:`${shown} result${shown!==1?'s':''}`;}
+}
+
+function exportRefiCSV(){
+  let rows=buildRefi().filter(r=>r.savingBps>=thrBps);
+  if(htbFilter==='htb')rows=rows.filter(r=>r.rate_type==='HTB');
+  if(htbFilter==='gc') rows=rows.filter(r=>r.rate_type==='GC');
+  if(htbFilter==='warm')rows=rows.filter(r=>r.rate_type==='Warm');
+  const cpb=document.getElementById('f-cpb').value;
+  const mf=document.getElementById('f-mkt').value;
+  const ff=document.getElementById('f-fund').value;
+  const sf=document.getElementById('f-sort').value;
+  if(cpb)rows=rows.filter(r=>r.prime_broker===cpb);
+  if(mf)rows=rows.filter(r=>r.country===mf);
+  if(ff)rows=rows.filter(r=>r.fund===ff);
+  if(sf==='bps')rows.sort((a,b)=>b.savingBps-a.savingBps);
+  else if(sf==='notional')rows.sort((a,b)=>b.gross_exposure_usd-a.gross_exposure_usd);
+  else rows.sort((a,b)=>b.savingUsd-a.savingUsd);
+
+  const csvRows=['Ticker,Current Rate%,Target Rate%'];
+  rows.filter(r=>r.borrow_rate_pct>r.bestRate).forEach(r=>csvRows.push([r.ticker,r.borrow_rate_pct.toFixed(3),r.bestRate.toFixed(3)].join(',')));
+
+  const today=new Date();
+  const dd=String(today.getDate()).padStart(2,'0');
+  const mm=String(today.getMonth()+1).padStart(2,'0');
+  const yyyy=today.getFullYear();
+  const primePart=cpb?cpb.replace(/\s+/g,'_'):'All';
+  const filename=`${primePart}_rerate_${dd}${mm}${yyyy}.csv`;
+
+  const blob=new Blob([csvRows.join('\n')],{type:'text/csv'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url;a.download=filename;a.click();
+  URL.revokeObjectURL(url);
 }
 
 // ─────────────────────────────────────────────
@@ -1969,7 +2049,7 @@ function renderAvail(){
     </div>
 
     <div class="tbl-card">
-      <div class="tbl-title">Full Availability — Prime ${pb} <span id="fa-sort-indicator"></span></div>
+      <div class="tbl-title" style="display:flex;align-items:center;justify-content:space-between"><span>Full Availability — Prime ${pb} <span id="fa-sort-indicator" style="font-weight:400;color:var(--t3)"></span></span><span id="fa-count" style="font-weight:400;color:var(--t3);letter-spacing:.08em"></span></div>
       <div class="fbar" id="fa-filter-bar"></div>
       <div class="tbl-outer"><div class="tbl-scroll" style="max-height:380px">
         <table id="fa-table"><thead><tr>
@@ -2066,7 +2146,8 @@ function initFullAvailTable(pb, rows, posSet) {
   }
   // Render table body
   function renderTable(data) {
-    table.querySelector('tbody').innerHTML = data.slice(0,250).map(r=>`<tr>
+    const shown=data.slice(0,250);
+    table.querySelector('tbody').innerHTML = shown.map(r=>`<tr>
       <td class="tl tk">${r.ticker}</td><td class="tl">${r.name}</td>
       <td class="tl">${mktTag(r.country)}</td><td class="tl">${r.sector}</td>
       <td class="tl">${htbBadge(r.rate_type)}</td>
@@ -2075,6 +2156,7 @@ function initFullAvailTable(pb, rows, posSet) {
       <td>$${fmt(r.available_shares*r.price_usd)}</td>
       <td style="color:${posSet.has(r.ticker)?'var(--gr)':'var(--t3)'};font-size:12px">${posSet.has(r.ticker)?'✓':'–'}</td>
     </tr>`).join('');
+    const cEl=document.getElementById('fa-count');if(cEl){const n=shown.length;cEl.textContent=data.length>250?`Showing 250 of ${data.length}`:`${n} result${n!==1?'s':''}`;}
   }
   // Dropdown filter events
   filterBar.querySelectorAll('select').forEach(sel => {
@@ -2140,7 +2222,7 @@ function renderAvailAll(){
       </div>
     </div>
     <div class="tbl-card">
-      <div class="tbl-title">Full Availability — All PBs <span id="fa-all-sort-indicator"></span></div>
+      <div class="tbl-title" style="display:flex;align-items:center;justify-content:space-between"><span>Full Availability — All PBs <span id="fa-all-sort-indicator" style="font-weight:400;color:var(--t3)"></span></span><span id="fa-all-count" style="font-weight:400;color:var(--t3);letter-spacing:.08em"></span></div>
       <div class="fbar" id="fa-all-filter-bar"></div>
       <div class="tbl-outer"><div class="tbl-scroll" style="max-height:420px">
         <table id="fa-all-table"><thead><tr>
@@ -2256,6 +2338,7 @@ function initFullAvailAllTable() {
       <td>$${fmt(r.available_shares*r.price_usd)}</td>
       <td style="color:${POS.map(p=>p.ticker).includes(r.ticker)?'var(--gr)':'var(--t3)'};font-size:12px">${POS.map(p=>p.ticker).includes(r.ticker)?'✓':'–'}</td>
     </tr>`).join('');
+    const cEl=document.getElementById('fa-all-count');if(cEl){const n=data.length;cEl.textContent=`${n} result${n!==1?'s':''}`;}
   }
   // Dropdown filter events
   filterBar.querySelectorAll('select').forEach(sel => {
@@ -2321,6 +2404,7 @@ function goPage(idx,btn){
     curPb = 'ALL';
     renderAvail();
   }
+  if(idx===3){ renderP4(); }
 }
 function setThr(el,v){
   thrBps=v;
@@ -2337,11 +2421,107 @@ function setHtbF(el,v){
 // INIT
 // ─────────────────────────────────────────────
 window.addEventListener('DOMContentLoaded',()=>{
+  document.getElementById('nav-date').textContent=new Date().toLocaleDateString('en-CA');
   document.fonts.ready.then(()=>{
     renderP1();
     renderP2();
   });
 });
+
+// ─────────────────────────────────────────────
+// PAGE 4 — ACTION ITEMS
+// ─────────────────────────────────────────────
+function ruleConcentration(){
+  const totalExp=sum(POS,p=>p.gross_exposure_usd);
+  const pbExp={};
+  POS.forEach(p=>{ pbExp[p.prime_broker]=(pbExp[p.prime_broker]||0)+p.gross_exposure_usd; });
+  return Object.entries(pbExp)
+    .filter(([,exp])=>exp/totalExp>0.5)
+    .map(([pb,exp])=>({
+      sev:'critical',
+      sortKey:1e9,
+      mainText:`Concentration with ${pb} is currently ${(exp/totalExp*100).toFixed(0)}% of total short exposure.`,
+      subText:`Consider redistributing to reduce counterparty risk.`
+    }));
+}
+
+function ruleCostSavings(refi){
+  return refi
+    .filter(r=>r.savingBps>0)
+    .sort((a,b)=>b.savingUsd-a.savingUsd)
+    .slice(0,5)
+    .map(r=>{
+      const mainText=r.bestPB!==r.prime_broker
+        ?`Rerate ${r.ticker} position at ${r.prime_broker} → ${r.bestRate.toFixed(2)}%`
+        :`Discuss lower rate with ${r.prime_broker} for ${r.ticker} → ${r.bestRate.toFixed(2)}%`;
+      const subText=r.bestPB!==r.prime_broker
+        ?`Current rate: ${r.borrow_rate_pct.toFixed(2)}%  |  Otherwise, consider moving position to ${r.bestPB}`
+        :`Current rate: ${r.borrow_rate_pct.toFixed(2)}%`;
+      return{sev:'warning',sortKey:r.savingUsd,mainText,subText,savingUsd:r.savingUsd};
+    });
+}
+
+function ruleCrossFundDupes(){
+  const byTicker={};
+  POS.forEach(p=>{
+    if(!byTicker[p.ticker])byTicker[p.ticker]={name:p.name,legs:[]};
+    byTicker[p.ticker].legs.push({fund:p.fund,pb:p.prime_broker,rate:p.borrow_rate_pct,cost:p.daily_borrow_cost_usd,exp:p.gross_exposure_usd});
+  });
+  return Object.entries(byTicker)
+    .filter(([,d])=>d.legs.length>1)
+    .map(([ticker,d])=>{
+      const bestRate=Math.min(...d.legs.map(l=>l.rate));
+      const bestLeg=d.legs.find(l=>l.rate===bestRate);
+      const saving=sum(d.legs.filter(l=>l.rate>bestRate),l=>(l.rate-bestRate)/100*l.exp/360);
+      const spread=Math.max(...d.legs.map(l=>l.rate))-bestRate;
+      const funds=[...new Set(d.legs.map(l=>l.fund))];
+      if(saving<=0)return null;
+      return{
+        sev:spread>2?'warning':'opp',
+        sortKey:saving,
+        mainText:`${ticker} is shorted across ${funds.length} funds at different rates (spread: ${spread.toFixed(2)}%).`,
+        subText:`Consolidate borrow at ${bestLeg.pb} at ${bestRate.toFixed(2)}%.`,
+        savingUsd:saving
+      };
+    })
+    .filter(Boolean)
+    .sort((a,b)=>b.sortKey-a.sortKey);
+}
+
+function renderP4(){
+  const refi=buildRefi();
+  const items=[
+    ...ruleConcentration(),
+    ...ruleCostSavings(refi),
+    ...ruleCrossFundDupes()
+  ];
+  items.sort((a,b)=>{
+    if(a.sev==='critical'&&b.sev!=='critical')return -1;
+    if(b.sev==='critical'&&a.sev!=='critical')return 1;
+    return b.sortKey-a.sortKey;
+  });
+  const top5=items.slice(0,5);
+  const SEV_COLOR={critical:'var(--rd)',warning:'var(--am)',opp:'var(--gr)'};
+  const SEV_BG={critical:'rgba(232,96,96,.07)',warning:'rgba(255,204,48,.06)',opp:'rgba(60,200,184,.06)'};
+  const SEV_LABEL={critical:'CRITICAL',warning:'WARNING',opp:'OPPORTUNITY'};
+  const inner=top5.length
+    ?top5.map((item,i)=>`
+      <div class="ai-card" style="border-left-color:${SEV_COLOR[item.sev]};background:${SEV_BG[item.sev]}">
+        <div class="ai-rank">${i+1}</div>
+        <div class="ai-content">
+          <span class="ai-badge" style="color:${SEV_COLOR[item.sev]};border-color:${SEV_COLOR[item.sev]}">${SEV_LABEL[item.sev]}</span>
+          <div class="ai-text">${item.mainText}</div>
+          ${item.subText?`<div class="ai-sub">${item.subText}</div>`:''}
+        </div>
+        ${item.savingUsd?`<div class="ai-saving"><div class="ai-saving-amt">$${fmt(item.savingUsd)}</div><div class="ai-saving-lbl">/day</div></div>`:''}
+      </div>`).join('')
+    :`<div style="padding:48px;text-align:center;color:var(--t3);font-family:var(--fm);font-size:12px">No action items flagged — book looks clean.</div>`;
+  document.getElementById('p4-body').innerHTML=`
+    <div style="padding:4px 0 8px">
+      <div style="font-family:var(--fm);font-size:10px;color:var(--t3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px">Today's Priority Action Items</div>
+      ${inner}
+    </div>`;
+}
 </script>
 <div id="rt-tooltip">
   <span class="rt-tip-gc">GC &nbsp;&nbsp;&lt;0.5%</span><br>

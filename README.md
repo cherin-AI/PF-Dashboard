@@ -24,9 +24,9 @@ HTML, JavaScript, Chart.js
 The dashboard runs as a **standalone HTML application** with simulated
 financial data.
 
-The design can be extended to support automated data ingestion via APIs or data pipelines, allowing the dashboard to refresh with updated portfolio datasets.
+The design can be extended to support automated data ingestion via APIs or data pipelines, allowing the dashboard to refresh with updated datasets.
 
-Data in this project is simulated and does not represent any real portfolio.
+Data in this project is simulated and does not represent any real portfolio or prime inventory data.
 
 ------------------------------------------------------------------------
 
@@ -61,9 +61,25 @@ Features
 -   Estimated **saving in basis points**
 -   Filters by market, fund and HTB classification
 -   Sorts by **Daily cost saving**, bps, positon notional $
+-   **Export to CSV** -- generates a rerate request file to send directly to the prime broker
 
 Purpose\
 Identify positions where borrow costs can be reduced either through **renegotiation with the current prime broker** or **switching to another broker offering lower rates**, after accounting for crossing costs such as comms and stamp charges.
+
+------------------------------------------------------------------------
+
+## Action Items
+
+Centralized view of prioritized financing actions generated from the portfolio.
+
+Key sections
+
+-   **Pending rerate requests** -- outstanding requests sent to prime brokers
+-   **Action status tracking** -- open, in-progress, and resolved items
+-   **Priority flags** -- highlights high-impact opportunities requiring attention
+
+Purpose\
+Provide a single place to **track and manage outstanding financing actions** across prime brokers, ensuring follow-through on refinancing opportunities.
 
 ------------------------------------------------------------------------
 
@@ -101,9 +117,10 @@ fund portfolio finance and treasury teams**.
 
 # Preview
 
-/images/dashboard_snapshot.png\
-/images/refinancing_opportunities.png\
-/images/daily_availability.png
+![Portfolio Snapshot](images/01.png)
+![Refinancing Opportunities](images/02.png)
+![Daily Availability](images/03.png)
+![Action Items](images/04.png)
 
 ------------------------------------------------------------------------
 
@@ -116,4 +133,5 @@ Portfolio Finance / Equity Finance
 
 # Updates & Latest Deployments
 
-Mar 15th, 2025
+Mar 14th, 2026 - launched
+Mar 16th, 2026 - added "action item" page / "export CSV" function under refinancing opp page
