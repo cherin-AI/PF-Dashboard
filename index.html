@@ -8,15 +8,15 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --bg:#07090f;--s1:#0b1018;--s2:#0f1520;--s3:#131c2a;--s4:#182236;
   --b1:#1b2a42;--b2:#213352;--b3:#2a4068;
-  --t1:#d4e4f8;--t2:#8ba8cc;--t3:#4a6080;--t4:#2a3a52;
+  --t1:#e8eef8;--t2:#a8bdd6;--t3:#607a96;--t4:#2a3a52;
   --ac:#8177F5;--gr:#3CC8B8;--rd:#E86060;--am:#FFCC30;--pu:#FF9040;--te:#3CC8B8;--co:#FF9040;
   --pA:#8177F5;--pB:#3CC8B8;--pC:#FF9040;
-  --fn:'DM Sans',sans-serif;--fm:'JetBrains Mono',monospace
+  --fn:'Inter',sans-serif;--fm:'Inter',sans-serif
 }
 html,body{height:100%;background:var(--bg);color:var(--t1);font-family:var(--fn);font-size:13px;line-height:1.5;overflow-x:hidden;overflow-y:scroll}
 
@@ -38,7 +38,7 @@ html,body{height:100%;background:var(--bg);color:var(--t1);font-family:var(--fn)
   background:none;border:1px solid transparent;color:var(--t3);
 }
 .nb:hover{color:var(--t1);border-color:var(--b2)}
-.nb.on{background:var(--s3);border-color:var(--ac);color:var(--ac)}
+.nb.on{background:rgba(255,255,255,.08);border-color:#ffffff;color:#ffffff}
 .hdr-right{display:flex;align-items:center;gap:14px;justify-content:flex-end;font-family:var(--fn);font-size:11px;color:var(--t3)}
 .live-dot{width:7px;height:7px;border-radius:50%;background:var(--gr);box-shadow:0 0 6px var(--gr)}
 
@@ -65,19 +65,19 @@ html,body{height:100%;background:var(--bg);color:var(--t1);font-family:var(--fn)
 
 /* ── CHART CARDS ── */
 .chart-card{background:var(--s2);border:1px solid var(--b1);border-radius:8px;padding:14px 16px;min-width:0}
-.chart-title{font-family:var(--fm);font-size:9px;font-weight:600;letter-spacing:.12em;color:var(--t3);text-transform:uppercase;margin-bottom:12px}
+.chart-title{font-family:var(--fm);font-size:9px;font-weight:600;letter-spacing:.12em;color:var(--t2);text-transform:uppercase;margin-bottom:12px}
 .chart-wrap{position:relative;width:100%}
 .chart-wrap canvas{display:block;width:100%!important}
 
 /* ── TABLES ── */
 .tbl-card{background:var(--s2);border:1px solid var(--b1);border-radius:8px;padding:14px 16px;min-width:0;margin-bottom:14px}
-.tbl-title{font-family:var(--fm);font-size:9px;font-weight:600;letter-spacing:.12em;color:var(--t3);text-transform:uppercase;margin-bottom:10px}
+.tbl-title{font-family:var(--fm);font-size:9px;font-weight:600;letter-spacing:.12em;color:var(--t2);text-transform:uppercase;margin-bottom:10px}
 .tbl-outer{overflow-x:auto}
 .tbl-scroll{overflow-y:auto}
 table{width:100%;border-collapse:collapse;font-family:var(--fm);font-size:12px}
 thead th{
   position:sticky;top:0;z-index:2;background:var(--s2);
-  font-size:9px;font-weight:600;letter-spacing:.08em;color:var(--t3);
+  font-size:9px;font-weight:600;letter-spacing:.08em;color:var(--t2);
   padding:7px 10px;text-align:right;white-space:nowrap;
   border-bottom:1px solid var(--b2)
 }
@@ -109,7 +109,7 @@ tbody tr:nth-child(even) td{background:rgba(255,255,255,0.018)}
   background:var(--s2);border:1px solid var(--b1);border-radius:8px;
   padding:10px 14px;margin-bottom:12px
 }
-.fl{font-family:var(--fm);font-size:9px;font-weight:600;letter-spacing:.12em;color:var(--t3);text-transform:uppercase;white-space:nowrap}
+.fl{font-family:var(--fm);font-size:9px;font-weight:600;letter-spacing:.12em;color:var(--t2);text-transform:uppercase;white-space:nowrap}
 .chips{display:flex;gap:4px}
 .chip{
   font-family:var(--fm);font-size:10px;padding:4px 12px;border-radius:4px;cursor:pointer;
@@ -1731,28 +1731,28 @@ const BASE_OPTS={
   animation:false,
   plugins:{
     datalabels:{display:false},
-    legend:{labels:{color:'#8ba8cc',font:{family:'JetBrains Mono',size:10},boxWidth:9,padding:10}},
+    legend:{labels:{color:'#a8bdd6',font:{family:'Inter',size:10},boxWidth:9,padding:10}},
     tooltip:{
       backgroundColor:'#0f1520',borderColor:'#213352',borderWidth:1,
-      titleColor:'#d4e4f8',bodyColor:'#8ba8cc',
-      titleFont:{family:'JetBrains Mono',size:11},
-      bodyFont:{family:'JetBrains Mono',size:10},padding:10,
+      titleColor:'#e8eef8',bodyColor:'#a8bdd6',
+      titleFont:{family:'Inter',size:11},
+      bodyFont:{family:'Inter',size:10},padding:10,
     }
   }
 };
 const SCALE_Y={
   grid:{color:'rgba(27,42,66,.8)'},
   border:{color:'transparent'},
-  ticks:{color:'#2a3a52',font:{family:'JetBrains Mono',size:9},
+  ticks:{color:'#a8bdd6',font:{family:'Inter',size:9},
     callback:v=>{const a=Math.abs(v);if(a>=1e9)return'$'+(v/1e9).toFixed(1)+'B';if(a>=1e6)return'$'+(v/1e6).toFixed(0)+'M';if(a>=1e3)return'$'+(v/1e3).toFixed(0)+'K';return v;}}
 };
 const SCALE_YN={  // no dollar sign
   grid:{color:'rgba(27,42,66,.8)'},border:{color:'transparent'},
-  ticks:{color:'#2a3a52',font:{family:'JetBrains Mono',size:9}}
+  ticks:{color:'#a8bdd6',font:{family:'Inter',size:9}}
 };
 const SCALE_X={
   grid:{display:false},border:{color:'transparent'},
-  ticks:{color:'#2a3a52',font:{family:'JetBrains Mono',size:9},maxRotation:0}
+  ticks:{color:'#a8bdd6',font:{family:'Inter',size:9},maxRotation:0}
 };
 const SCALE_XR=(rot)=>({...SCALE_X,ticks:{...SCALE_X.ticks,maxRotation:rot,minRotation:rot}});
 const NOLEG={plugins:{...BASE_OPTS.plugins,legend:{display:false}}};
@@ -1775,14 +1775,14 @@ function donut(id,labels,data,colors,extra={}){
         display:true,
         anchor:'center',align:'center',
         color:'#07090f',
-        font:{family:'JetBrains Mono',size:10,weight:'600'},
+        font:{family:'Inter',size:10,weight:'600'},
         formatter:(v)=>Math.round(v/total*100)+'%'
       }
     }},extra));
 }
 function hbar(id,labels,data,color){
   makeChart(id,'bar',labels,[{data,backgroundColor:color+'60',borderColor:color,borderWidth:1,borderRadius:2}],
-    mergeDeep({indexAxis:'y'},NOLEG,{scales:{x:SCALE_Y,y:{grid:{display:false},border:{color:'transparent'},ticks:{color:'#2a3a52',font:{family:'JetBrains Mono',size:9}}}}}));
+    mergeDeep({indexAxis:'y'},NOLEG,{scales:{x:SCALE_Y,y:{grid:{display:false},border:{color:'transparent'},ticks:{color:'#a8bdd6',font:{family:'Inter',size:9}}}}}));
 }
 function vbar(id,labels,data,color,scaleOpts={}){
   makeChart(id,'bar',labels,[{data,backgroundColor:color+'60',borderColor:color,borderWidth:1,borderRadius:2}],
@@ -1854,7 +1854,7 @@ function renderP1(){
   // Rate distribution
   const bkts=[0,1,2,3,5,8,15,100],lbs=['<1','1-2','2-3','3-5','5-8','8-15','>15'],cnts=Array(7).fill(0);
   p.forEach(x=>{for(let i=0;i<7;i++){if(x.borrow_rate_pct>=bkts[i]&&x.borrow_rate_pct<bkts[i+1]){cnts[i]++;break;}}});
-  vbar('ch-rdist',lbs,cnts,'#3CC8B8',{ticks:{color:'#2a3a52',font:{family:'JetBrains Mono',size:9}}});
+  vbar('ch-rdist',lbs,cnts,'#3CC8B8',{ticks:{color:'#a8bdd6',font:{family:'Inter',size:9}}});
 
 
   // Top 30
