@@ -13,7 +13,7 @@
 :root{
   --bg:#07090f;--s1:#0b1018;--s2:#0f1520;--s3:#131c2a;--s4:#182236;
   --b1:#1b2a42;--b2:#213352;--b3:#2a4068;
-  --t1:#e8eef8;--t2:#a8bdd6;--t3:#607a96;--t4:#2a3a52;
+  --t1:#f3f7fd;--t2:#cdd9ea;--t3:#93a8c0;--t4:#2a3a52;
   --ac:#8177F5;--gr:#3CC8B8;--rd:#E86060;--am:#FFCC30;--pu:#FF9040;--te:#3CC8B8;--co:#FF9040;
   --pA:#8177F5;--pB:#3CC8B8;--pC:#FF9040;
   --fn:'Inter',sans-serif;--fm:'Inter',sans-serif
@@ -38,7 +38,7 @@ html,body{height:100%;background:var(--bg);color:var(--t1);font-family:var(--fn)
   background:none;border:1px solid transparent;color:var(--t3);
 }
 .nb:hover{color:var(--t1);border-color:var(--b2)}
-.nb.on{background:rgba(255,255,255,.08);border-color:#ffffff;color:#ffffff}
+.nb.on{background:rgba(129,119,245,.14);border-color:rgba(129,119,245,.5);color:#ffffff}
 .hdr-right{display:flex;align-items:center;gap:14px;justify-content:flex-end;font-family:var(--fn);font-size:11px;color:var(--t3)}
 .live-dot{width:7px;height:7px;border-radius:50%;background:var(--gr);box-shadow:0 0 6px var(--gr)}
 
@@ -57,11 +57,11 @@ html,body{height:100%;background:var(--bg);color:var(--t1);font-family:var(--fn)
 
 /* ── KPI ── */
 .kpi-label{font-family:var(--fm);font-size:9px;font-weight:500;letter-spacing:.14em;color:var(--t2);text-transform:uppercase;margin-bottom:6px}
-.kpi-val{font-family:var(--fm);font-size:20px;font-weight:700;line-height:1;color:var(--t1)}
+.kpi-val{font-family:var(--fm);font-size:20px;font-weight:700;line-height:1;color:var(--t1);font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
 .kpi-val.c-ac{color:var(--ac)}.kpi-val.c-gr{color:var(--gr)}.kpi-val.c-rd{color:var(--rd)}
 .kpi-val.c-am{color:var(--am)}.kpi-val.c-pu{color:var(--pu)}.kpi-val.c-pA{color:var(--pA)}
 .kpi-val.c-pB{color:var(--pB)}.kpi-val.c-pC{color:var(--pC)}
-.kpi-sub{font-family:var(--fm);font-size:10px;color:var(--t2);margin-top:4px}
+.kpi-sub{font-family:var(--fm);font-size:10px;color:var(--t2);margin-top:4px;font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
 
 /* ── CHART CARDS ── */
 .chart-card{background:var(--s2);border:1px solid var(--b1);border-radius:8px;padding:14px 16px;min-width:0}
@@ -75,6 +75,7 @@ html,body{height:100%;background:var(--bg);color:var(--t1);font-family:var(--fn)
 .tbl-outer{overflow-x:auto}
 .tbl-scroll{overflow-y:auto}
 table{width:100%;border-collapse:collapse;font-family:var(--fm);font-size:12px}
+td,th{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
 thead th{
   position:sticky;top:0;z-index:2;background:var(--s2);
   font-size:9px;font-weight:600;letter-spacing:.08em;color:var(--t2);
@@ -154,20 +155,20 @@ tbody tr:nth-child(even) td{background:rgba(255,255,255,0.018)}
 /* ── SCROLLBARS ── */
 ::-webkit-scrollbar{width:6px;height:6px}
 ::-webkit-scrollbar-track{background:var(--s2)}
-::-webkit-scrollbar-thumb{background:#a8bdd6;border-radius:3px}
-::-webkit-scrollbar-thumb:hover{background:#e8eef8}
+::-webkit-scrollbar-thumb{background:var(--b2);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--b3)}
 ::-webkit-scrollbar-corner{background:var(--s2)}
 
 /* ── ACTION ITEMS PAGE ── */
-.ai-card{display:flex;align-items:flex-start;gap:16px;padding:16px 20px;border-radius:6px;border-left:3px solid transparent;margin-bottom:10px}
-.ai-rank{font-family:var(--fm);font-size:22px;font-weight:700;color:var(--t4);min-width:24px;line-height:1.2;padding-top:3px}
-.ai-content{display:flex;flex-direction:column;gap:4px}
-.ai-badge{display:inline-block;font-family:var(--fm);font-size:8px;font-weight:700;letter-spacing:.1em;padding:2px 8px;border-radius:3px;border:1px solid;margin-bottom:3px;width:fit-content}
-.ai-text{font-family:var(--fn);font-size:13px;color:var(--t1);line-height:1.6}
-.ai-sub{font-family:var(--fn);font-size:11px;color:var(--t3);margin-top:3px;line-height:1.5}
-.ai-saving{margin-left:auto;text-align:right;min-width:80px;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;padding-left:20px}
-.ai-saving-amt{font-family:var(--fm);font-size:24px;font-weight:700;color:var(--gr);line-height:1}
-.ai-saving-lbl{font-family:var(--fm);font-size:10px;color:var(--t3);margin-top:3px}
+.ai-card{display:flex;align-items:center;gap:14px;padding:10px 16px;border-radius:6px;margin-bottom:7px}
+.ai-rank{font-family:var(--fm);font-size:22px;font-weight:700;min-width:24px;text-align:center;line-height:1.2}
+.ai-content{display:flex;flex-direction:column;gap:2px}
+.ai-badge{display:inline-block;font-family:var(--fm);font-size:8px;font-weight:700;letter-spacing:.1em;padding:1px 7px;border-radius:3px;border:1px solid;margin-bottom:2px;width:fit-content}
+.ai-text{font-family:var(--fn);font-size:12px;color:var(--t1);line-height:1.45}
+.ai-sub{font-family:var(--fn);font-size:11px;color:var(--t3);margin-top:1px;line-height:1.4}
+.ai-saving{margin-left:auto;text-align:right;min-width:72px;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;padding-left:20px}
+.ai-saving-amt{font-family:var(--fm);font-size:16px;font-weight:700;color:var(--gr);line-height:1;font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+.ai-saving-lbl{font-family:var(--fm);font-size:9px;color:var(--t3);margin-top:2px}
 </style>
 </head>
 <body>
@@ -175,7 +176,6 @@ tbody tr:nth-child(even) td{background:rgba(255,255,255,0.018)}
 <div id="hdr">
   <div class="brand">
     <span class="brand-name">APAC PORTFOLIO FINANCE MONITOR</span>
-    <span class="live-dot"></span>
     <span class="brand-date" id="nav-date"></span>
   </div>
   <nav class="nav">
@@ -185,9 +185,8 @@ tbody tr:nth-child(even) td{background:rgba(255,255,255,0.018)}
     <button class="nb" onclick="goPage(3,this)">Action Items</button>
   </nav>
   <div class="hdr-right">
-    <span style="font-family:var(--fm); font-size:11px; color:var(--t3); text-align:right; line-height:1.4; margin-right:12px;">
-      Cherin Kim | cherin0508@gmail.com<br>
-      Sample portfolio dashboard built with simulated financial data
+    <span style="font-family:var(--fm);font-size:11px;color:var(--t3);letter-spacing:.04em">
+      Snapshot as of <span id="hdr-asof" style="color:var(--t2)"></span>
     </span>
   </div>
 </div>
@@ -237,11 +236,12 @@ tbody tr:nth-child(even) td{background:rgba(255,255,255,0.018)}
     <div class="tbl-title">Top 30 Positions — Daily Borrow Cost</div>
     <div class="tbl-outer"><div class="tbl-scroll" style="max-height:340px">
       <table><thead><tr>
+        <th class="tl">Rank</th><th>Daily Cost</th>
         <th class="tl">Ticker</th><th class="tl">Name</th>
         <th class="tl">Mkt</th><th class="tl">Sector</th>
         <th class="tl">PB</th><th class="tl">Fund</th>
         <th class="tl">Rate Type<span class="rt-info">i</span></th><th class="tl">Side</th>
-        <th>Shares</th><th>Notional USD</th><th>Rate %</th><th>Daily Cost</th>
+        <th>Shares</th><th>Notional USD</th><th>Rate %</th>
       </tr></thead>
       <tbody id="tb-top30"></tbody>
       </table>
@@ -339,6 +339,11 @@ tbody tr:nth-child(even) td{background:rgba(255,255,255,0.018)}
 </div>
 
 </div><!-- /main -->
+
+<footer style="max-width:1680px;margin:0 auto;padding:18px 24px 28px;border-top:1px solid var(--b1);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-family:var(--fm);font-size:10px;color:var(--t2);letter-spacing:.04em">
+  <span>Built by Cherin Kim · cherin0508@gmail.com</span>
+  <span>Demonstration build · simulated portfolio &amp; borrow data · not investment advice</span>
+</footer>
 
 <script>
 // ─────────────────────────────────────────────
@@ -1738,10 +1743,10 @@ const BASE_OPTS={
   animation:false,
   plugins:{
     datalabels:{display:false},
-    legend:{labels:{color:'#a8bdd6',font:{family:'Inter',size:10},boxWidth:9,padding:10}},
+    legend:{labels:{color:'#cdd9ea',font:{family:'Inter',size:10},boxWidth:9,padding:10}},
     tooltip:{
       backgroundColor:'#0f1520',borderColor:'#213352',borderWidth:1,
-      titleColor:'#e8eef8',bodyColor:'#a8bdd6',
+      titleColor:'#e8eef8',bodyColor:'#cdd9ea',
       titleFont:{family:'Inter',size:11},
       bodyFont:{family:'Inter',size:10},padding:10,
     }
@@ -1750,16 +1755,16 @@ const BASE_OPTS={
 const SCALE_Y={
   grid:{color:'rgba(27,42,66,.8)'},
   border:{color:'transparent'},
-  ticks:{color:'#a8bdd6',font:{family:'Inter',size:9},
+  ticks:{color:'#cdd9ea',font:{family:'Inter',size:9},
     callback:v=>{const a=Math.abs(v);if(a>=1e9)return'$'+(v/1e9).toFixed(1)+'B';if(a>=1e6)return'$'+(v/1e6).toFixed(0)+'M';if(a>=1e3)return'$'+(v/1e3).toFixed(0)+'K';return v;}}
 };
 const SCALE_YN={  // no dollar sign
   grid:{color:'rgba(27,42,66,.8)'},border:{color:'transparent'},
-  ticks:{color:'#a8bdd6',font:{family:'Inter',size:9}}
+  ticks:{color:'#cdd9ea',font:{family:'Inter',size:9}}
 };
 const SCALE_X={
   grid:{display:false},border:{color:'transparent'},
-  ticks:{color:'#a8bdd6',font:{family:'Inter',size:9},maxRotation:0}
+  ticks:{color:'#cdd9ea',font:{family:'Inter',size:9},maxRotation:0}
 };
 const SCALE_XR=(rot)=>({...SCALE_X,ticks:{...SCALE_X.ticks,maxRotation:rot,minRotation:rot}});
 const NOLEG={plugins:{...BASE_OPTS.plugins,legend:{display:false}}};
@@ -1788,15 +1793,59 @@ function donut(id,labels,data,colors,extra={}){
     }},extra));
 }
 function hbar(id,labels,data,color){
-  makeChart(id,'bar',labels,[{data,backgroundColor:color+'60',borderColor:color,borderWidth:1,borderRadius:2}],
-    mergeDeep({indexAxis:'y'},NOLEG,{scales:{x:SCALE_Y,y:{grid:{display:false},border:{color:'transparent'},ticks:{color:'#a8bdd6',font:{family:'Inter',size:9}}}}}));
+  makeChart(id,'bar',labels,[{data,backgroundColor:color,borderWidth:0,borderRadius:2}],
+    mergeDeep({indexAxis:'y'},NOLEG,{scales:{x:SCALE_Y,y:{grid:{display:false},border:{color:'transparent'},ticks:{color:'#cdd9ea',font:{family:'Inter',size:9}}}}}));
 }
 function vbar(id,labels,data,color,scaleOpts={}){
-  makeChart(id,'bar',labels,[{data,backgroundColor:color+'60',borderColor:color,borderWidth:1,borderRadius:2}],
+  makeChart(id,'bar',labels,[{data,backgroundColor:color+'bf',borderWidth:0,borderRadius:2}],
     mergeDeep({},NOLEG,{scales:{y:mergeDeep({},SCALE_YN,scaleOpts),x:SCALE_X}}));
 }
 function gbar(id,labels,datasets){
   makeChart(id,'bar',labels,datasets,mergeDeep({},NOLEG,{scales:{y:SCALE_Y,x:SCALE_X}}));
+}
+
+// PB concentration — horizontal bars colored by PB, with a 50% soft-limit dashed line
+function pbConcBar(id,labels,vals,total){
+  if(CHARTS[id]){CHARTS[id].destroy();delete CHARTS[id];}
+  const el=document.getElementById(id);if(!el)return;
+  const PBC={'Prime A':'#8177F5','Prime B':'#3CC8B8','Prime C':'#FF9040'};
+  const breach='#FF2233';
+  const limitLine={
+    id:'pbLimit',
+    afterDraw(chart){
+      const x=chart.scales.x,a=chart.chartArea;if(!x)return;
+      const px=x.getPixelForValue(total*0.5);
+      const ctx=chart.ctx;ctx.save();
+      ctx.strokeStyle=breach;ctx.lineWidth=1.5;ctx.setLineDash([4,3]);
+      ctx.beginPath();ctx.moveTo(px,a.top);ctx.lineTo(px,a.bottom);ctx.stroke();
+      ctx.setLineDash([]);ctx.fillStyle=breach;ctx.font='9px Inter';ctx.textAlign='center';
+      ctx.fillText('50% limit',px,a.top-3);ctx.restore();
+    }
+  };
+  CHARTS[id]=new Chart(el,{
+    type:'bar',
+    data:{labels,datasets:[{
+      data:vals,
+      backgroundColor:labels.map(p=>(vals[labels.indexOf(p)]/total>0.5?breach:PBC[p])+'bf'),
+      borderWidth:0,borderRadius:2,barThickness:16
+    }]},
+    options:mergeDeep({},BASE_OPTS,{
+      indexAxis:'y',animation:false,
+      layout:{padding:{top:14,right:44}},
+      scales:{
+        x:mergeDeep({},SCALE_Y,{max:total*0.62}),
+        y:{grid:{display:false},border:{color:'transparent'},ticks:{color:'#cdd9ea',font:{family:'Inter',size:9}}}
+      },
+      plugins:{
+        legend:{display:false},
+        tooltip:{callbacks:{label:c=>`$${fmt(c.raw)} · ${(c.raw/total*100).toFixed(1)}% of short`}},
+        datalabels:{display:true,anchor:'end',align:'end',clamp:true,
+          color:'#cdd9ea',font:{family:'Inter',size:9,weight:'400'},
+          formatter:v=>(v/total*100).toFixed(1)+'%'}
+      }
+    }),
+    plugins:[limitLine]
+  });
 }
 
 // ─────────────────────────────────────────────
@@ -1820,16 +1869,16 @@ function renderP1(){
 
   document.getElementById('kpi-row').innerHTML=`
     <div class="card"><div class="kpi-label">Total Short Exposure</div>
-      <div class="kpi-val c-ac">$${fmt(tExp)}</div>
+      <div class="kpi-val">$${fmt(tExp)}</div>
       <div class="kpi-sub">USD notional</div></div>
     <div class="card"><div class="kpi-label">Daily Borrow Cost</div>
-      <div class="kpi-val c-am">$${fmt(tCost)}</div>
+      <div class="kpi-val">$${fmt(tCost)}</div>
       <div class="kpi-sub">≈ $${fmt(tCost*360)} / yr</div></div>
     <div class="card"><div class="kpi-label">HTB Positions</div>
-      <div class="kpi-val c-rd">${htb.length}</div>
+      <div class="kpi-val c-am">${htb.length}</div>
       <div class="kpi-sub">${(htb.length/p.length*100).toFixed(1)}% of legs · $${fmt(htbCost)}/day</div></div>
     <div class="card"><div class="kpi-label">Active Short Positions</div>
-      <div class="kpi-val c-pu">${names.size}</div>
+      <div class="kpi-val">${names.size}</div>
       <div class="kpi-sub">3 PBs · 3 Funds</div></div>`;
 
   // PB donut — fixed order: Prime A, Prime B, Prime C
@@ -1841,13 +1890,13 @@ function renderP1(){
   // Sector hbar
   const secM={};p.forEach(x=>{secM[x.sector]=(secM[x.sector]||0)+x.gross_exposure_usd;});
   const secTop=Object.entries(secM).sort((a,b)=>b[1]-a[1]).slice(0,9);
-  hbar('ch-sec',secTop.map(x=>x[0]),secTop.map(x=>x[1]),'#8177F5');
+  hbar('ch-sec',secTop.map(x=>x[0]),secTop.map(x=>x[1]),'#5f86bd');
 
   // L/S grouped bar
   const fM={};p.forEach(x=>{if(!fM[x.fund])fM[x.fund]={s:0};if(x.side==='Short')fM[x.fund].s+=x.gross_exposure_usd;});
   const fk=Object.keys(fM);
   gbar('ch-ls',fk,[
-    {label:'Short',data:fk.map(k=>fM[k].s),backgroundColor:'#E8606055',borderColor:'#E86060',borderWidth:1,borderRadius:2},
+    {label:'Short',data:fk.map(k=>fM[k].s),backgroundColor:'#5f86bd',borderWidth:0,borderRadius:2},
   ]);
 
   // Market donut
@@ -1861,12 +1910,15 @@ function renderP1(){
   // Rate distribution
   const bkts=[0,1,2,3,5,8,15,100],lbs=['<1','1-2','2-3','3-5','5-8','8-15','>15'],cnts=Array(7).fill(0);
   p.forEach(x=>{for(let i=0;i<7;i++){if(x.borrow_rate_pct>=bkts[i]&&x.borrow_rate_pct<bkts[i+1]){cnts[i]++;break;}}});
-  vbar('ch-rdist',lbs,cnts,'#3CC8B8',{ticks:{color:'#a8bdd6',font:{family:'Inter',size:9}}});
+  makeChart('ch-rdist','bar',lbs,[{data:cnts,backgroundColor:'#5f86bd',borderWidth:0,borderRadius:2}],
+    mergeDeep({},NOLEG,{scales:{y:mergeDeep({},SCALE_YN,{ticks:{color:'#cdd9ea',font:{family:'Inter',size:9}}}),x:SCALE_X}}));
 
 
   // Top 30
   const t30=[...p].sort((a,b)=>b.daily_borrow_cost_usd-a.daily_borrow_cost_usd).slice(0,30);
-  document.getElementById('tb-top30').innerHTML=t30.map(r=>`<tr>
+  document.getElementById('tb-top30').innerHTML=t30.map((r,i)=>`<tr>
+    <td class="tl" style="color:var(--t3);font-weight:600">${i+1}</td>
+    <td style="color:var(--am);font-weight:600">$${fmt(r.daily_borrow_cost_usd)}</td>
     <td class="tl tk">${r.ticker}</td>
     <td class="tl">${r.name}</td>
     <td class="tl">${mktTag(r.country)}</td>
@@ -1877,8 +1929,7 @@ function renderP1(){
     <td class="tl"><span class="b-${r.side}">${r.side}</span></td>
     <td>${fmtN(r.abs_shares)}</td>
     <td>$${fmt(r.gross_exposure_usd)}</td>
-    <td style="color:${r.borrow_rate_pct>8?'var(--am)':'var(--t2)'}">${r.borrow_rate_pct.toFixed(3)}%</td>
-    <td style="color:var(--am);font-weight:600">$${fmt(r.daily_borrow_cost_usd)}</td>
+    <td style="color:${r.borrow_rate_pct>8?'var(--am)':'var(--t2)'}">${r.borrow_rate_pct.toFixed(2)}%</td>
   </tr>`).join('');
 }
 
@@ -1944,9 +1995,9 @@ function renderP2(){
     <td class="tl" style="font-size:10px;color:var(--t2)">${r.fund}</td>
     <td class="tl">${htbBadge(r.rate_type)}</td>
     <td class="tl">${pbBadge(r.prime_broker)}</td>
-    <td style="color:var(--rd)">${r.borrow_rate_pct.toFixed(3)}%</td>
+    <td style="color:var(--rd)">${r.borrow_rate_pct.toFixed(2)}%</td>
     <td class="tl">${pbBadge(r.bestPB)}</td>
-    <td style="color:var(--gr)">${r.bestRate.toFixed(3)}%</td>
+    <td style="color:var(--gr)">${r.bestRate.toFixed(2)}%</td>
     <td class="${r.savingBps>=100?'c-hi':r.savingBps>=25?'c-med':'c-lo'}">${r.savingBps}</td>
     <td>$${fmt(r.gross_exposure_usd)}</td>
     <td style="color:${top5Set.has(r)?'var(--am)':'inherit'}">$${fmt(r.savingUsd)}</td>
@@ -1975,7 +2026,7 @@ function exportRefiCSV(){
   else rows.sort((a,b)=>b.savingUsd-a.savingUsd);
 
   const csvRows=['Ticker,Current Rate%,Target Rate%'];
-  rows.filter(r=>r.borrow_rate_pct>r.bestRate).forEach(r=>csvRows.push([r.ticker,r.borrow_rate_pct.toFixed(3),r.bestRate.toFixed(3)].join(',')));
+  rows.filter(r=>r.borrow_rate_pct>r.bestRate).forEach(r=>csvRows.push([r.ticker,r.borrow_rate_pct.toFixed(2),r.bestRate.toFixed(2)].join(',')));
 
   const today=new Date();
   const dd=String(today.getDate()).padStart(2,'0');
@@ -2009,7 +2060,7 @@ function renderAvail(){
   const newR=rows.filter(r=>!posSet.has(r.ticker));
   const pbC={A:'var(--pA)',B:'var(--pB)',C:'var(--pC)'}[pb];
   const pbHex={A:'#8177F5',B:'#3CC8B8',C:'#FF9040'}[pb];
-  const mdn=+med(rows.map(r=>r.borrow_rate_pct)).toFixed(3);
+  const mdn=+med(rows.map(r=>r.borrow_rate_pct)).toFixed(2);
   const mn=+Math.min(...rows.map(r=>r.borrow_rate_pct)).toFixed(2);
   const mx=+Math.max(...rows.map(r=>r.borrow_rate_pct)).toFixed(2);
   const htbMed=htb.length?+med(htb.map(r=>r.borrow_rate_pct)).toFixed(2):0;
@@ -2048,7 +2099,7 @@ function renderAvail(){
             <td class="tl tk">${r.ticker}</td><td class="tl">${r.name}</td>
             <td class="tl">${mktTag(r.country)}</td><td class="tl">${r.sector}</td>
             <td class="tl">${htbBadge(r.rate_type)}</td>
-            <td style="color:${r.borrow_rate_pct>8?'var(--am)':'var(--t2)'}">${r.borrow_rate_pct.toFixed(3)}%</td>
+            <td style="color:${r.borrow_rate_pct>8?'var(--am)':'var(--t2)'}">${r.borrow_rate_pct.toFixed(2)}%</td>
             <td>${fmtN(r.available_shares)}</td>
           </tr>`).join('')}
           </tbody></table>
@@ -2159,7 +2210,7 @@ function initFullAvailTable(pb, rows, posSet) {
       <td class="tl tk">${r.ticker}</td><td class="tl">${r.name}</td>
       <td class="tl">${mktTag(r.country)}</td><td class="tl">${r.sector}</td>
       <td class="tl">${htbBadge(r.rate_type)}</td>
-      <td style="color:${r.borrow_rate_pct>8?'var(--am)':'var(--t2)'}">${r.borrow_rate_pct.toFixed(3)}%</td>
+      <td style="color:${r.borrow_rate_pct>8?'var(--am)':'var(--t2)'}">${r.borrow_rate_pct.toFixed(2)}%</td>
       <td>${fmtN(r.available_shares)}</td>
       <td>$${fmt(r.available_shares*r.price_usd)}</td>
       <td style="color:${posSet.has(r.ticker)?'var(--gr)':'var(--t3)'};font-size:12px">${posSet.has(r.ticker)?'✓':'–'}</td>
@@ -2216,7 +2267,7 @@ function renderAvailAll(){
           <div class="kpi-val" style="color:${pbHex[pb]};font-size:28px">${r.length}</div>
           <div style="height:4px"></div>
           <div class="kpi-val" style="color:${pbHex[pb]};font-size:22px;font-weight:500;margin-bottom:2px">$${(notional/1e9).toFixed(1)}B</div>
-          <div class="kpi-sub">HTB: ${h.length} · Warm: ${w.length} · Med: ${med(r.map(x=>x.borrow_rate_pct)).toFixed(3)}%</div>
+          <div class="kpi-sub">HTB: ${h.length} · Warm: ${w.length} · Med: ${med(r.map(x=>x.borrow_rate_pct)).toFixed(2)}%</div>
         </div>`;}).join('')}
     </div>
     <div class="row c2">
@@ -2341,7 +2392,7 @@ function initFullAvailAllTable() {
       <td class="tl tk">${r.ticker}</td><td class="tl">${r.name}</td>
       <td class="tl">${mktTag(r.country)}</td><td class="tl">${r.sector}</td>
       <td class="tl">${htbBadge(r.rate_type)}</td>
-      <td style="color:${r.borrow_rate_pct>8?'var(--am)':'var(--t2)'}">${r.borrow_rate_pct.toFixed(3)}%</td>
+      <td style="color:${r.borrow_rate_pct>8?'var(--am)':'var(--t2)'}">${r.borrow_rate_pct.toFixed(2)}%</td>
       <td>${fmtN(r.available_shares)}</td>
       <td>$${fmt(r.available_shares*r.price_usd)}</td>
       <td style="color:${POS.map(p=>p.ticker).includes(r.ticker)?'var(--gr)':'var(--t3)'};font-size:12px">${POS.map(p=>p.ticker).includes(r.ticker)?'✓':'–'}</td>
@@ -2385,7 +2436,7 @@ function initFullAvailAllTable() {
       ['A','B','C'].map(pb=>({
         label:`Prime ${pb}`,
         data:htbTks.map(t=>{const r=AVAIL[pb].find(x=>x.ticker===t);return r?r.borrow_rate_pct:null;}),
-        backgroundColor:pbHex[pb]+'55',borderColor:pbHex[pb],borderWidth:1,borderRadius:2,
+        backgroundColor:pbHex[pb]+'bf',borderWidth:0,borderRadius:2,
       })),
       {scales:{y:mergeDeep({},SCALE_YN,{ticks:{...SCALE_YN.ticks,callback:v=>v+'%'}}),x:SCALE_XR(50)}}
     );
@@ -2394,7 +2445,7 @@ function initFullAvailAllTable() {
       ['A','B','C'].map(pb=>{
         const c=Array(7).fill(0);
         AVAIL[pb].forEach(r=>{for(let i=0;i<7;i++){if(r.borrow_rate_pct>=bkts[i]&&r.borrow_rate_pct<bkts[i+1]){c[i]++;break;}}});
-        return{label:`Prime ${pb}`,data:c,backgroundColor:pbHex[pb]+'55',borderColor:pbHex[pb],borderWidth:1,borderRadius:2};
+        return{label:`Prime ${pb}`,data:c,backgroundColor:pbHex[pb]+'bf',borderWidth:0,borderRadius:2};
       }),
       {scales:{y:mergeDeep({},SCALE_YN,{ticks:{...SCALE_YN.ticks}}),x:SCALE_X}}
     );
@@ -2429,7 +2480,15 @@ function setHtbF(el,v){
 // INIT
 // ─────────────────────────────────────────────
 window.addEventListener('DOMContentLoaded',()=>{
-  document.getElementById('nav-date').textContent=new Date().toLocaleDateString('en-CA');
+  // Latest trading day in HKT — data updates Mon–Fri, so weekends roll back to Friday
+  const hk=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Hong_Kong'}));
+  const wd=hk.getDay();
+  if(wd===6)hk.setDate(hk.getDate()-1);       // Saturday → Friday
+  else if(wd===0)hk.setDate(hk.getDate()-2);  // Sunday → Friday
+  const _pad=n=>String(n).padStart(2,'0');
+  const _d=`${hk.getFullYear()}-${_pad(hk.getMonth()+1)}-${_pad(hk.getDate())}`;
+  document.getElementById('nav-date').textContent=_d;
+  document.getElementById('hdr-asof').textContent=_d+' 08:02 HKT';
   document.fonts.ready.then(()=>{
     renderP1();
     renderP2();
@@ -2514,8 +2573,8 @@ function renderP4(){
   const SEV_LABEL={critical:'CRITICAL',warning:'WARNING',opp:'OPPORTUNITY'};
   const inner=top5.length
     ?top5.map((item,i)=>`
-      <div class="ai-card" style="border-left-color:${SEV_COLOR[item.sev]};background:${SEV_BG[item.sev]}">
-        <div class="ai-rank">${i+1}</div>
+      <div class="ai-card" style="background:${SEV_BG[item.sev]}">
+        <div class="ai-rank" style="color:${SEV_COLOR[item.sev]}">${i+1}</div>
         <div class="ai-content">
           <span class="ai-badge" style="color:${SEV_COLOR[item.sev]};border-color:${SEV_COLOR[item.sev]}">${SEV_LABEL[item.sev]}</span>
           <div class="ai-text">${item.mainText}</div>
@@ -2524,11 +2583,28 @@ function renderP4(){
         ${item.savingUsd?`<div class="ai-saving"><div class="ai-saving-amt">$${fmt(item.savingUsd)}</div><div class="ai-saving-lbl">/day</div></div>`:''}
       </div>`).join('')
     :`<div style="padding:48px;text-align:center;color:var(--t3);font-family:var(--fm);font-size:12px">No action items flagged — book looks clean.</div>`;
+  // Supporting context — counterparty concentration (backs the critical item)
+  const totalExp=sum(POS,p=>p.gross_exposure_usd);
+  const pbExp={};
+  POS.forEach(p=>{pbExp[p.prime_broker]=(pbExp[p.prime_broker]||0)+p.gross_exposure_usd;});
+  const pbOrder=['Prime A','Prime B','Prime C'].filter(k=>k in pbExp).sort((a,b)=>pbExp[b]-pbExp[a]);
+
   document.getElementById('p4-body').innerHTML=`
-    <div style="padding:4px 0 8px">
-      <div style="font-family:var(--fm);font-size:10px;color:var(--t3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px">Today's Priority Action Items</div>
-      ${inner}
+    <div class="row c2" style="align-items:start">
+      <div style="padding:4px 0 8px">
+        <div style="font-family:var(--fm);font-size:10px;color:var(--t3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px">Today's Priority Action Items</div>
+        ${inner}
+      </div>
+      <div class="card">
+        <div class="tbl-title" style="margin-bottom:6px">Counterparty Concentration — Short Exposure by Prime Broker</div>
+        <div class="chart-wrap" style="height:180px"><canvas id="ch-conc"></canvas></div>
+        <div style="display:flex;align-items:center;gap:7px;margin-top:12px;padding-top:12px;border-top:1px solid var(--b1)">
+          <span style="width:18px;height:3px;background:#FF2233;border-radius:2px;display:inline-block"></span>
+          <span style="font-family:var(--fm);font-size:10px;color:var(--t3)">Internal soft limit: 50% per counterparty · bar turns red on breach</span>
+        </div>
+      </div>
     </div>`;
+  pbConcBar('ch-conc',pbOrder,pbOrder.map(k=>pbExp[k]),totalExp);
 }
 </script>
 <div id="rt-tooltip">
